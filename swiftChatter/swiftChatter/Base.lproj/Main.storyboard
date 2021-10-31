@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cOe-KH-pNK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cOe-KH-pNK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chatter-->
+        <!--Chat Name-->
+        <scene sceneID="5lG-Mc-y51">
+            <objects>
+                <viewController id="ymk-YN-O30" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4pV-m1-SK0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-NU-TjS">
+                                <rect key="frame" x="0.0" y="104" width="414" height="639"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="g7t-EE-kPH"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zA9-kc-6nv"/>
+                            </scrollView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Temporary Message" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="D71-E2-iqI">
+                                <rect key="frame" x="0.0" y="751" width="414" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lTx-JA-aU9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat Name" id="P9V-4V-tiL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rm5-Ll-xKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1397.1014492753625" y="-727.23214285714278"/>
+        </scene>
+        <!--MnkyChat-->
         <scene sceneID="eK2-Jn-DvV">
             <objects>
                 <tableViewController id="TTV-uT-QlR" customClass="MainVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,8 +55,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJl-ZG-c6H" userLabel="Username Label">
-                                            <rect key="frame" x="20" y="11" width="76" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GroupChat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJl-ZG-c6H" userLabel="Username Label">
+                                            <rect key="frame" x="20" y="11" width="132.5" height="20.5"/>
                                             <accessibility key="accessibilityConfiguration" identifier="username"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -67,6 +97,7 @@
                                     <outlet property="messageLabel" destination="dJT-FC-iMD" id="Gzg-rM-pM1"/>
                                     <outlet property="timestampLabel" destination="QTC-HT-tNz" id="TCI-8D-DZA"/>
                                     <outlet property="usernameLabel" destination="VJl-ZG-c6H" id="cqQ-dE-bV4"/>
+                                    <segue destination="1yL-ab-WsZ" kind="show" id="0UR-GP-ABS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,10 +106,18 @@
                             <outlet property="delegate" destination="TTV-uT-QlR" id="9Y8-GL-g7X"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Chatter" id="9xo-TL-k5z">
-                        <barButtonItem key="rightBarButtonItem" title="Compose" image="square.and.pencil" catalog="system" id="5fj-2L-oDW">
+                    <navigationItem key="navigationItem" title="MnkyChat" id="9xo-TL-k5z">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="UUa-Wi-wI1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jLr-iR-0wz" userLabel="Search">
+                                <rect key="frame" x="20" y="5" width="102.5" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Search"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="CreateChat" image="plus.bubble.fill" catalog="system" id="5fj-2L-oDW">
                             <connections>
-                                <segue destination="cbB-3J-HZt" kind="presentation" id="5Fr-e7-yoW"/>
+                                <segue destination="cbB-3J-HZt" kind="push" id="5Fr-e7-yoW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -96,17 +135,17 @@
             <objects>
                 <viewController title="Post" id="fYL-Vo-3wv" customClass="PostVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VeJ-Ao-mlF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swiftUser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yr9-45-qxH">
-                                <rect key="frame" x="170.5" y="76" width="73" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yr9-45-qxH">
+                                <rect key="frame" x="164.5" y="108" width="85.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Some short sample text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h8g-Q2-nw3">
-                                <rect key="frame" x="16" y="117" width="382" height="741"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Chat Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h8g-Q2-nw3">
+                                <rect key="frame" x="16" y="149" width="382" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -124,8 +163,8 @@
                             <constraint firstItem="h8g-Q2-nw3" firstAttribute="top" secondItem="Yr9-45-qxH" secondAttribute="bottom" constant="20" id="zxv-nl-SGj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Post" id="nqS-Y1-Q4h">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" image="paperplane" catalog="system" id="WMm-6l-VgM">
+                    <navigationItem key="navigationItem" title="Create New MnkyChat" id="nqS-Y1-Q4h">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" image="checkmark.circle.fill" catalog="system" id="WMm-6l-VgM">
                             <connections>
                                 <action selector="submitChatt:" destination="fYL-Vo-3wv" id="8Hn-Wn-sYL"/>
                             </connections>
@@ -163,8 +202,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cbB-3J-HZt" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fym-Gg-8yk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cwp-ic-2Dy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -176,10 +216,30 @@
             </objects>
             <point key="canvasLocation" x="1425" y="86"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7aZ-uf-w5d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1yL-ab-WsZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Sz7-Ie-Lr1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ihg-s1-JSA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ymk-YN-O30" kind="relationship" relationship="rootViewController" id="kr6-Pd-nlZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZS4-IF-b77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="-727"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="paperplane" catalog="system" width="128" height="118"/>
-        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="plus.bubble.fill" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
