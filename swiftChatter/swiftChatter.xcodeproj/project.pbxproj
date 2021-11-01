@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		192CB5C4273030A20074CA36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192CB5C3273030A20074CA36 /* GoogleService-Info.plist */; };
+		192CB5C6273042630074CA36 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CB5C5273042630074CA36 /* StartViewController.swift */; };
 		B4FF18AC115414DD6B3B4F6F /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */; };
 		FC03AB4224CA88800013DA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4124CA88800013DA53 /* AppDelegate.swift */; };
 		FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4324CA88800013DA53 /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		192CB5C3273030A20074CA36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		192CB5C5273042630074CA36 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		1F6B94E2C76EE7949A1E3438 /* Pods-swiftChatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.debug.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.debug.xcconfig"; sourceTree = "<group>"; };
 		2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DFA02A18C4CB5D5CC7F07 /* Pods-swiftChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.release.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				FC67425E250A9185009998D4 /* LaunchScreen.storyboard */,
 				FC03AB4F24CA88830013DA53 /* Info.plist */,
 				192CB5C3273030A20074CA36 /* GoogleService-Info.plist */,
+				192CB5C5273042630074CA36 /* StartViewController.swift */,
 			);
 			path = swiftChatter;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC03AB4624CA88800013DA53 /* MainVC.swift in Sources */,
+				192CB5C6273042630074CA36 /* StartViewController.swift in Sources */,
 				FC28600024CBDF7D00B60A29 /* Chatt.swift in Sources */,
 				FC28600224CBDFBC00B60A29 /* ChattTableCell.swift in Sources */,
 				FCAAE87B256955D300ABEEFF /* ChattStore.swift in Sources */,
