@@ -14,8 +14,86 @@
             filePath = "swiftChatter/StartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11">
+            startingLineNumber = "14"
+            endingLineNumber = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB404AA0-CDEE-46BB-A8A0-3A4233AD4155"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftChatter/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "CB404AA0-CDEE-46BB-A8A0-3A4233AD4155 - 743c8ba48df89999"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.AppDelegate.__allocating_init() -&gt; swiftChatter.AppDelegate"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chasecohn/Desktop/MNKY%20chat/NameUndecided/swiftChatter/swiftChatter/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "7">
+               </Location>
+               <Location
+                  uuid = "CB404AA0-CDEE-46BB-A8A0-3A4233AD4155 - 482d7fd9f3ff96bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.AppDelegate.init() -&gt; swiftChatter.AppDelegate"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chasecohn/Desktop/MNKY%20chat/NameUndecided/swiftChatter/swiftChatter/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "CB404AA0-CDEE-46BB-A8A0-3A4233AD4155 - bc8a197496bfac83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.AppDelegate.__deallocating_deinit"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chasecohn/Desktop/MNKY%20chat/NameUndecided/swiftChatter/swiftChatter/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "CB404AA0-CDEE-46BB-A8A0-3A4233AD4155 - b20a9a8f04a05c58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chasecohn/Desktop/MNKY%20chat/NameUndecided/swiftChatter/swiftChatter/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
