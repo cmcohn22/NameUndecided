@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192CB5C4273030A20074CA36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192CB5C3273030A20074CA36 /* GoogleService-Info.plist */; };
+		B4FF18AC115414DD6B3B4F6F /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */; };
 		FC03AB4224CA88800013DA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4124CA88800013DA53 /* AppDelegate.swift */; };
 		FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4324CA88800013DA53 /* SceneDelegate.swift */; };
 		FC03AB4624CA88800013DA53 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4524CA88800013DA53 /* MainVC.swift */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		192CB5C3273030A20074CA36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F6B94E2C76EE7949A1E3438 /* Pods-swiftChatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.debug.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.debug.xcconfig"; sourceTree = "<group>"; };
+		2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		373DFA02A18C4CB5D5CC7F07 /* Pods-swiftChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.release.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.release.xcconfig"; sourceTree = "<group>"; };
 		FC03AB3E24CA88800013DA53 /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC03AB4124CA88800013DA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC03AB4324CA88800013DA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,18 +47,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4FF18AC115414DD6B3B4F6F /* Pods_swiftChatter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FF25EFFAD2757C7A4DC9D66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		751F26FE3940682E77857CF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F6B94E2C76EE7949A1E3438 /* Pods-swiftChatter.debug.xcconfig */,
+				373DFA02A18C4CB5D5CC7F07 /* Pods-swiftChatter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FC03AB3524CA88800013DA53 = {
 			isa = PBXGroup;
 			children = (
 				FC285FFD24CBCD8900B60A29 /* Default-568h@2x.png */,
 				FC03AB4024CA88800013DA53 /* swiftChatter */,
 				FC03AB3F24CA88800013DA53 /* Products */,
+				751F26FE3940682E77857CF8 /* Pods */,
+				5FF25EFFAD2757C7A4DC9D66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +104,7 @@
 				FC03AB4724CA88800013DA53 /* Main.storyboard */,
 				FC67425E250A9185009998D4 /* LaunchScreen.storyboard */,
 				FC03AB4F24CA88830013DA53 /* Info.plist */,
+				192CB5C3273030A20074CA36 /* GoogleService-Info.plist */,
 			);
 			path = swiftChatter;
 			sourceTree = "<group>";
@@ -89,17 +116,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC03AB5224CA88830013DA53 /* Build configuration list for PBXNativeTarget "swiftChatter" */;
 			buildPhases = (
+				F14413DC88ADF33799621CEB /* [CP] Check Pods Manifest.lock */,
 				FC03AB3A24CA88800013DA53 /* Sources */,
 				FC03AB3B24CA88800013DA53 /* Frameworks */,
 				FC03AB3C24CA88800013DA53 /* Resources */,
+				D3F37C774BB914D31B211088 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = swiftChatter;
-			packageProductDependencies = (
-			);
 			productName = switChatter;
 			productReference = FC03AB3E24CA88800013DA53 /* swiftChatter.app */;
 			productType = "com.apple.product-type.application";
@@ -128,8 +155,6 @@
 				Base,
 			);
 			mainGroup = FC03AB3524CA88800013DA53;
-			packageReferences = (
-			);
 			productRefGroup = FC03AB3F24CA88800013DA53 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,12 +171,55 @@
 			files = (
 				FC285FFE24CBCD8900B60A29 /* Default-568h@2x.png in Resources */,
 				FC03AB4B24CA88830013DA53 /* Assets.xcassets in Resources */,
+				192CB5C4273030A20074CA36 /* GoogleService-Info.plist in Resources */,
 				FC03AB4924CA88800013DA53 /* Main.storyboard in Resources */,
 				FC674260250A9185009998D4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D3F37C774BB914D31B211088 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftChatter/Pods-swiftChatter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftChatter/Pods-swiftChatter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swiftChatter/Pods-swiftChatter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F14413DC88ADF33799621CEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swiftChatter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC03AB3A24CA88800013DA53 /* Sources */ = {
@@ -308,6 +376,7 @@
 		};
 		FC03AB5324CA88830013DA53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F6B94E2C76EE7949A1E3438 /* Pods-swiftChatter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -329,6 +398,7 @@
 		};
 		FC03AB5424CA88830013DA53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 373DFA02A18C4CB5D5CC7F07 /* Pods-swiftChatter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
