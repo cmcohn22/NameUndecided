@@ -48,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hvh-n6-Wzg" id="nV7-wc-gvZ">
@@ -235,7 +235,7 @@
         <!--LogInViewController-->
         <scene sceneID="JkG-vB-GvI">
             <objects>
-                <viewController title="LogInViewController" id="0Cf-gJ-mWb" sceneMemberID="viewController">
+                <viewController title="LogInViewController" id="0Cf-gJ-mWb" customClass="LogInViewController" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9E-2H-pmV" customClass="LogInViewController" customModule="swiftChatter" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,7 +265,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCD-7a-bgJ">
                                 <rect key="frame" x="102" y="652" width="200" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                                 <connections>
                                     <segue destination="cOe-KH-pNK" kind="show" id="qFn-Mm-Ru9"/>
                                 </connections>
@@ -287,11 +287,6 @@
                             <constraint firstItem="e6q-mr-Med" firstAttribute="top" secondItem="KGH-lp-gNP" secondAttribute="top" constant="37" id="fw4-zu-hcb"/>
                             <constraint firstItem="tiw-Ae-s6A" firstAttribute="leading" secondItem="KGH-lp-gNP" secondAttribute="leading" constant="113" id="lE4-W0-7e8"/>
                         </constraints>
-                        <connections>
-                            <outlet property="Email" destination="tiw-Ae-s6A" id="CZB-PP-efw"/>
-                            <outlet property="Login" destination="cCD-7a-bgJ" id="OHf-zy-sYz"/>
-                            <outlet property="Password" destination="Rzo-xq-doT" id="stE-7p-43k"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Gze-Qk-k5r"/>
                 </viewController>
@@ -391,8 +386,8 @@
         <!--SignUpViewController-->
         <scene sceneID="l4R-sx-piT">
             <objects>
-                <viewController title="SignUpViewController" id="CPU-Oq-a7B" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="70b-d9-jA2" customClass="SignUpViewController">
+                <viewController title="SignUpViewController" id="CPU-Oq-a7B" customClass="SignUpViewController" customModule="swiftChatter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="70b-d9-jA2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -426,6 +421,14 @@
                                     <segue destination="cOe-KH-pNK" kind="show" id="SwR-IO-wlu"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password Confirm" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3y-GH-l0o">
+                                <rect key="frame" x="113" y="554" width="211" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="lDW-U1-82M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gdi-Xj-a1h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -435,18 +438,23 @@
                             <constraint firstItem="bmc-K4-y53" firstAttribute="leading" secondItem="gdi-Xj-a1h" secondAttribute="leading" constant="172" id="Ejg-hQ-GAS"/>
                             <constraint firstItem="P6C-gX-Hry" firstAttribute="top" secondItem="Y9A-9O-P8k" secondAttribute="bottom" constant="86" id="F7c-qH-c1B"/>
                             <constraint firstItem="Y9A-9O-P8k" firstAttribute="leading" secondItem="gdi-Xj-a1h" secondAttribute="leading" constant="113" id="F93-gW-15I"/>
+                            <constraint firstItem="h3y-GH-l0o" firstAttribute="trailing" secondItem="Y9A-9O-P8k" secondAttribute="trailing" id="FJD-DW-1Rf"/>
+                            <constraint firstItem="P6C-gX-Hry" firstAttribute="top" secondItem="h3y-GH-l0o" secondAttribute="bottom" constant="36" id="GGR-Io-6Vr"/>
                             <constraint firstItem="Y9A-9O-P8k" firstAttribute="top" secondItem="YLJ-A3-ux7" secondAttribute="bottom" constant="88" id="JJO-7q-FHR"/>
                             <constraint firstItem="bmc-K4-y53" firstAttribute="top" secondItem="gdi-Xj-a1h" secondAttribute="top" constant="33" id="Or3-ox-6Jo"/>
                             <constraint firstItem="YLJ-A3-ux7" firstAttribute="centerX" secondItem="70b-d9-jA2" secondAttribute="centerX" constant="11.5" id="mUb-jc-qp9"/>
+                            <constraint firstItem="h3y-GH-l0o" firstAttribute="leading" secondItem="Y9A-9O-P8k" secondAttribute="leading" id="oN8-bQ-3lm"/>
                             <constraint firstItem="YLJ-A3-ux7" firstAttribute="top" secondItem="gdi-Xj-a1h" secondAttribute="top" constant="266" id="r01-hE-b4K"/>
                             <constraint firstItem="gdi-Xj-a1h" firstAttribute="trailing" secondItem="Y9A-9O-P8k" secondAttribute="trailing" constant="90" id="sBX-4I-8GN"/>
                             <constraint firstItem="YLJ-A3-ux7" firstAttribute="leading" secondItem="gdi-Xj-a1h" secondAttribute="leading" constant="113" id="xr7-SG-hfH"/>
                         </constraints>
-                        <connections>
-                            <outlet property="Email" destination="YLJ-A3-ux7" id="MNd-eD-uRT"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="qRj-0s-o2v"/>
+                    <connections>
+                        <outlet property="email" destination="YLJ-A3-ux7" id="vMK-7q-esI"/>
+                        <outlet property="password" destination="Y9A-9O-P8k" id="xII-u7-V2j"/>
+                        <outlet property="passwordConfirm" destination="h3y-GH-l0o" id="VNi-bG-2Oe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8u-Av-c86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

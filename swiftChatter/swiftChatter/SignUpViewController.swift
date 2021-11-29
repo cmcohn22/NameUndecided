@@ -8,19 +8,23 @@
 
 import Foundation
 import UIKit
-class SignUpViewController {
-   
-    @IBOutlet weak var Email: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var passwordConfirm: UITextField!
+import Firebase
+import FirebaseAuth
+
+final class SignUpViewController {
     
+    private init() {}                
+    
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var passwordConfirm: UITextField!
+    @IBOutlet weak var password: UITextField!
     @IBAction func signUpAction(_ sender: Any) {
     if password.text != passwordConfirm.text {
     let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 
     alertController.addAction(defaultAction)
-    self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
             }
     else{
     Auth.auth().createUser(withEmail: email.text!, password: password.text!){ (user, error) in

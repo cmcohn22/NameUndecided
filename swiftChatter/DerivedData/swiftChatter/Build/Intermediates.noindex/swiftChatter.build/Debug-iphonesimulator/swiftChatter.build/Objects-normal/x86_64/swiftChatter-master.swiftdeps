@@ -1,16 +1,16 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
-options: "4e16a8fa4791745dcd098f9b200e234ba41994d47d1296924fd69d2ec4abdbf0"
-build_start_time: [1635785882, 395645141]
-build_end_time: [1635785883, 495182991]
+options: "b8909b94c85a22731d5bbf022a8182fc5d51188615aa0de1048124d903d7e578"
+build_start_time: [1635789071, 269201993]
+build_end_time: [1635789072, 369873046]
 inputs:
-  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/AppDelegate.swift": [1635776864, 19874095]
+  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/AppDelegate.swift": [1635786387, 181195497]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/Chatt.swift": [1635776418, 757809162]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/ChattStore.swift": [1635776418, 757989406]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/ChattTableCell.swift": [1635776418, 758138895]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/HomeViewController.swift": [1635782523, 436689853]
-  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/LogInViewController.swift": [1635785623, 464752674]
+  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/LogInViewController.swift": [1635787993, 97095489]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/MainVC.swift": [1635776418, 758483409]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/PostVC.swift": [1635776418, 758656024]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/SceneDelegate.swift": [1635776418, 758823633]
-  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/SignUpViewController.swift": [1635785881, 871556520]
+  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/SignUpViewController.swift": !private [1635789069, 930330753]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/StartViewController.swift": [1635784927, 119833469]

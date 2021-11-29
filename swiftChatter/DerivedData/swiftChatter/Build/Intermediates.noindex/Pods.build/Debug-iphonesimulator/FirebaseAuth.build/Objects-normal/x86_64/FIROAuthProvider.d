@@ -1,0 +1,58 @@
+dependencies: \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/AuthProvider/OAuth/FIROAuthProvider.m \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/DerivedData/swiftChatter/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseAuth.build/module.modulemap \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIROAuthProvider.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/kcdata.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/uuid.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/netinet6.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/machine.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/device.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/mach_debug.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/mach_machine.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/mach.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/bank.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/darwin_posix_sys_types.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/netinet.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/net.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/darwin_cdefs.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include/mach-o/dyld.modulemap \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRFederatedAuthProvider.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthUIDelegate.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRFacebookAuthProvider.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIROAuthCredential.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthCredential.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FirebaseCoreInternal.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/DerivedData/swiftChatter/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRVersion.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIROptions.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FirebaseCore.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRLoggerLevel.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRConfiguration.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FIRAppInternal.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FIRComponent.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FIRComponentContainer.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FIRComponentType.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FIRDependency.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FIRHeartbeatInfo.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FIRLibrary.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FIRLogger.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseCore/Sources/Private/FIROptionsInternal.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Auth/FIRAuthGlobalWorkQueue.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Auth/FIRAuth_Internal.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuth.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthAPNSTokenType.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthErrors.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/Interop/Auth/Public/FIRAuthInterop.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/AuthProvider/OAuth/FIROAuthCredential_Internal.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Backend/FIRAuthBackend.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Backend/FIRAuthRPCRequest.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Backend/FIRAuthRPCResponse.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Backend/FIRAuthRequestConfiguration.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Utilities/FIRAuthErrorUtils.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRMultiFactorInfo.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Utilities/FIRAuthInternalErrors.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Utilities/FIRAuthWebUtils.h \
+  /Users/chasecohn/Desktop/MNKY\ chat/NameUndecided/swiftChatter/Pods/FirebaseAuth/FirebaseAuth/Sources/Utilities/FIRAuthURLPresenter.h
