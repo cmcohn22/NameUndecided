@@ -47,8 +47,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Jvn-pS-FB9">
+                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Past Activity" image="clock.fill" catalog="system" width="150" id="P8I-rV-jnu"/>
+                                <barButtonItem title="Messages" image="message.fill" catalog="system" width="100" id="HIe-mJ-P9O"/>
+                                <barButtonItem title="Profile" image="person.fill" catalog="system" width="150" id="lpf-cm-ioq"/>
+                            </items>
+                        </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hvh-n6-Wzg" id="nV7-wc-gvZ">
@@ -138,30 +147,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yr9-45-qxH">
-                                <rect key="frame" x="164.5" y="76" width="85.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Chat Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h8g-Q2-nw3">
-                                <rect key="frame" x="16" y="117" width="382" height="741"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MnkyChat Password (Optional)" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zew-R1-i5Q">
+                                <rect key="frame" x="93" y="456" width="228" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MnkyChat Description" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnP-Fx-Tt7">
+                                <rect key="frame" x="121" y="414" width="172" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MnkyChat Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PNZ-U1-osS">
+                                <rect key="frame" x="140" y="372" width="135" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NWL-ly-X5e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="h8g-Q2-nw3" firstAttribute="bottom" secondItem="NWL-ly-X5e" secondAttribute="bottom" priority="250" constant="16" id="ZqY-cx-C6y"/>
-                            <constraint firstItem="Yr9-45-qxH" firstAttribute="top" secondItem="NWL-ly-X5e" secondAttribute="top" constant="20" id="a66-EG-mTH"/>
-                            <constraint firstItem="h8g-Q2-nw3" firstAttribute="leading" secondItem="NWL-ly-X5e" secondAttribute="leading" constant="16" id="aTH-Ek-WOA"/>
-                            <constraint firstItem="Yr9-45-qxH" firstAttribute="centerX" secondItem="NWL-ly-X5e" secondAttribute="centerX" id="l9L-71-1dv"/>
-                            <constraint firstItem="NWL-ly-X5e" firstAttribute="trailing" secondItem="h8g-Q2-nw3" secondAttribute="trailing" priority="250" constant="16" id="x0p-rb-Rx3"/>
-                            <constraint firstItem="h8g-Q2-nw3" firstAttribute="top" secondItem="Yr9-45-qxH" secondAttribute="bottom" constant="20" id="zxv-nl-SGj"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create New MnkyChat" id="nqS-Y1-Q4h">
                         <barButtonItem key="rightBarButtonItem" title="Submit" image="checkmark.circle.fill" catalog="system" id="WMm-6l-VgM">
@@ -170,14 +176,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="messageTextView" destination="h8g-Q2-nw3" id="X7v-lc-0IZ"/>
-                        <outlet property="usernameLabel" destination="Yr9-45-qxH" id="335-9d-9KO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWC-sg-ksM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2483" y="86"/>
+            <point key="canvasLocation" x="2482.608695652174" y="85.714285714285708"/>
         </scene>
         <!--StartViewController-->
         <scene sceneID="ewQ-65-COV">
@@ -418,11 +420,11 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.bubble.fill" catalog="system" width="128" height="110"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
