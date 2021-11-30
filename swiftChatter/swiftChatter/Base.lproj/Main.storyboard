@@ -47,8 +47,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="UsA-23-4FX">
+                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="N8R-kC-6T8"/>
+                                <barButtonItem title="Message" image="message.fill" catalog="system" width="150" id="dHy-yC-OgJ"/>
+                                <barButtonItem title="Profile" image="person.fill" catalog="system" width="150" id="gcs-QM-cGU"/>
+                            </items>
+                        </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hvh-n6-Wzg" id="nV7-wc-gvZ">
@@ -115,7 +124,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Search"/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="CreateChat" image="plus.bubble.fill" catalog="system" id="5fj-2L-oDW">
+                        <barButtonItem key="rightBarButtonItem" title="CreateChat" image="plus.message.fill" catalog="system" id="5fj-2L-oDW">
                             <connections>
                                 <segue destination="cbB-3J-HZt" kind="push" id="5Fr-e7-yoW"/>
                             </connections>
@@ -418,8 +427,11 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="plus.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus.message.fill" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
