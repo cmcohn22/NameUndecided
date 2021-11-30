@@ -35,18 +35,37 @@
                     </view>
                     <navigationItem key="navigationItem" title="Chat Name" id="P9V-4V-tiL">
                         <barButtonItem key="rightBarButtonItem" title="GC Details" style="plain" id="l2L-Xs-m5i">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cKz-YB-cAA">
-                                <rect key="frame" x="-33" y="-15" width="92" height="31"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cKz-YB-cAA">
+                                <rect key="frame" x="302" y="11" width="92" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system"/>
                             </button>
+                            <connections>
+                                <segue destination="3xv-kN-CHs" kind="push" id="cCB-fy-AB2"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rm5-Ll-xKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1397.1014492753625" y="-727.23214285714278"/>
+        </scene>
+        <!--Chat Settings-->
+        <scene sceneID="mYZ-4m-kCQ">
+            <objects>
+                <viewController id="3xv-kN-CHs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ECY-HV-mrQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Enk-lA-v0h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat Settings" id="Ryd-C1-bfE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oW2-sc-NFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2483" y="-727"/>
         </scene>
         <!--MnkyChat-->
         <scene sceneID="eK2-Jn-DvV">
