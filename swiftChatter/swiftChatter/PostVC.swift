@@ -7,20 +7,65 @@
 //
 import UIKit
 
-final class PostVC: UIViewController {
-  
+final class PostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+        
+    var locManager = CLLocationManager()
+    locManager.requestWhenInUseAuthorization()
+    
+    var currentLocation: CLLocation!
+
+    if
+       CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+       CLLocationManager.authorizationStatus() ==  .authorizedAlways
+    {
+        currentLocation = locManager.location
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var messageTextView: UITextView!
-
-    @IBAction func submitChatt(_ sender: Any) {
-        ChattStore.shared.postChatt(Chatt(username: usernameLabel.text,
-                                          message: messageTextView.text))
+    print("\(currentLocation.coordinate.longitude)")
+    print("\(currentLocation.coordinate.latitude)")
+    
+    @IBOutlet weak var chattname: UITextField!
+    @IBOutlet weak var chattdescription: UITextField!
+    @IBAction func submitNewChatt(_ sender: Any, currentLocation) {
+        let chatt = Chatt(name: self.chattname.text,
+                             description: self.chattdescription.text,
+                             lat: "\(currentLocation.coordinate.latitude)",
+                             long: "\(currentLocation.coordinate.longitude)",
+                             radius: nil)
+        
+        ChattStore.shared.createChatt(chatt, image: postImage.image)
         
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBOutlet weak var postImage: UIImageView!
+    
+        
+    @IBAction func pickMedia(_ sender: Any) {
+            presentPicker(.photoLibrary)
+        }
+        
+    @IBAction func accessCamera(_ sender: Any) {
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                presentPicker(.camera)
+            } else {
+                print("Camera not available. iPhone simulators don't simulate the camera.")
+            }
+        }
+        
+    private func presentPicker(_ sourceType: UIImagePickerController.SourceType) {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.sourceType = sourceType
+            imagePickerController.delegate = self
+            imagePickerController.allowsEditing = true
+            imagePickerController.mediaTypes = ["public.image"]
+            imagePickerController.videoMaximumDuration = TimeInterval(5) // secs
+            imagePickerController.videoQuality = .typeHigh
+            present(imagePickerController, animated: true, completion: nil)
+        }
 }
