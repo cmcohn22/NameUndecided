@@ -35,8 +35,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Chat Name" id="P9V-4V-tiL">
                         <barButtonItem key="rightBarButtonItem" title="GC Details" style="plain" id="l2L-Xs-m5i">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cKz-YB-cAA">
-                                <rect key="frame" x="-33" y="-15" width="92" height="31"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cKz-YB-cAA">
+                                <rect key="frame" x="302" y="11" width="92" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system"/>
@@ -56,7 +56,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="UsA-23-4FX">
                             <rect key="frame" x="0.0" y="142" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -157,7 +156,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter MnkyChat Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ome-Uy-Qkp">
                                 <rect key="frame" x="63" y="419" width="301" height="42"/>
                                 <constraints>
@@ -183,8 +181,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-s2-lvX">
-                                <rect key="frame" x="147" y="623" width="93.5" height="62"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.badge.ellipsis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="R5u-K2-fxQ">
+                                <rect key="frame" x="63" y="111" width="288" height="290"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMn-ZU-OgV">
+                                <rect key="frame" x="145" y="748" width="126" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="XKG-dC-hqB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="location.fill" catalog="system" title="Set Location"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-s2-lvX">
+                                <rect key="frame" x="145" y="623" width="93.5" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="CLu-FP-o6V"/>
                                 </constraints>
@@ -196,17 +205,6 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.badge.ellipsis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="R5u-K2-fxQ">
-                                <rect key="frame" x="63" y="111" width="288" height="290"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMn-ZU-OgV">
-                                <rect key="frame" x="145" y="748" width="126" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="XKG-dC-hqB"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="location.fill" catalog="system" title="Set Location"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NWL-ly-X5e"/>
@@ -395,7 +393,7 @@
         <!--SignUpViewController-->
         <scene sceneID="l4R-sx-piT">
             <objects>
-                <viewController title="SignUpViewController" id="CPU-Oq-a7B" sceneMemberID="viewController">
+                <viewController title="SignUpViewController" id="CPU-Oq-a7B" customClass="SignUpVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="70b-d9-jA2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -427,9 +425,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
                                 <connections>
+                                    <action selector="Submit:" destination="CPU-Oq-a7B" eventType="touchUpInside" id="Abd-fw-QNH"/>
                                     <segue destination="cOe-KH-pNK" kind="show" id="7xf-Zt-ONi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOM-HC-Ifa">
+                                <rect key="frame" x="172" y="162" width="79" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gdi-Xj-a1h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -448,6 +454,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qRj-0s-o2v"/>
+                    <connections>
+                        <outlet property="Password" destination="Y9A-9O-P8k" id="uo5-yu-MvS"/>
+                        <outlet property="TestLabel" destination="MOM-HC-Ifa" id="tz2-7p-cDB"/>
+                        <outlet property="Username" destination="YLJ-A3-ux7" id="e9k-vs-MO3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8u-Av-c86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
