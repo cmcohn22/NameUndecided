@@ -27,6 +27,13 @@ class SignUpVC: UIViewController{
         return emailPred.evaluate(with: email)
     }
     @IBOutlet weak var InvalidEmail: UILabel!
+
+    @IBOutlet weak var EmptyFirstName: UILabel!
+    
+    @IBOutlet weak var EmptyLastName: UILabel!
+    @IBOutlet weak var EmptyUserName: UILabel!
+    
+    @IBOutlet weak var EmptyPassword: UILabel!
     @IBAction func Submit(_ sender: Any) {
         print("hello")
         let userName: String = Username.text!
@@ -34,20 +41,47 @@ class SignUpVC: UIViewController{
         let email: String = Email.text!
         let firstName: String = FirstName.text!
         let lastName: String = LastName.text!
-        let profilPic: String = "image.img"
+        let profilePic: String = "image.img"
         print(userName)
         print(pass)
         print(email)
         print(firstName)
         print(lastName)
-        print(profilPic)
+        print(profilePic)
         let validEmail = isValidEmail(email)
         print(validEmail)
-        if validEmail {
+        if validEmail && userName != "" && pass != "" && firstName != "" && lastName != "" && profilePic != ""{
           self.performSegue(withIdentifier: "ID2", sender: self)
         }
-        else {
+        if !validEmail{
             InvalidEmail.text = "Invalid Email"
+        }
+        else {
+            InvalidEmail.text = ""
+        }
+        if firstName == "" || firstName.count > 18{
+            EmptyFirstName.text = "Invalid First Name"
+        }
+        else {
+            EmptyFirstName.text = ""
+        }
+        if lastName == "" || lastName.count > 18{
+            EmptyLastName.text = "Invalid Last Name"
+        }
+        else {
+            EmptyLastName.text = ""
+        }
+        if userName == "" || userName.count > 18{
+            EmptyUserName.text = "Invalid Username"
+        }
+        else {
+            EmptyUserName.text = ""
+        }
+        if pass == "" || pass.count > 18{
+            EmptyPassword.text = "Invalid Password"
+        }
+        else {
+            EmptyPassword.text = ""
         }
 
         let postUrl = URL(string: "urlString")
@@ -59,7 +93,7 @@ class SignUpVC: UIViewController{
             "first_name" : firstName,
             "last_name" : lastName,
             "email" : email,
-            "profile_pic" : profilPic,
+            "profile_pic" : profilePic,
         ]
 //        postRequest.httpBody = params
         

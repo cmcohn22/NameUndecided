@@ -62,34 +62,6 @@
 			<key>uniqueIdentifier</key>
 			<string>1AAB0EEF-FE0F-4479-939C-08E1A0E31810</string>
 		</dict>
-		<key>2A45A6DE-4D27-4750-9908-643C8848E2B9</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>2A45A6DE-4D27-4750-9908-643C8848E2B9.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>PromisesObjC-ctvoopilvkkstxgzyfdhwtujseqt</string>
-			<key>timeStartedRecording</key>
-			<real>659998508.52582002</real>
-			<key>timeStoppedRecording</key>
-			<real>659998508.63373601</real>
-			<key>title</key>
-			<string>Build target PromisesObjC</string>
-			<key>uniqueIdentifier</key>
-			<string>2A45A6DE-4D27-4750-9908-643C8848E2B9</string>
-		</dict>
 		<key>4A8CCDD4-B3EB-4D45-AA6C-A70CB47B812B</key>
 		<dict>
 			<key>className</key>
@@ -146,6 +118,34 @@
 			<key>uniqueIdentifier</key>
 			<string>4BB807F0-8302-4D3D-BDD6-44024E4B92EF</string>
 		</dict>
+		<key>59603099-9B78-46F5-A45E-E14ADC76C7DA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>59603099-9B78-46F5-A45E-E14ADC76C7DA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>swiftChatter-bhfsaykimutpeidqwemhousxzjwg</string>
+			<key>timeStartedRecording</key>
+			<real>659999880.19935906</real>
+			<key>timeStoppedRecording</key>
+			<real>659999883.54494202</real>
+			<key>title</key>
+			<string>Build target swiftChatter</string>
+			<key>uniqueIdentifier</key>
+			<string>59603099-9B78-46F5-A45E-E14ADC76C7DA</string>
+		</dict>
 		<key>834C98C9-855F-4CC4-8394-53E3DC2091BA</key>
 		<dict>
 			<key>className</key>
@@ -174,33 +174,33 @@
 			<key>uniqueIdentifier</key>
 			<string>834C98C9-855F-4CC4-8394-53E3DC2091BA</string>
 		</dict>
-		<key>935F1244-EBF7-41B2-B31C-FA1C31AF6606</key>
+		<key>9DD6EF90-8744-4763-8FEA-46D54A7C4FEB</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
 			<key>documentTypeString</key>
 			<string>&lt;nil&gt;</string>
 			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>935F1244-EBF7-41B2-B31C-FA1C31AF6606.xcactivitylog</string>
+			<string>9DD6EF90-8744-4763-8FEA-46D54A7C4FEB.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>S</string>
 			</dict>
 			<key>signature</key>
-			<string>swiftChatter-bhfsaykimutpeidqwemhousxzjwg</string>
+			<string>PromisesObjC-ctvoopilvkkstxgzyfdhwtujseqt</string>
 			<key>timeStartedRecording</key>
-			<real>659998509.43709099</real>
+			<real>659999880.11130905</real>
 			<key>timeStoppedRecording</key>
-			<real>659998510.67712402</real>
+			<real>659999880.15908206</real>
 			<key>title</key>
-			<string>Build target swiftChatter</string>
+			<string>Build target PromisesObjC</string>
 			<key>uniqueIdentifier</key>
-			<string>935F1244-EBF7-41B2-B31C-FA1C31AF6606</string>
+			<string>9DD6EF90-8744-4763-8FEA-46D54A7C4FEB</string>
 		</dict>
 		<key>A817FE5D-63CD-49BA-A0A3-E004C2DDD54D</key>
 		<dict>
