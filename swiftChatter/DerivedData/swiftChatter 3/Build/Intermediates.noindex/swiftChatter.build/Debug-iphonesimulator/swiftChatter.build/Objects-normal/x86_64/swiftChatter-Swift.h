@@ -281,9 +281,12 @@ SWIFT_CLASS("_TtC12swiftChatter13SceneDelegate")
 
 SWIFT_CLASS("_TtC12swiftChatter8SignUpVC")
 @interface SignUpVC : UIViewController
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TestLabel;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified Email;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified LastName;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified FirstName;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified Username;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified Password;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified InvalidEmail;
 - (IBAction)Submit:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
