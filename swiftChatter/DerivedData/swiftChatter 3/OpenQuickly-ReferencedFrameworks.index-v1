@@ -15,23 +15,23 @@
 	<string>FirebaseAnalytics</string>
 	<string>sys</string>
 	<string>UIKit</string>
-	<string>netinet</string>
-	<string>FirebaseAppCheck</string>
 	<string>FirebasePerformance</string>
+	<string>FirebaseAppCheck</string>
+	<string>FirebaseRemoteConfig</string>
 	<string>FirebaseAppDistribution</string>
 	<string>FBLPromises</string>
-	<string>WatchKit</string>
 	<string>FirebaseAuth</string>
-	<string>FirebaseRemoteConfig</string>
+	<string>WatchKit</string>
+	<string>netinet</string>
 	<string>SystemConfiguration</string>
 	<string>FirebaseMessaging</string>
 	<string>dispatch</string>
-	<string>GoogleUtilities</string>
-	<string>FirebaseCore</string>
 	<string>FirebaseCrashlytics</string>
-	<string>FirebaseStorage</string>
-	<string>FirebaseDynamicLinks</string>
+	<string>FirebaseCore</string>
+	<string>GoogleUtilities</string>
 	<string>GoogleDataTransport</string>
+	<string>FirebaseDynamicLinks</string>
+	<string>FirebaseStorage</string>
 	<string>FirebaseFunctions</string>
 	<string>CoreTelephony</string>
 	<string>objc</string>
