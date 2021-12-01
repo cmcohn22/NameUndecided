@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8768AC35A2F68C1420F56C68C03143F3D1BF087B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8768AC35A2F68C1420F56C68C03143F3D1BF087B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CA7E1C45-944A-401B-8BB1-600535A97DA3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8768AC35A2F68C1420F56C68C03143F3D1BF087B" : "NameUndecided\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "swiftChatter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "swiftChatter\/swiftChatter.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git@github.com:cmcohn22\/NameUndecided.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8768AC35A2F68C1420F56C68C03143F3D1BF087B"
+    }
+  ]
+}
