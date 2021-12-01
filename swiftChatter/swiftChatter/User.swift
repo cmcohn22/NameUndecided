@@ -8,24 +8,34 @@
 
 import Foundation
 import SwiftUI
+import CoreLocation
 
-class User {
+struct User {
     var username: String?
+    var password: String?
+    var first_name: String?
+    var last_name: String?
+    var email: String?
+    @UserPropWrapper var image: String?
     var lat: String?
     var long: String?
-    
-    func setLat() -> String {
-        var locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
-
-        var currentLocation: CLLocation!
-
-        if
-           CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-           CLLocationManager.authorizationStatus() ==  .authorizedAlways
-        {
-            currentLocation = locManager.location
+}
+@propertyWrapper
+struct UserPropWrapper {
+    private var _value: String?
+    var wrappedValue: String? {
+        get { _value }
+        set {
+            guard let newValue = newValue else {
+                _value = nil
+                return
+            }
+            _value = (newValue == "null" || newValue.isEmpty) ? nil : newValue
         }
+    }
+    
+    init(wrappedValue: String?) {
+        self.wrappedValue = wrappedValue
     }
 }
 

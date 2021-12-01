@@ -1,20 +1,16 @@
 //
 //  AppDelegate.swift
-//  switChatter
+//  swiftChatter
 //
-//  Created by sugih on 7/23/20.
-//  Copyright © 2020 The Regents of the University of Michigan. All rights reserved.
+//  Created by Mac Pro PD on 9/14/21.
 //
 
 import UIKit
 
-import Firebase
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
         // Override point for customization after application launch.
         return true
     }
@@ -35,4 +31,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 

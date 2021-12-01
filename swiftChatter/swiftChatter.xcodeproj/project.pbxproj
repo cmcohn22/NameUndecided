@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		192CB5C4273030A20074CA36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192CB5C3273030A20074CA36 /* GoogleService-Info.plist */; };
 		192CB5C6273042630074CA36 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CB5C5273042630074CA36 /* StartViewController.swift */; };
-		555486312756BCBD0015FDB6 /* swiftChatter in Resources */ = {isa = PBXBuildFile; fileRef = 555486302756BCBD0015FDB6 /* swiftChatter */; };
 		555486332756BCE20015FDB6 /* Chatt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555486322756BCE20015FDB6 /* Chatt.swift */; };
 		555486352756BE100015FDB6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555486342756BE100015FDB6 /* User.swift */; };
 		555486372756BE710015FDB6 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555486362756BE710015FDB6 /* UserStore.swift */; };
+		55B0321227570F7B00A67C65 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0321127570F7B00A67C65 /* SignUpVC.swift */; };
 		B4FF18AC115414DD6B3B4F6F /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */; };
 		FC03AB4224CA88800013DA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4124CA88800013DA53 /* AppDelegate.swift */; };
 		FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4324CA88800013DA53 /* SceneDelegate.swift */; };
@@ -32,10 +32,10 @@
 		1F6B94E2C76EE7949A1E3438 /* Pods-swiftChatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.debug.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.debug.xcconfig"; sourceTree = "<group>"; };
 		2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DFA02A18C4CB5D5CC7F07 /* Pods-swiftChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.release.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.release.xcconfig"; sourceTree = "<group>"; };
-		555486302756BCBD0015FDB6 /* swiftChatter */ = {isa = PBXFileReference; lastKnownFileType = folder; name = swiftChatter; sourceTree = "<group>"; };
 		555486322756BCE20015FDB6 /* Chatt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatt.swift; sourceTree = "<group>"; };
 		555486342756BE100015FDB6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		555486362756BE710015FDB6 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		55B0321127570F7B00A67C65 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		FC03AB3E24CA88800013DA53 /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC03AB4124CA88800013DA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC03AB4324CA88800013DA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,12 +103,12 @@
 			children = (
 				FC03AB4124CA88800013DA53 /* AppDelegate.swift */,
 				FC03AB4324CA88800013DA53 /* SceneDelegate.swift */,
-				555486302756BCBD0015FDB6 /* swiftChatter */,
 				FCAAE87A256955D300ABEEFF /* ChattStore.swift */,
 				FC28600124CBDFBC00B60A29 /* ChattTableCell.swift */,
 				555486322756BCE20015FDB6 /* Chatt.swift */,
 				555486342756BE100015FDB6 /* User.swift */,
 				555486362756BE710015FDB6 /* UserStore.swift */,
+				55B0321127570F7B00A67C65 /* SignUpVC.swift */,
 				FC03AB4524CA88800013DA53 /* MainVC.swift */,
 				FC285FF924CBCAAD00B60A29 /* PostVC.swift */,
 				FC03AB4A24CA88830013DA53 /* Assets.xcassets */,
@@ -181,7 +181,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				555486312756BCBD0015FDB6 /* swiftChatter in Resources */,
 				FC285FFE24CBCD8900B60A29 /* Default-568h@2x.png in Resources */,
 				FC03AB4B24CA88830013DA53 /* Assets.xcassets in Resources */,
 				192CB5C4273030A20074CA36 /* GoogleService-Info.plist in Resources */,
@@ -242,6 +241,7 @@
 				FC03AB4624CA88800013DA53 /* MainVC.swift in Sources */,
 				192CB5C6273042630074CA36 /* StartViewController.swift in Sources */,
 				555486332756BCE20015FDB6 /* Chatt.swift in Sources */,
+				55B0321227570F7B00A67C65 /* SignUpVC.swift in Sources */,
 				FC28600224CBDFBC00B60A29 /* ChattTableCell.swift in Sources */,
 				FCAAE87B256955D300ABEEFF /* ChattStore.swift in Sources */,
 				555486352756BE100015FDB6 /* User.swift in Sources */,

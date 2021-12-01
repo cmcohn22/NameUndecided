@@ -9,7 +9,7 @@ import UIKit
 
 final class ChattTableCell: UITableViewCell {
     
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var timestampLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var groupChatName: UILabel!
+    @IBOutlet weak var latestMessage: UILabel!
+    @IBOutlet weak var timeStamp: UILabel!
 }

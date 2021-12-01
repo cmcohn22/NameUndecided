@@ -8,34 +8,21 @@
 import UIKit
 
 final class PostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-        
-    var locManager = CLLocationManager()
-    locManager.requestWhenInUseAuthorization()
-    
-    var currentLocation: CLLocation!
 
-    if
-       CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-       CLLocationManager.authorizationStatus() ==  .authorizedAlways
-    {
-        currentLocation = locManager.location
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    print("\(currentLocation.coordinate.longitude)")
-    print("\(currentLocation.coordinate.latitude)")
     
     @IBOutlet weak var chattname: UITextField!
     @IBOutlet weak var chattdescription: UITextField!
-    @IBAction func submitNewChatt(_ sender: Any, currentLocation) {
+    @IBAction func submitNewChatt(_ sender: Any) {
         let chatt = Chatt(name: self.chattname.text,
                              description: self.chattdescription.text,
-                             lat: "\(currentLocation.coordinate.latitude)",
-                             long: "\(currentLocation.coordinate.longitude)",
+                             lat: nil,
+                             long: nil,
                              radius: nil)
         
         ChattStore.shared.createChatt(chatt, image: postImage.image)
@@ -64,8 +51,6 @@ final class PostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             imagePickerController.delegate = self
             imagePickerController.allowsEditing = true
             imagePickerController.mediaTypes = ["public.image"]
-            imagePickerController.videoMaximumDuration = TimeInterval(5) // secs
-            imagePickerController.videoQuality = .typeHigh
             present(imagePickerController, animated: true, completion: nil)
         }
 }

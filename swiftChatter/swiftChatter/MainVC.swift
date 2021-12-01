@@ -12,11 +12,11 @@ final class MainVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // setup refreshControler here later
-        // iOS 14 or newer
-        refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
-        
-        refreshTimeline(nil)
+//        // setup refreshControler here later
+//        // iOS 14 or newer
+//        refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
+//
+//        refreshTimeline(nil)
     }
 
     /*
@@ -24,18 +24,18 @@ final class MainVC: UITableViewController {
         refreshTimeline()
     }*/
     
-    // MARK:-
-    private func refreshTimeline(_ sender: UIAction?) {
-        ChattStore.shared.getChatts { success in
-            DispatchQueue.main.async {
-                if success {
-                    self.tableView.reloadData()
-                }
-                // stop the refreshing animation upon completion:
-                self.refreshControl?.endRefreshing()
-            }
-        }
-    }
+//    // MARK:-
+//    private func refreshTimeline(_ sender: UIAction?) {
+//        ChattStore.shared.getChatts { success in
+//            DispatchQueue.main.async {
+//                if success {
+//                    self.tableView.reloadData()
+//                }
+//                // stop the refreshing animation upon completion:
+//                self.refreshControl?.endRefreshing()
+//            }
+//        }
+//    }
     
     // MARK:- TableView handlers
     
@@ -65,9 +65,9 @@ final class MainVC: UITableViewController {
 
         let chatt = ChattStore.shared.chatts[indexPath.row]
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
-        cell.usernameLabel.text = chatt.username
-        cell.messageLabel.text = chatt.message
-        cell.timestampLabel.text = chatt.timestamp
+        cell.groupChatName.text = chatt.name
+        cell.latestMessage.text = chatt.recent_message_content
+        cell.timeStamp.text = chatt.recent_message_timestamp
         
         return cell
     }
