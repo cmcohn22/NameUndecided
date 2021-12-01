@@ -5,11 +5,17 @@
 //  Created by sugih on 7/24/20.
 //  Copyright © 2020 The Regents of the University of Michigan. All rights reserved.
 //
+
 struct Chatt {
-    var username: String?
-    var message: String?
-    var timestamp: String?
-    @ChattPropWrapper var audio: String?
+    var chat_id: String?
+    var name: String?
+    var description: String?
+    var lat: String?
+    var long: String?
+    var radius: String?
+    var recent_message_content: String?
+    var recent_message_timestamp: String?
+    @ChattPropWrapper var image: String?
 }
 
 @propertyWrapper
