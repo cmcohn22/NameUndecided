@@ -1,0 +1,59 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "6f2bb6c6a82d7bec135e89c6b5287c879d9809d9229bf01c28492c93e8ab1362"
+    }
+  ],
+  "containerPath" : "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter 3.xcworkspace",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator15.0",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/DerivedData/swiftChatter 3/Index/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/DerivedData/swiftChatter 3/Index/Build/Products",
+      "derivedDataPath" : "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/DerivedData/swiftChatter 3/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/DerivedData/swiftChatter 3/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/DerivedData/swiftChatter 3/Index/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "INDEX_ARENA_INFO_REGULAR_BUILD_PRODUCTS_DIR" : "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/DerivedData/swiftChatter 3/Build/Products",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
