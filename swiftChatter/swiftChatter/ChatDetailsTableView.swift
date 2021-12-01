@@ -9,8 +9,43 @@
 import Foundation
 import UIKit
 
+struct User {
+    var username: String
+    var first_name: String
+    var last_name: String
+    var admin: Bool
+}
+
+struct MnkyChat_info {
+    var chatID: String?
+    var chatName: String?
+    var chatDescription: String?
+    var timestamp: String?
+    var users: [User]?
+}
+enum typeEnum {
+    case file
+    case message
+}
+
+struct Message {
+    var type: typeEnum?
+    var message_id: String?
+    var first_name: String?
+    var last_name: String?
+    var username: String?
+    var profile_pic: String?
+    var content: String?
+    //var likes: [User]?
+    
+}
+
 class ChatDetailsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
+    //get api/chat-info, fills out mnkychat_info struct
+    private var mnkyChat_info: MnkyChat_info = MnkyChat_info()
+    //get api/messages
+    private var messages: [Message] = [Message]()
     private var messageViewModel: MessageViewModel = MessageViewModel()
     var nickName: String?
     
