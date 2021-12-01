@@ -13,5 +13,6 @@ target 'swiftChatter' do
   use_frameworks!
 
   # Pods for swiftChatter
-
+  pod 'SocketIO'
+  
 end
