@@ -1,7 +1,4 @@
 PODS:
-  - BlocksKit/DynamicDelegate (2.2.5)
-  - Emitter (0.0.9):
-    - BlocksKit/DynamicDelegate
   - Firebase/Analytics (8.9.0):
     - Firebase/Core
   - Firebase/Core (8.9.0):
@@ -90,17 +87,16 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
-  - SocketIO (0.0.1):
-    - Emitter
+  - Socket.IO-Client-Swift (16.0.1):
+    - Starscream (~> 4.0)
+  - Starscream (4.0.4)
 
 DEPENDENCIES:
   - Firebase/Analytics
-  - SocketIO
+  - Socket.IO-Client-Swift
 
 SPEC REPOS:
   trunk:
-    - BlocksKit
-    - Emitter
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -111,11 +107,10 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
-    - SocketIO
+    - Socket.IO-Client-Swift
+    - Starscream
 
 SPEC CHECKSUMS:
-  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
-  Emitter: cf50bf44fc8817535018fbd6c4fd576b87803e78
   Firebase: 13d8d96499e2635428d5bf0ec675df21f95d9a95
   FirebaseAnalytics: 3a11ed901750e1ebcbe35e75915ff079878ea385
   FirebaseCore: 599ee609343eaf4941bd188f85e3aa077ffe325b
@@ -126,8 +121,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: 684ee790a24f73ebb2d1d966e9711c203f2a4237
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  SocketIO: 52f4b693419f30f831ac567dc306575384128920
+  Socket.IO-Client-Swift: c116d6dc9fd6be9c259bacfe143f8725bce7d79e
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
 
-PODFILE CHECKSUM: e7cb59fe331f7e2c2fa8190906fda1b4a9188f6b
+PODFILE CHECKSUM: b59bc2d3bec1ed406ba7f98d4c2ad4ad1730cc42
 
 COCOAPODS: 1.11.2

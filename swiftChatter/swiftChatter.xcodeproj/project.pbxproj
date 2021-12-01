@@ -11,14 +11,22 @@
 		192CB5C6273042630074CA36 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CB5C5273042630074CA36 /* StartViewController.swift */; };
 		1953AB092756A6C700AC3B26 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1953AB082756A6C700AC3B26 /* SignUpVC.swift */; };
 		1953AB0B2756A6E000AC3B26 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1953AB0A2756A6E000AC3B26 /* LogInVC.swift */; };
+		5F0C12622757DDB5003E10ED /* KxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C12612757DDB5003E10ED /* KxSwift.swift */; };
+		5F0C12642757DDD8003E10ED /* Application-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C12632757DDD8003E10ED /* Application-Ext.swift */; };
+		5F0C12662757DDEE003E10ED /* TableView-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C12652757DDEE003E10ED /* TableView-Ext.swift */; };
 		5F37F14827568784005229A7 /* CreateMnkyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F14727568784005229A7 /* CreateMnkyChat.swift */; };
+		5F74C9422757E14C00601E10 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74C9412757E14C00601E10 /* User.swift */; };
+		5F74C9442757E15C00601E10 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74C9432757E15C00601E10 /* Message.swift */; };
+		5F74C9462757E1D600601E10 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74C9452757E1D600601E10 /* ChatViewModel.swift */; };
+		5F74C94E2757E5D300601E10 /* Cells in Resources */ = {isa = PBXBuildFile; fileRef = 5F74C94D2757E5D200601E10 /* Cells */; };
 		5FF87BDE27571DBA00D16F72 /* ChatDetailsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BDD27571DBA00D16F72 /* ChatDetailsTableView.swift */; };
 		5FF87BE0275721D400D16F72 /* SocketFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BDF275721D400D16F72 /* SocketFunctions.swift */; };
 		5FF87BE2275723AB00D16F72 /* ChatListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BE1275723AB00D16F72 /* ChatListTableView.swift */; };
 		5FF87BE427572B0800D16F72 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BE327572B0800D16F72 /* ChatVC.swift */; };
 		5FF87BE62757B67B00D16F72 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BE52757B67B00D16F72 /* MessageViewModel.swift */; };
-		5FF87BE82757CA2800D16F72 /* ActiveChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BE72757CA2800D16F72 /* ActiveChats.swift */; };
-		5FF87BEA2757CA3300D16F72 /* ActiveChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BE92757CA3300D16F72 /* ActiveChatsVC.swift */; };
+		5FF87BE82757CA2800D16F72 /* bob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BE72757CA2800D16F72 /* bob.swift */; };
+		5FF87BEA2757CA3300D16F72 /* bobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BE92757CA3300D16F72 /* bobVC.swift */; };
+		5FF87BEC2757CD6200D16F72 /* MessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF87BEB2757CD6200D16F72 /* MessageTableCell.swift */; };
 		B4FF18AC115414DD6B3B4F6F /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */; };
 		FC03AB4224CA88800013DA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4124CA88800013DA53 /* AppDelegate.swift */; };
 		FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4324CA88800013DA53 /* SceneDelegate.swift */; };
@@ -41,14 +49,22 @@
 		1F6B94E2C76EE7949A1E3438 /* Pods-swiftChatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.debug.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.debug.xcconfig"; sourceTree = "<group>"; };
 		2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DFA02A18C4CB5D5CC7F07 /* Pods-swiftChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.release.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.release.xcconfig"; sourceTree = "<group>"; };
+		5F0C12612757DDB5003E10ED /* KxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KxSwift.swift; sourceTree = "<group>"; };
+		5F0C12632757DDD8003E10ED /* Application-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application-Ext.swift"; sourceTree = "<group>"; };
+		5F0C12652757DDEE003E10ED /* TableView-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView-Ext.swift"; sourceTree = "<group>"; };
 		5F37F14727568784005229A7 /* CreateMnkyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMnkyChat.swift; sourceTree = "<group>"; };
+		5F74C9412757E14C00601E10 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5F74C9432757E15C00601E10 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		5F74C9452757E1D600601E10 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		5F74C94D2757E5D200601E10 /* Cells */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cells; sourceTree = "<group>"; };
 		5FF87BDD27571DBA00D16F72 /* ChatDetailsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailsTableView.swift; sourceTree = "<group>"; };
 		5FF87BDF275721D400D16F72 /* SocketFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketFunctions.swift; sourceTree = "<group>"; };
 		5FF87BE1275723AB00D16F72 /* ChatListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableView.swift; sourceTree = "<group>"; };
 		5FF87BE327572B0800D16F72 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		5FF87BE52757B67B00D16F72 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
-		5FF87BE72757CA2800D16F72 /* ActiveChats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChats.swift; sourceTree = "<group>"; };
-		5FF87BE92757CA3300D16F72 /* ActiveChatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatsVC.swift; sourceTree = "<group>"; };
+		5FF87BE72757CA2800D16F72 /* bob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bob.swift; sourceTree = "<group>"; };
+		5FF87BE92757CA3300D16F72 /* bobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bobVC.swift; sourceTree = "<group>"; };
+		5FF87BEB2757CD6200D16F72 /* MessageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableCell.swift; sourceTree = "<group>"; };
 		FC03AB3E24CA88800013DA53 /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC03AB4124CA88800013DA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC03AB4324CA88800013DA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,12 +136,20 @@
 				FC285FFF24CBDF7D00B60A29 /* Chatt.swift */,
 				FCAAE87A256955D300ABEEFF /* ChattStore.swift */,
 				FC28600124CBDFBC00B60A29 /* ChattTableCell.swift */,
+				5F74C9412757E14C00601E10 /* User.swift */,
+				5F74C9432757E15C00601E10 /* Message.swift */,
+				5F74C9452757E1D600601E10 /* ChatViewModel.swift */,
+				5FF87BE52757B67B00D16F72 /* MessageViewModel.swift */,
 				5FF87BDD27571DBA00D16F72 /* ChatDetailsTableView.swift */,
 				5FF87BE1275723AB00D16F72 /* ChatListTableView.swift */,
-				5FF87BE52757B67B00D16F72 /* MessageViewModel.swift */,
+				5F0C12612757DDB5003E10ED /* KxSwift.swift */,
+				5FF87BEB2757CD6200D16F72 /* MessageTableCell.swift */,
 				5FF87BE327572B0800D16F72 /* ChatVC.swift */,
 				5FF87BDF275721D400D16F72 /* SocketFunctions.swift */,
 				FC03AB4524CA88800013DA53 /* MainVC.swift */,
+				5F74C94D2757E5D200601E10 /* Cells */,
+				5F0C12632757DDD8003E10ED /* Application-Ext.swift */,
+				5F0C12652757DDEE003E10ED /* TableView-Ext.swift */,
 				FC285FF924CBCAAD00B60A29 /* PostVC.swift */,
 				5F37F14727568784005229A7 /* CreateMnkyChat.swift */,
 				FC03AB4A24CA88830013DA53 /* Assets.xcassets */,
@@ -134,8 +158,8 @@
 				FC03AB4F24CA88830013DA53 /* Info.plist */,
 				192CB5C3273030A20074CA36 /* GoogleService-Info.plist */,
 				192CB5C5273042630074CA36 /* StartViewController.swift */,
-				5FF87BE72757CA2800D16F72 /* ActiveChats.swift */,
-				5FF87BE92757CA3300D16F72 /* ActiveChatsVC.swift */,
+				5FF87BE72757CA2800D16F72 /* bob.swift */,
+				5FF87BE92757CA3300D16F72 /* bobVC.swift */,
 				1953AB082756A6C700AC3B26 /* SignUpVC.swift */,
 				1953AB0A2756A6E000AC3B26 /* LogInVC.swift */,
 			);
@@ -202,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F74C94E2757E5D300601E10 /* Cells in Resources */,
 				FC285FFE24CBCD8900B60A29 /* Default-568h@2x.png in Resources */,
 				FC03AB4B24CA88830013DA53 /* Assets.xcassets in Resources */,
 				192CB5C4273030A20074CA36 /* GoogleService-Info.plist in Resources */,
@@ -261,22 +286,29 @@
 			files = (
 				5FF87BDE27571DBA00D16F72 /* ChatDetailsTableView.swift in Sources */,
 				FC03AB4624CA88800013DA53 /* MainVC.swift in Sources */,
-				5FF87BEA2757CA3300D16F72 /* ActiveChatsVC.swift in Sources */,
+				5FF87BEA2757CA3300D16F72 /* bobVC.swift in Sources */,
 				5FF87BE62757B67B00D16F72 /* MessageViewModel.swift in Sources */,
 				192CB5C6273042630074CA36 /* StartViewController.swift in Sources */,
 				FC28600024CBDF7D00B60A29 /* Chatt.swift in Sources */,
 				FC28600224CBDFBC00B60A29 /* ChattTableCell.swift in Sources */,
 				FCAAE87B256955D300ABEEFF /* ChattStore.swift in Sources */,
+				5F0C12622757DDB5003E10ED /* KxSwift.swift in Sources */,
 				1953AB092756A6C700AC3B26 /* SignUpVC.swift in Sources */,
 				FC03AB4224CA88800013DA53 /* AppDelegate.swift in Sources */,
-				5FF87BE82757CA2800D16F72 /* ActiveChats.swift in Sources */,
+				5FF87BE82757CA2800D16F72 /* bob.swift in Sources */,
 				FC285FFA24CBCAAD00B60A29 /* PostVC.swift in Sources */,
+				5F74C9462757E1D600601E10 /* ChatViewModel.swift in Sources */,
 				5FF87BE427572B0800D16F72 /* ChatVC.swift in Sources */,
+				5FF87BEC2757CD6200D16F72 /* MessageTableCell.swift in Sources */,
 				5FF87BE0275721D400D16F72 /* SocketFunctions.swift in Sources */,
+				5F0C12642757DDD8003E10ED /* Application-Ext.swift in Sources */,
+				5F0C12662757DDEE003E10ED /* TableView-Ext.swift in Sources */,
 				1953AB0B2756A6E000AC3B26 /* LogInVC.swift in Sources */,
 				5F37F14827568784005229A7 /* CreateMnkyChat.swift in Sources */,
 				FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */,
+				5F74C9442757E15C00601E10 /* Message.swift in Sources */,
 				5FF87BE2275723AB00D16F72 /* ChatListTableView.swift in Sources */,
+				5F74C9422757E14C00601E10 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

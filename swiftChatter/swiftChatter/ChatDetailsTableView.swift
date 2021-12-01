@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct User {
+struct mUser {
     var username: String?
     var first_name: String?
     var last_name: String?
@@ -21,14 +21,14 @@ struct MnkyChat_info {
     var chatName: String?
     var chatDescription: String?
     var timestamp: String?
-    var users: [User?]
+    var users: [mUser?]
 }
 enum typeEnum {
     case file
     case message
 }
 
-struct Message {
+struct mMessage {
     var type: typeEnum?
     var message_id: String?
     var first_name: String?
@@ -43,9 +43,9 @@ struct Message {
 class ChatDetailsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     //get api/chat-info, fills out mnkychat_info struct
-    private var mnkyChat_info: MnkyChat_info = MnkyChat_info(users : [User]())
+    private var mnkyChat_info: MnkyChat_info = MnkyChat_info(users : [mUser]())
     //get api/messages
-    private var messages: [Message] = [Message]()
+    private var messages: [mMessage] = [mMessage]()
     
     private let nFields =  Mirror(reflecting: Chatt()).children.count
     private let serverUrl = "http://127.0.0.1:8000/"
@@ -96,7 +96,7 @@ class ChatDetailsTableView: UITableView, UITableViewDelegate, UITableViewDataSou
             //for chatData in chat_info{
                 print("hi")
                 if userEntry.count == self.nFields {
-                    self.mnkyChat_info.users.append(User(username: userEntry["username"] as? String,
+                    self.mnkyChat_info.users.append(mUser(username: userEntry["username"] as? String,
                                                          first_name: userEntry["first_name"] as? String,
                                                          last_name: userEntry["last_name"] as? String,
                                                          admin: userEntry["admin"] as? Bool))
