@@ -14,24 +14,50 @@
             <objects>
                 <viewController id="ymk-YN-O30" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4pV-m1-SK0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1046"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-NU-TjS">
-                                <rect key="frame" x="0.0" y="104" width="414" height="639"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="g7t-EE-kPH"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="zA9-kc-6nv"/>
-                            </scrollView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Temporary Message" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="D71-E2-iqI">
-                                <rect key="frame" x="0.0" y="751" width="414" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Temporary Message" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="D71-E2-iqI">
+                                <rect key="frame" x="0.0" y="955" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVQ-GW-xcz">
+                                <rect key="frame" x="0.0" y="56" width="414" height="891"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAG-w6-W5l">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="q42-2P-66T"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZAG-w6-W5l" firstAttribute="leading" secondItem="3Rc-JC-GRo" secondAttribute="leading" id="DYM-Ji-OXA"/>
+                                    <constraint firstItem="ZAG-w6-W5l" firstAttribute="top" secondItem="4Qq-SO-ZT0" secondAttribute="top" id="Dfp-e2-2xG"/>
+                                    <constraint firstItem="4Qq-SO-ZT0" firstAttribute="width" secondItem="ZAG-w6-W5l" secondAttribute="width" id="J0r-LD-TE8"/>
+                                    <constraint firstItem="ZAG-w6-W5l" firstAttribute="leading" secondItem="SVQ-GW-xcz" secondAttribute="leading" id="MLZ-4U-v1t"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZAG-w6-W5l" secondAttribute="bottom" id="Mgr-rd-L3m"/>
+                                    <constraint firstItem="ZAG-w6-W5l" firstAttribute="trailing" secondItem="3Rc-JC-GRo" secondAttribute="trailing" constant="414" id="OqD-YF-uCM"/>
+                                    <constraint firstItem="ZAG-w6-W5l" firstAttribute="top" secondItem="3Rc-JC-GRo" secondAttribute="top" id="sp1-b9-jaJ"/>
+                                    <constraint firstItem="ZAG-w6-W5l" firstAttribute="bottom" secondItem="3Rc-JC-GRo" secondAttribute="bottom" id="t0h-5p-w0g"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="3Rc-JC-GRo"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="4Qq-SO-ZT0"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lTx-JA-aU9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="SVQ-GW-xcz" secondAttribute="bottom" constant="99" id="0TK-C2-dgb"/>
+                            <constraint firstItem="SVQ-GW-xcz" firstAttribute="top" secondItem="lTx-JA-aU9" secondAttribute="top" id="16j-uu-WGF"/>
+                            <constraint firstItem="SVQ-GW-xcz" firstAttribute="leading" secondItem="lTx-JA-aU9" secondAttribute="leading" id="1l9-rF-k4L"/>
+                            <constraint firstItem="SVQ-GW-xcz" firstAttribute="trailing" secondItem="D71-E2-iqI" secondAttribute="trailing" id="5ou-Wq-6Nd"/>
+                            <constraint firstItem="SVQ-GW-xcz" firstAttribute="leading" secondItem="D71-E2-iqI" secondAttribute="leading" id="Icm-05-qbo"/>
+                            <constraint firstItem="SVQ-GW-xcz" firstAttribute="trailing" secondItem="lTx-JA-aU9" secondAttribute="trailing" id="XTf-pw-hgS"/>
+                            <constraint firstItem="D71-E2-iqI" firstAttribute="top" secondItem="SVQ-GW-xcz" secondAttribute="bottom" constant="8" symbolic="YES" id="cON-F6-Spn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat Name" id="P9V-4V-tiL">
                         <barButtonItem key="rightBarButtonItem" title="GC Details" style="plain" id="l2L-Xs-m5i">
@@ -43,6 +69,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <size key="freeformSize" width="414" height="1100"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rm5-Ll-xKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
