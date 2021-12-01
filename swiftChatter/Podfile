@@ -8,5 +8,7 @@ target 'swiftChatter' do
   # Pods for swiftChatter
   pod 'SDWebImage'
   pod 'Alamofire'
+  pod 'MessageKit'
+  pod 'Scaledrone', '~> 0.3.0'
 
 end

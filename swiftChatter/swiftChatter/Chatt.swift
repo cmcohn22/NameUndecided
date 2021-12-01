@@ -17,7 +17,16 @@ struct Chatt {
     var recent_message_content: String?
     var recent_message_timestamp: String?
     @ChattPropWrapper var image: String?
+    var messages = [Message]()
+    
+    struct Message {
+        var content: String?
+        var timeStamp: String?
+    }
+    
 }
+
+
 
 @propertyWrapper
 struct ChattPropWrapper {

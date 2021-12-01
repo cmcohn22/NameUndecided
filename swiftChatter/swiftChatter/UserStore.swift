@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Alamofire
 
+
 final class UserStore: ObservableObject {
     static let shared = UserStore() // create one instance of the class to be shared
     private init() {}                // and make the constructor private so no other
@@ -52,7 +53,33 @@ final class UserStore: ObservableObject {
                     }
                 }
     }
-    
+    @available(iOS 15.0.0, *)
+    func login(_ user: User) async {
+        guard let apiUrl = URL(string: serverUrl+"login/") else {
+            print("createUser: Bad URL")
+            return
+        }
+        let jsonObj = ["username": user.username,
+                       "password": user.password]
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
+            print("postChatt: jsonData serialization error")
+            return
+        }
+        
+        var request = URLRequest(url: apiUrl)
+        request.httpMethod = "POST"
+        request.httpBody = jsonData
+        do {
+            let (_, response) = try await URLSession.shared.data(for: request)
+
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                print("postChatt: HTTP STATUS: \(httpStatus.statusCode)")
+                return
+            }
+        } catch {
+            print("postChatt: NETWORKING ERROR")
+        }
+    }
     
 }
 

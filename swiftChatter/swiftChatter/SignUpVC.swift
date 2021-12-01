@@ -29,6 +29,17 @@ final class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey : Any]) {
+            if let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String {
+                if mediaType  == "public.image" {
+                    profilePic.image = (info[UIImagePickerController.InfoKey.editedImage] as? UIImage ??
+                                        info[UIImagePickerController.InfoKey.originalImage] as? UIImage)?
+                        .resizeImage(targetSize: CGSize(width: 240, height: 128))
+                }
+            }
+            picker.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -68,7 +79,6 @@ final class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                         last_name: self.lastName.text,
                         email: self.email.text)
         UserStore.shared.createUser(user, image: profilePic.image)
-        dismiss(animated: true, completion: nil)
         
     }
     

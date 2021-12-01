@@ -1,22 +1,40 @@
 PODS:
   - Alamofire (5.4.4)
+  - InputBarAccessoryView (5.4.0):
+    - InputBarAccessoryView/Core (= 5.4.0)
+  - InputBarAccessoryView/Core (5.4.0)
+  - MessageKit (3.7.0):
+    - InputBarAccessoryView (~> 5.4.0)
+  - Scaledrone (0.3.0):
+    - Starscream (~> 2.1.0)
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
+  - Starscream (2.1.1)
 
 DEPENDENCIES:
   - Alamofire
+  - MessageKit
+  - Scaledrone (~> 0.3.0)
   - SDWebImage
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - InputBarAccessoryView
+    - MessageKit
+    - Scaledrone
     - SDWebImage
+    - Starscream
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  InputBarAccessoryView: 74d471ab1fa1736806be50328df79257e52865a9
+  MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
+  Scaledrone: 25e5e70107222ed50046fc0ed9569915bdb85262
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  Starscream: 142bd8ef24592d985daee9fa48c936070b85b15f
 
-PODFILE CHECKSUM: a187d627d7beb0b4755c9fa5a4249783850d32f9
+PODFILE CHECKSUM: a18c99d2a3e0dc400ff812c01d22eb7a97356586
 
 COCOAPODS: 1.11.2

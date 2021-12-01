@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "25D257BD-5B13-4382-8A3D-96A6A25E9CC1"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BA3C7CC-53E7-4241-B1ED-F10E0880E3E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftChatter/SignUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "SignUpVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5BA3C7CC-53E7-4241-B1ED-F10E0880E3E5 - 6a3e1d634b7f756c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.SignUpVC.userName.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macpropd/Desktop/NameUndecided/swiftChatter/swiftChatter/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "5BA3C7CC-53E7-4241-B1ED-F10E0880E3E5 - 666f566b2cc74b78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.SignUpVC.userName.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macpropd/Desktop/NameUndecided/swiftChatter/swiftChatter/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "5BA3C7CC-53E7-4241-B1ED-F10E0880E3E5 - 5d37a16025d18897"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.SignUpVC.userName.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macpropd/Desktop/NameUndecided/swiftChatter/swiftChatter/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "5BA3C7CC-53E7-4241-B1ED-F10E0880E3E5 - e43bb1ad90007331"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.SignUpVC.userName.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macpropd/Desktop/NameUndecided/swiftChatter/swiftChatter/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "5BA3C7CC-53E7-4241-B1ED-F10E0880E3E5 - df568c5b9c7dd016"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.SignUpVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; swiftChatter.SignUpVC"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macpropd/Desktop/NameUndecided/swiftChatter/swiftChatter/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "187">
+               </Location>
+               <Location
+                  uuid = "5BA3C7CC-53E7-4241-B1ED-F10E0880E3E5 - ff67e116ae6bb25c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.SignUpVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;swiftChatter.SignUpVC&gt;"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macpropd/Desktop/NameUndecided/swiftChatter/swiftChatter/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

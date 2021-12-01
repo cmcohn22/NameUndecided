@@ -17,8 +17,14 @@ struct User {
     var last_name: String?
     var email: String?
     @UserPropWrapper var image: String?
-    var lat: String?
-    var long: String?
+    var lat: String!
+    var long: String!
+    
+    mutating func setLatLong(_ currentLocation: CLLocation){
+        lat = "\(currentLocation.coordinate.latitude)"
+        long = "\(currentLocation.coordinate.longitude)"
+    }
+    
 }
 @propertyWrapper
 struct UserPropWrapper {

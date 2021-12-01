@@ -53,5 +53,28 @@ final class ChattStore: ObservableObject {
                 }
     }
     
+    func getChatts(_ completion: ((Bool) -> ())?){
+        let chatt1 = Chatt(chat_id: "80a97", name: "Music Lovers", description: "Come here to talk everything music", lat: "72.8561644", long: "19.0176147", radius: "2.0338", recent_message_content: "Hey, who likes Young Thug?", recent_message_timestamp: "10:53:58.694302", image: nil)
+        
+        self.chatts.append(chatt1)
+        
+        let chatt2 = Chatt(chat_id: "a16z8", name: "EECS 441", description: "Mobile Application Dev", lat: "72.8561644", long: "19.0176147", radius: "2.0338", recent_message_content: "Gotta Love EECS 441", recent_message_timestamp: "02:22:58.694302", image: nil)
+        
+        self.chatts.append(chatt2)
+        
+    }
+    
+    
+    func withinRange(_ givLat: String,_ givLong: String,_ radius:String,_ testLat: String,_ testLong: String) -> Bool {
+        guard let newFloat = Float(radius) else { return false }
+        let newRadius = newFloat / 69.0
+        if Float(testLat)! <= Float(givLat)! + newRadius && Float(testLat)! >= Float(givLat)! - newRadius {
+            if Float(testLong)! <= Float(givLong)! + newRadius && Float(testLong)! >= Float(givLong)! - newRadius{
+                return true
+            }
+        }
+        return false
+    }
+    
     
 }
