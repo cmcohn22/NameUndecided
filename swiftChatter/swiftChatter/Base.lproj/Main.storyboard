@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dXJ-b2-v0o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dXJ-b2-v0o">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,7 +51,7 @@
         <!--MnkyChat-->
         <scene sceneID="eK2-Jn-DvV">
             <objects>
-                <tableViewController id="TTV-uT-QlR" customClass="MainVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="TTV-uT-QlR" customClass="ActiveChatsVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GsI-Ba-nvz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,9 +73,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GroupChat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJl-ZG-c6H" userLabel="Username Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GroupChat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJl-ZG-c6H" userLabel="GroupChat Name Label">
                                             <rect key="frame" x="20" y="11" width="132.5" height="20.5"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="username"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="groupchatname"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -112,9 +112,9 @@
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <connections>
-                                    <outlet property="messageLabel" destination="dJT-FC-iMD" id="Gzg-rM-pM1"/>
-                                    <outlet property="timestampLabel" destination="QTC-HT-tNz" id="TCI-8D-DZA"/>
-                                    <outlet property="usernameLabel" destination="VJl-ZG-c6H" id="cqQ-dE-bV4"/>
+                                    <outlet property="groupchatnameLabel" destination="VJl-ZG-c6H" id="xGW-k7-GPp"/>
+                                    <outlet property="messageLabel" destination="dJT-FC-iMD" id="y3r-R5-b6r"/>
+                                    <outlet property="timestampLabel" destination="QTC-HT-tNz" id="WEd-mD-DlP"/>
                                     <segue destination="1yL-ab-WsZ" kind="show" id="0UR-GP-ABS"/>
                                 </connections>
                             </tableViewCell>

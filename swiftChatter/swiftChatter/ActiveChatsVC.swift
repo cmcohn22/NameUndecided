@@ -7,8 +7,8 @@
 //
 import UIKit
 
-final class MainVC: UITableViewController {
-        
+final class ActiveChatsVC: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +17,7 @@ final class MainVC: UITableViewController {
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
         
         refreshTimeline(nil)
+        
     }
 
     /*
@@ -26,7 +27,7 @@ final class MainVC: UITableViewController {
     
     // MARK:-
     private func refreshTimeline(_ sender: UIAction?) {
-        ChattStore.shared.getChatts { success in
+        ActiveChats.shared.get_active_chats { success in
             DispatchQueue.main.async {
                 if success {
                     self.tableView.reloadData()
@@ -46,7 +47,7 @@ final class MainVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // how many rows per section
-        return ChattStore.shared.chatts.count
+        return ActiveChats.shared.chatts.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -63,12 +64,11 @@ final class MainVC: UITableViewController {
             fatalError("No reusable cell!")
         }
 
-        let chatt = ChattStore.shared.chatts[indexPath.row]
+        let chat = ActiveChats.shared.chatts[indexPath.row]
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
-        cell.usernameLabel.text = chatt.username
-        cell.messageLabel.text = chatt.message
-        cell.timestampLabel.text = chatt.timestamp
-        
+        cell.groupchatnameLabel.text = chat.name
+        cell.messageLabel.text = chat.recent_message_content
+        cell.timestampLabel.text = chat.recent_message_timestamp
         return cell
     }
 }
