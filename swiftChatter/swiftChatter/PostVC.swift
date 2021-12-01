@@ -8,12 +8,14 @@
 import UIKit
 import CoreLocation
 
-final class PostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
+final class PostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate, CLLocationManagerDelegate {
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        chattname.delegate = self
+        chattdescription.delegate = self
     }
     
     var locationManager: CLLocationManager!
@@ -36,6 +38,13 @@ final class PostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             locationManager.startUpdatingLocation()
             //locationManager.startUpdatingHeading()
         }
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        chattname.resignFirstResponder()
+        chattdescription.resignFirstResponder()
+        return true
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

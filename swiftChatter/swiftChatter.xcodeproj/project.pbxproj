@@ -15,6 +15,7 @@
 		555486352756BE100015FDB6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555486342756BE100015FDB6 /* User.swift */; };
 		555486372756BE710015FDB6 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555486362756BE710015FDB6 /* UserStore.swift */; };
 		5559375F2757DE1300CE5D7A /* ActiveChatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5559375E2757DE1300CE5D7A /* ActiveChatLog.swift */; };
+		555937612757EBB900CE5D7A /* MessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555937602757EBB900CE5D7A /* MessageTableCell.swift */; };
 		55B0321227570F7B00A67C65 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0321127570F7B00A67C65 /* SignUpVC.swift */; };
 		B4FF18AC115414DD6B3B4F6F /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */; };
 		FC03AB4224CA88800013DA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4124CA88800013DA53 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 		555486342756BE100015FDB6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		555486362756BE710015FDB6 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		5559375E2757DE1300CE5D7A /* ActiveChatLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatLog.swift; sourceTree = "<group>"; };
+		555937602757EBB900CE5D7A /* MessageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableCell.swift; sourceTree = "<group>"; };
 		55B0321127570F7B00A67C65 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		FC03AB3E24CA88800013DA53 /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC03AB4124CA88800013DA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				FCAAE87A256955D300ABEEFF /* ChattStore.swift */,
 				FC28600124CBDFBC00B60A29 /* ChattTableCell.swift */,
 				555486322756BCE20015FDB6 /* Chatt.swift */,
+				555937602757EBB900CE5D7A /* MessageTableCell.swift */,
 				555486342756BE100015FDB6 /* User.swift */,
 				555486362756BE710015FDB6 /* UserStore.swift */,
 				55B0321127570F7B00A67C65 /* SignUpVC.swift */,
@@ -249,6 +252,7 @@
 			files = (
 				FC03AB4624CA88800013DA53 /* MainVC.swift in Sources */,
 				192CB5C6273042630074CA36 /* StartViewController.swift in Sources */,
+				555937612757EBB900CE5D7A /* MessageTableCell.swift in Sources */,
 				550A90DA27573C5600CFB8D8 /* LogInVC.swift in Sources */,
 				555486332756BCE20015FDB6 /* Chatt.swift in Sources */,
 				55B0321227570F7B00A67C65 /* SignUpVC.swift in Sources */,
@@ -409,7 +413,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 46F985JG37;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -431,7 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 46F985JG37;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (

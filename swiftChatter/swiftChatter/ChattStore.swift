@@ -54,13 +54,40 @@ final class ChattStore: ObservableObject {
     }
     
     func getChatts(_ completion: ((Bool) -> ())?){
-        let chatt1 = Chatt(chat_id: "80a97", name: "Music Lovers", description: "Come here to talk everything music", lat: "72.8561644", long: "19.0176147", radius: "2.0338", recent_message_content: "Hey, who likes Young Thug?", recent_message_timestamp: "10:53:58.694302", image: nil)
+        let chatt1 = Chatt(chat_id: "80a97", name: "Music Lovers", description: "Come here to talk everything music", lat: "72.8561644", long: "19.0176147", radius: "2.0338", recent_message_content: "Hey", recent_message_timestamp: "10:53:58.694302", image: nil)
         
         self.chatts.append(chatt1)
         
         let chatt2 = Chatt(chat_id: "a16z8", name: "EECS 441", description: "Mobile Application Dev", lat: "72.8561644", long: "19.0176147", radius: "2.0338", recent_message_content: "Gotta Love EECS 441", recent_message_timestamp: "02:22:58.694302", image: nil)
         
         self.chatts.append(chatt2)
+        
+        let chatt3 = Chatt(chat_id: "a16z8", name: "EECS 485", description: "Mobile Application Dev", lat: "72.8561644", long: "19.0176147", radius: "2.0338", recent_message_content: "Gotta Love EECS 485", recent_message_timestamp: "02:22:58.694302", image: nil)
+        
+        self.chatts.append(chatt3)
+        
+    }
+    
+    func getMessages(_ completion: ((Bool) -> ())?){
+        
+        var messages: [Chatt.Message] = []
+        
+        let mess1 = Chatt.Message(content: "Hey", timeStamp: "10:30")
+        let mess2 = Chatt.Message(content: "How's it going?", timeStamp: "10:32")
+        let mess3 = Chatt.Message(content: "Happy to be here!", timeStamp: "10:35")
+        let mess4 = Chatt.Message(content: "What music do you like?", timeStamp: "10:36")
+        let mess5 = Chatt.Message(content: "I love jazz!", timeStamp: "10:38")
+        let mess6 = Chatt.Message(content: "All that jazz!", timeStamp: "10:39")
+        
+        messages.append(mess1)
+        messages.append(mess2)
+        messages.append(mess3)
+        messages.append(mess4)
+        messages.append(mess5)
+        messages.append(mess6)
+        
+        self.chatts[0].messages = messages
+        
         
     }
     
