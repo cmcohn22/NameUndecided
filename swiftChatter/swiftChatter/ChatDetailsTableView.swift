@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 struct User {
-    var username: String
-    var first_name: String
-    var last_name: String
-    var admin: Bool
+    var username: String?
+    var first_name: String?
+    var last_name: String?
+    var admin: Bool?
 }
 
 struct MnkyChat_info {
@@ -21,7 +21,7 @@ struct MnkyChat_info {
     var chatName: String?
     var chatDescription: String?
     var timestamp: String?
-    var users: [User]?
+    var users: [User?]
 }
 enum typeEnum {
     case file
@@ -43,9 +43,88 @@ struct Message {
 class ChatDetailsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     //get api/chat-info, fills out mnkychat_info struct
-    private var mnkyChat_info: MnkyChat_info = MnkyChat_info()
+    private var mnkyChat_info: MnkyChat_info = MnkyChat_info(users : [User]())
     //get api/messages
     private var messages: [Message] = [Message]()
+    
+    private let nFields =  Mirror(reflecting: Chatt()).children.count
+    private let serverUrl = "http://127.0.0.1:8000/"
+    
+    let chat_id = "5014a329"
+    let lat = 0.0
+    let long = 0.0
+//    mnkyChat_info.chatID = chat_id
+    
+    // Use GET api/chat_info/
+    private func get_info(_ completion: ((Bool) -> ())?) {
+        guard let apiUrl = URL(string: serverUrl+"api/chat-info/chat_id=" + String(chat_id)) else {
+            print("chat-info: Bad URL")
+            return
+        }
+    
+        var request = URLRequest(url: apiUrl)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            var success = false
+            defer { completion?(success) }
+            
+            guard let data = data, error == nil else {
+                print("chat-info: NETWORKING ERROR")
+                return
+            }
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                print("chat-info: HTTP STATUS: \(httpStatus.statusCode)")
+                return
+            }
+            
+            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+                print("chat-info: failed JSON deserialization")
+                return
+            }
+            
+            let chat_info = jsonObj["chat-info"] as? Dictionary<String,Any?> ?? [:]
+        DispatchQueue.main.async {
+//            messages = []()
+            self.mnkyChat_info.chatID = chat_info["chat_id"] as? String
+            self.mnkyChat_info.chatName = chat_info["name"] as? String
+            self.mnkyChat_info.chatDescription = chat_info["description"] as? String
+            self.mnkyChat_info.timestamp = chat_info["timestamp"] as? String
+//            self.mnkyChat_info.users = [User]()
+            let user_array = chat_info["users"] as? [Dictionary<String,Any?>] ?? []
+            for userEntry in user_array{
+            //for chatData in chat_info{
+                print("hi")
+                if userEntry.count == self.nFields {
+                    self.mnkyChat_info.users.append(User(username: userEntry["username"] as? String,
+                                                         first_name: userEntry["first_name"] as? String,
+                                                         last_name: userEntry["last_name"] as? String,
+                                                         admin: userEntry["admin"] as? Bool))
+                } else {
+                    print("active-chats: Received unexpected number of fields: \(userEntry.count) instead of \(self.nFields).")
+                }
+            }
+        }
+            success = true // for completion(success)
+        }.resume()
+        
+    }
+    
+    private func get_messages(_ completion: ((Bool) -> ())?) {
+        guard let apiUrl = URL(string: serverUrl+"api/messages/?lat=" + String(lat) + "&long=" + String(long) + "chat_id=" + String(chat_id)) else {
+            print("message: Bad URL")
+            return
+        }
+    
+        var request = URLRequest(url: apiUrl)
+        request.httpMethod = "GET"
+        
+        
+    }
+    
+    
+    
+    
     private var messageViewModel: MessageViewModel = MessageViewModel()
     var nickName: String?
     
