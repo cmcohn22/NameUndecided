@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		192CB5C4273030A20074CA36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192CB5C3273030A20074CA36 /* GoogleService-Info.plist */; };
 		192CB5C6273042630074CA36 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CB5C5273042630074CA36 /* StartViewController.swift */; };
+		194DF2642759681F008D7A6C /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 194DF2632759681F008D7A6C /* Classes */; };
+		194DF26627596848008D7A6C /* Data Binding in Resources */ = {isa = PBXBuildFile; fileRef = 194DF26527596848008D7A6C /* Data Binding */; };
+		194DF26E275968EB008D7A6C /* Extension in Resources */ = {isa = PBXBuildFile; fileRef = 194DF26D275968EB008D7A6C /* Extension */; };
+		194DF270275968F6008D7A6C /* Media in Resources */ = {isa = PBXBuildFile; fileRef = 194DF26F275968F5008D7A6C /* Media */; };
+		194DF27627596F3B008D7A6C /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 194DF27527596F3B008D7A6C /* Model */; };
 		1953AB092756A6C700AC3B26 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1953AB082756A6C700AC3B26 /* SignUpVC.swift */; };
 		1953AB0B2756A6E000AC3B26 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1953AB0A2756A6E000AC3B26 /* LogInVC.swift */; };
 		5F37F14827568784005229A7 /* CreateMnkyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F14727568784005229A7 /* CreateMnkyChat.swift */; };
@@ -29,6 +34,14 @@
 /* Begin PBXFileReference section */
 		192CB5C3273030A20074CA36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		192CB5C5273042630074CA36 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		194DF25A27596736008D7A6C /* KxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KxSwift.swift; sourceTree = "<group>"; };
+		194DF2632759681F008D7A6C /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
+		194DF26527596848008D7A6C /* Data Binding */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Data Binding"; sourceTree = "<group>"; };
+		194DF268275968A1008D7A6C /* Application+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Extension.swift"; sourceTree = "<group>"; };
+		194DF269275968A1008D7A6C /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
+		194DF26D275968EB008D7A6C /* Extension */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extension; sourceTree = "<group>"; };
+		194DF26F275968F5008D7A6C /* Media */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Media; sourceTree = "<group>"; };
+		194DF27527596F3B008D7A6C /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 		1953AB082756A6C700AC3B26 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		1953AB0A2756A6E000AC3B26 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		1F6B94E2C76EE7949A1E3438 /* Pods-swiftChatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.debug.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +75,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		194DF25927596736008D7A6C /* Data Binding */ = {
+			isa = PBXGroup;
+			children = (
+				194DF25A27596736008D7A6C /* KxSwift.swift */,
+			);
+			path = "Data Binding";
+			sourceTree = "<group>";
+		};
+		194DF267275968A1008D7A6C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				194DF268275968A1008D7A6C /* Application+Extension.swift */,
+				194DF269275968A1008D7A6C /* TableView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5FF25EFFAD2757C7A4DC9D66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +131,18 @@
 		FC03AB4024CA88800013DA53 /* swiftChatter */ = {
 			isa = PBXGroup;
 			children = (
+				194DF27527596F3B008D7A6C /* Model */,
+				194DF26F275968F5008D7A6C /* Media */,
+				194DF26D275968EB008D7A6C /* Extension */,
+				194DF26527596848008D7A6C /* Data Binding */,
+				194DF2632759681F008D7A6C /* Classes */,
 				FC03AB4124CA88800013DA53 /* AppDelegate.swift */,
+				194DF267275968A1008D7A6C /* Extension */,
 				FC03AB4324CA88800013DA53 /* SceneDelegate.swift */,
 				FC285FFF24CBDF7D00B60A29 /* Chatt.swift */,
 				FCAAE87A256955D300ABEEFF /* ChattStore.swift */,
 				FC28600124CBDFBC00B60A29 /* ChattTableCell.swift */,
+				194DF25927596736008D7A6C /* Data Binding */,
 				FC03AB4524CA88800013DA53 /* MainVC.swift */,
 				FC285FF924CBCAAD00B60A29 /* PostVC.swift */,
 				5F37F14727568784005229A7 /* CreateMnkyChat.swift */,
@@ -181,10 +218,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				194DF27627596F3B008D7A6C /* Model in Resources */,
 				FC285FFE24CBCD8900B60A29 /* Default-568h@2x.png in Resources */,
 				FC03AB4B24CA88830013DA53 /* Assets.xcassets in Resources */,
 				192CB5C4273030A20074CA36 /* GoogleService-Info.plist in Resources */,
+				194DF270275968F6008D7A6C /* Media in Resources */,
+				194DF2642759681F008D7A6C /* Classes in Resources */,
+				194DF26627596848008D7A6C /* Data Binding in Resources */,
 				FC03AB4924CA88800013DA53 /* Main.storyboard in Resources */,
+				194DF26E275968EB008D7A6C /* Extension in Resources */,
 				FC674260250A9185009998D4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

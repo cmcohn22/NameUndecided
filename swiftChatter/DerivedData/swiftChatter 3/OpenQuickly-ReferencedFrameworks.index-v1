@@ -2,38 +2,45 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Foundation</string>
-	<string>CommonCrypto</string>
-	<string>AppKit</string>
-	<string>nanopb</string>
-	<string>Firebase</string>
-	<string>FirebaseFirestore</string>
-	<string>Security</string>
-	<string>FirebaseInstallations</string>
-	<string>FirebaseDatabase</string>
-	<string>FirebaseInAppMessaging</string>
-	<string>FirebaseAnalytics</string>
-	<string>sys</string>
-	<string>UIKit</string>
 	<string>FirebasePerformance</string>
-	<string>FirebaseAppCheck</string>
-	<string>FirebaseRemoteConfig</string>
-	<string>FirebaseAppDistribution</string>
-	<string>FBLPromises</string>
-	<string>FirebaseAuth</string>
-	<string>WatchKit</string>
-	<string>netinet</string>
-	<string>SystemConfiguration</string>
-	<string>FirebaseMessaging</string>
-	<string>dispatch</string>
-	<string>FirebaseCrashlytics</string>
-	<string>FirebaseCore</string>
-	<string>GoogleUtilities</string>
-	<string>GoogleDataTransport</string>
+	<string>CommonCrypto</string>
 	<string>FirebaseDynamicLinks</string>
-	<string>FirebaseStorage</string>
-	<string>FirebaseFunctions</string>
-	<string>CoreTelephony</string>
 	<string>objc</string>
+	<string>FirebaseInstallations</string>
+	<string>FirebaseAuth</string>
+	<string>GoogleUtilities</string>
+	<string>Firebase</string>
+	<string>Network</string>
+	<string>GoogleDataTransport</string>
+	<string>FirebaseInAppMessaging</string>
+	<string>FirebaseAppCheck</string>
+	<string>FirebaseMessaging</string>
+	<string>FirebaseCore</string>
+	<string>FirebaseCrashlytics</string>
+	<string>sys</string>
+	<string>CoreTelephony</string>
+	<string>nanopb</string>
+	<string>dispatch</string>
+	<string>FirebaseFirestore</string>
+	<string>FirebaseDatabase</string>
+	<string>FBLPromises</string>
+	<string>FirebaseRemoteConfig</string>
+	<string>Dispatch</string>
+	<string>WatchKit</string>
+	<string>Foundation</string>
+	<string>Security</string>
+	<string>zlib</string>
+	<string>QuartzCore</string>
+	<string>AppKit</string>
+	<string>Starscream</string>
+	<string>netinet</string>
+	<string>FirebaseStorage</string>
+	<string>SystemConfiguration</string>
+	<string>FirebaseFunctions</string>
+	<string>FirebaseAnalytics</string>
+	<string>FirebaseAppDistribution</string>
+	<string>SocketIO</string>
+	<string>UIKit</string>
+	<string>CoreGraphics</string>
 </array>
 </plist>
