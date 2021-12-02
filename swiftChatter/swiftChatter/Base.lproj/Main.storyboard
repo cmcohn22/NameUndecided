@@ -81,8 +81,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GroupChat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJl-ZG-c6H" userLabel="GroupChat Name Label">
-                                            <rect key="frame" x="20" y="11" width="132.5" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GroupChat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJl-ZG-c6H" userLabel="GroupChat Name Label">
+                                            <rect key="frame" x="91" y="11" width="132.5" height="20.5"/>
                                             <accessibility key="accessibilityConfiguration" identifier="groupchatname"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -95,13 +95,25 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJT-FC-iMD">
-                                            <rect key="frame" x="20" y="41.5" width="69" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJT-FC-iMD">
+                                            <rect key="frame" x="91" y="43" width="69" height="20.5"/>
                                             <accessibility key="accessibilityConfiguration" identifier="message"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVP-6S-ciM">
+                                            <rect key="frame" x="20" y="27" width="0.0" height="0.0"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OSb-Eu-sdw">
+                                            <rect key="frame" x="20" y="5" width="63" height="59"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="image"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="QTC-HT-tNz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VJl-ZG-c6H" secondAttribute="trailing" constant="8" symbolic="YES" id="09d-KR-LgN"/>
@@ -121,6 +133,8 @@
                                 </accessibility>
                                 <connections>
                                     <outlet property="groupchatnameLabel" destination="VJl-ZG-c6H" id="xGW-k7-GPp"/>
+                                    <outlet property="imageLabel" destination="OSb-Eu-sdw" id="0ME-30-zTW"/>
+                                    <outlet property="inageLabel" destination="OSb-Eu-sdw" id="MSi-kV-jgB"/>
                                     <outlet property="messageLabel" destination="dJT-FC-iMD" id="y3r-R5-b6r"/>
                                     <outlet property="timestampLabel" destination="QTC-HT-tNz" id="WEd-mD-DlP"/>
                                     <segue destination="1yL-ab-WsZ" kind="show" id="0UR-GP-ABS"/>
@@ -590,37 +604,31 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GroupChat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-um-hHK" userLabel="GroupChat Name Label">
-                                            <rect key="frame" x="20" y="11" width="132.5" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GroupChat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-um-hHK" userLabel="GroupChat Name Label">
+                                            <rect key="frame" x="94" y="11" width="132.5" height="20.5"/>
                                             <accessibility key="accessibilityConfiguration" identifier="groupchatname"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="604-jO-8UW">
-                                            <rect key="frame" x="313" y="11" width="81" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="604-jO-8UW">
+                                            <rect key="frame" x="94" y="39" width="81" height="21"/>
                                             <accessibility key="accessibilityConfiguration" identifier="timestamp"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBW-1I-2Oy">
-                                            <rect key="frame" x="20" y="41.5" width="69" height="20.5"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="message"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A7h-QN-hpA">
+                                            <rect key="frame" x="20" y="0.0" width="66" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="image"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="604-jO-8UW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XwI-um-hHK" secondAttribute="trailing" constant="8" symbolic="YES" id="2Ve-ol-H23"/>
                                         <constraint firstItem="XwI-um-hHK" firstAttribute="leading" secondItem="IN5-1i-bGO" secondAttribute="leadingMargin" id="F0v-ql-CVL"/>
-                                        <constraint firstItem="rBW-1I-2Oy" firstAttribute="bottom" secondItem="IN5-1i-bGO" secondAttribute="bottomMargin" priority="250" id="LHU-4w-Akt"/>
                                         <constraint firstItem="XwI-um-hHK" firstAttribute="top" secondItem="IN5-1i-bGO" secondAttribute="topMargin" id="UBR-3I-uUJ"/>
                                         <constraint firstItem="604-jO-8UW" firstAttribute="top" secondItem="IN5-1i-bGO" secondAttribute="topMargin" id="Zq0-NT-e2m"/>
-                                        <constraint firstItem="rBW-1I-2Oy" firstAttribute="leading" secondItem="IN5-1i-bGO" secondAttribute="leadingMargin" id="fXK-Js-yEQ"/>
-                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="rBW-1I-2Oy" secondAttribute="trailing" id="rTR-xh-AKr"/>
-                                        <constraint firstItem="rBW-1I-2Oy" firstAttribute="top" secondItem="XwI-um-hHK" secondAttribute="bottom" constant="10" id="rfz-mW-uzw"/>
                                         <constraint firstItem="604-jO-8UW" firstAttribute="trailing" secondItem="IN5-1i-bGO" secondAttribute="trailingMargin" id="wJk-qP-AIZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -629,9 +637,9 @@
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <connections>
-                                    <outlet property="groupchatnameLabel" destination="XwI-um-hHK" id="en7-aC-IcJ"/>
-                                    <outlet property="messageLabel" destination="rBW-1I-2Oy" id="PKu-Xo-dbW"/>
-                                    <outlet property="timestampLabel" destination="604-jO-8UW" id="upS-m8-K7r"/>
+                                    <outlet property="groupchatnameLabel" destination="XwI-um-hHK" id="2Qg-lQ-dck"/>
+                                    <outlet property="imageLabel" destination="A7h-QN-hpA" id="TQE-Bn-VeA"/>
+                                    <outlet property="timestampLabel" destination="604-jO-8UW" id="TO2-dO-ahU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -657,7 +665,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVG-FP-moD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="1122"/>
+            <point key="canvasLocation" x="169.56521739130437" y="1120.9821428571429"/>
         </scene>
         <!--PostVC-->
         <scene sceneID="5up-ka-FTZ">
@@ -745,8 +753,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oAg-PT-h2C"/>
-        <segue reference="U9I-fN-4Fa"/>
+        <segue reference="hsD-lj-dER"/>
         <segue reference="MQ5-Le-mvV"/>
         <segue reference="ort-Z5-tCM"/>
     </inferredMetricsTieBreakers>
