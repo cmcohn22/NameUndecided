@@ -14,6 +14,10 @@
 		5F37F14827568784005229A7 /* CreateMnkyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F14727568784005229A7 /* CreateMnkyChat.swift */; };
 		5F37F14B2756FBCC005229A7 /* ActiveChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F1492756FBCC005229A7 /* ActiveChats.swift */; };
 		5F37F14C2756FBCC005229A7 /* ActiveChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */; };
+		5F94B5382759DCD000D96252 /* MessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94B5342759DCD000D96252 /* MessageTableCell.swift */; };
+		5F94B5392759DCD000D96252 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94B5352759DCD000D96252 /* Message.swift */; };
+		5F94B53A2759DCD000D96252 /* MessageLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94B5362759DCD000D96252 /* MessageLog.swift */; };
+		5F94B53B2759DCD000D96252 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94B5372759DCD000D96252 /* MessageVC.swift */; };
 		88361A34275875F30006ABE4 /* ChatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A33275875F30006ABE4 /* ChatLog.swift */; };
 		88361A36275876070006ABE4 /* ChatLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A35275876070006ABE4 /* ChatLogVC.swift */; };
 		88361A38275966660006ABE4 /* ChatLogTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A37275966660006ABE4 /* ChatLogTableCell.swift */; };
@@ -41,6 +45,10 @@
 		5F37F14727568784005229A7 /* CreateMnkyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMnkyChat.swift; sourceTree = "<group>"; };
 		5F37F1492756FBCC005229A7 /* ActiveChats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChats.swift; sourceTree = "<group>"; };
 		5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChatsVC.swift; sourceTree = "<group>"; };
+		5F94B5342759DCD000D96252 /* MessageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageTableCell.swift; path = "../../../../../Downloads/NameUndecided-griffinLittleBranch/swiftChatter/swiftChatter/MessageTableCell.swift"; sourceTree = "<group>"; };
+		5F94B5352759DCD000D96252 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = "../../../../../Downloads/NameUndecided-griffinLittleBranch/swiftChatter/swiftChatter/Message.swift"; sourceTree = "<group>"; };
+		5F94B5362759DCD000D96252 /* MessageLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageLog.swift; path = "../../../../../Downloads/NameUndecided-griffinLittleBranch/swiftChatter/swiftChatter/MessageLog.swift"; sourceTree = "<group>"; };
+		5F94B5372759DCD000D96252 /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageVC.swift; path = "../../../../../Downloads/NameUndecided-griffinLittleBranch/swiftChatter/swiftChatter/MessageVC.swift"; sourceTree = "<group>"; };
 		88361A33275875F30006ABE4 /* ChatLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLog.swift; sourceTree = "<group>"; };
 		88361A35275876070006ABE4 /* ChatLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogVC.swift; sourceTree = "<group>"; };
 		88361A37275966660006ABE4 /* ChatLogTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogTableCell.swift; sourceTree = "<group>"; };
@@ -111,6 +119,10 @@
 			children = (
 				FC03AB4124CA88800013DA53 /* AppDelegate.swift */,
 				FC03AB4324CA88800013DA53 /* SceneDelegate.swift */,
+				5F94B5352759DCD000D96252 /* Message.swift */,
+				5F94B5362759DCD000D96252 /* MessageLog.swift */,
+				5F94B5342759DCD000D96252 /* MessageTableCell.swift */,
+				5F94B5372759DCD000D96252 /* MessageVC.swift */,
 				FC285FFF24CBDF7D00B60A29 /* Chatt.swift */,
 				FCAAE87A256955D300ABEEFF /* ChattStore.swift */,
 				FC28600124CBDFBC00B60A29 /* ChattTableCell.swift */,
@@ -250,9 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F94B53B2759DCD000D96252 /* MessageVC.swift in Sources */,
 				192CB5C6273042630074CA36 /* StartViewController.swift in Sources */,
 				FC28600024CBDF7D00B60A29 /* Chatt.swift in Sources */,
 				88361A34275875F30006ABE4 /* ChatLog.swift in Sources */,
+				5F94B5392759DCD000D96252 /* Message.swift in Sources */,
+				5F94B53A2759DCD000D96252 /* MessageLog.swift in Sources */,
 				FC28600224CBDFBC00B60A29 /* ChattTableCell.swift in Sources */,
 				FCAAE87B256955D300ABEEFF /* ChattStore.swift in Sources */,
 				1953AB092756A6C700AC3B26 /* SignUpVC.swift in Sources */,
@@ -264,6 +279,7 @@
 				5F37F14C2756FBCC005229A7 /* ActiveChatsVC.swift in Sources */,
 				5F37F14827568784005229A7 /* CreateMnkyChat.swift in Sources */,
 				FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */,
+				5F94B5382759DCD000D96252 /* MessageTableCell.swift in Sources */,
 				5F37F14B2756FBCC005229A7 /* ActiveChats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
