@@ -13,26 +13,57 @@
         <scene sceneID="5lG-Mc-y51">
             <objects>
                 <viewController id="ymk-YN-O30" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4pV-m1-SK0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="y8O-Ni-tQo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-NU-TjS">
-                                <rect key="frame" x="0.0" y="104" width="414" height="639"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="g7t-EE-kPH"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="zA9-kc-6nv"/>
-                            </scrollView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Temporary Message" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="D71-E2-iqI">
-                                <rect key="frame" x="0.0" y="751" width="414" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="lTx-JA-aU9"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
+                        <textField key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send Message..." textAlignment="natural" minimumFontSize="20" id="od6-gY-Lda">
+                            <rect key="frame" x="0.0" y="127" width="414" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="qxc-le-JaW">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qxc-le-JaW" id="eH1-FN-4yU" customClass="MessageTableCell" customModule="swiftChatter" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5f-6f-3wW">
+                                            <rect key="frame" x="20" y="11" width="83" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9p5-58-NbQ">
+                                            <rect key="frame" x="111" y="11" width="82" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM5-N3-pTa">
+                                            <rect key="frame" x="20" y="39" width="134" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9p5-58-NbQ" firstAttribute="leading" secondItem="O5f-6f-3wW" secondAttribute="trailing" constant="8" symbolic="YES" id="3cm-w9-J2Q"/>
+                                        <constraint firstItem="O5f-6f-3wW" firstAttribute="leading" secondItem="eH1-FN-4yU" secondAttribute="leading" constant="20" symbolic="YES" id="Bpm-tH-deg"/>
+                                        <constraint firstItem="OM5-N3-pTa" firstAttribute="leading" secondItem="eH1-FN-4yU" secondAttribute="leading" constant="20" symbolic="YES" id="M5g-RK-OGW"/>
+                                        <constraint firstAttribute="trailing" secondItem="OM5-N3-pTa" secondAttribute="trailing" constant="260" id="Ooe-eZ-Bgc"/>
+                                        <constraint firstAttribute="trailing" secondItem="9p5-58-NbQ" secondAttribute="trailing" constant="221" id="WCT-8F-jJ1"/>
+                                        <constraint firstItem="OM5-N3-pTa" firstAttribute="top" secondItem="O5f-6f-3wW" secondAttribute="bottom" constant="7" id="aNA-hU-thE"/>
+                                        <constraint firstItem="9p5-58-NbQ" firstAttribute="baseline" secondItem="O5f-6f-3wW" secondAttribute="baseline" id="aUh-in-Fqf"/>
+                                        <constraint firstItem="9p5-58-NbQ" firstAttribute="top" secondItem="eH1-FN-4yU" secondAttribute="topMargin" id="wHR-hG-ltE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
                     <navigationItem key="navigationItem" title="Chat Name" id="P9V-4V-tiL">
                         <barButtonItem key="rightBarButtonItem" title="GC Details" style="plain" id="l2L-Xs-m5i">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cKz-YB-cAA">
@@ -549,12 +580,12 @@
         <!--Chat List View Controller-->
         <scene sceneID="D9g-vY-VPL">
             <objects>
-                <viewController storyboardIdentifier="ChatListViewController" id="Kw4-Bc-vvA" customClass="ChatListViewController" customModule="socket_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatListViewController" id="Kw4-Bc-vvA" customClass="ChatListViewController" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MOD-Qh-tXf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WsA-sg-12q" customClass="ChatListTableView" customModule="socket_demo" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WsA-sg-12q" customClass="ChatListTableView" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -579,12 +610,12 @@
         <!--Chat Detail View Controller-->
         <scene sceneID="sPB-rM-jFO">
             <objects>
-                <viewController storyboardIdentifier="ChatDetailViewController" id="vKg-SA-S7h" customClass="ChatDetailViewController" customModule="socket_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatDetailViewController" id="vKg-SA-S7h" customClass="ChatDetailViewController" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="on1-id-OG3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eop-y7-qGI" customClass="ChatDetailsTableView" customModule="socket_demo" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eop-y7-qGI" customClass="ChatDetailsTableView" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="758"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.90980392160000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
@@ -646,7 +677,7 @@
         <!--Join Chat View Controller-->
         <scene sceneID="elf-oL-KB8">
             <objects>
-                <viewController storyboardIdentifier="JoinChatViewController" id="V4R-tF-QFn" customClass="JoinChatViewController" customModule="socket_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoinChatViewController" id="V4R-tF-QFn" customClass="JoinChatViewController" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nic-l0-D9A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
