@@ -1,51 +1,51 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "e5ab5e9422a53ba45284d18bd4db99f7d23d5b063ef0ee7da37f5de7eaca9930"
-build_start_time: [1638478304, 946217060]
-build_end_time: [1638478312, 279953956]
+build_start_time: [1638499969, 84398984]
+build_end_time: [1638499980, 941132068]
 inputs:
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"
-  : [1638476539, 3844976]
+  : [1638499550, 938793659]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"
-  : [1638476539, 2497196]
+  : [1638499550, 939028263]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"
-  : [1638476539, 3171920]
+  : [1638499550, 939283370]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"
-  : [1638476539, 3502845]
+  : [1638499550, 939500331]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"
-  : [1638476539, 2827405]
+  : [1638499550, 939677715]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift"
-  : [1638476538, 999588489]
+  : [1638499550, 939941406]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift"
-  : [1638476538, 999376773]
+  : [1638499550, 940226316]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager+Debug.swift"
-  : [1638476539, 1009464]
+  : [1638499550, 940568447]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager+Internal.swift"
-  : [1638476538, 996772289]
+  : [1638499550, 940888404]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager+OrientationNotification.swift"
-  : [1638476539, 1392841]
+  : [1638499550, 941396474]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager+Position.swift"
-  : [1638476538, 999837160]
+  : [1638499550, 941879749]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager+Toolbar.swift"
-  : [1638476539, 1738071]
+  : [1638499550, 942097663]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager+UIKeyboardNotification.swift"
-  : [1638476538, 998766660]
+  : [1638499550, 942315816]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager+UITextFieldViewNotification.swift"
-  : [1638476539, 4199743]
+  : [1638499550, 942549705]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager.swift"
-  : [1638476539, 647544]
+  : [1638499550, 942834854]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift"
-  : [1638476539, 213623]
+  : [1638499550, 943081855]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQTextView/IQTextView.swift"
-  : [1638476538, 996574878]
+  : [1638499550, 943370819]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift"
-  : [1638476538, 997566461]
+  : [1638499550, 943608283]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift"
-  : [1638476538, 998449087]
+  : [1638499550, 943807840]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift"
-  : [1638476538, 997168540]
+  : [1638499550, 943974018]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift"
-  : [1638476538, 997362613]
+  : [1638499550, 944142580]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift"
-  : [1638476538, 997758150]
+  : [1638499550, 944317817]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"
-  : [1638476538, 998076200]
+  : [1638499550, 944617271]

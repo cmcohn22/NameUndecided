@@ -4,6 +4,7 @@
 <array>
 	<string>FirebasePerformance</string>
 	<string>CommonCrypto</string>
+	<string>CoreLocation</string>
 	<string>FirebaseDynamicLinks</string>
 	<string>objc</string>
 	<string>FirebaseInstallations</string>

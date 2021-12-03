@@ -32,25 +32,9 @@
 		<data>
 		zPkZuBNh6cHy2Ff+4Neq+H3nLKQ=
 		</data>
-		<key>Base.lproj/Main.storyboardc/ChatDetailViewController.nib</key>
-		<data>
-		10dNyLVrnHNN+GBDDMWkGHghStw=
-		</data>
-		<key>Base.lproj/Main.storyboardc/ChatListViewController.nib</key>
-		<data>
-		rqoBMJ4VSdrBD5Mpa6NlAiy+ZeY=
-		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		ZY2p1q7e/ygi+p6RA7QKgsdQdus=
-		</data>
-		<key>Base.lproj/Main.storyboardc/JoinChatViewController.nib</key>
-		<data>
-		3baRX68lEzoSAm7J6giX20iQ+/Q=
-		</data>
-		<key>Base.lproj/Main.storyboardc/Kw4-Bc-vvA-view-MOD-Qh-tXf.nib</key>
-		<data>
-		6HQV3ZMO+xr2C3cquH95OQMy1UQ=
+		/miVueICt9TRalfGg6azdnCr4/0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/TTV-uT-QlR-view-GsI-Ba-nvz.nib</key>
 		<data>
@@ -58,11 +42,11 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-1yL-ab-WsZ.nib</key>
 		<data>
-		a54wqM8Q0Edwe9R9R70CGQKRWmg=
+		8YVpPFTrP33rqrPK/KDEzI8MvDY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-0Cf-gJ-mWb.nib</key>
 		<data>
-		YYtcvC6mr9sfPIYmfDjTPua09DY=
+		7qj//w+KMDJdei/ogl2Y5T65qyM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-CPU-Oq-a7B.nib</key>
 		<data>
@@ -76,10 +60,6 @@
 		<data>
 		oLFBZemMJFsJyspU94fHozfc8FE=
 		</data>
-		<key>Base.lproj/Main.storyboardc/V4R-tF-QFn-view-Nic-l0-D9A.nib</key>
-		<data>
-		0O9qxJZLAkaJZEg3rpo9BwWmGR8=
-		</data>
 		<key>Base.lproj/Main.storyboardc/dXJ-b2-v0o-view-Gyc-kX-23V.nib</key>
 		<data>
 		1bh7ilA89PWT1AkXt1m9C5kHh9s=
@@ -88,13 +68,9 @@
 		<data>
 		mdCOUZs4gyrA1UBFokr5/y1yamc=
 		</data>
-		<key>Base.lproj/Main.storyboardc/vKg-SA-S7h-view-on1-id-OG3.nib</key>
+		<key>Base.lproj/Main.storyboardc/ymk-YN-O30-view-y8O-Ni-tQo.nib</key>
 		<data>
-		15TiqIo7itRKj8m/kqeg6ER2cEk=
-		</data>
-		<key>Base.lproj/Main.storyboardc/ymk-YN-O30-view-4pV-m1-SK0.nib</key>
-		<data>
-		KcL09f2m467g3+pPI+1/T65c3lY=
+		TPpSa06aiXM8+nf2CmKKU78h3Gs=
 		</data>
 		<key>Classes/Cells/ChatListTableViewCell.swift</key>
 		<data>
@@ -166,7 +142,7 @@
 		</data>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<data>
-		i5qPGS9FFSrnoJ4LRNRsnqJ6T2g=
+		ASFfFRRAEr6Tw+rxmfnt9h/LruQ=
 		</data>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<data>
@@ -178,7 +154,7 @@
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
-		cGdmZx0pan6n/m3+tWG7Z533Yes=
+		XH9wAyi5Yf1O8I3UoA7BtYgQwZs=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -190,7 +166,7 @@
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/FirebaseCoreDiagnostics</key>
 		<data>
-		XjGMYyw5DqMKbe4t4RHfpnl+6jw=
+		qMokwj3dDEYDgvVj7+hwwY9PNW4=
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
 		<data>
@@ -202,7 +178,7 @@
 		</data>
 		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations</key>
 		<data>
-		OUSQH6Uzkp5SGoRap9AEamEt5xY=
+		pbUz0udjw6v/HxnPx7wANIfrus4=
 		</data>
 		<key>Frameworks/FirebaseInstallations.framework/Info.plist</key>
 		<data>
@@ -214,7 +190,7 @@
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport</key>
 		<data>
-		9yYOG2gM4Gml3PRDK4zTVg2HUIs=
+		jSSKzgPwU8e6PMSy6WqoVdgCBn0=
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
 		<data>
@@ -226,7 +202,7 @@
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
-		EV7RAQyv/Mo+LisP7qDMSzbT748=
+		powJCmr+kx8jonim/tweZZBn/5I=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
@@ -238,7 +214,7 @@
 		</data>
 		<key>Frameworks/IQKeyboardManagerSwift.framework/IQKeyboardManagerSwift</key>
 		<data>
-		sVTwXaglHIMsKGM9YJ++aCr5yi8=
+		cuNHjGHDMUUB911xE/uc7nW81ZQ=
 		</data>
 		<key>Frameworks/IQKeyboardManagerSwift.framework/Info.plist</key>
 		<data>
@@ -254,7 +230,7 @@
 		</data>
 		<key>Frameworks/SocketIO.framework/SocketIO</key>
 		<data>
-		Uq4VZt/wSUx1VpeKQYbHqk3f6C8=
+		a041NRNalUobhRPMYRTR+RLWBVQ=
 		</data>
 		<key>Frameworks/SocketIO.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -266,7 +242,7 @@
 		</data>
 		<key>Frameworks/Starscream.framework/Starscream</key>
 		<data>
-		exnMWF1Sbt2qtF/KoJJNqFLY+7U=
+		VvHjsv/1w/flHoKeItEFry7DBeA=
 		</data>
 		<key>Frameworks/Starscream.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -282,7 +258,7 @@
 		</data>
 		<key>Frameworks/nanopb.framework/nanopb</key>
 		<data>
-		RAjqgvMIJthhJP3+kPg1WhUui7U=
+		yX+nWO0+FVYgb4T/52DOORS9nLY=
 		</data>
 		<key>GoogleService-Info.plist</key>
 		<data>
@@ -368,39 +344,11 @@
 			t5onbLbpdfol3nbQ+0J9nH2HXVwpppchqtIB3gXBcEQ=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/ChatDetailViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NqEUVk7nAhZlESs6P76blaB0EPOjrTLpdow4v8KpXCs=
-			</data>
-		</dict>
-		<key>Base.lproj/Main.storyboardc/ChatListViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zr8+d+2KeEL7YP+LeDp2ZurJbZF1PIZ+WpD7fC0u56A=
-			</data>
-		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FJw8r3t7o6LXfV6Zjao23AJlK+twypfHGASrDrqmWfs=
-			</data>
-		</dict>
-		<key>Base.lproj/Main.storyboardc/JoinChatViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Yk0ydtbO7lWDiro4zjE2/VK7h9kJx8JPrhd8WGXaJnc=
-			</data>
-		</dict>
-		<key>Base.lproj/Main.storyboardc/Kw4-Bc-vvA-view-MOD-Qh-tXf.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7UocLiP8n39Ht0WNwCa2+aRXAdm68unzpYRj/kFV78Y=
+			w3s7SmMkVHaiJ4orAK6pCV7hR3UE66VuFdRyJHrxQQk=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/TTV-uT-QlR-view-GsI-Ba-nvz.nib</key>
@@ -414,14 +362,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KPkr5ANPy2FlCSYJCNdUs4EWj5MBQIbe071uM8E1Vo4=
+			R5aXDyAKW8uv9Ja99ErX4CRHAlXhuJFAcMM3EKjrNv4=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-0Cf-gJ-mWb.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m5Yzc0pMeNaNSPHcOO8UZF57Uz6/BGZ8uJEZ4yGVwZA=
+			T7g6NV1NtWHvG+rePWd3GuFU7AHUKwG1Gk/M2ml/hWE=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-CPU-Oq-a7B.nib</key>
@@ -445,13 +393,6 @@
 			k1gLQyEhGxcIqPcV5GbFBwCwQrO4wlDIYGAN7uSe5v4=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/V4R-tF-QFn-view-Nic-l0-D9A.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iHwZ2+Ldhibj9Jqcq1XZWm93L5R3bJGG0fBvOr545uE=
-			</data>
-		</dict>
 		<key>Base.lproj/Main.storyboardc/dXJ-b2-v0o-view-Gyc-kX-23V.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -466,18 +407,11 @@
 			NJOMcpPBKGhWDO06LCDm8KKxpH+Oj/3wVIkzpeOK4YQ=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/vKg-SA-S7h-view-on1-id-OG3.nib</key>
+		<key>Base.lproj/Main.storyboardc/ymk-YN-O30-view-y8O-Ni-tQo.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7F973yQruSQ77yr9chqEkSCPVjdhUFbnnqzJqsJ5xi4=
-			</data>
-		</dict>
-		<key>Base.lproj/Main.storyboardc/ymk-YN-O30-view-4pV-m1-SK0.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			W6eTNYzPwT5V4GYdVleTYuOGBwx4ixoi0tTaO8JeOms=
+			Ac8llhg+9t+Nl1LuD4Qs+QoCQ5ijRrgW6PvESZCCDoQ=
 			</data>
 		</dict>
 		<key>Classes/Cells/ChatListTableViewCell.swift</key>
@@ -603,7 +537,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EKZ9tI93M6S5WqVso8nu/A4UcQnmALviPweyHuuTsAA=
+			CxofN5yr7wDarDcg9CPZda4fCUptL8RiYPKmmq1LiOE=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
@@ -624,7 +558,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SEW9L78cT3MWleOcZiq53ZVKuZ+4oj64OfgxYxquEsY=
+			MCWO5+FTUNZViCqtLN97ekqghqmvTnkSVaMzfbfQi78=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -645,7 +579,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qxsaWTBzBuQBRInvkvfqYXPiqZodEzHn1welw0DtJic=
+			CnATkN2DnQUQ3NcZvgQMsPMFyv0zy/oNjJsTPCIKkH0=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
@@ -666,7 +600,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+KAMwJH6qDorWjXrQNPM9IOVrJ5lFqPsil8KO7FDPGw=
+			dMxQ5VtVdYs2Ym6ddBHUij0b3G/WgB1Z7PzXjINvcVg=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseInstallations.framework/Info.plist</key>
@@ -687,7 +621,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6QRdC0jDHGo1IZt/Mk6Tipe3AYGUqXbX1JvD+iJT5iM=
+			pWnXNI/xphfl/HQCI/7fNylR9z55h7DlvBLhukj3jd4=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
@@ -708,7 +642,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PpgMkKcp1O3J6POG6QfnUYw5Jlayj/wOHDlJnu/gBnQ=
+			skz9WtNYhdTewqyUmUM5xWXYf0ThQa0L/EC3q/aNPpY=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
@@ -729,7 +663,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GkXwF5E8VGYGo4pbvtm3MdLtVtahR4fD8aloCFy5wfI=
+			l24jD3LQ2XkA7lkKWM3vclin3Mc4gQo8BJcW0gCBS9M=
 			</data>
 		</dict>
 		<key>Frameworks/IQKeyboardManagerSwift.framework/Info.plist</key>
@@ -757,7 +691,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NlZBdO5fav07u1Ofy03QBd+l9IJnGWCccaXZF/ECXis=
+			NJQBGe2zKrLxBK7habkIdVrN493RwGonVV594XHWLRU=
 			</data>
 		</dict>
 		<key>Frameworks/SocketIO.framework/_CodeSignature/CodeResources</key>
@@ -778,7 +712,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wzMpdCjqueK5x6tAUTKgyUHzob7jW5xExpcujRztWO8=
+			EAcVRsmu0QiyXG3ArIJ1Wg9nH8pwolAr+AoOe8fp20E=
 			</data>
 		</dict>
 		<key>Frameworks/Starscream.framework/_CodeSignature/CodeResources</key>
@@ -806,7 +740,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gi9LJgyiMAuNyoM3FsmUnuqL87z/7oWDMLTdyafEgNo=
+			u6+zznTkGS1BsTDHrz8D3c+TYGBLp6NpD3NW+A0ymKY=
 			</data>
 		</dict>
 		<key>GoogleService-Info.plist</key>
