@@ -16,6 +16,7 @@
 		5F37F14C2756FBCC005229A7 /* ActiveChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */; };
 		88361A34275875F30006ABE4 /* ChatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A33275875F30006ABE4 /* ChatLog.swift */; };
 		88361A36275876070006ABE4 /* ChatLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A35275876070006ABE4 /* ChatLogVC.swift */; };
+		88361A38275966660006ABE4 /* ChatLogTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A37275966660006ABE4 /* ChatLogTableCell.swift */; };
 		B4FF18AC115414DD6B3B4F6F /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */; };
 		FC03AB4224CA88800013DA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4124CA88800013DA53 /* AppDelegate.swift */; };
 		FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4324CA88800013DA53 /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 		5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChatsVC.swift; sourceTree = "<group>"; };
 		88361A33275875F30006ABE4 /* ChatLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLog.swift; sourceTree = "<group>"; };
 		88361A35275876070006ABE4 /* ChatLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogVC.swift; sourceTree = "<group>"; };
+		88361A37275966660006ABE4 /* ChatLogTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogTableCell.swift; sourceTree = "<group>"; };
 		FC03AB3E24CA88800013DA53 /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC03AB4124CA88800013DA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC03AB4324CA88800013DA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				FC285FFF24CBDF7D00B60A29 /* Chatt.swift */,
 				FCAAE87A256955D300ABEEFF /* ChattStore.swift */,
 				FC28600124CBDFBC00B60A29 /* ChattTableCell.swift */,
+				88361A37275966660006ABE4 /* ChatLogTableCell.swift */,
 				5F37F1492756FBCC005229A7 /* ActiveChats.swift */,
 				5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */,
 				FC285FF924CBCAAD00B60A29 /* PostVC.swift */,
@@ -257,6 +260,7 @@
 				FC285FFA24CBCAAD00B60A29 /* PostVC.swift in Sources */,
 				1953AB0B2756A6E000AC3B26 /* LogInVC.swift in Sources */,
 				88361A36275876070006ABE4 /* ChatLogVC.swift in Sources */,
+				88361A38275966660006ABE4 /* ChatLogTableCell.swift in Sources */,
 				5F37F14C2756FBCC005229A7 /* ActiveChatsVC.swift in Sources */,
 				5F37F14827568784005229A7 /* CreateMnkyChat.swift in Sources */,
 				FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */,

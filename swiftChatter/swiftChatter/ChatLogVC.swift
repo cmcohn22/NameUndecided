@@ -27,7 +27,7 @@ final class ChatLogVC: UITableViewController {
     
     // MARK:-
     private func refreshTimeline(_ sender: UIAction?) {
-        ActiveChats.shared.get_active_chats { success in
+        ChatLog.shared.get_chat_log { success in
             DispatchQueue.main.async {
                 if success {
                     self.tableView.reloadData()
@@ -47,7 +47,7 @@ final class ChatLogVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // how many rows per section
-        return ActiveChats.shared.chatts.count
+        return ChatLog.shared.chatts.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -60,11 +60,11 @@ final class ChatLogVC: UITableViewController {
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // populate a single cell
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChattTableCell", for: indexPath) as? ChattTableCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChatLogTableCell", for: indexPath) as? ChatLogTableCell else {
             fatalError("No reusable cell!")
         }
 
-        let chat = ActiveChats.shared.chatts[indexPath.row]
+        let chat = ChatLog.shared.chatts[indexPath.row]
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
         cell.groupchatnameLabel.text = chat.name
         //cell.imageLabel = chat.image

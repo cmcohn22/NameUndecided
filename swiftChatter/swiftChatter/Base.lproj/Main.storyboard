@@ -133,8 +133,7 @@
                                 </accessibility>
                                 <connections>
                                     <outlet property="groupchatnameLabel" destination="VJl-ZG-c6H" id="xGW-k7-GPp"/>
-                                    <outlet property="imageLabel" destination="OSb-Eu-sdw" id="0ME-30-zTW"/>
-                                    <outlet property="inageLabel" destination="OSb-Eu-sdw" id="MSi-kV-jgB"/>
+                                    <outlet property="imageLabel" destination="OSb-Eu-sdw" id="X8A-Ga-ibF"/>
                                     <outlet property="messageLabel" destination="dJT-FC-iMD" id="y3r-R5-b6r"/>
                                     <outlet property="timestampLabel" destination="QTC-HT-tNz" id="WEd-mD-DlP"/>
                                     <segue destination="1yL-ab-WsZ" kind="show" id="0UR-GP-ABS"/>
@@ -571,10 +570,10 @@
             </objects>
             <point key="canvasLocation" x="-1171.0144927536232" y="707.8125"/>
         </scene>
-        <!--MnkyChat-->
+        <!--Chat Log-->
         <scene sceneID="fE4-Gb-XBn">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="sOr-lN-PR3" customClass="PostVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="sOr-lN-PR3" userLabel="Chat Log" customClass="ChatLogVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PFc-bt-u36">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -597,10 +596,10 @@
                             </items>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" id="DsW-a7-sd7" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatLogTableCell" rowHeight="75" id="DsW-a7-sd7" userLabel="ChatLogTableCell" customClass="ChatLogTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DsW-a7-sd7" id="IN5-1i-bGO">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DsW-a7-sd7" id="IN5-1i-bGO" customClass="ChatLogTableCell" customModule="swiftChatter" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -632,14 +631,14 @@
                                         <constraint firstItem="604-jO-8UW" firstAttribute="trailing" secondItem="IN5-1i-bGO" secondAttribute="trailingMargin" id="wJk-qP-AIZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration" identifier="ChattTableCell">
+                                <accessibility key="accessibilityConfiguration" identifier="ChatLogTableCell">
                                     <accessibilityTraits key="traits" staticText="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <connections>
-                                    <outlet property="groupchatnameLabel" destination="XwI-um-hHK" id="2Qg-lQ-dck"/>
-                                    <outlet property="imageLabel" destination="A7h-QN-hpA" id="TQE-Bn-VeA"/>
-                                    <outlet property="timestampLabel" destination="604-jO-8UW" id="TO2-dO-ahU"/>
+                                    <outlet property="groupchatnameLabel" destination="XwI-um-hHK" id="1ZS-sp-0JQ"/>
+                                    <outlet property="imageLabel" destination="A7h-QN-hpA" id="bcz-B5-HRO"/>
+                                    <outlet property="timestampLabel" destination="604-jO-8UW" id="UbE-FU-RQp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -648,7 +647,7 @@
                             <outlet property="delegate" destination="sOr-lN-PR3" id="T6Z-aS-otP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MnkyChat" id="qfp-pD-0td">
+                    <navigationItem key="navigationItem" title="Chat Log" id="qfp-pD-0td">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Lu3-Nz-djZ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="whj-PU-mZn" userLabel="Search">
                                 <rect key="frame" x="20" y="11" width="102.5" height="34.5"/>

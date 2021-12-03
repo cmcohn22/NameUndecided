@@ -13,20 +13,23 @@ final class ChatLog: ObservableObject {
     private init() {}                // and make the constructor private so no other
                                      // instances can be created
     @Published private(set) var chatts = [Chatt]()
-    private let nFields = Mirror(reflecting: Chatt()).children.count
+    // private let nFields = Mirror(reflecting: Chatt()).children.count
+    private let nFields = 3
 
     private let serverUrl = "http://127.0.0.1:8000/"
     
     let lat = 0.0
     let long = 0.0
     
-    func get_active_chats(_ completion: ((Bool) -> ())?) {
+    func get_chat_log(_ completion: ((Bool) -> ())?) {
         guard let apiUrl = URL(string: serverUrl+"api/chat-log/?lat=" + String(lat) + "&long=" + String(long)) else {
             print("chat-log: Bad URL")
             return
         }
         
         var request = URLRequest(url: apiUrl)
+        request.addValue("Token be1721b173119203ff1c7e13d8b9e906d6b2a017", forHTTPHeaderField: "Authorization")
+        // TODO: GET RID OF THIS LATER WHEN WE HAVE SIGN UP AND LOGIN WORKING ^
         request.httpMethod = "GET"
         
 //        let locationManager = CLLocationManager()
@@ -70,10 +73,10 @@ final class ChatLog: ObservableObject {
                 return
             }
             
-            print("HERE")
+            print("POOPCOCK")
             print(jsonObj)
             let chattsReceived = jsonObj["chat_log"] as? [Dictionary<String,Any?>] ?? []
-            print("teehee")
+            print("PEECOCK")
             print(chattsReceived)
             print(type(of: chattsReceived))
         DispatchQueue.main.async {
@@ -81,7 +84,7 @@ final class ChatLog: ObservableObject {
             for chattEntry in chattsReceived{
                 if chattEntry.count == self.nFields {
                     self.chatts.append(Chatt(name: chattEntry["name"] as? String,
-                                             recent_message_timestamp: chattEntry["recent_message_timestamp"] as? String, image: chattEntry["image"] as? String))
+                                             recent_message_timestamp: chattEntry["timestamp"] as? String, image: chattEntry["image"] as? String))
                 } else {
                     print("chat_log: Received unexpected number of fields: \(chattEntry.count) instead of \(self.nFields).")
                 }
