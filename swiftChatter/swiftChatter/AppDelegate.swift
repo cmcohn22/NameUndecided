@@ -10,9 +10,22 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         // Override point for customization after application launch.
+        let options: UNAuthorizationOptions = [.badge, .sound, .alert]
+          UNUserNotificationCenter.current()
+            .requestAuthorization(options: options) { _, error in
+              if let error = error {
+                print("Error: \(error)")
+              }
+            }
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+      application.applicationIconBadgeNumber = 0
+      UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+      UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
 
     // MARK: UISceneSession Lifecycle
@@ -28,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    
 
 
 }
