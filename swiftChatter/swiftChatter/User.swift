@@ -16,7 +16,7 @@ struct User {
     var first_name: String?
     var last_name: String?
     var email: String?
-    @UserPropWrapper var image: String?
+    @UserPropWrapper var profile_pic: String?
     var lat: String!
     var long: String!
     

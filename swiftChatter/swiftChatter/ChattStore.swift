@@ -16,7 +16,11 @@ final class ChattStore: ObservableObject {
     @Published private(set) var chatts = [Chatt]()
     private let nFields = Mirror(reflecting: Chatt()).children.count
 
-    private let serverUrl = "https://18.119.159.133/"
+    private let serverUrl = "https://mnky-chat.com/api/"
+    
+    private let tokenHeaders: HTTPHeaders = [
+        "Authorization": "Token a23cb7a7efd4981c4a85a0cd6428213b38489c01"
+    ]
     
     func createChatt(_ chatt: Chatt, image: UIImage?)  {
         guard let apiUrl = URL(string: serverUrl+"create-chat/") else {
@@ -43,7 +47,7 @@ final class ChattStore: ObservableObject {
                     if let image = image?.jpegData(compressionQuality: 1.0) {
                         mpFD.append(image, withName: "image", fileName: "chattImage", mimeType: "image/jpeg")
                     }
-                }, to: apiUrl, method: .post).response { response in
+                }, to: apiUrl, method: .post, headers: tokenHeaders).response { response in
                     switch (response.result) {
                     case .success:
                         print("createChatt: new chat created!")

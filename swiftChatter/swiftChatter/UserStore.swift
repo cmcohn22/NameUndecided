@@ -17,9 +17,9 @@ final class UserStore: ObservableObject {
     @Published private(set) var chatts = [User]()
     private let nFields = Mirror(reflecting: User()).children.count
 
-    private let serverUrl = "https://18.119.159.133/"
+    private let serverUrl = "https://mnky-chat.com/api/"
     
-    func createUser(_ user: User, image: UIImage?)  {
+    func createUser(_ user: User, profile_pic: UIImage?)  {
         guard let apiUrl = URL(string: serverUrl+"signup/") else {
             print("createUser: Bad URL")
             return
@@ -41,15 +41,15 @@ final class UserStore: ObservableObject {
                     if let email = user.email?.data(using: .utf8) {
                         mpFD.append(email, withName: "email")
                     }
-                    if let image = image?.jpegData(compressionQuality: 1.0) {
-                        mpFD.append(image, withName: "image", fileName: "chattImage", mimeType: "image/jpeg")
+                    if let profile_pic = profile_pic?.jpegData(compressionQuality: 1.0) {
+                        mpFD.append(profile_pic, withName: "profile_pic", fileName: "profile_pic", mimeType: "image/jpeg")
                     }
                 }, to: apiUrl, method: .post).response { response in
                     switch (response.result) {
                     case .success:
-                        print("createUser: new chat created!")
+                        print("createUser: new user created!")
                     case .failure:
-                        print("createUser: new chat failed")
+                        print("createUser: new user failed")
                     }
                 }
     }

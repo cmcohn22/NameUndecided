@@ -21,24 +21,6 @@ final class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentPicker(.photoLibrary)
     }
     
-    @IBAction func accessCamera(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            presentPicker(.camera)
-        } else {
-            print("Camera not available. iPhone simulators don't simulate the camera.")
-        }
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey : Any]) {
-            if let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String {
-                if mediaType  == "public.image" {
-                    profilePic.image = (info[UIImagePickerController.InfoKey.editedImage] as? UIImage ??
-                                        info[UIImagePickerController.InfoKey.originalImage] as? UIImage)?
-                        .resizeImage(targetSize: CGSize(width: 240, height: 128))
-                }
-            }
-            picker.dismiss(animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,16 +52,35 @@ final class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     
     @IBAction func creatAccount(_ sender: Any) {
-        if isUserInformationValid() == false {
-            print("Please fill out all the required information")
-        }
         let user = User(username: self.userName.text,
                         password: self.passWord.text,
                         first_name: self.firstName.text,
                         last_name: self.lastName.text,
                         email: self.email.text)
-        UserStore.shared.createUser(user, image: profilePic.image)
+        if isUserInformationValid() == false {
+            print("Please fill out all the required information")
+        }
+        UserStore.shared.createUser(user, profile_pic: profilePic.image)
         
+    }
+    
+    @IBAction func accessCamera(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            presentPicker(.camera)
+        } else {
+            print("Camera not available. iPhone simulators don't simulate the camera.")
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey : Any]) {
+            if let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String {
+                if mediaType  == "public.image" {
+                    profilePic.image = (info[UIImagePickerController.InfoKey.editedImage] as? UIImage ??
+                                        info[UIImagePickerController.InfoKey.originalImage] as? UIImage)?
+                        .resizeImage(targetSize: CGSize(width: 240, height: 128))
+                }
+            }
+            picker.dismiss(animated: true, completion: nil)
     }
     
     private func isUserInformationValid() -> Bool {
