@@ -16,7 +16,7 @@ final class ChatLog: ObservableObject {
     // private let nFields = Mirror(reflecting: Chatt()).children.count
     private let nFields = 3
 
-    private let serverUrl = "http://127.0.0.1:8000/"
+    private let serverUrl = "https://mnky-chat.com/"
     
     let lat = 0.0
     let long = 0.0

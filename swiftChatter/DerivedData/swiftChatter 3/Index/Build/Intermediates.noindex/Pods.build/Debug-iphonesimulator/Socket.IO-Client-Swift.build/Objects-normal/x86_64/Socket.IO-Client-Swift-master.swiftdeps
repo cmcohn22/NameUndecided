@@ -1,52 +1,52 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "b9f579b3bb827e1c15a89152012e4fc49e61059f5d4234356efe57645c085e41"
-build_start_time: [1638819790, 106820106]
-build_end_time: [1638819791, 599165916]
+build_start_time: [1638820748, 185431957]
+build_end_time: [1638820754, 734325885]
 inputs:
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Ack/SocketAckEmitter.swift"
-  : [1638819755, 770678758]
+  : [1638820665, 408739089]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Ack/SocketAckManager.swift"
-  : [1638819755, 771234035]
+  : [1638820665, 408233880]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Client/SocketAnyEvent.swift"
-  : [1638819755, 772006034]
+  : [1638820665, 404731750]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Client/SocketEventHandler.swift"
-  : [1638819755, 772400140]
+  : [1638820665, 406233787]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Client/SocketIOClient.swift"
-  : [1638819755, 772676944]
+  : [1638820665, 405265808]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Client/SocketIOClientConfiguration.swift"
-  : [1638819755, 773070335]
+  : [1638820665, 404187917]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Client/SocketIOClientOption.swift"
-  : [1638819755, 773428201]
+  : [1638820665, 405643463]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Client/SocketIOClientSpec.swift"
-  : [1638819755, 773743867]
+  : [1638820665, 407139778]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Client/SocketIOStatus.swift"
-  : [1638819755, 774288177]
+  : [1638820665, 407520771]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Client/SocketRawView.swift"
-  : [1638819755, 774564266]
+  : [1638820665, 406681776]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Engine/SocketEngine.swift"
-  : [1638819755, 775150537]
+  : [1638820665, 403408050]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Engine/SocketEngineClient.swift"
-  : [1638819755, 775614500]
+  : [1638820665, 400792121]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Engine/SocketEnginePacketType.swift"
-  : [1638819755, 776082515]
+  : [1638820665, 402816295]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Engine/SocketEnginePollable.swift"
-  : [1638819755, 776324272]
+  : [1638820665, 401689529]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Engine/SocketEngineSpec.swift"
-  : [1638819755, 776550769]
+  : [1638820665, 402181148]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Engine/SocketEngineWebsocket.swift"
-  : [1638819755, 777184009]
+  : [1638820665, 401238918]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Manager/SocketManager.swift"
-  : [1638819755, 777915954]
+  : [1638820665, 399912834]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Manager/SocketManagerSpec.swift"
-  : [1638819755, 778351783]
+  : [1638820665, 399271965]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Parse/SocketPacket.swift"
-  : [1638819755, 778859138]
+  : [1638820665, 398342370]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Parse/SocketParsable.swift"
-  : [1638819755, 779628276]
+  : [1638820665, 397738933]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Util/SocketExtensions.swift"
-  : [1638819755, 780013561]
+  : [1638820665, 396583557]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Util/SocketLogger.swift"
-  : [1638819755, 781121492]
+  : [1638820665, 396172761]
   ? "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Util/SocketStringReader.swift"
-  : [1638819755, 781735420]
-  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Util/SocketTypes.swift": [1638819755, 782475948]
+  : [1638820665, 395669221]
+  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Socket.IO-Client-Swift/Source/SocketIO/Util/SocketTypes.swift": [1638820665, 396994590]

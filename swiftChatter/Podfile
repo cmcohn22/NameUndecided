@@ -3,7 +3,8 @@
 
 # add the Firebase pod for Google Analytics
 pod 'Firebase/Analytics'
-pod '
+pod 'Socket.IO-Client-Swift'
+pod 'IQKeyboardManagerSwift'
 # or pod ‘Firebase/AnalyticsWithoutAdIdSupport’
 # for Analytics without IDFA collection capability
 

@@ -81,15 +81,21 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.6.0):
     - GoogleUtilities/Logger
+  - IQKeyboardManagerSwift (6.5.9)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
+  - Socket.IO-Client-Swift (16.0.1):
+    - Starscream (~> 4.0)
+  - Starscream (4.0.4)
 
 DEPENDENCIES:
   - Firebase/Analytics
+  - IQKeyboardManagerSwift
+  - Socket.IO-Client-Swift
 
 SPEC REPOS:
   trunk:
@@ -101,8 +107,11 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - IQKeyboardManagerSwift
     - nanopb
     - PromisesObjC
+    - Socket.IO-Client-Swift
+    - Starscream
 
 SPEC CHECKSUMS:
   Firebase: 13d8d96499e2635428d5bf0ec675df21f95d9a95
@@ -113,9 +122,12 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: b54a857d347703d67c7a6f23713760c9bcfe9008
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleUtilities: 684ee790a24f73ebb2d1d966e9711c203f2a4237
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  Socket.IO-Client-Swift: c116d6dc9fd6be9c259bacfe143f8725bce7d79e
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
 
-PODFILE CHECKSUM: fdc17bf39693a2c22a39e09a813cc0ef08e5dc2b
+PODFILE CHECKSUM: 83cc0153ff05ef1e6aa26d227547b1065381a5fa
 
 COCOAPODS: 1.11.2

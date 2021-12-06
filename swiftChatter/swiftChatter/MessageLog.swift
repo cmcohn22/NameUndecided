@@ -16,7 +16,7 @@ final class MessageLog: ObservableObject {
     @Published private(set) var messages = [Message]()
     private let nFields = Mirror(reflecting: Message()).children.count
 
-    private let serverUrl = "http://127.0.0.1:8000/"
+    private let serverUrl = "https://mnky-chat.com/"
     
     // TODO: Figure out current location
     let lat = 0.0

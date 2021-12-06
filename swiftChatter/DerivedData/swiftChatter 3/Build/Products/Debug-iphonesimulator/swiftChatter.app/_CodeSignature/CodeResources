@@ -98,87 +98,123 @@
 		</data>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<data>
-		7vKTj/k34fPIASrAg8HAqAivT6w=
+		o3vlwV7u2HeS8iBNLY3S57ifPNU=
 		</data>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<data>
-		FnLVcK5nUoLHofPk5A4uc2GVTzg=
+		pkiDAoX9Qn2G1bnDrA2sIHll+dg=
 		</data>
 		<key>Frameworks/FBLPromises.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Sy/yqUojgkjJCwgQH1J8lZaqJFQ=
+		cvgal4AiQA7n62fbdqvLhGdxwMc=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
-		zEl5IQNm76L7U6MP8nEOpQZpAys=
+		uYE0x5IPp6S215T9lDIVpngkrCA=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
-		Qi/urCWmAe7G76r3RNxODxiAKsU=
+		KSOtZGZ3pnek+p3bjkLvcde91n0=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/_CodeSignature/CodeResources</key>
 		<data>
-		jDeGpuCnF7g89xNRFCRWCUUIuug=
+		fhDrxNynizIyGndpVZJTvutQlug=
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/FirebaseCoreDiagnostics</key>
 		<data>
-		lgqVWD4pkL5DrokXgbixbHoMAiU=
+		khgU5ZyJkcOXZgrzNPeU4LQ8EMI=
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
 		<data>
-		x+NfsZHh+MN+dZxwvGhLNKAxbfg=
+		ZX5RjmJyb0gaFJ0t77B+s4EEC98=
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/_CodeSignature/CodeResources</key>
 		<data>
-		lahR2YJE4+j5HSxs8rCDDHPwnnQ=
+		uTNCoYUwZO0m9CGmeJ9qAh1Z/TY=
 		</data>
 		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations</key>
 		<data>
-		kamCimk5tnFTQ4BVJJbT1NDQtK8=
+		IcdU7Aw2djOXLAwIFRkyYSfnkx4=
 		</data>
 		<key>Frameworks/FirebaseInstallations.framework/Info.plist</key>
 		<data>
-		4SwhIqgnEa83YLCQccXTZ0FNwVU=
+		Qh9EH+yk+qdemy1pi48fNkbEc24=
 		</data>
 		<key>Frameworks/FirebaseInstallations.framework/_CodeSignature/CodeResources</key>
 		<data>
-		OtGyCNdt42t/RT6Lsgws9eE8YEA=
+		RGECktSP8DHxHfDag8amyUw1Hpo=
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport</key>
 		<data>
-		NcnMh6WTMLUcHs3I8COBETQd+9o=
+		w0kPuwxlLUzmJzd3y/PEFCmdU0A=
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
 		<data>
-		oudaJLQYgtbX9oQdhwhbCy4tWHU=
+		mxLLaF1+yKyoquKgf+HGMbqjWlk=
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/_CodeSignature/CodeResources</key>
 		<data>
-		UKZja3n2OZ0YlWXLjwFqnXtqeaY=
+		K42uAyvQ3dhOf9izWA7FH7xt2ec=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
-		jvWIfunkUpm64q+kaKCgXZ2frOY=
+		6PHaLchFFBqPzy6VLl6dznz2eU4=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
-		OOyNo37DJaoh8jpPvIVNVwrdK3o=
+		wdIuAQjyzTKXLoKwxaV0CvWjeUQ=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/_CodeSignature/CodeResources</key>
 		<data>
-		hiyHm56FypixQhCQ0tP/v8UoBmw=
+		hD4yEz7bdtq9EOgPWanK8vOlsKU=
+		</data>
+		<key>Frameworks/IQKeyboardManagerSwift.framework/IQKeyboardManagerSwift</key>
+		<data>
+		rtEwJdAXVWN1q1MV5Fs5rqXTacU=
+		</data>
+		<key>Frameworks/IQKeyboardManagerSwift.framework/Info.plist</key>
+		<data>
+		LEExs0zVkgEv72JIkKbDG8Z/GJg=
+		</data>
+		<key>Frameworks/IQKeyboardManagerSwift.framework/_CodeSignature/CodeResources</key>
+		<data>
+		Cg61QmseVun5tHb/Th/xhnxkDAs=
+		</data>
+		<key>Frameworks/SocketIO.framework/Info.plist</key>
+		<data>
+		DPEGVqyueXt+QEN0l0ziAerl+1k=
+		</data>
+		<key>Frameworks/SocketIO.framework/SocketIO</key>
+		<data>
+		MpiIEimh0Sd+6B8K8lAvlYvC6u8=
+		</data>
+		<key>Frameworks/SocketIO.framework/_CodeSignature/CodeResources</key>
+		<data>
+		tTe0672Ic8SZB9GHvob9FD3tAag=
+		</data>
+		<key>Frameworks/Starscream.framework/Info.plist</key>
+		<data>
+		6xM6nda9VHq1WNEVXxNA0OT8iC4=
+		</data>
+		<key>Frameworks/Starscream.framework/Starscream</key>
+		<data>
+		IbI0VGbtzAAMsjdkxPTr6S30Rjg=
+		</data>
+		<key>Frameworks/Starscream.framework/_CodeSignature/CodeResources</key>
+		<data>
+		AL1Hf5Jvms8HpM1ad2t6egyx5bw=
 		</data>
 		<key>Frameworks/nanopb.framework/Info.plist</key>
 		<data>
-		pZWS6DuAbhGewBGsBOX+roO4mj0=
+		S1+tWPCf4ITXOq1iMRre2bY7QCg=
 		</data>
 		<key>Frameworks/nanopb.framework/_CodeSignature/CodeResources</key>
 		<data>
-		37VvQOVMw3/pDJ98zpyWilZr47Q=
+		6zeaAeY2fZhpGeQ/Euh68DCKgkg=
 		</data>
 		<key>Frameworks/nanopb.framework/nanopb</key>
 		<data>
-		WhTHm0qLDMl8GcL6NWGLtQkwyVQ=
+		Gws1NGMDnr0BxF0RXkiAYXnFzj0=
 		</data>
 		<key>GoogleService-Info.plist</key>
 		<data>
@@ -360,147 +396,210 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OPs4HC5CKXLlIOQ4q841zB1wZg1/xDW2VzVVMHsAuKM=
+			35Kvuxnbi9S3HKUgOcAgXJNskPzwBD5nafnP8qPj8h4=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U70hZrc+gFpncXWHWhc25uftaIR0q+C6kAgyLFvKAFw=
+			U3vhWcnqHf1/65G/Qp7/bNTggSoqy/+zTH/I6Rwy89Y=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zJv8K6zvn6UGE+HpozGfAS7l5Tjw2PdmFLPeEl00Nrc=
+			zS8HSIEP9U+IGG6rLOstNMnRXYeRODiXyTI5/Zqyu3k=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W1qFX+UMqihW2QpR4eRM+n9FVvKCWZXd9LQof/QxOgE=
+			tq2cFdGrpmLe/kd/g9FtRSgYCoEzNRCb7OF117iXHK4=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MsqU/vTNq0YE/vE+89Dzx/swrk1F1xhvtl9x3VbPvao=
+			yIvGqgAFehSS+pXt+U91rKdfoHrz4s9/GVdgXbg5334=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FQY1feF1p3zMgSakL0XVXgHSOFYNrz7lo0ZA+g7M4cs=
+			WV5dKw7tZZY1PFs8UhfB9KNtgIArDuuILhcEiK5HtMY=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/FirebaseCoreDiagnostics</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Od+Zqx9W62YZ79YAWIcRuUiSKfWqOyGs6H1PA5B/68o=
+			6oGnnekeI7ecBLhBT4JCLAIDCv/2f14XrJxlraWkpKs=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			L1sidVp3RkUdQ75gn+T34GyBfAX8aEGSxSKs334bzDU=
+			dstKO6ABJtrXql77uc063KFmttKQAm1e3o17AlANL4k=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o8JjfsEXRlNZFS4fS2NrBnDXq9rSW+K3p+cg9h8F1Bg=
+			3fLfoKlJX8/5v2jurS4wl7aAOwvZqZOdamRBxiu8vyE=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o661IZ5+Zw4GlwyQF9T4PcQL5JZtGJgXtAKRcc1jhUg=
+			z/o1zfE5BBjswk6DYfZ0nJqZOuivYmkC83nm4a5Gd9Q=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseInstallations.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+ET388zA2i4zaUhi+oWLX7e6ttDYbGv5eSEFJUwAqA8=
+			jD2ip4CFlK/mnbZ76aj5NaehmbywEQglq7ial+3PXiY=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseInstallations.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xL5kL+bnFm0N3FoMISVYX5mBWr7RtBxoFjohZBaK1wg=
+			HY/CYXUZ05Krvz4bqObZYaA0/7YpVpVRYfKkleCKgG4=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PQCv2pq7hp5plaYQA08NyTGs+VKk+JcuGBVfz1mhr1s=
+			Lb/oAAqPVkREvCMzSiuA+8kEKYP+jZIWnlC1O7cXldc=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RHfznNJbQogcUMpe2o3yIojmUr6k756QoN19jW0B9Hg=
+			Ab8w3zXUc2cqc91JwDyyAtrUa5108zHda+U8/tfdJBs=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleDataTransport.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xyFudgSxAOT6job81mRGgRPPbGbNPyQ/bqnjvmhMolE=
+			C5fKV6LZ5ovJRs59RcQ1lCKfwpNbwU23DQ7CQUmg7cM=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R5b8cbQ6peHsdqatchsOYrTirHllLf4E5aR5QeOOuO4=
+			YrhuW+jYGeHmLqG1qbb/FI+2Vn7YDzzfKGInT2/4EAA=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RHO0OXlxvI8unDZq5kTH0HSpt4Try+fjfbjZCUzmzKY=
+			ws1bjymr8l1mcDB4pozQ4w5BrTjg87hVZnw5lYIE/go=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DASppsDD9n3ZwUUjzzvKwicDoFOVt95UxkAWxv0SAU8=
+			6s/1BJDZ9aKFJc+uQ+ZgOjoAzHpnAia3VjEXdtrsOQk=
+			</data>
+		</dict>
+		<key>Frameworks/IQKeyboardManagerSwift.framework/IQKeyboardManagerSwift</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			iRA+HPr258tSuMnU4v+vTzGPDXI+cV25NlX1ZhipsVo=
+			</data>
+		</dict>
+		<key>Frameworks/IQKeyboardManagerSwift.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/8trgFYX0jru8E6BLHiSDRwlZ1EKplz6fQbhIJbnTaU=
+			</data>
+		</dict>
+		<key>Frameworks/IQKeyboardManagerSwift.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LDGhX1gpuXTAb51fr73NCegK2NyaVEkCZDbGBfqqLuI=
+			</data>
+		</dict>
+		<key>Frameworks/SocketIO.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0/b13yQfjmd5BIw9MO2BqpnyNvWhaYZksR1zmdHkt+k=
+			</data>
+		</dict>
+		<key>Frameworks/SocketIO.framework/SocketIO</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YTuOGMt81BOhm77IEyx03ynvwql//VCWnLlFzl1WhF8=
+			</data>
+		</dict>
+		<key>Frameworks/SocketIO.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gP6LtYoMY6ByWMaQtXb92zdZTcJbZ/kDMS3YFrhmzUU=
+			</data>
+		</dict>
+		<key>Frameworks/Starscream.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			P3q4rHTFgRlR1TUgVGZQNyqNyi+TZNeB23fItHFw+qA=
+			</data>
+		</dict>
+		<key>Frameworks/Starscream.framework/Starscream</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3uvpMgAezdloA8EhQuvVEvVriWfmjpEAnLoRtHs8XHo=
+			</data>
+		</dict>
+		<key>Frameworks/Starscream.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GhwPBI3GKVyjTnj2zw1BBEL7G+lfOwsElQHOaK2/rmQ=
 			</data>
 		</dict>
 		<key>Frameworks/nanopb.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/wG/RPSKgRrA0mjOAGlK4FvD6I1E8FraEv7V/1OANJI=
+			+FjmiRe+Si/p+vOrzvDTMA7bCiEeD5Qlvw0v7VaNLWY=
 			</data>
 		</dict>
 		<key>Frameworks/nanopb.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BsgtHLxFMM0iinOipzQED+xAdT2yhXDszDb+dymvBEI=
+			+zE9zCO3wp5YxPb4Obv+HE056M4RXOezrfZW6i2oZHk=
 			</data>
 		</dict>
 		<key>Frameworks/nanopb.framework/nanopb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			soENZ+HXY3qJviXYByCXZzWHfWzI+EpHuoFKk+RY+Q0=
+			a2RT5ZWXM7HiBA8+C07pZhaLMrhWgJBdmlJtVY9ZmPs=
 			</data>
 		</dict>
 		<key>GoogleService-Info.plist</key>
