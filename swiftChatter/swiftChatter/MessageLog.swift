@@ -22,7 +22,7 @@ final class MessageLog: ObservableObject {
     let lat = 0.0
     let long = 0.0
     // TODO: Where am I grabbing chat_id from?
-    var chat_id = "5014a329"
+    var chat_id = "157ace05"
     
     func get_messages(_ completion: ((Bool) -> ())?) {
         guard let apiUrl = URL(string: serverUrl+"api/messages/?lat=" + String(lat) + "&long=" + String(long) + "&chat_id=" + chat_id) else {
@@ -31,7 +31,7 @@ final class MessageLog: ObservableObject {
         }
         
         var request = URLRequest(url: apiUrl)
-        request.addValue("Token be1721b173119203ff1c7e13d8b9e906d6b2a017", forHTTPHeaderField: "Authorization")
+        request.addValue("Token bbd9e8de6701f341cd96302a19b98c29e1d62f54", forHTTPHeaderField: "Authorization")
         // TODO: GET RID OF THIS LATER WHEN WE HAVE SIGN UP AND LOGIN WORKING ^
         request.httpMethod = "GET"
         
