@@ -97,7 +97,7 @@
                                     <outlet property="imageLabel" destination="OSb-Eu-sdw" id="X8A-Ga-ibF"/>
                                     <outlet property="messageLabel" destination="dJT-FC-iMD" id="y3r-R5-b6r"/>
                                     <outlet property="timestampLabel" destination="QTC-HT-tNz" id="WEd-mD-DlP"/>
-                                    <segue destination="1yL-ab-WsZ" kind="show" id="0UR-GP-ABS"/>
+                                    <segue destination="32I-zu-pcC" kind="show" id="n8R-zi-j3p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -275,7 +275,8 @@
         <!--LoginViewController-->
         <scene sceneID="JkG-vB-GvI">
             <objects>
-                <viewController title="LoginViewController" id="0Cf-gJ-mWb" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPF-tM-IYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController title="LoginViewController" id="0Cf-gJ-mWb" customClass="LogInVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9E-2H-pmV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,9 +308,16 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
-                                    <segue destination="cOe-KH-pNK" kind="show" id="qFn-Mm-Ru9"/>
+                                    <action selector="Submit:" destination="0Cf-gJ-mWb" eventType="touchUpInside" id="x69-vx-SyA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thj-fW-M7M" userLabel="InvalidLogIn">
+                                <rect key="frame" x="113" y="516" width="211" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KGH-lp-gNP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -329,10 +337,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gze-Qk-k5r"/>
+                    <connections>
+                        <outlet property="InvalidLogIn" destination="thj-fW-M7M" id="Bhd-gd-oS9"/>
+                        <outlet property="Password" destination="Rzo-xq-doT" id="rIn-92-1eO"/>
+                        <outlet property="Username" destination="tiw-Ae-s6A" id="aHW-ai-JJu"/>
+                        <segue destination="cOe-KH-pNK" kind="show" identifier="ID1" id="f4R-ek-9Xa"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fPF-tM-IYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1171" y="-283"/>
+            <point key="canvasLocation" x="-1312" y="-242"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="13C-0L-RgB">
@@ -352,25 +365,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0F8-t2-CHl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-310.14492753623193" y="86.383928571428569"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7aZ-uf-w5d">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1yL-ab-WsZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Sz7-Ie-Lr1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ihg-s1-JSA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="32I-zu-pcC" kind="show" id="CUK-zW-kcQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZS4-IF-b77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="374" y="-727"/>
         </scene>
         <!--SignUpViewController-->
         <scene sceneID="l4R-sx-piT">
@@ -396,9 +390,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="EmptyPassWord:" destination="CPU-Oq-a7B" eventType="editingDidEnd" id="zaG-sG-ZTL"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmc-K4-y53">
                                 <rect key="frame" x="172" y="33" width="73.5" height="20.5"/>
@@ -540,7 +531,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="142" width="414" height="42"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
@@ -788,8 +779,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hsD-lj-dER"/>
-        <segue reference="MQ5-Le-mvV"/>
+        <segue reference="U9I-fN-4Fa"/>
+        <segue reference="f4R-ek-9Xa"/>
         <segue reference="ort-Z5-tCM"/>
     </inferredMetricsTieBreakers>
     <resources>

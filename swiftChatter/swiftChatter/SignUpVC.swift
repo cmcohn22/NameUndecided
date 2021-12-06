@@ -50,9 +50,6 @@ class SignUpVC: UIViewController{
         print(profilePic)
         let validEmail = isValidEmail(email)
         print(validEmail)
-        if validEmail && userName != "" && pass != "" && firstName != "" && lastName != "" && profilePic != ""{
-          self.performSegue(withIdentifier: "ID2", sender: self)
-        }
         if !validEmail{
             InvalidEmail.text = "Invalid Email"
         }
@@ -83,6 +80,11 @@ class SignUpVC: UIViewController{
         else {
             EmptyPassword.text = ""
         }
+        if validEmail && userName != "" && pass != "" && firstName != "" && lastName != "" && profilePic != ""{
+          self.performSegue(withIdentifier: "ID2", sender: self)
+        }
+        else{
+        
         let url = URL(string: "https://mnky-chat.com/api/signup/")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -131,6 +133,7 @@ class SignUpVC: UIViewController{
             "email" : email,
             "profile_pic" : profilePic,
         ]
+        }
 //        postRequest.httpBody = params
         
     }

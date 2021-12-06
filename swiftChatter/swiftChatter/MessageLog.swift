@@ -53,10 +53,9 @@ final class MessageLog: ObservableObject {
                 return
             }
             
-            print("POOPCOCK")
+
             print(jsonObj)
             let messagesReceived = jsonObj["messages"] as? [Dictionary<String,Any?>] ?? []
-            print("PEECOCK")
             print(messagesReceived)
             print(type(of: messagesReceived))
         DispatchQueue.main.async {
