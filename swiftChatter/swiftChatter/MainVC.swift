@@ -61,7 +61,7 @@ final class MainVC: UITableViewController, CLLocationManagerDelegate {
     }
     
     func setUser() {
-        var user = User(username: "pratik", password: "nah", first_name: "Pratik", last_name: "Danu", email: "pdanu")
+        var user = UserStore.shared.activeUser
         user.setLatLong(userLocation)
         print(user.username as Any)
         print(user.password as Any)

@@ -19,6 +19,7 @@ struct User {
     @UserPropWrapper var profile_pic: String?
     var lat: String!
     var long: String!
+    var tokenId: String!
     
     mutating func setLatLong(_ currentLocation: CLLocation){
         lat = "\(currentLocation.coordinate.latitude)"
