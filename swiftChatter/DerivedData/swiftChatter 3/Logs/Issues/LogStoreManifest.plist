@@ -6,34 +6,6 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>07C4AD02-13AF-43ED-8D96-757F6BFAD03B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>07C4AD02-13AF-43ED-8D96-757F6BFAD03B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>SocketIO-ctvoopilvkkstxgzyfdhwtujseqt</string>
-			<key>timeStartedRecording</key>
-			<real>660069885.277776</real>
-			<key>timeStoppedRecording</key>
-			<real>660069885.27799594</real>
-			<key>title</key>
-			<string>Build target SocketIO</string>
-			<key>uniqueIdentifier</key>
-			<string>07C4AD02-13AF-43ED-8D96-757F6BFAD03B</string>
-		</dict>
 		<key>1E9950D1-175F-4BD9-9118-B1FBDC1D16CE</key>
 		<dict>
 			<key>className</key>
@@ -118,34 +90,6 @@
 			<key>uniqueIdentifier</key>
 			<string>3781912F-AEBF-4E09-B9F4-A0998C6904F4</string>
 		</dict>
-		<key>5917AF1A-05D9-4FFB-8A2D-C7A627C1F0B8</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.bundle</string>
-			<key>fileName</key>
-			<string>5917AF1A-05D9-4FFB-8A2D-C7A627C1F0B8.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>SocketIO-SocketIO-ctvoopilvkkstxgzyfdhwtujseqt</string>
-			<key>timeStartedRecording</key>
-			<real>660069885.27818</real>
-			<key>timeStoppedRecording</key>
-			<real>660069885.27835906</real>
-			<key>title</key>
-			<string>Build target SocketIO-SocketIO</string>
-			<key>uniqueIdentifier</key>
-			<string>5917AF1A-05D9-4FFB-8A2D-C7A627C1F0B8</string>
-		</dict>
 		<key>5AE8C086-37AC-4018-A22B-02CFC6E402F6</key>
 		<dict>
 			<key>className</key>
@@ -229,62 +173,6 @@
 			<string>Build target FirebaseCoreDiagnostics</string>
 			<key>uniqueIdentifier</key>
 			<string>9AD5C14B-20CD-4314-A84D-255AD3325BA2</string>
-		</dict>
-		<key>CB073CEE-74AD-4AA3-AEDF-6D9DE9CF8C3A</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>CB073CEE-74AD-4AA3-AEDF-6D9DE9CF8C3A.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>Emitter-ctvoopilvkkstxgzyfdhwtujseqt</string>
-			<key>timeStartedRecording</key>
-			<real>660069885.27730894</real>
-			<key>timeStoppedRecording</key>
-			<real>660069885.27753603</real>
-			<key>title</key>
-			<string>Build target Emitter</string>
-			<key>uniqueIdentifier</key>
-			<string>CB073CEE-74AD-4AA3-AEDF-6D9DE9CF8C3A</string>
-		</dict>
-		<key>D7DB3DBD-4CB5-4022-AC36-B63B90D5C1DB</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>D7DB3DBD-4CB5-4022-AC36-B63B90D5C1DB.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>BlocksKit-ctvoopilvkkstxgzyfdhwtujseqt</string>
-			<key>timeStartedRecording</key>
-			<real>660069885.27850604</real>
-			<key>timeStoppedRecording</key>
-			<real>660069885.27866697</real>
-			<key>title</key>
-			<string>Build target BlocksKit</string>
-			<key>uniqueIdentifier</key>
-			<string>D7DB3DBD-4CB5-4022-AC36-B63B90D5C1DB</string>
 		</dict>
 		<key>DA2FDF68-B78F-4086-8678-6B30AED986FF</key>
 		<dict>
