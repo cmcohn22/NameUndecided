@@ -6,6 +6,40 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>1B469AFC-6939-48CB-B735-C9E1E8A3BD6D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.IndexBuildLog</string>
+			<key>fileName</key>
+			<string>1B469AFC-6939-48CB-B735-C9E1E8A3BD6D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Index Build</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Index Build</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>swiftChatter Build Preparation</string>
+			<key>timeStartedRecording</key>
+			<real>660455246.181265</real>
+			<key>timeStoppedRecording</key>
+			<real>660455247.78410101</real>
+			<key>title</key>
+			<string>swiftChatter Build Preparation</string>
+			<key>uniqueIdentifier</key>
+			<string>1B469AFC-6939-48CB-B735-C9E1E8A3BD6D</string>
+		</dict>
 		<key>2A67AC63-4C84-4C07-A6DF-35A92FC13A37</key>
 		<dict>
 			<key>className</key>
@@ -957,6 +991,40 @@
 			<string>Clean Build Folder</string>
 			<key>uniqueIdentifier</key>
 			<string>C72CB0FE-FB71-4F47-94E3-4AF25C3AA49F</string>
+		</dict>
+		<key>DC825D10-2B45-45E8-AB4A-364BCED6A3F1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.IndexBuildLog</string>
+			<key>fileName</key>
+			<string>DC825D10-2B45-45E8-AB4A-364BCED6A3F1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Index Build</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Index Build</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>swiftChatter Build Preparation</string>
+			<key>timeStartedRecording</key>
+			<real>660455667.39722502</real>
+			<key>timeStoppedRecording</key>
+			<real>660455668.25449097</real>
+			<key>title</key>
+			<string>swiftChatter Build Preparation</string>
+			<key>uniqueIdentifier</key>
+			<string>DC825D10-2B45-45E8-AB4A-364BCED6A3F1</string>
 		</dict>
 		<key>ED8B5797-C9E2-4EC9-9020-A0533EEA5E98</key>
 		<dict>
