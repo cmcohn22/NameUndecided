@@ -275,7 +275,8 @@
         <!--LoginViewController-->
         <scene sceneID="JkG-vB-GvI">
             <objects>
-                <viewController title="LoginViewController" id="0Cf-gJ-mWb" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPF-tM-IYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController title="LoginViewController" id="0Cf-gJ-mWb" customClass="LogInVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9E-2H-pmV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,9 +308,16 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
-                                    <segue destination="cOe-KH-pNK" kind="show" id="qFn-Mm-Ru9"/>
+                                    <action selector="Submit:" destination="0Cf-gJ-mWb" eventType="touchUpInside" id="x69-vx-SyA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thj-fW-M7M" userLabel="InvalidLogIn">
+                                <rect key="frame" x="113" y="516" width="211" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KGH-lp-gNP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -329,10 +337,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gze-Qk-k5r"/>
+                    <connections>
+                        <outlet property="InvalidLogIn" destination="thj-fW-M7M" id="Bhd-gd-oS9"/>
+                        <outlet property="Password" destination="Rzo-xq-doT" id="rIn-92-1eO"/>
+                        <outlet property="Username" destination="tiw-Ae-s6A" id="aHW-ai-JJu"/>
+                        <segue destination="cOe-KH-pNK" kind="show" identifier="ID1" id="f4R-ek-9Xa"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fPF-tM-IYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1171" y="-283"/>
+            <point key="canvasLocation" x="-1312" y="-242"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="13C-0L-RgB">
@@ -377,9 +390,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="EmptyPassWord:" destination="CPU-Oq-a7B" eventType="editingDidEnd" id="zaG-sG-ZTL"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmc-K4-y53">
                                 <rect key="frame" x="172" y="33" width="73.5" height="20.5"/>
@@ -521,7 +531,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="142" width="414" height="42"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
@@ -769,9 +779,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oAg-PT-h2C"/>
         <segue reference="U9I-fN-4Fa"/>
-        <segue reference="MQ5-Le-mvV"/>
+        <segue reference="f4R-ek-9Xa"/>
         <segue reference="ort-Z5-tCM"/>
     </inferredMetricsTieBreakers>
     <resources>
