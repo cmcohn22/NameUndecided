@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "232c0e7d135682078156566440ca3d7b352d12cbee6c759597bfed26f140b24b"
-build_start_time: [1638820910, 697556972]
-build_end_time: [1638820912, 424188137]
+build_start_time: [1638822765, 864933967]
+build_end_time: [1638822767, 861438035]
 inputs:
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/ActiveChats.swift": [1638819834, 11487007]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/ActiveChatsVC.swift": [1638819834, 11689662]

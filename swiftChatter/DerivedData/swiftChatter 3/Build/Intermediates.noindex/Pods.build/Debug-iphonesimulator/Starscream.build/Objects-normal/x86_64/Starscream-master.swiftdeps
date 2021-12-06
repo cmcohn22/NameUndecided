@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "e5ab5e9422a53ba45284d18bd4db99f7d23d5b063ef0ee7da37f5de7eaca9930"
-build_start_time: [1638820792, 886374950]
-build_end_time: [1638820805, 262354850]
+build_start_time: [1638822753, 498064994]
+build_end_time: [1638822761, 580127000]
 inputs:
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Starscream/Sources/Compression/Compression.swift": [1638820665, 423221588]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/Pods/Starscream/Sources/Compression/WSCompression.swift": [1638820665, 423599243]
