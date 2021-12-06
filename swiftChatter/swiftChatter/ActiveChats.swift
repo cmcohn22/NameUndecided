@@ -15,13 +15,13 @@ final class ActiveChats: ObservableObject {
     @Published private(set) var chatts = [Chatt]()
     private let nFields = Mirror(reflecting: Chatt()).children.count
 
-    private let serverUrl = "http://127.0.0.1:8000/"
+    private let serverUrl = "https://mnky-chat.com/"
     
     let lat = 0.0
     let long = 0.0
     
     func get_active_chats(_ completion: ((Bool) -> ())?) {
-        guard let apiUrl = URL(string: serverUrl+"api/active-chats/?lat=" + String(lat) + "&long=" + String(long)) else {
+        guard let apiUrl = URL(string: serverUrl+"api/active-chats/?lat=" + String(lat) + "&long=" + String(long)) else {   
             print("active-chats: Bad URL")
             return
         }
