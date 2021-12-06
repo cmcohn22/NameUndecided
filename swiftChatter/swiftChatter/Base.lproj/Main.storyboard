@@ -764,9 +764,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="contentLabel" destination="jB9-TP-wYv" id="PKN-IF-bMa"/>
-                                    <outlet property="firstnameLabel" destination="T56-f6-EHY" id="uMJ-WV-bfs"/>
-                                    <outlet property="lastnameLabel" destination="Vz1-fX-nXo" id="GVB-by-9AL"/>
+                                    <outlet property="contentLabel" destination="jB9-TP-wYv" id="6kA-qq-3Lq"/>
+                                    <outlet property="firstnameLabel" destination="T56-f6-EHY" id="58t-e6-N9O"/>
+                                    <outlet property="lastnameLabel" destination="Vz1-fX-nXo" id="FUT-cc-HsE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
