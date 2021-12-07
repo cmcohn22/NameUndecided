@@ -61,6 +61,7 @@ final class MessageVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // populate a single cell
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MessageTableCell", for: indexPath) as? MessageTableCell else {
+            print("Interesting")
             fatalError("No reusable cell!")
         }
 
@@ -69,6 +70,7 @@ final class MessageVC: UITableViewController {
         cell.firstnameLabel.text = message.first_name
         cell.lastnameLabel.text = message.last_name
         cell.contentLabel.text = message.content
+//        cell.profilePic.
         return cell
     }
 }

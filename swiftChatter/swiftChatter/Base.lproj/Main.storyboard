@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="UsA-23-4FX">
-                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="142" width="414" height="43"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="N8R-kC-6T8">
@@ -275,7 +275,6 @@
         <!--LoginViewController-->
         <scene sceneID="JkG-vB-GvI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fPF-tM-IYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="LoginViewController" id="0Cf-gJ-mWb" customClass="LogInVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9E-2H-pmV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -344,6 +343,7 @@
                         <segue destination="cOe-KH-pNK" kind="show" identifier="ID1" id="f4R-ek-9Xa"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPF-tM-IYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1312" y="-242"/>
         </scene>
@@ -531,7 +531,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="142" width="414" height="42"/>
+                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
@@ -710,18 +710,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <textField key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send Message..." textAlignment="natural" minimumFontSize="20" id="sh0-mc-Hfp">
-                            <rect key="frame" x="0.0" y="127" width="414" height="34"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Lle-dO-EnI">
+                            <rect key="frame" x="0.0" y="138" width="414" height="705"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send Message..." textAlignment="natural" minimumFontSize="20" id="VEe-nc-feE">
+                                    <rect key="frame" x="0.0" y="641" width="376" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5h-Ia-Imp">
+                                    <rect key="frame" x="373" y="641" width="41" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="arrow.up" catalog="system"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="R5h-Ia-Imp" secondAttribute="trailing" id="AbC-Co-4xE"/>
+                                <constraint firstItem="R5h-Ia-Imp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lle-dO-EnI" secondAttribute="leading" constant="20" symbolic="YES" id="IIs-bf-1Tm"/>
+                                <constraint firstItem="R5h-Ia-Imp" firstAttribute="top" secondItem="VEe-nc-feE" secondAttribute="top" id="S58-2c-ZXG"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="9aC-FW-KQ5" customClass="MessageTableCell" customModule="swiftChatter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageTableCell" rowHeight="71" id="9aC-FW-KQ5" customClass="MessageTableCell" customModule="swiftChatter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9aC-FW-KQ5" id="Jzc-gS-ENx" customClass="MessageTableCell" customModule="swiftChatter" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T56-f6-EHY">
@@ -742,11 +759,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgt-5l-jX5">
+                                            <rect key="frame" x="201" y="11" width="67" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="T56-f6-EHY" firstAttribute="leading" secondItem="Jzc-gS-ENx" secondAttribute="leading" constant="20" symbolic="YES" id="1Xq-0y-T7P"/>
                                         <constraint firstItem="jB9-TP-wYv" firstAttribute="top" secondItem="T56-f6-EHY" secondAttribute="bottom" constant="7" id="4dG-PX-si5"/>
-                                        <constraint firstAttribute="trailing" secondItem="jB9-TP-wYv" secondAttribute="trailing" constant="260" id="FU3-hR-gSb"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jB9-TP-wYv" secondAttribute="trailing" id="FU3-hR-gSb"/>
                                         <constraint firstItem="Vz1-fX-nXo" firstAttribute="leading" secondItem="T56-f6-EHY" secondAttribute="trailing" constant="8" symbolic="YES" id="OKN-qw-MFq"/>
                                         <constraint firstItem="jB9-TP-wYv" firstAttribute="leading" secondItem="Jzc-gS-ENx" secondAttribute="leading" constant="20" symbolic="YES" id="T6g-mN-v7s"/>
                                         <constraint firstItem="Vz1-fX-nXo" firstAttribute="baseline" secondItem="T56-f6-EHY" secondAttribute="baseline" id="TFK-Ou-m56"/>
@@ -754,10 +775,16 @@
                                         <constraint firstItem="Vz1-fX-nXo" firstAttribute="top" secondItem="Jzc-gS-ENx" secondAttribute="topMargin" id="toP-kt-yyZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="MessageTableCell">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <connections>
-                                    <outlet property="contentLabel" destination="jB9-TP-wYv" id="6kA-qq-3Lq"/>
-                                    <outlet property="firstnameLabel" destination="T56-f6-EHY" id="58t-e6-N9O"/>
-                                    <outlet property="lastnameLabel" destination="Vz1-fX-nXo" id="FUT-cc-HsE"/>
+                                    <outlet property="contentLabel" destination="jB9-TP-wYv" id="Tj6-ck-PcH"/>
+                                    <outlet property="firstnameLabel" destination="T56-f6-EHY" id="Tyt-f2-uun"/>
+                                    <outlet property="lastnameLabel" destination="Vz1-fX-nXo" id="YWW-qG-8IF"/>
+                                    <outlet property="profilePic" destination="rgt-5l-jX5" id="Gpw-aQ-1Bj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -780,10 +807,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="U9I-fN-4Fa"/>
-        <segue reference="f4R-ek-9Xa"/>
+        <segue reference="MQ5-Le-mvV"/>
         <segue reference="ort-Z5-tCM"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="camera.badge.ellipsis" catalog="system" width="128" height="92"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>

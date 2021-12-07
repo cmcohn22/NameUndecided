@@ -5,6 +5,7 @@
 pod 'Firebase/Analytics'
 pod 'Socket.IO-Client-Swift'
 pod 'IQKeyboardManagerSwift'
+pod 'Alamofire'
 # or pod ‘Firebase/AnalyticsWithoutAdIdSupport’
 # for Analytics without IDFA collection capability
 

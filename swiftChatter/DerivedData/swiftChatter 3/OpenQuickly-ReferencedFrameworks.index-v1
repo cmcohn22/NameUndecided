@@ -11,21 +11,24 @@
 	<string>FirebaseAuth</string>
 	<string>GoogleUtilities</string>
 	<string>Firebase</string>
-	<string>Network</string>
 	<string>GoogleDataTransport</string>
-	<string>FirebaseAppCheck</string>
+	<string>Network</string>
 	<string>FirebaseInAppMessaging</string>
+	<string>FirebaseAppCheck</string>
 	<string>FirebaseMessaging</string>
 	<string>FirebaseCore</string>
-	<string>FirebaseCrashlytics</string>
+	<string>MobileCoreServices</string>
 	<string>sys</string>
+	<string>FirebaseCrashlytics</string>
 	<string>CoreTelephony</string>
 	<string>nanopb</string>
+	<string>CoreServices</string>
 	<string>dispatch</string>
 	<string>FirebaseFirestore</string>
 	<string>FirebaseDatabase</string>
 	<string>FBLPromises</string>
 	<string>FirebaseRemoteConfig</string>
+	<string>FoundationNetworking</string>
 	<string>Dispatch</string>
 	<string>WatchKit</string>
 	<string>Foundation</string>
@@ -33,7 +36,9 @@
 	<string>zlib</string>
 	<string>QuartzCore</string>
 	<string>AppKit</string>
+	<string>Alamofire</string>
 	<string>Starscream</string>
+	<string>Combine</string>
 	<string>netinet</string>
 	<string>FirebaseStorage</string>
 	<string>SystemConfiguration</string>

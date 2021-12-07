@@ -83,7 +83,7 @@ class SignUpVC: UIViewController{
         if validEmail && userName != "" && pass != "" && firstName != "" && lastName != "" && profilePic != ""{
           self.performSegue(withIdentifier: "ID2", sender: self)
         }
-        else{
+//        else{
         
         let url = URL(string: "https://mnky-chat.com/api/signup/")!
         var request = URLRequest(url: url)
@@ -136,7 +136,7 @@ class SignUpVC: UIViewController{
         }
 //        postRequest.httpBody = params
         
-    }
+//    }
     
     
 //

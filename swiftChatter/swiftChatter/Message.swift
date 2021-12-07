@@ -16,5 +16,8 @@ struct Message {
     var username: String?
 //    var profile_pic:
     var content: String?
+    var timestamp: String?
+    var profile_pic: String?
+    var likes: NSArray?
 //    var likes: [Dictionary<String,Any?>]? // TODO: Determine Type if we choose to implement
 }
