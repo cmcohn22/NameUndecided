@@ -19,7 +19,7 @@ final class ChattStore: ObservableObject {
     private let serverUrl = "https://mnky-chat.com/api/"
     
     private let tokenHeaders: HTTPHeaders = [
-        "Authorization": "Token a23cb7a7efd4981c4a85a0cd6428213b38489c01"
+        "Authorization": "Token \(tokenId)"
     ]
     
     func createChatt(_ chatt: Chatt, image: UIImage?)  {
