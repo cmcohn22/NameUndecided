@@ -17,23 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="UsA-23-4FX">
-                            <rect key="frame" x="0.0" y="142" width="414" height="43"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="N8R-kC-6T8">
-                                    <connections>
-                                        <segue destination="sOr-lN-PR3" kind="show" id="oAg-PT-h2C"/>
-                                    </connections>
-                                </barButtonItem>
-                                <barButtonItem title="Message" image="message.fill" catalog="system" width="150" id="dHy-yC-OgJ"/>
-                                <barButtonItem title="Profile" image="person.fill" catalog="system" width="150" id="gcs-QM-cGU">
-                                    <connections>
-                                        <segue destination="IPF-70-V03" kind="show" id="U9I-fN-4Fa"/>
-                                    </connections>
-                                </barButtonItem>
-                            </items>
-                        </toolbar>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Kkm-1f-y6A">
+                            <rect key="frame" x="0.0" y="142" width="414" height="702"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jeu-UD-Qsm">
+                                    <rect key="frame" x="0.0" y="651" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <items>
+                                        <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="nSL-ev-wC7"/>
+                                        <barButtonItem title="Message" image="message.fill" catalog="system" width="150" id="Bjd-uw-hR4"/>
+                                        <barButtonItem title="Profile" image="person.fill" catalog="system" width="150" id="mZv-wv-cf2"/>
+                                    </items>
+                                </toolbar>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
@@ -527,11 +526,11 @@
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="sOr-lN-PR3" userLabel="Chat Log" customClass="ChatLogVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PFc-bt-u36">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="196" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
@@ -812,7 +811,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="U9I-fN-4Fa"/>
         <segue reference="MQ5-Le-mvV"/>
         <segue reference="ort-Z5-tCM"/>
     </inferredMetricsTieBreakers>
