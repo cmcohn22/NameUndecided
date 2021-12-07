@@ -724,6 +724,9 @@
                                     <rect key="frame" x="373" y="641" width="41" height="31"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="arrow.up" catalog="system"/>
+                                    <connections>
+                                        <action selector="SendMessage:" destination="32I-zu-pcC" eventType="touchUpInside" id="TaT-4u-tsJ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -799,6 +802,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="MessageContent" destination="VEe-nc-feE" id="Qgt-pG-EtV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcC-0X-WYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

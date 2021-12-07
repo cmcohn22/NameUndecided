@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import SocketIO
 
 final class MessageVC: UITableViewController {
     
+    @IBOutlet weak var MessageContent: UITextField!
+    @IBAction func SendMessage(_ sender: Any) {
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // setup refreshControler here later
         // iOS 14 or newer
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
         
         refreshTimeline(nil)
+        
         
     }
 

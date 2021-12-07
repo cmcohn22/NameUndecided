@@ -45,7 +45,8 @@
 	<string>FirebaseFunctions</string>
 	<string>FirebaseAnalytics</string>
 	<string>FirebaseAppDistribution</string>
-	<string>CoreGraphics</string>
+	<string>SocketIO</string>
 	<string>UIKit</string>
+	<string>CoreGraphics</string>
 </array>
 </plist>

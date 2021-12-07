@@ -5,7 +5,7 @@
 //  Created by Griffin Kaufman on 12/2/21.
 //  Copyright © 2021 The Regents of the University of Michigan. All rights reserved.
 //
-
+import UIKit
 import Foundation
 
 struct Message {
