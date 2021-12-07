@@ -10,7 +10,6 @@ import CoreLocation
 
 final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate, CLLocationManagerDelegate {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,77 +17,27 @@ final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, U
         chattdescription.delegate = self
     }
     
-    var locationManager: CLLocationManager!
-    var userLocation: CLLocation!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        determineMyCurrentLocation()
-    }
-    
-    
-    func determineMyCurrentLocation() {
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-            //locationManager.startUpdatingHeading()
-        }
-    }
-    
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         chattname.resignFirstResponder()
         chattdescription.resignFirstResponder()
         return true
     }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        userLocation = locations[0] as CLLocation
-        
-        // Call stopUpdatingLocation() to stop listening for location updates,
-        // other wise this function will be called every time when user location changes.
-        
-       // manager.stopUpdatingLocation()
-        
-        print("user latitude = \(userLocation.coordinate.latitude)")
-        print("user longitude = \(userLocation.coordinate.longitude)")
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
-    {
-        print("Error \(error)")
-    }
+
     
     var radiusIn: String!
     @IBOutlet weak var chattname: UITextField!
     @IBOutlet weak var chattdescription: UITextField!
     @IBOutlet weak var slideValue: UILabel!
-    @IBAction func sliderValueChanged(_ sender: UISlider) {
-        sliderValue.text = String(sender.value)
+    @IBAction func sliderValue(_ sender: UISlider) {
+        slideValue.text = String(sender.value)
         radiusIn = "\(sender.value)"
     }
-    
-//    @IBOutlet weak var chattname: UITextField!
-//    @IBOutlet weak var chattdescription: UITextField!
-//    @IBOutlet weak var sliderValue: UILabel!
-//    @IBAction func sliderValueChanged(_ sender: UISlider) {
-//        sliderValue.text = String(sender.value)
-//        radiusIn = "\(sender.value)"
-//    }
-    
-    
-
     
     @IBAction func submitNewChatt(_ sender: Any) {
         let chatt = Chatt(name: self.chattname.text,
                           description: self.chattdescription.text,
-                          lat: "\(userLocation.coordinate.latitude)",
-                          long: "\(userLocation.coordinate.longitude)",
+                          lat: "0.0",
+                          long: "0.0",
                           radius: radiusIn)
         print(chatt.lat as Any)
         print(chatt.long as Any)
@@ -97,29 +46,12 @@ final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, U
         ChattStore.shared.createChatt(chatt, image: postImage.image)
     }
     
-//    @IBAction func submitNewChatt(_ sender: Any) {
-//        let chatt = Chatt(name: self.chattname.text,
-//                          description: self.chattdescription.text,
-//                          lat: "\(userLocation.coordinate.latitude)",
-//                          long: "\(userLocation.coordinate.longitude)",
-//                          radius: radiusIn)
-//        print(chatt.lat as Any)
-//        print(chatt.long as Any)
-//        print(chatt.radius as Any)
-//
-//        ChattStore.shared.createChatt(chatt, image: postImage.image)
-//
-//    }
-    
     @IBOutlet weak var postImage: UIImageView!
     
     @IBAction func pickMedia(_ sender: Any) {
         presentPicker(.photoLibrary)
     }
-    
-//    @IBAction func pickMedia(_ sender: Any) {
-//            presentPicker(.photoLibrary)
-//        }
+
     
     @IBAction func accessCamera(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -129,14 +61,6 @@ final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-        
-//    @IBAction func accessCamera(_ sender: Any) {
-//            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-//                presentPicker(.camera)
-//            } else {
-//                print("Camera not available. iPhone simulators don't simulate the camera.")
-//            }
-//        }
         
     private func presentPicker(_ sourceType: UIImagePickerController.SourceType) {
             let imagePickerController = UIImagePickerController()

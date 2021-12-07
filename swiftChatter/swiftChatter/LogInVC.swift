@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import Alamofire
 
+public var tokenId: String = ""
+
 class LogInVC: UIViewController{
     
     @IBOutlet weak var Username: UITextField!
@@ -49,8 +51,15 @@ class LogInVC: UIViewController{
                         }
                         
 //                        successHandler((json as! [String:AnyObject]))
-                        
-
+                    
+                                   
+                        if let result = response.value{
+                            let JSON = result as! NSDictionary
+                            print(JSON)
+                            tokenId = (JSON.object(forKey: "token") as! String)
+                        }
+                        print("HLLLLLL")
+                        print(tokenId)
                     }
                     break
                 case .failure(let error):

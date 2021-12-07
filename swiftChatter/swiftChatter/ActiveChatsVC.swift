@@ -6,11 +6,67 @@
 //  Copyright © 2020 The Regents of the University of Michigan. All rights reserved.
 //
 import UIKit
+import CoreLocation
 
-final class ActiveChatsVC: UITableViewController {
+public var globalLat: String = ""
+public var globalLong: String = ""
+
+final class ActiveChatsVC: UITableViewController, CLLocationManagerDelegate {
+    
+    var locationManager = CLLocationManager()
+    var userLocation: CLLocation!
+    
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+            determineMyCurrentLocation()
+        }
+    func determineMyCurrentLocation() {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager.startUpdatingLocation()
+                //locationManager.startUpdatingHeading()
+            }
+        }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            userLocation = locations[0] as CLLocation
+            
+            // Call stopUpdatingLocation() to stop listening for location updates,
+            // other wise this function will be called every time when user location changes.
+            
+           // manager.stopUpdatingLocation()
+            
+            print("user latitude = \(userLocation.coordinate.latitude)")
+            print("user longitude = \(userLocation.coordinate.longitude)")
+            globalLat = "\(userLocation.coordinate.latitude)"
+            globalLong = "\(userLocation.coordinate.longitude)"
+            setUser()
+        }
+        
+        func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+        {
+            print("Error \(error)")
+        }
+    
+    func setUser() {
+            let user = UserStore.shared.activeUser
+            print(user.username as Any)
+            print(user.password as Any)
+            print(user.first_name as Any)
+            print(user.last_name as Any)
+            print(user.email as Any)
+            print(globalLat)
+            print(globalLong)
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.requestWhenInUseAuthorization()
+        UserStore.shared.getUserInfo()
 
         // setup refreshControler here later
         // iOS 14 or newer
@@ -27,6 +83,7 @@ final class ActiveChatsVC: UITableViewController {
     
     // MARK:-
     private func refreshTimeline(_ sender: UIAction?) {
+        determineMyCurrentLocation()
         ActiveChats.shared.get_active_chats { success in
             DispatchQueue.main.async {
                 if success {

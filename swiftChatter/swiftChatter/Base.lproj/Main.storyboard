@@ -733,7 +733,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" minimumValueImage="0.circle" catalog="system" maximumValueImage="5.circle" translatesAutoresizingMaskIntoConstraints="NO" id="aoW-2l-txf">
                                 <rect key="frame" x="81" y="504.5" width="214" height="31"/>
                                 <connections>
-                                    <action selector="sliderValueChanged:" destination="juT-U6-zK3" eventType="valueChanged" id="htg-Wd-Q0y"/>
+                                    <action selector="sliderValue:" destination="juT-U6-zK3" eventType="valueChanged" id="B4b-Ka-AMU"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" text="Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abu-KC-SIW">
@@ -813,7 +813,7 @@
                         <outlet property="chattdescription" destination="rCS-sI-Z5X" id="fnL-eE-xuI"/>
                         <outlet property="chattname" destination="hHa-aN-lc9" id="cq9-Ll-si1"/>
                         <outlet property="postImage" destination="Lp7-50-ATQ" id="L9g-u1-t6s"/>
-                        <outlet property="slideValue" destination="nfW-Oz-RE9" id="OyA-cR-uAC"/>
+                        <outlet property="slideValue" destination="nfW-Oz-RE9" id="f6u-9a-1fR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RE9-iE-lm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -822,6 +822,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Lry-o0-Ayw"/>
         <segue reference="U9I-fN-4Fa"/>
         <segue reference="f4R-ek-9Xa"/>
         <segue reference="scY-YU-Oo9"/>

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key></key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -22,6 +24,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>To take photo for profile or groupchat</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Share your location</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To add photo to profile and groupchat</string>
 	<key>UIApplicationSceneManifest</key>
