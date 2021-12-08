@@ -50,82 +50,74 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 }
-extension SceneDelegate: CLLocationManagerDelegate {
-func locationManager(
-  _ manager: CLLocationManager,
-  didEnterRegion region: CLRegion
-) {
-  if region is CLCircularRegion {
-      print("exit")
-    handleEnter(for: region)
-  }
-}
-
-func locationManager(
-  _ manager: CLLocationManager,
-  didExitRegion region: CLRegion
-) {
-  if region is CLCircularRegion {
-      print("enter")
-    handleExit(for: region)
-  }
-}
-
-func handleEnter(for region: CLRegion) {
-  // Show an alert if application is active
-  if UIApplication.shared.applicationState == .active {
-    guard let message = note(from: region.identifier) else { return }
-    //window?.rootViewController?.showAlert(withTitle: nil, message: message)
-  } else {
-    // Otherwise present a local notification
-    guard let body = note(from: region.identifier) else { return }
-    let notificationContent = UNMutableNotificationContent()
-    notificationContent.body = body
-    notificationContent.sound = .default
-    notificationContent.badge = UIApplication.shared.applicationIconBadgeNumber + 1 as NSNumber
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-    let request = UNNotificationRequest(
-      identifier: "location_change",
-      content: notificationContent,
-      trigger: trigger)
-    UNUserNotificationCenter.current().add(request) { error in
-      if let error = error {
-        print("Error: \(error)")
-      }
-    }
-  }
-}
-
-func handleExit(for region: CLRegion) {
-  // Show an alert if application is active
-  if UIApplication.shared.applicationState == .active {
-    guard let message = note(from: region.identifier) else { return }
-  //  window?.rootViewController?.showAlert(withTitle: nil, message: message)
-  } else {
-    // Otherwise present a local notification
-    guard let body = note(from: region.identifier) else { return }
-    let notificationContent = UNMutableNotificationContent()
-    notificationContent.body = body
-    notificationContent.sound = .default
-    notificationContent.badge = UIApplication.shared.applicationIconBadgeNumber + 1 as NSNumber
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-    let request = UNNotificationRequest(
-      identifier: "location_change",
-      content: notificationContent,
-      trigger: trigger)
-    UNUserNotificationCenter.current().add(request) { error in
-      if let error = error {
-        print("Error: \(error)")
-      }
-    }
-  }
-}
-
-func note(from identifier: String) -> String? {
-  let geofences = Geofence.allGeofences()
-  let matched = geofences.first { $0.identifier == identifier }
-  return matched?.note
-}
-
-
-}
+//extension SceneDelegate: CLLocationManagerDelegate {
+//func locationManager(
+//  _ manager: CLLocationManager,
+//  didEnterRegion region: CLRegion
+//) {
+//  if region is CLCircularRegion {
+//      print("exit")
+//    handleEnter(for: region)
+//  }
+//}
+//
+//func locationManager(
+//  _ manager: CLLocationManager,
+//  didExitRegion region: CLRegion
+//) {
+//  if region is CLCircularRegion {
+//      print("enter")
+//    handleExit(for: region)
+//  }
+//}
+//
+//func handleEnter(for region: CLRegion) {
+//  // Show an alert if application is active
+//  if UIApplication.shared.applicationState == .active {
+//    guard let message = note(from: region.identifier) else { return }
+//    //window?.rootViewController?.showAlert(withTitle: nil, message: message)
+//  } else {
+//    // Otherwise present a local notification
+//    guard let body = note(from: region.identifier) else { return }
+//    let notificationContent = UNMutableNotificationContent()
+//    notificationContent.body = body
+//    notificationContent.sound = .default
+//    notificationContent.badge = UIApplication.shared.applicationIconBadgeNumber + 1 as NSNumber
+//    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//    let request = UNNotificationRequest(
+//      identifier: "location_change",
+//      content: notificationContent,
+//      trigger: trigger)
+//    UNUserNotificationCenter.current().add(request) { error in
+//      if let error = error {
+//        print("Error: \(error)")
+//      }
+//    }
+//  }
+//}
+//
+//func handleExit(for region: CLRegion) {
+//  // Show an alert if application is active
+//  if UIApplication.shared.applicationState == .active {
+//    guard let message = note(from: region.identifier) else { return }
+//  //  window?.rootViewController?.showAlert(withTitle: nil, message: message)
+//  } else {
+//    // Otherwise present a local notification
+//    guard let body = note(from: region.identifier) else { return }
+//    let notificationContent = UNMutableNotificationContent()
+//    notificationContent.body = body
+//    notificationContent.sound = .default
+//    notificationContent.badge = UIApplication.shared.applicationIconBadgeNumber + 1 as NSNumber
+//    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//    let request = UNNotificationRequest(
+//      identifier: "location_change",
+//      content: notificationContent,
+//      trigger: trigger)
+//    UNUserNotificationCenter.current().add(request) { error in
+//      if let error = error {
+//        print("Error: \(error)")
+//      }
+//    }
+//  }
+//}
+//}

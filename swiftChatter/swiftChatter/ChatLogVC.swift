@@ -11,6 +11,13 @@ import CoreLocation
 final class ChatLogVC: UITableViewController {
     
     lazy var locationManager = CLLocationManager()
+    @objc func refresh(sender:AnyObject)
+    {
+        // Updating your data here...
+        refreshTimeline(nil)
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
