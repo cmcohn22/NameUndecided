@@ -10,13 +10,25 @@ import Foundation
 import UIKit
 import Alamofire
 
-class LogInVC: UIViewController{
+class LogInVC: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
     
     @IBOutlet weak var InvalidLogIn: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Username.delegate = self
+        Password.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        Username.resignFirstResponder()
+        Password.resignFirstResponder()
+        return true
+    }
        
     @IBAction func Submit(_ sender: Any) {
         InvalidLogIn.text = ""
