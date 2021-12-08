@@ -46,6 +46,7 @@ final class ChatSettings: ObservableObject {
     
     // Retrieve chat info to populate chatUser table cells
     func get_chat_info(_ completion: ((Bool) -> ())?) {
+        print("THIS FUNCTION IS BEING CALL GETCHATGETCHAT")
         guard let apiUrl = URL(string: serverUrl+"api/active-chats/?chat_id=" + String(chat_id)) else {
             print("chat-info: Bad URL")
             return

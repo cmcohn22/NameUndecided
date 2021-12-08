@@ -16,17 +16,26 @@ final class ChatUsersTableCell: UITableViewCell {
 }
 
 
-final class ChatSettingsVC: UITableViewController {
+final class ChatSettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ChatSettings.shared.get_chat_info { success in
+            DispatchQueue.main.async {
+                if success {
+                    self.viewDidLoad()
+                }
+                // stop the refreshing animation upon completion:
+//                self.refreshControl?.endRefreshing()
+            }
+        }
         // setup refreshControler here later
         // iOS 14 or newer
-        refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
-        
-        refreshTimeline(nil)
-        
+//        refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
+//
+//        refreshTimeline(nil)
+
     }
 
     /*
@@ -35,18 +44,20 @@ final class ChatSettingsVC: UITableViewController {
     }*/
     
     // MARK:-
-    private func refreshTimeline(_ sender: UIAction?) {
-        ChatSettings.shared.get_chat_info { success in
-            DispatchQueue.main.async {
-                if success {
-                    self.tableView.reloadData()
-                }
-                // stop the refreshing animation upon completion:
-                self.refreshControl?.endRefreshing()
-            }
-        }
-    }
-    
+//    private func refreshTimeline(_ sender: UIAction?) {
+//        ChatSettings.shared.get_chat_info { success in
+//            DispatchQueue.main.async {
+//                if success {
+//                    self.viewDidLoad()
+////                    self.tableView.reloadData()
+//                }
+//                // stop the refreshing animation upon completion:
+////                self.viewDidLoad()
+////                self.refreshControl?.endRefreshing()
+//            }
+//        }
+//    }
+//
     // MARK:- TableView handlers
     
 //    override func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,12 +76,12 @@ final class ChatSettingsVC: UITableViewController {
     
     
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // how many rows per section
         return ChatSettings.shared.chatUsers.count
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // event handler when a cell is tapped
 
         //selectedRow = indexPath.row
@@ -78,7 +89,7 @@ final class ChatSettingsVC: UITableViewController {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
         
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // populate a single cell
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChatUsersTableCell", for: indexPath) as? ChatUsersTableCell else {
             fatalError("No reusable cell!")
