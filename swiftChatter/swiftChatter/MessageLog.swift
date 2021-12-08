@@ -27,7 +27,7 @@ final class MessageLog: ObservableObject {
     func get_messages(_ completion: ((Bool) -> ())?) {
         guard let apiUrl = URL(string: serverUrl+"api/messages/?lat=" + String(lat) + "&long=" + String(long) + "&chat_id=" + chat_id) else {
             print("messages: Bad URL")
-            return
+            return  
         }
         
         var request = URLRequest(url: apiUrl)

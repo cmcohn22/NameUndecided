@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>429DBC2D-59E6-4F97-BD45-6391F3EF4B06</key>
+		<key>0048F03A-2559-4693-A8F0-3F5030C87ACE</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>429DBC2D-59E6-4F97-BD45-6391F3EF4B06.xcactivitylog</string>
+			<string>0048F03A-2559-4693-A8F0-3F5030C87ACE.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Run swiftChatter</string>
 			<key>timeStartedRecording</key>
-			<real>660603067.26183701</real>
+			<real>660632144.82512105</real>
 			<key>timeStoppedRecording</key>
-			<real>660603151.03390002</real>
+			<real>660632175.96385801</real>
 			<key>title</key>
 			<string>Run swiftChatter</string>
 			<key>uniqueIdentifier</key>
-			<string>429DBC2D-59E6-4F97-BD45-6391F3EF4B06</string>
+			<string>0048F03A-2559-4693-A8F0-3F5030C87ACE</string>
 		</dict>
-		<key>46A878A6-A135-4409-88CB-C9D77D86F5FC</key>
+		<key>157C22DD-46BD-4BDC-8DB3-29917A37EDF4</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>46A878A6-A135-4409-88CB-C9D77D86F5FC.xcactivitylog</string>
+			<string>157C22DD-46BD-4BDC-8DB3-29917A37EDF4.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,15 +66,15 @@
 			<key>signature</key>
 			<string>Run swiftChatter</string>
 			<key>timeStartedRecording</key>
-			<real>660597395.39752698</real>
+			<real>660670567.07325304</real>
 			<key>timeStoppedRecording</key>
-			<real>660597553.99976504</real>
+			<real>660670803.89051294</real>
 			<key>title</key>
 			<string>Run swiftChatter</string>
 			<key>uniqueIdentifier</key>
-			<string>46A878A6-A135-4409-88CB-C9D77D86F5FC</string>
+			<string>157C22DD-46BD-4BDC-8DB3-29917A37EDF4</string>
 		</dict>
-		<key>472AB81E-C105-46B6-BC83-60B4E4C08354</key>
+		<key>3DA7CCA2-DA54-4EAF-94FA-D1448ADA078B</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -83,7 +83,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>472AB81E-C105-46B6-BC83-60B4E4C08354.xcactivitylog</string>
+			<string>3DA7CCA2-DA54-4EAF-94FA-D1448ADA078B.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -100,15 +100,15 @@
 			<key>signature</key>
 			<string>Run swiftChatter</string>
 			<key>timeStartedRecording</key>
-			<real>660598142.88370705</real>
+			<real>660671287.28058302</real>
 			<key>timeStoppedRecording</key>
-			<real>660598263.21520305</real>
+			<real>660671414.57767403</real>
 			<key>title</key>
 			<string>Run swiftChatter</string>
 			<key>uniqueIdentifier</key>
-			<string>472AB81E-C105-46B6-BC83-60B4E4C08354</string>
+			<string>3DA7CCA2-DA54-4EAF-94FA-D1448ADA078B</string>
 		</dict>
-		<key>87ED3470-D938-4F67-AA33-DBF00DB669E8</key>
+		<key>50A7707F-3B4B-442B-B128-D51F9E1C4815</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -117,7 +117,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>87ED3470-D938-4F67-AA33-DBF00DB669E8.xcactivitylog</string>
+			<string>50A7707F-3B4B-442B-B128-D51F9E1C4815.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -134,15 +134,15 @@
 			<key>signature</key>
 			<string>Run swiftChatter</string>
 			<key>timeStartedRecording</key>
-			<real>660599008.21011198</real>
+			<real>660671472.66382205</real>
 			<key>timeStoppedRecording</key>
-			<real>660599181.55440402</real>
+			<real>660671653.41786504</real>
 			<key>title</key>
 			<string>Run swiftChatter</string>
 			<key>uniqueIdentifier</key>
-			<string>87ED3470-D938-4F67-AA33-DBF00DB669E8</string>
+			<string>50A7707F-3B4B-442B-B128-D51F9E1C4815</string>
 		</dict>
-		<key>B396293D-4506-4FEB-8648-ACA978ECDCB0</key>
+		<key>66AC828C-8E03-411E-B0D5-18AD96389EE5</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -151,7 +151,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>B396293D-4506-4FEB-8648-ACA978ECDCB0.xcactivitylog</string>
+			<string>66AC828C-8E03-411E-B0D5-18AD96389EE5.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -168,15 +168,15 @@
 			<key>signature</key>
 			<string>Run swiftChatter</string>
 			<key>timeStartedRecording</key>
-			<real>660598589.82053399</real>
+			<real>660669839.50792098</real>
 			<key>timeStoppedRecording</key>
-			<real>660598639.57842898</real>
+			<real>660669852.554708</real>
 			<key>title</key>
 			<string>Run swiftChatter</string>
 			<key>uniqueIdentifier</key>
-			<string>B396293D-4506-4FEB-8648-ACA978ECDCB0</string>
+			<string>66AC828C-8E03-411E-B0D5-18AD96389EE5</string>
 		</dict>
-		<key>FE50FEA3-E91B-4268-855F-900D0D0AF3DA</key>
+		<key>6D0807D1-736E-4D5F-A755-551FE9D03B01</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -185,7 +185,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>FE50FEA3-E91B-4268-855F-900D0D0AF3DA.xcactivitylog</string>
+			<string>6D0807D1-736E-4D5F-A755-551FE9D03B01.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -202,13 +202,149 @@
 			<key>signature</key>
 			<string>Run swiftChatter</string>
 			<key>timeStartedRecording</key>
-			<real>660598095.462726</real>
+			<real>660670808.14538896</real>
 			<key>timeStoppedRecording</key>
-			<real>660598128.32877004</real>
+			<real>660671023.32673502</real>
 			<key>title</key>
 			<string>Run swiftChatter</string>
 			<key>uniqueIdentifier</key>
-			<string>FE50FEA3-E91B-4268-855F-900D0D0AF3DA</string>
+			<string>6D0807D1-736E-4D5F-A755-551FE9D03B01</string>
+		</dict>
+		<key>78150F01-3D73-4D73-BD71-D15A531571BF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>78150F01-3D73-4D73-BD71-D15A531571BF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>swiftChatter project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>swiftChatter</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run swiftChatter</string>
+			<key>timeStartedRecording</key>
+			<real>660671128.82566404</real>
+			<key>timeStoppedRecording</key>
+			<real>660671238.02706897</real>
+			<key>title</key>
+			<string>Run swiftChatter</string>
+			<key>uniqueIdentifier</key>
+			<string>78150F01-3D73-4D73-BD71-D15A531571BF</string>
+		</dict>
+		<key>DB260E76-FE5D-4D35-988B-AC96B32A6955</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DB260E76-FE5D-4D35-988B-AC96B32A6955.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>swiftChatter project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>swiftChatter</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run swiftChatter</string>
+			<key>timeStartedRecording</key>
+			<real>660670302.03775001</real>
+			<key>timeStoppedRecording</key>
+			<real>660670566.10286105</real>
+			<key>title</key>
+			<string>Run swiftChatter</string>
+			<key>uniqueIdentifier</key>
+			<string>DB260E76-FE5D-4D35-988B-AC96B32A6955</string>
+		</dict>
+		<key>DE3EA429-0EAE-4BF7-9154-F2F04580E775</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DE3EA429-0EAE-4BF7-9154-F2F04580E775.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>swiftChatter project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>swiftChatter</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run swiftChatter</string>
+			<key>timeStartedRecording</key>
+			<real>660669857.66692603</real>
+			<key>timeStoppedRecording</key>
+			<real>660669875.73695898</real>
+			<key>title</key>
+			<string>Run swiftChatter</string>
+			<key>uniqueIdentifier</key>
+			<string>DE3EA429-0EAE-4BF7-9154-F2F04580E775</string>
+		</dict>
+		<key>EAE4B805-8A32-48DE-A977-87FF5C76BADB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EAE4B805-8A32-48DE-A977-87FF5C76BADB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>swiftChatter project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>swiftChatter</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run swiftChatter</string>
+			<key>timeStartedRecording</key>
+			<real>660671245.422243</real>
+			<key>timeStoppedRecording</key>
+			<real>660671284.36446297</real>
+			<key>title</key>
+			<string>Run swiftChatter</string>
+			<key>uniqueIdentifier</key>
+			<string>EAE4B805-8A32-48DE-A977-87FF5C76BADB</string>
 		</dict>
 	</dict>
 </dict>

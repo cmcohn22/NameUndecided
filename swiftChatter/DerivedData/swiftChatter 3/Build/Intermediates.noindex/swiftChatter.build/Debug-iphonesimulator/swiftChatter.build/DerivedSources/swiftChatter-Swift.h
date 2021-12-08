@@ -314,6 +314,12 @@ SWIFT_CLASS("_TtC12swiftChatter9MessageVC")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface MessageVC (SWIFT_EXTENSION(swiftChatter))
+- (IBAction)writeText:(id _Nonnull)sender;
+- (IBAction)disconnect:(id _Nonnull)sender;
+@end
+
 @class UIWindow;
 @class UIScene;
 

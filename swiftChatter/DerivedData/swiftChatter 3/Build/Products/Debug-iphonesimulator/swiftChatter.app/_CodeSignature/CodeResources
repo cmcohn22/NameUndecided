@@ -26,7 +26,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/32I-zu-pcC-view-oi2-gs-dzd.nib</key>
 		<data>
-		AjgP/2ptt8tjJP9aECUxWZXEr4c=
+		9GW7BbW3h9TjD9Pa4n07kJ94qrw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/CPU-Oq-a7B-view-70b-d9-jA2.nib</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/sOr-lN-PR3-view-PFc-bt-u36.nib</key>
 		<data>
-		QGc/coI0p76Y6u98sgGrj0TgS+c=
+		SCJdZJ4JruE0SEeg/iy9IwT9m5c=
 		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
 		<data>
-		S7mUprKvqiKPjnUnhp7TyGFULcQ=
+		YpIMlJr9yl9o1Jq7gQJTp7aPCec=
 		</data>
 		<key>Frameworks/Alamofire.framework/Info.plist</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<data>
-		vLVpsMh8VtKjndcDmrl27PF5Apc=
+		+SUGuAHN87saaDqcg6nU2q1Smkc=
 		</data>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
-		a1RO00LK1e750AsPdGq/AViGGTg=
+		yG1rhUoD1j1XoOOonPuS1T9PX2c=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/FirebaseCoreDiagnostics</key>
 		<data>
-		CBNp/ukttADqWlRW7FVgsRC+czQ=
+		5Dohe0/WMhtBoWmcOCxOX0PACnA=
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations</key>
 		<data>
-		B4nZQTuau4HqR+heumOWZLoWAR8=
+		2Gh8fasalh2TPDAORz3gAerqxYQ=
 		</data>
 		<key>Frameworks/FirebaseInstallations.framework/Info.plist</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport</key>
 		<data>
-		RSKBECG4XnyfKxC5vov+w97fXjQ=
+		Nd1tIFOPGD2+Mft8fIzHsIKE8iQ=
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
-		kHhijlDBfw0wZI5wM9UfcZo/Pz8=
+		v9lAuDvybtMVbU0KQnfB8OANDAY=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
@@ -176,37 +176,13 @@
 		<data>
 		hD4yEz7bdtq9EOgPWanK8vOlsKU=
 		</data>
-		<key>Frameworks/IQKeyboardManagerSwift.framework/IQKeyboardManagerSwift</key>
-		<data>
-		xux4gJMpeYGSwG9Lu5yn2EyExls=
-		</data>
-		<key>Frameworks/IQKeyboardManagerSwift.framework/Info.plist</key>
-		<data>
-		LEExs0zVkgEv72JIkKbDG8Z/GJg=
-		</data>
-		<key>Frameworks/IQKeyboardManagerSwift.framework/_CodeSignature/CodeResources</key>
-		<data>
-		Cg61QmseVun5tHb/Th/xhnxkDAs=
-		</data>
-		<key>Frameworks/SocketIO.framework/Info.plist</key>
-		<data>
-		DPEGVqyueXt+QEN0l0ziAerl+1k=
-		</data>
-		<key>Frameworks/SocketIO.framework/SocketIO</key>
-		<data>
-		4Ip59JreOnPq3cQITBdREK4fus4=
-		</data>
-		<key>Frameworks/SocketIO.framework/_CodeSignature/CodeResources</key>
-		<data>
-		tTe0672Ic8SZB9GHvob9FD3tAag=
-		</data>
 		<key>Frameworks/Starscream.framework/Info.plist</key>
 		<data>
 		6xM6nda9VHq1WNEVXxNA0OT8iC4=
 		</data>
 		<key>Frameworks/Starscream.framework/Starscream</key>
 		<data>
-		k6tIo5kwF16pegxRECVAI1bTIPE=
+		EwXOgtGdsGQdoEmw2eDE9OcZt5E=
 		</data>
 		<key>Frameworks/Starscream.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -222,7 +198,7 @@
 		</data>
 		<key>Frameworks/nanopb.framework/nanopb</key>
 		<data>
-		6zeeDmhdmLH/G5mQT7Di9miH+7o=
+		vWQNNKEbwbtzqrjS7SU3LrCFKtU=
 		</data>
 		<key>GoogleService-Info.plist</key>
 		<data>
@@ -278,7 +254,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hX9uLPPgZfnIjtcqwdS6hBfbPiaxLj+dGrcJSRT856U=
+			MzUXVJfy90vtOL07sGKovsP2+uo935SysPa1wCW7DdY=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/CPU-Oq-a7B-view-70b-d9-jA2.nib</key>
@@ -383,7 +359,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6FbFxqEjRif3rQqS/h7fOyPRZc3kRavONewcCXMX+n8=
+			fGbUq3mjTAcTDveMeHEqZsqllFmrMAH4ogV8ZqqNqAs=
 			</data>
 		</dict>
 		<key>Default-568h@2x.png</key>
@@ -397,7 +373,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lJx3IrIrBDHCLQYtAyULfvkSg6GBrB1tJVXaKLLIX+s=
+			AHDeCngRUCsYwbDKaNtiE4J4q/BTsulQscCEim8U8qw=
 			</data>
 		</dict>
 		<key>Frameworks/Alamofire.framework/Info.plist</key>
@@ -418,7 +394,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8ELtM337vwik0k77jZZXud2hwk6SlneyKseQsq8lY/o=
+			qzCptRukva4DzKsUcRzGUu6DC4mxu4+2L5jB3b6srPI=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
@@ -439,7 +415,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oQNNzwlrcei8fTZgws9Alupjolnj7WpCkSKhE7TCP2I=
+			2rwvqS7O3mXbgnHZ+IswvbI5S9fpOZsdo78A+0kwEmg=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -460,7 +436,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5OTwyyYkUrIOzjg5Z/+ATp6kStyc+Ad+DJUfrOf6E2Y=
+			bRD7vZ/QrrOIYnpsNQBjvp5bAILZLtl3ESYYojUuN0Y=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
@@ -481,7 +457,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZlrHvL5zAFwRp+cKBzY6GyLV3VkRbe7gWJK1xHTv7/w=
+			KRgJcwAy6vQX/Tra6/yrMk2n/IdFDHmTzzXBC+qPRx0=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseInstallations.framework/Info.plist</key>
@@ -502,7 +478,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YM65xYC46PFM6L9xoXpIkxb/ThcxlVlPriGDNgkDX/8=
+			/ux/50aY7XOvVsGET1yJhrBvViEmPekby5gdY19FBfk=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
@@ -523,7 +499,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OU6CSjFPaI63A/qJ7bVYZ7JFrb5GCwRKTS3rT1JOhlk=
+			cc6OHZoZlRkuN+J+5NGJp5Vt7SopZrPAbG7C8Di5eSs=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
@@ -540,48 +516,6 @@
 			6s/1BJDZ9aKFJc+uQ+ZgOjoAzHpnAia3VjEXdtrsOQk=
 			</data>
 		</dict>
-		<key>Frameworks/IQKeyboardManagerSwift.framework/IQKeyboardManagerSwift</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			n6vXVPmO1WLEf8tgG50EVmjfMPytmTDAp5DjhGeuR3I=
-			</data>
-		</dict>
-		<key>Frameworks/IQKeyboardManagerSwift.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/8trgFYX0jru8E6BLHiSDRwlZ1EKplz6fQbhIJbnTaU=
-			</data>
-		</dict>
-		<key>Frameworks/IQKeyboardManagerSwift.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LDGhX1gpuXTAb51fr73NCegK2NyaVEkCZDbGBfqqLuI=
-			</data>
-		</dict>
-		<key>Frameworks/SocketIO.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0/b13yQfjmd5BIw9MO2BqpnyNvWhaYZksR1zmdHkt+k=
-			</data>
-		</dict>
-		<key>Frameworks/SocketIO.framework/SocketIO</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nBdG8/whjzuUYR5MGzYrrDalnmHQtyLIvXQXxK1E+QY=
-			</data>
-		</dict>
-		<key>Frameworks/SocketIO.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gP6LtYoMY6ByWMaQtXb92zdZTcJbZ/kDMS3YFrhmzUU=
-			</data>
-		</dict>
 		<key>Frameworks/Starscream.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -593,7 +527,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			syP2jOd72bJ7OeQ1spqU0UDZ8SlM4r+IDMrKWno09MU=
+			+Bx9dgykTC6hqvC51yYdtgqqG7nKXPmDmHZ5zwf2HNg=
 			</data>
 		</dict>
 		<key>Frameworks/Starscream.framework/_CodeSignature/CodeResources</key>
@@ -621,7 +555,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			63bUER8S4qM6IheHGcqetullTHEBG7KBhiF57Nhx+Jc=
+			eV8QqjYRHMvcmvy4dOLl0i8LfCqTuMPQfeb9tKED4Vw=
 			</data>
 		</dict>
 		<key>GoogleService-Info.plist</key>

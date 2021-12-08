@@ -28,7 +28,7 @@ final class ActiveChats: ObservableObject {
         
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "GET"
-        
+        //dict from chat id to array of messages for that chat.
 //        let locationManager = CLLocationManager()
 //        locationManager.requestAlwaysAuthorization()
 //
@@ -70,11 +70,11 @@ final class ActiveChats: ObservableObject {
                 return
             }
             
-            print("HERE")
+           
             let chattsReceived = jsonObj["active_chats"] as? [Dictionary<String,Any?>] ?? []
             print(chattsReceived)
             print(type(of: chattsReceived))
-            print("teehee")
+            
         DispatchQueue.main.async {
             self.chatts = [Chatt]()
             for chattEntry in chattsReceived{
