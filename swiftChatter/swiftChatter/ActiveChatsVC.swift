@@ -95,7 +95,7 @@ final class ActiveChatsVC: UITableViewController {
 //    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if(segue.identifier == "SpecificChatSegue"){
-            
+            //TODO
         }
         if let secondVC = segue.destination as? MessageVC,
            let chatDex = tableView.indexPathForSelectedRow?.row

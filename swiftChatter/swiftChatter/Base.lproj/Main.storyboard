@@ -221,7 +221,7 @@
         <!--StartViewController-->
         <scene sceneID="ewQ-65-COV">
             <objects>
-                <viewController title="StartViewController" id="dXJ-b2-v0o" sceneMemberID="viewController">
+                <viewController title="StartViewController" id="dXJ-b2-v0o" customClass="StartUpVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gyc-kX-23V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

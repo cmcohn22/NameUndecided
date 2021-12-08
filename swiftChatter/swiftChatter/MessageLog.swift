@@ -32,8 +32,8 @@ final class MessageLog: ObservableObject {
            }
         var request = URLRequest(url: apiUrl)
 //        request.addValue("Token 154685558fb3bb2d33ec51dbf5918e76ade92fcb", forHTTPHeaderField: "Authorization")
-        let tokstr = "Token \(token)" 
-        request.addValue(tokstr, forHTTPHeaderField: "Authorization")
+        
+        request.addValue(token, forHTTPHeaderField: "Authorization")
         // TODO: GET RID OF THIS LATER WHEN WE HAVE SIGN UP AND LOGIN WORKING ^
         request.httpMethod = "GET"
     
