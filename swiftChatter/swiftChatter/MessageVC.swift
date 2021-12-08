@@ -78,12 +78,14 @@ final class MessageVC: UITableViewController{
     @IBAction func SendMessage(_ sender: Any) {
                     print("good stuff")
         let jsonObject = MessageSocket.init(contents: MessageContent.text!)
+        
                     let jsonEncoder = JSONEncoder()
                             let jsonData = try! jsonEncoder.encode(jsonObject)
                             let json = String(data: jsonData, encoding: .utf8)!
         
                     print(json)
         StartUpVC.shared.writeText((Any).self, json: json)
+        MessageContent.text = ""
 //                    socket?.write(string: json)
     }
     /*
