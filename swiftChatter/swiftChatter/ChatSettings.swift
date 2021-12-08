@@ -1,15 +1,33 @@
-////
-////  ChatSettings.swift
-////  swiftChatter
-////
-////  Created by Griffin Kaufman on 12/7/21.
-////  Copyright © 2021 The Regents of the University of Michigan. All rights reserved.
-////
 //
-//import Foundation
-//import CoreLocation
+//  ChatSettings.swift
+//  swiftChatter
 //
-//final class ChatSettings: ObservableObject {
+//  Created by Griffin Kaufman on 12/7/21.
+//  Copyright © 2021 The Regents of the University of Michigan. All rights reserved.
+//
+
+import Foundation
+import CoreLocation
+
+struct ChatUser {
+//    var username: String?
+//    var password: String?
+    var first_name: String?
+    var last_name: String?
+//    var email: String?
+//    @UserPropWrapper var profile_pic: String?
+    var lat: String!
+    var long: String!
+//    var tokenId: String!
+    
+    mutating func setLatLong(_ currentLocation: CLLocation){
+        lat = "\(currentLocation.coordinate.latitude)"
+        long = "\(currentLocation.coordinate.longitude)"
+    }
+    
+}
+
+final class ChatSettings: ObservableObject {
 //    static let shared = ChatSettings() // create one instance of the class to be shared
 //    private init() {}                // and make the constructor private so no other
 //                                     // instances can be created
@@ -20,7 +38,7 @@
 //
 //    let lat = 0.0
 //    let long = 0.0
-//    
+//
 //    func get_active_chats(_ completion: ((Bool) -> ())?) {
 //        guard let apiUrl = URL(string: serverUrl+"api/active-chats/?lat=" + String(lat) + "&long=" + String(long)) else {
 //            print("active-chats: Bad URL")
@@ -70,4 +88,4 @@
 //            success = true // for completion(success)
 //        }.resume()
 //    }
-//}
+}
