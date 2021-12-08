@@ -24,20 +24,20 @@ final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, U
     }
 
     
-    var radiusIn: String!
+    var radiusIn: Double!
     @IBOutlet weak var chattname: UITextField!
     @IBOutlet weak var chattdescription: UITextField!
     @IBOutlet weak var slideValue: UILabel!
     @IBAction func sliderValue(_ sender: UISlider) {
         slideValue.text = String(sender.value)
-        radiusIn = "\(sender.value)"
+        radiusIn = Double(sender.value)
     }
     
     @IBAction func submitNewChatt(_ sender: Any) {
         let chatt = Chatt(name: self.chattname.text,
                           description: self.chattdescription.text,
-                          lat: "0.0",
-                          long: "0.0",
+                          lat: globalLat,
+                          long: globalLong,
                           radius: radiusIn)
         print(chatt.lat as Any)
         print(chatt.long as Any)

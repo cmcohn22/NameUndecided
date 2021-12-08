@@ -35,14 +35,14 @@ final class ChattStore: ObservableObject {
                     if let description = chatt.description?.data(using: .utf8) {
                         mpFD.append(description, withName: "description")
                     }
-                    if let lat = chatt.lat?.data(using: .utf8) {
-                        mpFD.append(lat, withName: "lat")
+                    if let lat = chatt.lat {
+                        mpFD.append("\(lat)".data(using: String.Encoding.utf8)!, withName: "lat")
                     }
-                    if let long = chatt.long?.data(using: .utf8) {
-                        mpFD.append(long, withName: "long")
+                    if let long = chatt.long{
+                        mpFD.append("\(long)".data(using: String.Encoding.utf8)!, withName: "long")
                     }
-                    if let radius = chatt.radius?.data(using: .utf8) {
-                        mpFD.append(radius, withName: "radius")
+                    if let radius = chatt.radius{
+                        mpFD.append("\(radius)".data(using: String.Encoding.utf8)!, withName: "radius")
                     }
                     if let image = image?.jpegData(compressionQuality: 1.0) {
                         mpFD.append(image, withName: "image", fileName: "chattImage", mimeType: "image/jpeg")

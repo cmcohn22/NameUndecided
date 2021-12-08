@@ -8,11 +8,12 @@
 import UIKit
 import CoreLocation
 
-public var globalLat: String = ""
-public var globalLong: String = ""
+public var globalLat: Double = 0.0
+public var globalLong: Double = 0.0
+
 
 final class ActiveChatsVC: UITableViewController, CLLocationManagerDelegate {
-    
+
     var locationManager = CLLocationManager()
     var userLocation: CLLocation!
     
@@ -42,8 +43,8 @@ final class ActiveChatsVC: UITableViewController, CLLocationManagerDelegate {
             
             print("user latitude = \(userLocation.coordinate.latitude)")
             print("user longitude = \(userLocation.coordinate.longitude)")
-            globalLat = "\(userLocation.coordinate.latitude)"
-            globalLong = "\(userLocation.coordinate.longitude)"
+            globalLat = userLocation.coordinate.latitude
+            globalLong = userLocation.coordinate.longitude
             setUser()
         }
         
@@ -67,6 +68,7 @@ final class ActiveChatsVC: UITableViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
         UserStore.shared.getUserInfo()
+        
 
         // setup refreshControler here later
         // iOS 14 or newer
@@ -112,6 +114,9 @@ final class ActiveChatsVC: UITableViewController, CLLocationManagerDelegate {
 
         //selectedRow = indexPath.row
         //chatt = chatts[indexPath.row]
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MessageVC") as? MessageVC
+        vc?.chatID = ActiveChats.shared.chatts[indexPath.row].chat_id!
+        navigationController?.pushViewController(vc!, animated: true)
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
         

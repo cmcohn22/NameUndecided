@@ -5,7 +5,6 @@
 //  Created by Griffin Kaufman on 12/2/21.
 //  Copyright © 2021 The Regents of the University of Michigan. All rights reserved.
 //
-
 import Foundation
 import CoreLocation
 
@@ -56,7 +55,9 @@ final class MessageLog: ObservableObject {
 
             print(jsonObj)
             let messagesReceived = jsonObj["messages"] as? [Dictionary<String,Any?>] ?? []
+            print("messagesReceived: ")
             print(messagesReceived)
+            print("end")
             print(type(of: messagesReceived))
         DispatchQueue.main.async {
             self.messages = [Message]()
@@ -67,7 +68,11 @@ final class MessageLog: ObservableObject {
                                                  first_name: message["first_name"] as? String,
                                                  last_name: message["last_name"] as? String,
                                                  username: message["username"] as? String,
-                                                 content: message["content"] as? String))
+                                                 content: message["content"] as? String,
+                                                 timestamp: message["timestamp"] as? String,
+                                                 profile_pic: message["profile_pic"] as? String,
+                                                 likes: message["likes"] as? NSArray
+                                                 ))
                 } else {
                     print("messages: Received unexpected number of fields: \(message.count) instead of \(self.nFields).")
                 }

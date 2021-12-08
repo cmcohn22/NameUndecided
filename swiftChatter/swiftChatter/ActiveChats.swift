@@ -82,7 +82,7 @@ final class ActiveChats: ObservableObject {
                     self.chatts.append(Chatt(chat_id: chattEntry["chat_id"] as? String,
                                              name: chattEntry["name"] as? String,
                                              description: chattEntry["description"] as? String,
-                                             lat: chattEntry["lat"] as? String, long: chattEntry["long"] as? String, radius: chattEntry["radius"] as? String, recent_message_content: chattEntry["recent_message_content"] as? String, recent_message_timestamp: chattEntry["recent_message_timestamp"] as? String, image: chattEntry["image"] as? String, require_password: chattEntry["require_password"] as? Bool))
+                                             lat: chattEntry["lat"] as? Double, long: chattEntry["long"] as? Double, radius: chattEntry["radius"] as? Double, recent_message_content: chattEntry["recent_message_content"] as? String, recent_message_timestamp: chattEntry["recent_message_timestamp"] as? String, image: chattEntry["image"] as? String, require_password: chattEntry["require_password"] as? Bool))
                 } else {
                     print("active-chats: Received unexpected number of fields: \(chattEntry.count) instead of \(self.nFields).")
                 }

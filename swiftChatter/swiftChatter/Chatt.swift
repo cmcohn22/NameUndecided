@@ -10,9 +10,9 @@ struct Chatt {
     var chat_id: String?
     var name: String?
     var description: String?
-    var lat: String!
-    var long: String!
-    var radius: String!
+    var lat: Double!
+    var long: Double!
+    var radius: Double!
     var recent_message_content: String?
     var recent_message_timestamp: String?
     @ChattPropWrapper var image: String?

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SignUpVC: UIViewController{
+class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     
     @IBOutlet weak var Email: UITextField!
@@ -19,6 +19,7 @@ class SignUpVC: UIViewController{
 
     @IBOutlet weak var Username: UITextField!
     
+    @IBOutlet weak var imageIn: UIImageView!
     @IBOutlet weak var Password: UITextField!
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -29,11 +30,16 @@ class SignUpVC: UIViewController{
     @IBOutlet weak var InvalidEmail: UILabel!
 
     @IBOutlet weak var EmptyFirstName: UILabel!
+ 
     
     @IBOutlet weak var EmptyLastName: UILabel!
     @IBOutlet weak var EmptyUserName: UILabel!
     
+    
     @IBOutlet weak var EmptyPassword: UILabel!
+    @IBAction func pickMedia(_ sender: Any) {
+        presentPicker(.photoLibrary)
+    }
     @IBAction func Submit(_ sender: Any) {
         print("hello")
         let userName: String = Username.text!
@@ -121,6 +127,10 @@ class SignUpVC: UIViewController{
         }
 
         task.resume()
+            
+            if let profile_pic = imageIn.image?.jpegData(compressionQuality: 1.0){
+                profilePic
+            }
 
         let postUrl = URL(string: "urlString")
         var postRequest = URLRequest(url: postUrl!)
@@ -135,7 +145,24 @@ class SignUpVC: UIViewController{
         ]
         }
 //        postRequest.httpBody = params
-        
+    }
+    private func presentPicker(_ sourceType: UIImagePickerController.SourceType) {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.sourceType = sourceType
+            imagePickerController.delegate = self
+            imagePickerController.allowsEditing = true
+            imagePickerController.mediaTypes = ["public.image"]
+            present(imagePickerController, animated: true, completion: nil)
+        }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey : Any]) {
+            if let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String {
+                if mediaType  == "public.image" {
+                    imageIn.image = (info[UIImagePickerController.InfoKey.editedImage] as? UIImage ??
+                                        info[UIImagePickerController.InfoKey.originalImage] as? UIImage)?
+                        .resizeImage(targetSize: CGSize(width: 240, height: 128))
+                }
+            }
+            picker.dismiss(animated: true, completion: nil)
     }
     
     
