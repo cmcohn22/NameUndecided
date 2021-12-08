@@ -530,7 +530,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="196" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
@@ -793,11 +793,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Chat Name" id="eDU-e8-EjW">
                         <barButtonItem key="rightBarButtonItem" title="GC Details" style="plain" id="aTV-SH-csq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="k7b-mD-wOR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="k7b-mD-wOR" userLabel="Settings">
                                 <rect key="frame" x="302" y="11" width="92" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="l3y-3j-IWs" kind="show" id="OvF-Mo-Sv8"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -809,6 +812,93 @@
             </objects>
             <point key="canvasLocation" x="1397.1014492753625" y="-727.23214285714278"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rvm-Ff-yxe">
+            <objects>
+                <viewController id="l3y-3j-IWs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h6k-AA-kYt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mgf-yS-F2g">
+                                <rect key="frame" x="0.0" y="279" width="414" height="469"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="lp2-tI-0fg"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="LR3-uf-eVG"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0GY-0h-8z7"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MnkyChat Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmZ-Ir-8Hb">
+                                <rect key="frame" x="20" y="20" width="374" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="kyd-Vy-jQD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mnky Chat Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULA-3N-6M8">
+                                <rect key="frame" x="182" y="99" width="173.5" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VKj-qQ-DMm">
+                                <rect key="frame" x="328" y="184" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mute Chat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwK-Kz-bIE">
+                                <rect key="frame" x="222" y="184" width="80" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gsQ-Xj-KyT">
+                                <rect key="frame" x="20" y="60" width="140" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="pbH-db-PlF"/>
+                                    <constraint firstAttribute="width" constant="140" id="ung-yp-5bK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP7-l0-Ccx">
+                                <rect key="frame" x="186" y="223" width="191" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="figure.walk" catalog="system" title="Leave Chat"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KmR-3N-5Xm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RmZ-Ir-8Hb" firstAttribute="top" secondItem="h6k-AA-kYt" secondAttribute="top" constant="20" symbolic="YES" id="0AB-Kl-uD7"/>
+                            <constraint firstItem="mgf-yS-F2g" firstAttribute="top" secondItem="zP7-l0-Ccx" secondAttribute="bottom" constant="25" id="3dL-C0-wMH"/>
+                            <constraint firstItem="zP7-l0-Ccx" firstAttribute="top" secondItem="BwK-Kz-bIE" secondAttribute="bottom" constant="8" symbolic="YES" id="9LL-ez-TI2"/>
+                            <constraint firstItem="mgf-yS-F2g" firstAttribute="top" secondItem="gsQ-Xj-KyT" secondAttribute="bottom" constant="64" id="AGu-j1-f3x"/>
+                            <constraint firstItem="BwK-Kz-bIE" firstAttribute="leading" secondItem="gsQ-Xj-KyT" secondAttribute="trailing" constant="58" id="Bm4-7G-nT7"/>
+                            <constraint firstItem="KmR-3N-5Xm" firstAttribute="trailing" secondItem="VKj-qQ-DMm" secondAttribute="trailing" constant="37" id="F0Z-AX-lnP"/>
+                            <constraint firstItem="VKj-qQ-DMm" firstAttribute="leading" secondItem="BwK-Kz-bIE" secondAttribute="trailing" constant="26" id="LY5-Cf-Spi"/>
+                            <constraint firstItem="gsQ-Xj-KyT" firstAttribute="top" secondItem="RmZ-Ir-8Hb" secondAttribute="bottom" constant="8" symbolic="YES" id="PTI-tZ-hAk"/>
+                            <constraint firstItem="KmR-3N-5Xm" firstAttribute="trailing" secondItem="zP7-l0-Ccx" secondAttribute="trailing" constant="37" id="QSI-FI-D0M"/>
+                            <constraint firstItem="KmR-3N-5Xm" firstAttribute="trailing" secondItem="ULA-3N-6M8" secondAttribute="trailing" constant="58.5" id="QfE-5I-cyh"/>
+                            <constraint firstItem="RmZ-Ir-8Hb" firstAttribute="leading" secondItem="gsQ-Xj-KyT" secondAttribute="leading" id="YPm-kN-IQw"/>
+                            <constraint firstItem="RmZ-Ir-8Hb" firstAttribute="leading" secondItem="KmR-3N-5Xm" secondAttribute="leading" constant="20" id="ZcX-97-PJb"/>
+                            <constraint firstItem="ULA-3N-6M8" firstAttribute="top" secondItem="RmZ-Ir-8Hb" secondAttribute="bottom" constant="47" id="daw-Yk-HOb"/>
+                            <constraint firstItem="zP7-l0-Ccx" firstAttribute="leading" secondItem="KmR-3N-5Xm" secondAttribute="leading" constant="265.5" id="dre-eK-sal"/>
+                            <constraint firstItem="BwK-Kz-bIE" firstAttribute="top" secondItem="ULA-3N-6M8" secondAttribute="bottom" constant="19" id="e0N-VF-k04"/>
+                            <constraint firstItem="ULA-3N-6M8" firstAttribute="leading" secondItem="gsQ-Xj-KyT" secondAttribute="trailing" constant="22" id="fN6-4T-p5x"/>
+                            <constraint firstItem="VKj-qQ-DMm" firstAttribute="top" secondItem="ULA-3N-6M8" secondAttribute="bottom" constant="19" id="fUw-pz-8rh"/>
+                            <constraint firstItem="zP7-l0-Ccx" firstAttribute="top" secondItem="VKj-qQ-DMm" secondAttribute="bottom" constant="8" symbolic="YES" id="fx4-n8-eth"/>
+                            <constraint firstItem="RmZ-Ir-8Hb" firstAttribute="trailing" secondItem="h6k-AA-kYt" secondAttribute="trailingMargin" id="hBh-1f-5WD"/>
+                            <constraint firstItem="gsQ-Xj-KyT" firstAttribute="leading" secondItem="KmR-3N-5Xm" secondAttribute="leading" constant="20" id="kzy-76-nlv"/>
+                            <constraint firstItem="gsQ-Xj-KyT" firstAttribute="bottom" secondItem="BwK-Kz-bIE" secondAttribute="bottom" id="l8i-Ju-jl0"/>
+                            <constraint firstItem="KmR-3N-5Xm" firstAttribute="bottom" secondItem="mgf-yS-F2g" secondAttribute="bottom" constant="60" id="sCB-ZJ-pK3"/>
+                            <constraint firstItem="KmR-3N-5Xm" firstAttribute="trailing" secondItem="RmZ-Ir-8Hb" secondAttribute="trailing" constant="20" id="ud4-kX-7iS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XiD-VX-TxL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4e4-9q-UCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3000.0000000000005" y="-727.23214285714278"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="MQ5-Le-mvV"/>
@@ -818,6 +908,7 @@
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="camera.badge.ellipsis" catalog="system" width="128" height="92"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
