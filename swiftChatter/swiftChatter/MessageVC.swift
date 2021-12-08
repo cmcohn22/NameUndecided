@@ -56,7 +56,24 @@ final class MessageVC: UITableViewController {
                print(currentlocation.coordinate.latitude)
                print(currentlocation.coordinate.longitude)
 //               guard let chatid = ActiveChats.shared.chatid else { return }
-               MessageLog.shared.get_messages(chat_id: chat_id, lat: currentlocation.coordinate.latitude, long: currentlocation.coordinate.longitude) { success in
+//        var utoken : String
+//        print(LogInVC.shared.userToken)
+//        print(SignUpVC.shared.userToken)
+//        if((LogInVC.shared.userToken) != nil){
+//            utoken = LogInVC.shared.userToken ?? "faillog"
+//        print("USERTOKEN LOGIN")
+//            print(utoken)
+//        } else if ((SignUpVC.shared.userToken) != nil){
+//            utoken = SignUpVC.shared.userToken ?? "failsign"
+//            print("SignTOKEN LOGIN")
+//                print(utoken)
+//        }
+//        else{
+//            utoken = "fail"//"154685558fb3bb2d33ec51dbf5918e76ade92fcb"
+//        }
+        //print(utoken)
+        
+        MessageLog.shared.get_messages(token: UserStore.shared.activeUser.tokenId, chat_id: chat_id, lat: currentlocation.coordinate.latitude, long: currentlocation.coordinate.longitude) { success in
             DispatchQueue.main.async {
                 if success {
                     self.tableView.reloadData()

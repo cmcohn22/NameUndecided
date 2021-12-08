@@ -11,7 +11,6 @@ import CoreLocation
 final class ChatLogVC: UITableViewController {
     
     lazy var locationManager = CLLocationManager()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,8 +36,17 @@ final class ChatLogVC: UITableViewController {
         }
         print(currentlocation.coordinate.latitude)
         print(currentlocation.coordinate.longitude)
+//        var utoken : String
+//        if((LogInVC.shared.userToken) != nil){
+//            utoken = LogInVC.shared.userToken ?? "faillog"
+//        } else if ((SignUpVC.shared.userToken) != nil){
+//            utoken = SignUpVC.shared.userToken ?? "failsign"
+//        }
+//        else{
+//            utoken = "fail"//"154685558fb3bb2d33ec51dbf5918e76ade92fcb"
+//        }
         //temporary value BELOW
-        ChatLog.shared.get_chat_log(token: "154685558fb3bb2d33ec51dbf5918e76ade92fcb", lat: currentlocation.coordinate.latitude, long: currentlocation.coordinate.longitude) { success in
+        ChatLog.shared.get_chat_log(token: UserStore.shared.activeUser.tokenId, lat: currentlocation.coordinate.latitude, long: currentlocation.coordinate.longitude) { success in
             DispatchQueue.main.async {
                 if success {
                     self.tableView.reloadData()

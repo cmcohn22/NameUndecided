@@ -11,6 +11,10 @@ import UIKit
 import Alamofire
 
 class LogInVC: UIViewController{
+//    static let shared = SignUpVC()
+//
+//    var userToken : String? //make into a user struct later after consulting pratiks code
+//
     
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
@@ -37,11 +41,19 @@ class LogInVC: UIViewController{
                 case .success(_):
                     if let json = response.value
                     {
+                        print("JSONNNN")
                         print(json)
                         print(response.response?.statusCode)
                         if(response.response?.statusCode == 200){
+                            let jsondic = json as! NSDictionary
+                            //let responseString = String(data: json, encoding: .utf8)
                             self.InvalidLogIn.text = ""
                             print("Segueing")
+                            let tken = jsondic["token"] as! String
+                            print("USERTOKEN SUCSIG")
+                            //print(self.userToken)
+                            print(tken)
+                            UserStore.shared.setToken(token: tken)
                             self.performSegue(withIdentifier: "ID1", sender: self)
                         }
                         else{

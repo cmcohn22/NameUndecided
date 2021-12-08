@@ -32,7 +32,10 @@ final class ChatLog: ObservableObject {
         print(apiUrl)
         
         var request = URLRequest(url: apiUrl)
-        request.addValue("Token " + token, forHTTPHeaderField: "Authorization")
+        let tokstr = "Token " + token
+        print("TOKSTR")
+        print(tokstr)
+        request.addValue(tokstr, forHTTPHeaderField: "Authorization")
         // TODO: GET RID OF THIS LATER WHEN WE HAVE SIGN UP AND LOGIN WORKING ^
         request.httpMethod = "GET"
         

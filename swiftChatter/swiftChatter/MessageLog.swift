@@ -19,22 +19,27 @@ final class MessageLog: ObservableObject {
     private let serverUrl = "https://mnky-chat.com/"
     
     // TODO: Figure out current location
-    let lat = 0.0
-    let long = 0.0
+//    let lat = 0.0
+//    let long = 0.0
     // TODO: Where am I grabbing chat_id from?
-    var chat_id = "157ace05"
+//    var chat_id = "157ace05"
     
-    func get_messages(chat_id: String, lat: Double, long: Double, _ completion: ((Bool) -> ())?) {
+    func get_messages(token: String, chat_id: String, lat: Double, long: Double, _ completion: ((Bool) -> ())?) {
         self.messages.removeAll()
         guard let apiUrl = URL(string: serverUrl+"api/messages/?lat=" + String(lat) + "&long=" + String(long) + "&chat_id=" + chat_id) else {
                print("messages: Bad URL")
                return
            }
         var request = URLRequest(url: apiUrl)
-        request.addValue("Token 154685558fb3bb2d33ec51dbf5918e76ade92fcb", forHTTPHeaderField: "Authorization")
+//        request.addValue("Token 154685558fb3bb2d33ec51dbf5918e76ade92fcb", forHTTPHeaderField: "Authorization")
+        let tokstr = "Token " + token
+        request.addValue(tokstr, forHTTPHeaderField: "Authorization")
         // TODO: GET RID OF THIS LATER WHEN WE HAVE SIGN UP AND LOGIN WORKING ^
         request.httpMethod = "GET"
-        
+    
+        print("REQUETO ")
+        print(request)
+        print(token)
         URLSession.shared.dataTask(with: request) { data, response, error in
             var success = false
             defer { completion?(success) }

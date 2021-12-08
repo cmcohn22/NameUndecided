@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 class SignUpVC: UIViewController{
+    //static let shared = SignUpVC()
     
-    
+    //var userToken : String? //make into a user struct later after consulting pratiks code
     @IBOutlet weak var Email: UITextField!
    
     @IBOutlet weak var LastName: UITextField!
@@ -114,9 +115,21 @@ class SignUpVC: UIViewController{
                 print("response = \(response)")
                 return
             }
-
+            //let responsejson = response.value
             let responseString = String(data: data, encoding: .utf8)
+            //let jsondic = data as! NSDictionary
+            //let responseString = String(data: json, encoding: .utf8)
+            print("Segueing")
+            do{
+                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+                let tken = json!["token"] as! String ?? "failtonke"
+                print("responseString = \(responseString)")
+                print("responseString = \(tken)")
+                UserStore.shared.setToken(token: tken)
+            }catch{ print("erroMsg") }
             print("responseString = \(responseString)")
+            
+        
         }
 
         task.resume()
