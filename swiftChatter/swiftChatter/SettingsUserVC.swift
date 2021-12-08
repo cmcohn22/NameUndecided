@@ -27,7 +27,6 @@ final class SettingsUserVC: UIViewController{
                     self.last_name_label.text = SettingsUser.shared.settings.lastnameU
                     self.username_label.text = SettingsUser.shared.settings.usernameU
                     self.email_label.text = SettingsUser.shared.settings.emailU
-                    print("HERE HERE HERE HERE HERE")
                 }
             }
         }
