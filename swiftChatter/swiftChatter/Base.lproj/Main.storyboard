@@ -1070,13 +1070,13 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pickMediad:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="nyG-4A-Wad"/>
+                                    <action selector="pickMedia:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="pvh-Fc-CnT"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" minimumValueImage="0.circle" catalog="system" maximumValueImage="5.circle" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-dC-8Q7">
                                 <rect key="frame" x="81" y="504.5" width="214" height="31"/>
                                 <connections>
-                                    <action selector="sliderValuerrr:" destination="0Dy-RJ-xyG" eventType="valueChanged" id="DEq-gI-m6d"/>
+                                    <action selector="sliderValue:" destination="0Dy-RJ-xyG" eventType="valueChanged" id="Jaz-L0-ORN"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" text="Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRY-F8-wf8">
@@ -1090,7 +1090,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                 <connections>
-                                    <action selector="submitNewChattt:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="IHA-LR-HnS"/>
+                                    <action selector="submitNewChatt:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="AMq-HD-h8Z"/>
                                     <segue destination="TTV-uT-QlR" kind="show" id="Xxa-d0-Hj3"/>
                                 </connections>
                             </button>
