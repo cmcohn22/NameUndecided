@@ -8,19 +8,19 @@
 
 import UIKit
 import Starscream
-struct MessageSockets: Encodable{
+struct MessageSocket: Encodable{
     let lat:Double
     let long:Double
     let type:String
     let chat_id:String
     let content:String
     
-    init(){// pass params like a constructor
+    init(contents: String){// pass params like a constructor
         self.lat = 0.0
         self.long = 0.0
         self.type = "chat_message"
         self.chat_id = "157ace05"
-        self.content = "please work!"
+        self.content = contents
     }
 //    "lat": 0.0,
 //    "long":0.0,
@@ -42,9 +42,7 @@ final class MessageVC: UITableViewController{
     
     
     @IBOutlet weak var MessageContent: UITextField!
-    @IBAction func SendMessage(_ sender: Any) {
-        
-    }
+    
     
     var socket: WebSocket!
     var isConnected = false
@@ -77,7 +75,17 @@ final class MessageVC: UITableViewController{
         
         
     }
-   
+    @IBAction func SendMessage(_ sender: Any) {
+                    print("good stuff")
+        let jsonObject = MessageSocket.init(contents: MessageContent.text!)
+                    let jsonEncoder = JSONEncoder()
+                            let jsonData = try! jsonEncoder.encode(jsonObject)
+                            let json = String(data: jsonData, encoding: .utf8)!
+        
+                    print(json)
+        StartUpVC.shared.writeText((Any).self, json: json)
+//                    socket?.write(string: json)
+    }
     /*
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         refreshTimeline()

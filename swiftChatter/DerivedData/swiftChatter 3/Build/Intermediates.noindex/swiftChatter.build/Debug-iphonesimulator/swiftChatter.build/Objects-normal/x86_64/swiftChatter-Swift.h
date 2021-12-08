@@ -303,8 +303,8 @@ SWIFT_CLASS("_TtC12swiftChatter16MessageTableCell")
 SWIFT_CLASS("_TtC12swiftChatter9MessageVC")
 @interface MessageVC : UITableViewController
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified MessageContent;
-- (IBAction)SendMessage:(id _Nonnull)sender;
 - (void)viewDidLoad;
+- (IBAction)SendMessage:(id _Nonnull)sender;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;

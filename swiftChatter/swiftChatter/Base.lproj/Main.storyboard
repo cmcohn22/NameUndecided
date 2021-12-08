@@ -725,7 +725,7 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="arrow.up" catalog="system"/>
                                     <connections>
-                                        <action selector="writeText:" destination="32I-zu-pcC" eventType="touchUpInside" id="ZWa-dE-ESo"/>
+                                        <action selector="SendMessage:" destination="32I-zu-pcC" eventType="touchUpInside" id="zpj-p2-rDr"/>
                                     </connections>
                                 </button>
                             </subviews>

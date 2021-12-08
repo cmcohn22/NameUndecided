@@ -9,22 +9,9 @@
 import Foundation
 import UIKit
 import Starscream
-struct MessageSocket: Encodable{
-    let lat:Double
-    let long:Double
-    let type:String
-    let chat_id:String
-    let content:String
-    
-    init(){// pass params like a constructor
-        self.lat = 0.0
-        self.long = 0.0
-        self.type = "chat_message"
-        self.chat_id = "157ace05"
-        self.content = "please work!"
-    }
-}
+
     class StartUpVC: UIViewController, WebSocketDelegate{
+        static let shared = StartUpVC()
         func handleError(_ error: Error?) {
             if let e = error as? WSError {
                 print("websocket encountered an error: \(e.message)")
@@ -85,23 +72,22 @@ struct MessageSocket: Encodable{
         socket.connect()
         print("connected")// setup refreshControler here later
         // iOS 14 or newer
-       
+    }
        
         func websocketDidConnect(ws: WebSocket) {
                 print("websocket is connected")
             }
+        func websocketDidDisconnect(ws: WebSocket) {
+                print("websocket is Disconnected")
+            }
             
-            func writeText(_ sender: Any) {
+        func writeText(_ sender: Any, json: String) {
                 print("good stuff")
-                let jsonObject = MessageSocket.init()
-                let jsonEncoder = JSONEncoder()
-                        let jsonData = try! jsonEncoder.encode(jsonObject)
-                        let json = String(data: jsonData, encoding: .utf8)!
-    //            print(jsonEncoder)
-    //            print(jsonData)
+          
                 print(json)
+            print(socket)
     //            let json = try?
-                socket?.write(string: json)
+            socket?.write(string: json)
 
                 
             }
@@ -116,4 +102,4 @@ struct MessageSocket: Encodable{
 
         
     }
-}
+
