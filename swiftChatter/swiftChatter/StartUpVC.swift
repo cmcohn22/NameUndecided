@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 import Starscream
-
+var socket: WebSocket!
+var isConnected = false
+let server = WebSocketServer()
     class StartUpVC: UIViewController, WebSocketDelegate{
         static let shared = StartUpVC()
         func handleError(_ error: Error?) {
@@ -49,9 +51,7 @@ import Starscream
                 }
             }
         
-    var socket: WebSocket!
-    var isConnected = false
-    let server = WebSocketServer()
+   
     override func viewDidLoad() {
         
         super.viewDidLoad()

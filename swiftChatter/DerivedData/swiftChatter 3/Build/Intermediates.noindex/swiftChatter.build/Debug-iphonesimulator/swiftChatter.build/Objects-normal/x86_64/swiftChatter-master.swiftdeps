@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "13421a14d2ff8d47de4adc311456469a9bf069cd8ad94521810732b0c052e992"
-build_start_time: [1638995522, 5662918]
-build_end_time: [1638995523, 20010948]
+build_start_time: [1638997418, 239914894]
+build_end_time: [1638997420, 192589998]
 inputs:
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/ActiveChats.swift": [1638986520, 635005474]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/ActiveChatsVC.swift": [1638986520, 636138916]
@@ -21,5 +21,5 @@ inputs:
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/PostVC.swift": [1638819834, 15522956]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/SceneDelegate.swift": [1638986520, 649621009]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/SignUpVC.swift": [1638986520, 650229454]
-  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/StartUpVC.swift": [1638995521, 386168003]
+  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/StartUpVC.swift": [1638997417, 613658666]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/StartViewController.swift": [1638291040, 0]
