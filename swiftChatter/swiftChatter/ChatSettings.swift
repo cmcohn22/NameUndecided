@@ -10,82 +10,96 @@ import Foundation
 import CoreLocation
 
 struct ChatUser {
-//    var username: String?
+    var username: String?
 //    var password: String?
     var first_name: String?
     var last_name: String?
 //    var email: String?
-//    @UserPropWrapper var profile_pic: String?
-    var lat: String!
-    var long: String!
+    @UserPropWrapper var profile_pic: String?
+//    var lat: String!
+//    var long: String!
+    var isAdmin: Bool!
 //    var tokenId: String!
     
-    mutating func setLatLong(_ currentLocation: CLLocation){
-        lat = "\(currentLocation.coordinate.latitude)"
-        long = "\(currentLocation.coordinate.longitude)"
-    }
+//    mutating func setLatLong(_ currentLocation: CLLocation){
+//        lat = "\(currentLocation.coordinate.latitude)"
+//        long = "\(currentLocation.coordinate.longitude)"
+//    }
     
 }
 
 final class ChatSettings: ObservableObject {
-//    static let shared = ChatSettings() // create one instance of the class to be shared
-//    private init() {}                // and make the constructor private so no other
-//                                     // instances can be created
-//    @Published private(set) var users = [String]()
-//    private let nFields = Mirror(reflecting: Chatt()).children.count
-//
-//    private let serverUrl = "https://mnky-chat.com/"
-//
+    static let shared = ChatSettings()
+    private init() {}
+    
+    @Published private(set) var chatUsers = [ChatUser]()
+    private let nFields = Mirror(reflecting: ChatUser()).children.count
+    
+    private let serverUrl = "https://mnky-chat.com/"
+    
 //    let lat = 0.0
 //    let long = 0.0
-//
-//    func get_active_chats(_ completion: ((Bool) -> ())?) {
-//        guard let apiUrl = URL(string: serverUrl+"api/active-chats/?lat=" + String(lat) + "&long=" + String(long)) else {
-//            print("active-chats: Bad URL")
-//            return
-//        }
-//
-//        var request = URLRequest(url: apiUrl)
-//        request.httpMethod = "GET"
-//
-//        URLSession.shared.dataTask(with: request) { data, response, error in
-//            var success = false
-//            defer { completion?(success) }
-//
-//            guard let data = data, error == nil else {
-//                print("active-chats: NETWORKING ERROR")
-//                return
-//            }
-//            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-//                print("active-chats: HTTP STATUS: \(httpStatus.statusCode)")
-//                return
-//            }
-//
-//            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
-//                print("active-chats: failed JSON deserialization")
-//                return
-//            }
-//
-//            print("HERE")
-//            let chattsReceived = jsonObj["active_chats"] as? [Dictionary<String,Any?>] ?? []
-//            print(chattsReceived)
-//            print(type(of: chattsReceived))
+    
+    var chat_id = ""
+    var chat_name = ""
+    var chat_description = ""
+    
+    // Retrieve chat info to populate chatUser table cells
+    func get_chat_info(_ completion: ((Bool) -> ())?) {
+        guard let apiUrl = URL(string: serverUrl+"api/active-chats/?chat_id=" + String(chat_id)) else {
+            print("chat-info: Bad URL")
+            return
+        }
+
+        var request = URLRequest(url: apiUrl)
+        request.httpMethod = "GET"
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            var success = false
+            defer { completion?(success) }
+
+            guard let data = data, error == nil else {
+                print("chat-info: NETWORKING ERROR")
+                return
+            }
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                print("chat-info: HTTP STATUS: \(httpStatus.statusCode)")
+                return
+            }
+
+            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+                print("chat-info: failed JSON deserialization")
+                return
+            }
+
+            
+            print("chat info besides USERS MNKY MNKY")
+            self.chat_id = jsonObj["chat_id"] as! String
+            self.chat_name = jsonObj["name"] as! String
+            self.chat_description = jsonObj["description"] as! String
+            print("HERE")
+            let chatUserInfoReceived = jsonObj["users"] as? [Dictionary<String,Any?>] ?? []
+            print(chatUserInfoReceived)
+            print(type(of: chatUserInfoReceived))
 //            print("teehee")
-//        DispatchQueue.main.async {
-//            self.chatts = [Chatt]()
-//            for chattEntry in chattsReceived{
-//                print("hi")
-//                if chattEntry.count == self.nFields {
-//                    self.chatts.append(Chatt(chat_id: chattEntry["chat_id"] as? String,
-//                                             name: chattEntry["name"] as? String,
-//                                             description: chattEntry["description"] as? String,
-//                                             lat: chattEntry["lat"] as? Double, long: chattEntry["long"] as? Double, radius: chattEntry["radius"] as? Double, recent_message_content: chattEntry["recent_message_content"] as? String, recent_message_timestamp: chattEntry["recent_message_timestamp"] as? String, image: chattEntry["image"] as? String, require_password: chattEntry["require_password"] as? Bool))
-//                } else {
-//                    print("active-chats: Received unexpected number of fields: \(chattEntry.count) instead of \(self.nFields).")
-//                }
-//            }
-//        }
-//            success = true // for completion(success)
-//        }.resume()
-//    }
+            
+//            self.chat_id = chatInfoReceived["chat_id"] as? String
+            
+            DispatchQueue.main.async {
+                self.chatUsers = [ChatUser]()
+                for userInfo in chatUserInfoReceived{
+                    if userInfo.count == self.nFields {
+                        self.chatUsers.append(ChatUser(username: userInfo["username"] as? String,
+                                                 first_name: userInfo["first_name"] as? String,
+                                                 last_name: userInfo["last_name"] as? String,
+                                                 profile_pic: userInfo["profile_pic"] as? String,
+                                                 isAdmin: userInfo["admin"] as? Bool))
+                    } else {
+                        print("chat-info: Received unexpected number of fields: \(chatUserInfoReceived.count) instead of \(self.nFields).")
+                    }
+                }
+            }
+            success = true // for completion(success)
+        }.resume()
+    }
 }
