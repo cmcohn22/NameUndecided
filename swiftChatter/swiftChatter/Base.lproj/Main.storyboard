@@ -731,7 +731,7 @@
                                                 <rect key="frame" x="-10" y="-13" width="416" height="1302.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. In pellentesque massa placerat duis ultricies lacus sed. Turpis massa sed elementum tempus egestas sed. Mattis aliquam faucibus purus in. Eget nullam non nisi est sit amet facilisis magna. Feugiat scelerisque varius morbi enim nunc faucibus a. Sodales ut etiam sit amet. Augue mauris augue neque gravida.
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. In pellentesque massa placerat duis ultricies lacus sed. Turpis massa sed elementum tempus egestas sed. Mattis aliquam faucibus purus in. Eget nullam non nisi est sit amet facilisis magna. Feugiat scelerisque varius morbi enim nunc faucibus a. Sodales ut etiam sit amet. Augue mauris augue neque gravida.
 
 Penatibus et magnis dis parturient montes nascetur. Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Tincidunt ornare massa eget egestas purus viverra. Mauris a diam maecenas sed. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Nec nam aliquam sem et tortor consequat id porta nibh. Non nisi est sit amet facilisis magna etiam. Pulvinar sapien et ligula ullamcorper. Bibendum arcu vitae elementum curabitur. Pretium aenean pharetra magna ac placerat vestibulum lectus. Turpis massa sed elementum tempus egestas. Elit sed vulputate mi sit amet. Non consectetur a erat nam at lectus. Morbi tincidunt ornare massa eget egestas purus. Magna etiam tempor orci eu lobortis elementum. Et magnis dis parturient montes. At volutpat diam ut venenatis. Sit amet luctus venenatis lectus magna fringilla urna. Erat velit scelerisque in dictum non consectetur a.
 
@@ -739,7 +739,7 @@ Praesent tristique magna sit amet purus gravida quis blandit turpis. Platea dict
 
 Cursus metus aliquam eleifend mi in nulla posuere. Nulla aliquet enim tortor at. Turpis egestas pretium aenean pharetra magna. Consequat id porta nibh venenatis cras sed felis eget velit. Ac tincidunt vitae semper quis lectus nulla at volutpat diam. Ultricies integer quis auctor elit sed vulputate mi sit. Convallis tellus id interdum velit laoreet. Habitant morbi tristique senectus et netus et malesuada fames. Morbi tristique senectus et netus et malesuada fames ac turpis. Tristique senectus et netus et malesuada. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Sit amet dictum sit amet justo donec enim diam. Eget nulla facilisi etiam dignissim diam. Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet. Mauris pharetra et ultrices neque ornare. Suspendisse in est ante in nibh mauris.
 
-Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Sit amet nulla facilisi morbi tempus iaculis urna. A diam sollicitudin tempor id eu nisl nunc. Enim tortor at auctor urna nunc id cursus. Eget nullam non nisi est sit amet facilisis magna etiam. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Euismod in pellentesque massa placerat duis ultricies. Consequat id porta nibh venenatis cras sed. Cras sed felis eget velit aliquet sagittis. Vestibulum lectus mauris ultrices eros in cursus. In hendrerit gravida rutrum quisque non tellus. At lectus urna duis convallis. At auctor urna nunc id. Aliquet bibendum enim facilisis gravida neque convallis. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Facilisis mauris sit amet massa vitae tortor. Tincidunt vitae semper quis lectus nulla at. Nec tincidunt praesent semper feugiat nibh sed. Massa sapien faucibus et molestie ac feugiat sed lectus.</mutableString>
+Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Sit amet nulla facilisi morbi tempus iaculis urna. A diam sollicitudin tempor id eu nisl nunc. Enim tortor at auctor urna nunc id cursus. Eget nullam non nisi est sit amet facilisis magna etiam. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Euismod in pellentesque massa placerat duis ultricies. Consequat id porta nibh venenatis cras sed. Cras sed felis eget velit aliquet sagittis. Vestibulum lectus mauris ultrices eros in cursus. In hendrerit gravida rutrum quisque non tellus. At lectus urna duis convallis. At auctor urna nunc id. Aliquet bibendum enim facilisis gravida neque convallis. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Facilisis mauris sit amet massa vitae tortor. Tincidunt vitae semper quis lectus nulla at. Nec tincidunt praesent semper feugiat nibh sed. Massa sapien faucibus et molestie ac feugiat sed lectus.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -874,7 +874,10 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                 <rect key="frame" x="302" y="11" width="92" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system" title="Settings"/>
+                                <connections>
+                                    <segue destination="VG5-Zg-VKD" kind="show" id="ZRH-HV-ZZd"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -904,7 +907,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                                 <rect key="frame" x="-10" y="-13" width="416" height="1302.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. In pellentesque massa placerat duis ultricies lacus sed. Turpis massa sed elementum tempus egestas sed. Mattis aliquam faucibus purus in. Eget nullam non nisi est sit amet facilisis magna. Feugiat scelerisque varius morbi enim nunc faucibus a. Sodales ut etiam sit amet. Augue mauris augue neque gravida.
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. In pellentesque massa placerat duis ultricies lacus sed. Turpis massa sed elementum tempus egestas sed. Mattis aliquam faucibus purus in. Eget nullam non nisi est sit amet facilisis magna. Feugiat scelerisque varius morbi enim nunc faucibus a. Sodales ut etiam sit amet. Augue mauris augue neque gravida.
 
 Penatibus et magnis dis parturient montes nascetur. Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Tincidunt ornare massa eget egestas purus viverra. Mauris a diam maecenas sed. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Nec nam aliquam sem et tortor consequat id porta nibh. Non nisi est sit amet facilisis magna etiam. Pulvinar sapien et ligula ullamcorper. Bibendum arcu vitae elementum curabitur. Pretium aenean pharetra magna ac placerat vestibulum lectus. Turpis massa sed elementum tempus egestas. Elit sed vulputate mi sit amet. Non consectetur a erat nam at lectus. Morbi tincidunt ornare massa eget egestas purus. Magna etiam tempor orci eu lobortis elementum. Et magnis dis parturient montes. At volutpat diam ut venenatis. Sit amet luctus venenatis lectus magna fringilla urna. Erat velit scelerisque in dictum non consectetur a.
 
@@ -912,7 +915,7 @@ Praesent tristique magna sit amet purus gravida quis blandit turpis. Platea dict
 
 Cursus metus aliquam eleifend mi in nulla posuere. Nulla aliquet enim tortor at. Turpis egestas pretium aenean pharetra magna. Consequat id porta nibh venenatis cras sed felis eget velit. Ac tincidunt vitae semper quis lectus nulla at volutpat diam. Ultricies integer quis auctor elit sed vulputate mi sit. Convallis tellus id interdum velit laoreet. Habitant morbi tristique senectus et netus et malesuada fames. Morbi tristique senectus et netus et malesuada fames ac turpis. Tristique senectus et netus et malesuada. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Sit amet dictum sit amet justo donec enim diam. Eget nulla facilisi etiam dignissim diam. Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet. Mauris pharetra et ultrices neque ornare. Suspendisse in est ante in nibh mauris.
 
-Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Sit amet nulla facilisi morbi tempus iaculis urna. A diam sollicitudin tempor id eu nisl nunc. Enim tortor at auctor urna nunc id cursus. Eget nullam non nisi est sit amet facilisis magna etiam. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Euismod in pellentesque massa placerat duis ultricies. Consequat id porta nibh venenatis cras sed. Cras sed felis eget velit aliquet sagittis. Vestibulum lectus mauris ultrices eros in cursus. In hendrerit gravida rutrum quisque non tellus. At lectus urna duis convallis. At auctor urna nunc id. Aliquet bibendum enim facilisis gravida neque convallis. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Facilisis mauris sit amet massa vitae tortor. Tincidunt vitae semper quis lectus nulla at. Nec tincidunt praesent semper feugiat nibh sed. Massa sapien faucibus et molestie ac feugiat sed lectus.</mutableString>
+Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Sit amet nulla facilisi morbi tempus iaculis urna. A diam sollicitudin tempor id eu nisl nunc. Enim tortor at auctor urna nunc id cursus. Eget nullam non nisi est sit amet facilisis magna etiam. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Euismod in pellentesque massa placerat duis ultricies. Consequat id porta nibh venenatis cras sed. Cras sed felis eget velit aliquet sagittis. Vestibulum lectus mauris ultrices eros in cursus. In hendrerit gravida rutrum quisque non tellus. At lectus urna duis convallis. At auctor urna nunc id. Aliquet bibendum enim facilisis gravida neque convallis. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Facilisis mauris sit amet massa vitae tortor. Tincidunt vitae semper quis lectus nulla at. Nec tincidunt praesent semper feugiat nibh sed. Massa sapien faucibus et molestie ac feugiat sed lectus.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -969,7 +972,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                                 <rect key="frame" x="-10" y="-13" width="416" height="1302.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. In pellentesque massa placerat duis ultricies lacus sed. Turpis massa sed elementum tempus egestas sed. Mattis aliquam faucibus purus in. Eget nullam non nisi est sit amet facilisis magna. Feugiat scelerisque varius morbi enim nunc faucibus a. Sodales ut etiam sit amet. Augue mauris augue neque gravida.
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. In pellentesque massa placerat duis ultricies lacus sed. Turpis massa sed elementum tempus egestas sed. Mattis aliquam faucibus purus in. Eget nullam non nisi est sit amet facilisis magna. Feugiat scelerisque varius morbi enim nunc faucibus a. Sodales ut etiam sit amet. Augue mauris augue neque gravida.
 
 Penatibus et magnis dis parturient montes nascetur. Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Tincidunt ornare massa eget egestas purus viverra. Mauris a diam maecenas sed. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Nec nam aliquam sem et tortor consequat id porta nibh. Non nisi est sit amet facilisis magna etiam. Pulvinar sapien et ligula ullamcorper. Bibendum arcu vitae elementum curabitur. Pretium aenean pharetra magna ac placerat vestibulum lectus. Turpis massa sed elementum tempus egestas. Elit sed vulputate mi sit amet. Non consectetur a erat nam at lectus. Morbi tincidunt ornare massa eget egestas purus. Magna etiam tempor orci eu lobortis elementum. Et magnis dis parturient montes. At volutpat diam ut venenatis. Sit amet luctus venenatis lectus magna fringilla urna. Erat velit scelerisque in dictum non consectetur a.
 
@@ -977,7 +980,7 @@ Praesent tristique magna sit amet purus gravida quis blandit turpis. Platea dict
 
 Cursus metus aliquam eleifend mi in nulla posuere. Nulla aliquet enim tortor at. Turpis egestas pretium aenean pharetra magna. Consequat id porta nibh venenatis cras sed felis eget velit. Ac tincidunt vitae semper quis lectus nulla at volutpat diam. Ultricies integer quis auctor elit sed vulputate mi sit. Convallis tellus id interdum velit laoreet. Habitant morbi tristique senectus et netus et malesuada fames. Morbi tristique senectus et netus et malesuada fames ac turpis. Tristique senectus et netus et malesuada. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Sit amet dictum sit amet justo donec enim diam. Eget nulla facilisi etiam dignissim diam. Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet. Mauris pharetra et ultrices neque ornare. Suspendisse in est ante in nibh mauris.
 
-Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Sit amet nulla facilisi morbi tempus iaculis urna. A diam sollicitudin tempor id eu nisl nunc. Enim tortor at auctor urna nunc id cursus. Eget nullam non nisi est sit amet facilisis magna etiam. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Euismod in pellentesque massa placerat duis ultricies. Consequat id porta nibh venenatis cras sed. Cras sed felis eget velit aliquet sagittis. Vestibulum lectus mauris ultrices eros in cursus. In hendrerit gravida rutrum quisque non tellus. At lectus urna duis convallis. At auctor urna nunc id. Aliquet bibendum enim facilisis gravida neque convallis. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Facilisis mauris sit amet massa vitae tortor. Tincidunt vitae semper quis lectus nulla at. Nec tincidunt praesent semper feugiat nibh sed. Massa sapien faucibus et molestie ac feugiat sed lectus.</mutableString>
+Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Sit amet nulla facilisi morbi tempus iaculis urna. A diam sollicitudin tempor id eu nisl nunc. Enim tortor at auctor urna nunc id cursus. Eget nullam non nisi est sit amet facilisis magna etiam. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Euismod in pellentesque massa placerat duis ultricies. Consequat id porta nibh venenatis cras sed. Cras sed felis eget velit aliquet sagittis. Vestibulum lectus mauris ultrices eros in cursus. In hendrerit gravida rutrum quisque non tellus. At lectus urna duis convallis. At auctor urna nunc id. Aliquet bibendum enim facilisis gravida neque convallis. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Facilisis mauris sit amet massa vitae tortor. Tincidunt vitae semper quis lectus nulla at. Nec tincidunt praesent semper feugiat nibh sed. Massa sapien faucibus et molestie ac feugiat sed lectus.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1016,6 +1019,107 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
             </objects>
             <point key="canvasLocation" x="3572" y="1588"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XwG-NN-cXd">
+            <objects>
+                <viewController id="VG5-Zg-VKD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRF-lv-Rzi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MnkyChat Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPS-gh-aFw">
+                                <rect key="frame" x="20" y="20" width="374" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="4jH-aO-IKK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mnky Chat Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WkG-xJ-MkU">
+                                <rect key="frame" x="182" y="99" width="173.5" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UlA-ad-eYr">
+                                <rect key="frame" x="328" y="184" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mute Chat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bic-We-qqy">
+                                <rect key="frame" x="222" y="184" width="80" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hm6-nu-H7n">
+                                <rect key="frame" x="20" y="60" width="140" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="PHN-hi-XIE"/>
+                                    <constraint firstAttribute="height" constant="155" id="XbD-hp-zIJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQO-Z3-Q09">
+                                <rect key="frame" x="186" y="223" width="191" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="figure.walk" catalog="system" title="Leave Chat"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sJt-jM-MhE">
+                                <rect key="frame" x="0.0" y="298" width="414" height="496"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="TdQ-aA-55R">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TdQ-aA-55R" id="rmo-pb-5Mm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOY-Jz-SMe">
+                                                    <rect key="frame" x="20" y="18" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Full Name"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ckv-Pa-Lo2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bic-We-qqy" firstAttribute="leading" secondItem="hm6-nu-H7n" secondAttribute="trailing" constant="58" id="6QG-Ul-lvn"/>
+                            <constraint firstItem="hm6-nu-H7n" firstAttribute="bottom" secondItem="Bic-We-qqy" secondAttribute="bottom" id="7lB-AI-xAO"/>
+                            <constraint firstItem="Ckv-Pa-Lo2" firstAttribute="trailing" secondItem="WkG-xJ-MkU" secondAttribute="trailing" constant="58.5" id="7pp-bu-jwJ"/>
+                            <constraint firstItem="OQO-Z3-Q09" firstAttribute="top" secondItem="Bic-We-qqy" secondAttribute="bottom" constant="8" symbolic="YES" id="84o-SK-wIU"/>
+                            <constraint firstItem="pPS-gh-aFw" firstAttribute="top" secondItem="DRF-lv-Rzi" secondAttribute="top" constant="20" symbolic="YES" id="Byy-Fh-UdZ"/>
+                            <constraint firstItem="Ckv-Pa-Lo2" firstAttribute="trailing" secondItem="pPS-gh-aFw" secondAttribute="trailing" constant="20" id="Dsw-bw-3Ut"/>
+                            <constraint firstItem="pPS-gh-aFw" firstAttribute="leading" secondItem="hm6-nu-H7n" secondAttribute="leading" id="Mxa-EY-e1x"/>
+                            <constraint firstItem="Ckv-Pa-Lo2" firstAttribute="trailing" secondItem="UlA-ad-eYr" secondAttribute="trailing" constant="37" id="PGM-eM-gVm"/>
+                            <constraint firstItem="Bic-We-qqy" firstAttribute="top" secondItem="WkG-xJ-MkU" secondAttribute="bottom" constant="19" id="ayr-RE-e1r"/>
+                            <constraint firstItem="pPS-gh-aFw" firstAttribute="leading" secondItem="Ckv-Pa-Lo2" secondAttribute="leading" constant="20" id="gWA-nU-zq5"/>
+                            <constraint firstItem="hm6-nu-H7n" firstAttribute="top" secondItem="pPS-gh-aFw" secondAttribute="bottom" constant="8" symbolic="YES" id="hr5-5w-HiW"/>
+                            <constraint firstItem="OQO-Z3-Q09" firstAttribute="leading" secondItem="Ckv-Pa-Lo2" secondAttribute="leading" constant="265.5" id="i3M-qv-xWG"/>
+                            <constraint firstItem="OQO-Z3-Q09" firstAttribute="top" secondItem="UlA-ad-eYr" secondAttribute="bottom" constant="8" symbolic="YES" id="iIN-R4-Nwj"/>
+                            <constraint firstItem="Ckv-Pa-Lo2" firstAttribute="trailing" secondItem="OQO-Z3-Q09" secondAttribute="trailing" constant="37" id="lRX-Vk-Sgv"/>
+                            <constraint firstItem="WkG-xJ-MkU" firstAttribute="top" secondItem="pPS-gh-aFw" secondAttribute="bottom" constant="47" id="nOw-ov-yyc"/>
+                            <constraint firstItem="UlA-ad-eYr" firstAttribute="leading" secondItem="Bic-We-qqy" secondAttribute="trailing" constant="26" id="olT-eu-XkZ"/>
+                            <constraint firstItem="WkG-xJ-MkU" firstAttribute="leading" secondItem="hm6-nu-H7n" secondAttribute="trailing" constant="22" id="qtN-Ro-pzY"/>
+                            <constraint firstItem="pPS-gh-aFw" firstAttribute="trailing" secondItem="DRF-lv-Rzi" secondAttribute="trailingMargin" id="s9F-gx-seP"/>
+                            <constraint firstItem="UlA-ad-eYr" firstAttribute="top" secondItem="WkG-xJ-MkU" secondAttribute="bottom" constant="19" id="uaT-gk-Wu9"/>
+                            <constraint firstItem="hm6-nu-H7n" firstAttribute="leading" secondItem="Ckv-Pa-Lo2" secondAttribute="leading" constant="20" id="wzX-pF-qwQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rw8-Rp-4Ii"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcW-LM-a4Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628.985507246377" y="-727.23214285714278"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="VqR-bK-UuJ"/>
@@ -1027,6 +1131,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="camera.badge.ellipsis" catalog="system" width="128" height="92"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
