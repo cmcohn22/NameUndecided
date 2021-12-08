@@ -974,52 +974,6 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="figure.walk" catalog="system" title="Leave Chat"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sJt-jM-MhE">
-                                <rect key="frame" x="0.0" y="298" width="414" height="496"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatUsersTableCell" rowHeight="58" id="TdQ-aA-55R" customClass="ChatUsersTableCell" customModule="swiftChatter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="58"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TdQ-aA-55R" id="rmo-pb-5Mm" customClass="ChatUsersTableCell" customModule="swiftChatter" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOY-Jz-SMe">
-                                                    <rect key="frame" x="20" y="18" width="104" height="21"/>
-                                                    <accessibility key="accessibilityConfiguration" label="Full Name"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VZ-na-xBC">
-                                                    <rect key="frame" x="309" y="19" width="49" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="49" id="XjM-0L-J7C"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="yOY-Jz-SMe" firstAttribute="top" secondItem="rmo-pb-5Mm" secondAttribute="top" constant="18" id="7pB-X0-TXq"/>
-                                                <constraint firstItem="3VZ-na-xBC" firstAttribute="leading" secondItem="yOY-Jz-SMe" secondAttribute="trailing" constant="185" id="9OS-Km-ORF"/>
-                                                <constraint firstAttribute="bottom" secondItem="yOY-Jz-SMe" secondAttribute="bottom" constant="19" id="IKf-Dd-Oae"/>
-                                                <constraint firstAttribute="bottom" secondItem="3VZ-na-xBC" secondAttribute="bottom" constant="18" id="NnM-fP-nZe"/>
-                                                <constraint firstItem="yOY-Jz-SMe" firstAttribute="leading" secondItem="rmo-pb-5Mm" secondAttribute="leading" constant="20" symbolic="YES" id="a8j-Ll-f0z"/>
-                                                <constraint firstAttribute="trailing" secondItem="3VZ-na-xBC" secondAttribute="trailing" constant="56" id="nL1-Iu-IWG"/>
-                                                <constraint firstItem="3VZ-na-xBC" firstAttribute="top" secondItem="rmo-pb-5Mm" secondAttribute="top" constant="19" id="u68-lO-4AU"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="adminLabel" destination="3VZ-na-xBC" id="NzL-aO-zqf"/>
-                                            <outlet property="fullnameLabel" destination="yOY-Jz-SMe" id="mcN-XC-ssm"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ckv-Pa-Lo2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1190,7 +1144,6 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uon-g5-tYU"/>
         <segue reference="ndF-JC-799"/>
         <segue reference="MQ5-Le-mvV"/>
         <segue reference="Xxa-d0-Hj3"/>
