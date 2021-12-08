@@ -15,10 +15,10 @@
 		19D8F9E2275EA1E00045A6CA /* MessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8F9E1275EA1E00045A6CA /* MessageTableCell.swift */; };
 		19D8F9E4275EA1E60045A6CA /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8F9E3275EA1E60045A6CA /* MessageVC.swift */; };
 		19D8F9E6275EA1EC0045A6CA /* MessageLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8F9E5275EA1EC0045A6CA /* MessageLog.swift */; };
-		5F37F14827568784005229A7 /* CreateMnkyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F14727568784005229A7 /* CreateMnkyChat.swift */; };
 		5F37F14B2756FBCC005229A7 /* ActiveChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F1492756FBCC005229A7 /* ActiveChats.swift */; };
 		5F37F14C2756FBCC005229A7 /* ActiveChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */; };
 		5FAF9BFA2760541200C57AF4 /* ChatSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF9BF92760541200C57AF4 /* ChatSettings.swift */; };
+		5FAF9BFC2760574600C57AF4 /* CreateMnkyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF9BFB2760574500C57AF4 /* CreateMnkyChat.swift */; };
 		88361A34275875F30006ABE4 /* ChatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A33275875F30006ABE4 /* ChatLog.swift */; };
 		88361A36275876070006ABE4 /* ChatLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A35275876070006ABE4 /* ChatLogVC.swift */; };
 		88361A38275966660006ABE4 /* ChatLogTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A37275966660006ABE4 /* ChatLogTableCell.swift */; };
@@ -47,10 +47,10 @@
 		1F6B94E2C76EE7949A1E3438 /* Pods-swiftChatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.debug.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.debug.xcconfig"; sourceTree = "<group>"; };
 		2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DFA02A18C4CB5D5CC7F07 /* Pods-swiftChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.release.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.release.xcconfig"; sourceTree = "<group>"; };
-		5F37F14727568784005229A7 /* CreateMnkyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMnkyChat.swift; sourceTree = "<group>"; };
 		5F37F1492756FBCC005229A7 /* ActiveChats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChats.swift; sourceTree = "<group>"; };
 		5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChatsVC.swift; sourceTree = "<group>"; };
 		5FAF9BF92760541200C57AF4 /* ChatSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSettings.swift; sourceTree = "<group>"; };
+		5FAF9BFB2760574500C57AF4 /* CreateMnkyChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateMnkyChat.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/CreateMnkyChat.swift"; sourceTree = "<group>"; };
 		88361A33275875F30006ABE4 /* ChatLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLog.swift; sourceTree = "<group>"; };
 		88361A35275876070006ABE4 /* ChatLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogVC.swift; sourceTree = "<group>"; };
 		88361A37275966660006ABE4 /* ChatLogTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogTableCell.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */,
 				FC285FF924CBCAAD00B60A29 /* PostVC.swift */,
 				5FAF9BF92760541200C57AF4 /* ChatSettings.swift */,
-				5F37F14727568784005229A7 /* CreateMnkyChat.swift */,
+				5FAF9BFB2760574500C57AF4 /* CreateMnkyChat.swift */,
 				FC03AB4A24CA88830013DA53 /* Assets.xcassets */,
 				FC03AB4724CA88800013DA53 /* Main.storyboard */,
 				FC67425E250A9185009998D4 /* LaunchScreen.storyboard */,
@@ -279,9 +279,9 @@
 				19D8F9E6275EA1EC0045A6CA /* MessageLog.swift in Sources */,
 				1953AB0B2756A6E000AC3B26 /* LogInVC.swift in Sources */,
 				88361A36275876070006ABE4 /* ChatLogVC.swift in Sources */,
+				5FAF9BFC2760574600C57AF4 /* CreateMnkyChat.swift in Sources */,
 				88361A38275966660006ABE4 /* ChatLogTableCell.swift in Sources */,
 				5F37F14C2756FBCC005229A7 /* ActiveChatsVC.swift in Sources */,
-				5F37F14827568784005229A7 /* CreateMnkyChat.swift in Sources */,
 				FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */,
 				5FAF9BFA2760541200C57AF4 /* ChatSettings.swift in Sources */,
 				5F37F14B2756FBCC005229A7 /* ActiveChats.swift in Sources */,
