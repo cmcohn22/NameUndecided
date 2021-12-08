@@ -1070,13 +1070,13 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pickMedia:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="3bH-qd-QZK"/>
+                                    <action selector="pickMediad:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="nyG-4A-Wad"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" minimumValueImage="0.circle" catalog="system" maximumValueImage="5.circle" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-dC-8Q7">
                                 <rect key="frame" x="81" y="504.5" width="214" height="31"/>
                                 <connections>
-                                    <action selector="sliderValue:" destination="0Dy-RJ-xyG" eventType="valueChanged" id="AzH-2l-8iR"/>
+                                    <action selector="sliderValuerrr:" destination="0Dy-RJ-xyG" eventType="valueChanged" id="DEq-gI-m6d"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" text="Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRY-F8-wf8">
@@ -1090,7 +1090,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                 <connections>
-                                    <action selector="submitNewChatt:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="xuu-zV-y3M"/>
+                                    <action selector="submitNewChattt:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="IHA-LR-HnS"/>
                                     <segue destination="TTV-uT-QlR" kind="show" id="Xxa-d0-Hj3"/>
                                 </connections>
                             </button>
@@ -1102,7 +1102,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="accessCamera:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="t3S-N8-WH5"/>
+                                    <action selector="accessCamerar:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="tgu-vU-5G7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suh-ml-HI5">
@@ -1153,10 +1153,10 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                         </connections>
                     </navigationItem>
                     <connections>
-                        <outlet property="chattdescription" destination="ZhY-hH-MGr" id="V8m-yI-Nue"/>
-                        <outlet property="chattname" destination="PDa-Z0-7Ud" id="AMm-l2-aQ8"/>
-                        <outlet property="postImage" destination="MqZ-7f-EiV" id="yHn-QR-RCx"/>
-                        <outlet property="slideValue" destination="Suh-ml-HI5" id="JW8-E3-AZB"/>
+                        <outlet property="chattdescription" destination="ZhY-hH-MGr" id="TbO-mj-qMY"/>
+                        <outlet property="chattname" destination="PDa-Z0-7Ud" id="7PR-BC-Kip"/>
+                        <outlet property="postImage" destination="MqZ-7f-EiV" id="Uqd-ke-fIr"/>
+                        <outlet property="slideValue" destination="Suh-ml-HI5" id="UCR-0G-KNj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDw-hD-VTL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
