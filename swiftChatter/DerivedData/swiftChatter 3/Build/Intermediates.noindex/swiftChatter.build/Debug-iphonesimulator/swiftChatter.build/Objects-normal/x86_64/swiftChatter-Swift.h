@@ -305,6 +305,8 @@ SWIFT_CLASS("_TtC12swiftChatter9MessageVC")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified MessageContent;
 - (IBAction)SendMessage:(id _Nonnull)sender;
 - (void)viewDidLoad;
+- (IBAction)writeText:(id _Nonnull)sender;
+- (IBAction)disconnect:(id _Nonnull)sender;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -312,12 +314,6 @@ SWIFT_CLASS("_TtC12swiftChatter9MessageVC")
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface MessageVC (SWIFT_EXTENSION(swiftChatter))
-- (IBAction)writeText:(id _Nonnull)sender;
-- (IBAction)disconnect:(id _Nonnull)sender;
 @end
 
 @class UIWindow;

@@ -38,7 +38,7 @@ struct MessageSocket: Encodable{
 //    socket.delegate = self
 //    socket.connect()
 //}
-final class MessageVC: UITableViewController {
+final class MessageVC: UITableViewController, WebSocketDelegate{
     
     
     @IBOutlet weak var MessageContent: UITextField!
@@ -68,7 +68,7 @@ final class MessageVC: UITableViewController {
         print(request)
         socket = WebSocket(request: request)
         socket.delegate = self
-        socket?.connect()
+        socket.connect()
         print("connected")// setup refreshControler here later
         // iOS 14 or newer
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
@@ -82,56 +82,6 @@ final class MessageVC: UITableViewController {
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         refreshTimeline()
     }*/
-    
-    // MARK:-
-    private func refreshTimeline(_ sender: UIAction?) {
-        MessageLog.shared.get_messages { success in
-            DispatchQueue.main.async {
-                if success {
-                    self.tableView.reloadData()
-                }
-                // stop the refreshing animation upon completion:
-                self.refreshControl?.endRefreshing()
-            }
-        }
-    }
-    
-    // MARK:- TableView handlers
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // how many sections are in table
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // how many rows per section
-        return MessageLog.shared.messages.count
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // event handler when a cell is tapped
-        //selectedRow = indexPath.row
-        //chatt = chatts[indexPath.row]
-        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
-    }
-        
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // populate a single cell
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MessageTableCell", for: indexPath) as? MessageTableCell else {
-            print("Interesting")
-            fatalError("No reusable cell!")
-        }
-
-        let message = MessageLog.shared.messages[indexPath.row]
-        cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
-        cell.firstnameLabel.text = message.first_name
-        cell.lastnameLabel.text = message.last_name
-        cell.contentLabel.text = message.content
-//        cell.profilePic.
-        return cell
-    }
-}
-extension MessageVC: WebSocketDelegate{
     func didReceive(event: WebSocketEvent, client: WebSocket) {
             switch event {
             case .connected(let headers):
@@ -235,4 +185,130 @@ extension MessageVC: WebSocketDelegate{
             }
         }
 
+    // MARK:-
+    private func refreshTimeline(_ sender: UIAction?) {
+        MessageLog.shared.get_messages { success in
+            DispatchQueue.main.async {
+                if success {
+                    self.tableView.reloadData()
+                }
+                // stop the refreshing animation upon completion:
+                self.refreshControl?.endRefreshing()
+            }
+        }
+    }
+    
+    // MARK:- TableView handlers
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // how many sections are in table
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // how many rows per section
+        return MessageLog.shared.messages.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // event handler when a cell is tapped
+        //selectedRow = indexPath.row
+        //chatt = chatts[indexPath.row]
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+        
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // populate a single cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MessageTableCell", for: indexPath) as? MessageTableCell else {
+            print("Interesting")
+            fatalError("No reusable cell!")
+        }
+
+        let message = MessageLog.shared.messages[indexPath.row]
+        cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
+        cell.firstnameLabel.text = message.first_name
+        cell.lastnameLabel.text = message.last_name
+        cell.contentLabel.text = message.content
+//        cell.profilePic.
+        return cell
+    }
 }
+//extension MessageVC: WebSocketDelegate{
+   
+//    func websocketDidConnect(ws: WebSocket) {
+//            print("websocket is connected")
+//        }
+//        func handleError(_ error: Error?) {
+//            if let e = error as? WSError {
+//                print("websocket encountered an error: \(e.message)")
+//            } else if let e = error {
+//                print("websocket encountered an error: \(e.localizedDescription)")
+//            } else {
+//                print("websocket encountered an error")
+//            }
+//        }
+//        @IBAction func writeText(_ sender: Any) {
+//            print("good stuff")
+//            let jsonObject = MessageSocket.init()
+//            let jsonEncoder = JSONEncoder()
+//                    let jsonData = try! jsonEncoder.encode(jsonObject)
+//                    let json = String(data: jsonData, encoding: .utf8)!
+////            print(jsonEncoder)
+////            print(jsonData)
+//            print(json)
+////            let json = try? JSONSerialization.jsonObject(with: jsonObject, options: [])
+////            guard JSONSerialization.isValidJSONObject(jsonObject) else {
+////                        print("[WEBSOCKET] Value is not a valid JSON object.\n \(jsonObject)")
+////                        return
+////                    }
+////
+////                    do {
+////                        let data = try JSONSerialization.data(withJSONObject: jsonObject, options: [])
+////                        socket.write(data: data)
+////                    } catch let error {
+////                        print("[WEBSOCKET] Error serializing JSON:\n\(error)")
+////                    }
+//
+//            socket?.write(string: json)
+////           didReceive(event: <#T##WebSocketEvent#>, client: <#T##WebSocket#>)
+//
+////            let jsonObject: [String: Any] = [
+////                "lat": 0.0,
+////                "long":0.0,
+////                "type": "chat_message",
+////                "chat_id": "157ace05",
+////                "content": "please work!"
+//////                "Authorization": "Token bbd9e8de6701f341cd96302a19b98c29e1d62f54"
+//////                ]
+////                do {
+////                    let jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
+////                    // here "jsonData" is the dictionary encoded in JSON data
+////
+////                    let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
+////                    // here "decoded" is of type `Any`, decoded from JSON data
+////
+////                    // you can now cast it with the right type
+////                    if let dictFromJSON = decoded as? [String:Any] {
+////                        print(dictFromJSON)
+////                        print(decoded)
+////                        socket.write(data: decoded)
+////                        print("Woohooooo!")
+////                    }
+////                } catch {
+////                    print("Bad!")
+////                    print(error.localizedDescription)
+////                }
+//
+//        }
+//
+//        // MARK: Disconnect Action
+//
+//        @IBAction func disconnect(_ sender: Any) {
+//            if isConnected {
+//                                socket.disconnect()
+//            } else {
+//                socket.connect()
+//            }
+//        }
+
+//}
