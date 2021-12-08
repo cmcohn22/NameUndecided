@@ -32,7 +32,7 @@ final class ChatLog: ObservableObject {
         print(apiUrl)
         
         var request = URLRequest(url: apiUrl)
-        let tokstr = "Token " + token
+        let tokstr = "Token \(token)" 
         print("TOKSTR")
         print(tokstr)
         request.addValue(tokstr, forHTTPHeaderField: "Authorization")

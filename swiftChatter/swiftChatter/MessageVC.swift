@@ -7,29 +7,117 @@
 //
 
 import UIKit
-import SocketIO
 import CoreLocation
+import Starscream
+struct MessageSocket: Encodable{
+    let lat:Double
+    let long:Double
+    let type:String
+    let chat_id:String
+    let content:String
+    
+    init(){// pass params like a constructor
+        self.lat = 0.0
+        self.long = 0.0
+        self.type = "chat_message"
+        self.chat_id = "157ace05"
+        self.content = "please work!"
+    }
+}
 
-final class MessageVC: UITableViewController {
+final class MessageVC: UITableViewController, WebSocketDelegate {
     var chat_id : String!
     lazy var locationManager = CLLocationManager()
     
     @IBOutlet weak var MessageContent: UITextField!
-    @IBAction func SendMessage(_ sender: Any) {
-        
-    }
 
+    var socket: WebSocket!
+       var isConnected = false
+       let server = WebSocketServer()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // setup refreshControler here later
         // iOS 14 or newer
-        refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
-        
-        refreshTimeline(nil)
+        guard let currentlocation = locationManager.location else{
+                   return
+               }
+        //"Token 215c7443c83149e5dbff2988509d34c765fcc366"
+        let strLat = String(currentlocation.coordinate.latitude)
+        let strLong = String(currentlocation.coordinate.latitude)
+        let toke = "Token \(UserStore.shared.activeUser.tokenId)"
+        var request = URLRequest(url: URL(string: "wss://mnky-chat.com/ws/chat/")!)
+              request.timeoutInterval = 5 // Sets the timeout for the connection
+              request.setValue(strLat, forHTTPHeaderField: "lat")
+              request.setValue(strLong, forHTTPHeaderField: "long")
+              request.setValue(toke, forHTTPHeaderField: "Authorization")
+              print(request)
+              socket = WebSocket(request: request)
+              socket.delegate = self
+              socket.connect()
+              print("connected")// setup refreshControler here later
+              // iOS 14 or newer
+              refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
+              
+              refreshTimeline(nil)
         
         
     }
+    func didReceive(event: WebSocketEvent, client: WebSocket) {
+            switch event {
+            case .connected(let headers):
+                isConnected = true
+                print("websocket is connected: \(headers)")
+            case .disconnected(let reason, let code):
+                isConnected = false
+                print("websocket is disconnected: \(reason) with code: \(code)")
+            case .text(let string):
+                print("Received text: \(string)")
+            case .binary(let data):
+                print("Received data: \(data.count)")
+            case .ping(_):
+                break
+            case .pong(_):
+                break
+            case .viabilityChanged(_):
+                break
+            case .reconnectSuggested(_):
+                break
+            case .cancelled:
+                isConnected = false
+            case .error(let error):
+                isConnected = false
+                handleError(error)
+            }
+        }
+    func websocketDidConnect(ws: WebSocket) {
+             print("websocket is connected")
+         }
+         func handleError(_ error: Error?) {
+             if let e = error as? WSError {
+                 print("websocket encountered an error: \(e.message)")
+             } else if let e = error {
+                 print("websocket encountered an error: \(e.localizedDescription)")
+             } else {
+                 print("websocket encountered an error")
+             }
+         }
+    @IBAction func SendMessage(_ sender: Any) {
+        print("good stuff")
+                 let jsonObject = MessageSocket.init()
+                 let jsonEncoder = JSONEncoder()
+                         let jsonData = try! jsonEncoder.encode(jsonObject)
+                         let json = String(data: jsonData, encoding: .utf8)!
+        print(json)
+        socket?.write(string: json)
+    }
+    @IBAction func disconnect(_ sender: Any) {
+                if isConnected {
+                                    socket.disconnect()
+                } else {
+                    socket.connect()
+                }
+            }
 
     /*
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
