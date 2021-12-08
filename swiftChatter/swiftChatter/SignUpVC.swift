@@ -83,7 +83,6 @@ class SignUpVC: UIViewController{
         if validEmail && userName != "" && pass != "" && firstName != "" && lastName != "" && profilePic != ""{
           self.performSegue(withIdentifier: "ID2", sender: self)
         }
-        else{
         
         let url = URL(string: "https://mnky-chat.com/api/signup/")!
         var request = URLRequest(url: url)
@@ -122,18 +121,18 @@ class SignUpVC: UIViewController{
 
         task.resume()
 
-        let postUrl = URL(string: "urlString")
-        var postRequest = URLRequest(url: postUrl!)
-        postRequest.httpMethod = "POST"
-        let params: [String: Any] = [
-            "username" : userName,
-            "password" : pass,
-            "first_name" : firstName,
-            "last_name" : lastName,
-            "email" : email,
-            "profile_pic" : profilePic,
-        ]
-        }
+//        let postUrl = URL(string: "urlString")
+//        var postRequest = URLRequest(url: postUrl!)
+//        postRequest.httpMethod = "POST"
+//        let params: [String: Any] = [
+//            "username" : userName,
+//            "password" : pass,
+//            "first_name" : firstName,
+//            "last_name" : lastName,
+//            "email" : email,
+//            "profile_pic" : profilePic,
+//        ]
+//            print(params["username"])
 //        postRequest.httpBody = params
         
     }

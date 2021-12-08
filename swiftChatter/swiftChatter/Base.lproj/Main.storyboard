@@ -17,23 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="UsA-23-4FX">
-                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="N8R-kC-6T8">
-                                    <connections>
-                                        <segue destination="sOr-lN-PR3" kind="show" id="oAg-PT-h2C"/>
-                                    </connections>
-                                </barButtonItem>
-                                <barButtonItem title="Message" image="message.fill" catalog="system" width="150" id="dHy-yC-OgJ"/>
-                                <barButtonItem title="Profile" image="person.fill" catalog="system" width="150" id="gcs-QM-cGU">
-                                    <connections>
-                                        <segue destination="IPF-70-V03" kind="show" id="U9I-fN-4Fa"/>
-                                    </connections>
-                                </barButtonItem>
-                            </items>
-                        </toolbar>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Kkm-1f-y6A">
+                            <rect key="frame" x="0.0" y="142" width="414" height="702"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jeu-UD-Qsm">
+                                    <rect key="frame" x="0.0" y="445" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <items>
+                                        <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="nSL-ev-wC7">
+                                            <connections>
+                                                <segue destination="sOr-lN-PR3" kind="show" id="Lj8-5o-iIH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem title="Message" image="message.fill" catalog="system" width="150" id="Bjd-uw-hR4"/>
+                                        <barButtonItem title="Profile" image="person.fill" catalog="system" width="150" id="mZv-wv-cf2">
+                                            <connections>
+                                                <segue destination="IPF-70-V03" kind="show" id="ndF-JC-799"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </items>
+                                </toolbar>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
@@ -97,7 +104,7 @@
                                     <outlet property="imageLabel" destination="OSb-Eu-sdw" id="X8A-Ga-ibF"/>
                                     <outlet property="messageLabel" destination="dJT-FC-iMD" id="y3r-R5-b6r"/>
                                     <outlet property="timestampLabel" destination="QTC-HT-tNz" id="WEd-mD-DlP"/>
-                                    <segue destination="32I-zu-pcC" kind="show" id="n8R-zi-j3p"/>
+                                    <segue destination="32I-zu-pcC" kind="show" identifier="SpecificChatSeque" id="n8R-zi-j3p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -107,14 +114,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="MnkyChat" id="9xo-TL-k5z">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="UUa-Wi-wI1">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jLr-iR-0wz" userLabel="Search">
-                                <rect key="frame" x="20" y="11" width="102.5" height="34.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Search"/>
-                            </button>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="CreateChat" image="plus.message.fill" catalog="system" id="5fj-2L-oDW">
                             <connections>
                                 <segue destination="fYL-Vo-3wv" kind="push" id="CFY-rE-iwG"/>
@@ -275,7 +274,6 @@
         <!--LoginViewController-->
         <scene sceneID="JkG-vB-GvI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fPF-tM-IYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="LoginViewController" id="0Cf-gJ-mWb" customClass="LogInVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9E-2H-pmV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -344,6 +342,7 @@
                         <segue destination="cOe-KH-pNK" kind="show" identifier="ID1" id="f4R-ek-9Xa"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPF-tM-IYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1312" y="-242"/>
         </scene>
@@ -531,18 +530,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="142" width="414" height="42"/>
+                            <rect key="frame" x="0.0" y="142" width="414" height="45"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
-                                <barButtonItem title="Message" image="message.fill" catalog="system" width="150" id="wWO-pi-lj4">
+                                <barButtonItem title="Message" image="message.fill" catalog="system" width="151" id="wWO-pi-lj4">
                                     <connections>
-                                        <segue destination="TTV-uT-QlR" kind="show" id="ort-Z5-tCM"/>
+                                        <segue destination="TTV-uT-QlR" kind="show" id="aJ4-Qz-Tn8"/>
                                     </connections>
                                 </barButtonItem>
                                 <barButtonItem title="Profile" image="person.fill" catalog="system" width="150" id="e9i-A2-sOr">
                                     <connections>
-                                        <segue destination="IPF-70-V03" kind="show" id="hsD-lj-dER"/>
+                                        <segue destination="IPF-70-V03" kind="show" id="VqR-bK-UuJ"/>
                                     </connections>
                                 </barButtonItem>
                             </items>
@@ -601,11 +600,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Chat Log" id="qfp-pD-0td">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Lu3-Nz-djZ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="whj-PU-mZn" userLabel="Search">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="whj-PU-mZn" userLabel="Active MnkyChats">
                                 <rect key="frame" x="20" y="11" width="102.5" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Search"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system" title="Active MnkyChats"/>
+                                <connections>
+                                    <segue destination="TTV-uT-QlR" kind="show" id="GUn-sY-CzV"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -618,10 +620,10 @@
             </objects>
             <point key="canvasLocation" x="169.56521739130437" y="1120.9821428571429"/>
         </scene>
-        <!--PostVC-->
+        <!--View Controller-->
         <scene sceneID="5up-ka-FTZ">
             <objects>
-                <viewController id="IPF-70-V03" customClass="PostVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IPF-70-V03" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QuV-EG-Tt3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -649,18 +651,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Data and Storage"/>
+                                <connections>
+                                    <segue destination="FVd-XQ-unp" kind="show" id="t6m-h0-AFP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovA-I3-ay5">
                                 <rect key="frame" x="20" y="580" width="374" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Privacy and Security"/>
+                                <connections>
+                                    <segue destination="38k-Xe-hAg" kind="show" id="Og4-Ti-RPo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lw-lL-GG2">
                                 <rect key="frame" x="20" y="657" width="374" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="About" buttonSize="large"/>
+                                <connections>
+                                    <segue destination="ePh-Dq-VMC" kind="show" id="Ycr-4p-Tqa"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dark Mode" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zms-wo-qZk">
                                 <rect key="frame" x="85" y="184" width="99" height="34"/>
@@ -702,6 +713,71 @@
             </objects>
             <point key="canvasLocation" x="1432" y="1122"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="df4-PG-w1l">
+            <objects>
+                <viewController id="FVd-XQ-unp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5G5-ZN-4Hf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1046"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olX-ot-JtR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1012"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fr3-vn-b4p">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qJG-wz-70m">
+                                                <rect key="frame" x="-10" y="-13" width="416" height="1302.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. In pellentesque massa placerat duis ultricies lacus sed. Turpis massa sed elementum tempus egestas sed. Mattis aliquam faucibus purus in. Eget nullam non nisi est sit amet facilisis magna. Feugiat scelerisque varius morbi enim nunc faucibus a. Sodales ut etiam sit amet. Augue mauris augue neque gravida.
+
+Penatibus et magnis dis parturient montes nascetur. Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Tincidunt ornare massa eget egestas purus viverra. Mauris a diam maecenas sed. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Nec nam aliquam sem et tortor consequat id porta nibh. Non nisi est sit amet facilisis magna etiam. Pulvinar sapien et ligula ullamcorper. Bibendum arcu vitae elementum curabitur. Pretium aenean pharetra magna ac placerat vestibulum lectus. Turpis massa sed elementum tempus egestas. Elit sed vulputate mi sit amet. Non consectetur a erat nam at lectus. Morbi tincidunt ornare massa eget egestas purus. Magna etiam tempor orci eu lobortis elementum. Et magnis dis parturient montes. At volutpat diam ut venenatis. Sit amet luctus venenatis lectus magna fringilla urna. Erat velit scelerisque in dictum non consectetur a.
+
+Praesent tristique magna sit amet purus gravida quis blandit turpis. Platea dictumst quisque sagittis purus. In eu mi bibendum neque egestas congue quisque egestas diam. Et ligula ullamcorper malesuada proin libero nunc. Non arcu risus quis varius quam quisque id. Venenatis urna cursus eget nunc scelerisque viverra. Fermentum iaculis eu non diam phasellus. Nunc id cursus metus aliquam eleifend. Leo urna molestie at elementum eu facilisis sed odio morbi. Sed id semper risus in hendrerit gravida rutrum. Enim sed faucibus turpis in eu mi bibendum. Suspendisse in est ante in nibh mauris cursus mattis molestie. Netus et malesuada fames ac. Eget aliquet nibh praesent tristique. Libero nunc consequat interdum varius sit amet mattis vulputate. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Condimentum id venenatis a condimentum vitae. Id volutpat lacus laoreet non curabitur. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Sit amet dictum sit amet.
+
+Cursus metus aliquam eleifend mi in nulla posuere. Nulla aliquet enim tortor at. Turpis egestas pretium aenean pharetra magna. Consequat id porta nibh venenatis cras sed felis eget velit. Ac tincidunt vitae semper quis lectus nulla at volutpat diam. Ultricies integer quis auctor elit sed vulputate mi sit. Convallis tellus id interdum velit laoreet. Habitant morbi tristique senectus et netus et malesuada fames. Morbi tristique senectus et netus et malesuada fames ac turpis. Tristique senectus et netus et malesuada. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Sit amet dictum sit amet justo donec enim diam. Eget nulla facilisi etiam dignissim diam. Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet. Mauris pharetra et ultrices neque ornare. Suspendisse in est ante in nibh mauris.
+
+Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Sit amet nulla facilisi morbi tempus iaculis urna. A diam sollicitudin tempor id eu nisl nunc. Enim tortor at auctor urna nunc id cursus. Eget nullam non nisi est sit amet facilisis magna etiam. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Euismod in pellentesque massa placerat duis ultricies. Consequat id porta nibh venenatis cras sed. Cras sed felis eget velit aliquet sagittis. Vestibulum lectus mauris ultrices eros in cursus. In hendrerit gravida rutrum quisque non tellus. At lectus urna duis convallis. At auctor urna nunc id. Aliquet bibendum enim facilisis gravida neque convallis. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Facilisis mauris sit amet massa vitae tortor. Tincidunt vitae semper quis lectus nulla at. Nec tincidunt praesent semper feugiat nibh sed. Massa sapien faucibus et molestie ac feugiat sed lectus.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="uFT-J0-rtX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fr3-vn-b4p" firstAttribute="leading" secondItem="IGz-ib-snd" secondAttribute="leading" id="6bI-RU-6Xd"/>
+                                    <constraint firstItem="fr3-vn-b4p" firstAttribute="bottom" secondItem="IGz-ib-snd" secondAttribute="bottom" id="6h8-Ol-hAA"/>
+                                    <constraint firstItem="fr3-vn-b4p" firstAttribute="top" secondItem="IGz-ib-snd" secondAttribute="top" id="UUQ-a8-I4k"/>
+                                    <constraint firstItem="fr3-vn-b4p" firstAttribute="width" secondItem="kKX-J3-kof" secondAttribute="width" multiplier="0.857488" id="bpE-ks-V09"/>
+                                    <constraint firstItem="fr3-vn-b4p" firstAttribute="trailing" secondItem="IGz-ib-snd" secondAttribute="trailing" id="l7V-Zh-m0B"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="IGz-ib-snd"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="kKX-J3-kof"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7LM-ys-goU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="olX-ot-JtR" firstAttribute="top" secondItem="7LM-ys-goU" secondAttribute="top" id="53Y-ML-STg"/>
+                            <constraint firstItem="olX-ot-JtR" firstAttribute="bottom" secondItem="7LM-ys-goU" secondAttribute="bottom" id="TpV-KQ-QXm"/>
+                            <constraint firstItem="olX-ot-JtR" firstAttribute="leading" secondItem="7LM-ys-goU" secondAttribute="leading" id="Xc2-Cd-dBm"/>
+                            <constraint firstItem="olX-ot-JtR" firstAttribute="trailing" secondItem="7LM-ys-goU" secondAttribute="trailing" id="vRF-KF-aGb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kUO-Zk-YZZ"/>
+                    <size key="freeformSize" width="414" height="1100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2or-oV-MCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2689.8550724637685" y="1589.0625"/>
+        </scene>
         <!--Chat Name-->
         <scene sceneID="ll2-bS-fAw">
             <objects>
@@ -710,18 +786,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <textField key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send Message..." textAlignment="natural" minimumFontSize="20" id="sh0-mc-Hfp">
-                            <rect key="frame" x="0.0" y="127" width="414" height="34"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Lle-dO-EnI">
+                            <rect key="frame" x="0.0" y="138" width="414" height="705"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send Message..." textAlignment="natural" minimumFontSize="20" id="VEe-nc-feE">
+                                    <rect key="frame" x="0.0" y="641" width="376" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5h-Ia-Imp">
+                                    <rect key="frame" x="373" y="641" width="41" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="arrow.up" catalog="system"/>
+                                    <connections>
+                                        <action selector="SendMessage:" destination="32I-zu-pcC" eventType="touchUpInside" id="TaT-4u-tsJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="R5h-Ia-Imp" secondAttribute="trailing" id="AbC-Co-4xE"/>
+                                <constraint firstItem="R5h-Ia-Imp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lle-dO-EnI" secondAttribute="leading" constant="20" symbolic="YES" id="IIs-bf-1Tm"/>
+                                <constraint firstItem="R5h-Ia-Imp" firstAttribute="top" secondItem="VEe-nc-feE" secondAttribute="top" id="S58-2c-ZXG"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="9aC-FW-KQ5" customClass="MessageTableCell" customModule="swiftChatter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageTableCell" rowHeight="71" id="9aC-FW-KQ5" customClass="MessageTableCell" customModule="swiftChatter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9aC-FW-KQ5" id="Jzc-gS-ENx" customClass="MessageTableCell" customModule="swiftChatter" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T56-f6-EHY">
@@ -742,11 +838,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgt-5l-jX5">
+                                            <rect key="frame" x="201" y="11" width="67" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="T56-f6-EHY" firstAttribute="leading" secondItem="Jzc-gS-ENx" secondAttribute="leading" constant="20" symbolic="YES" id="1Xq-0y-T7P"/>
                                         <constraint firstItem="jB9-TP-wYv" firstAttribute="top" secondItem="T56-f6-EHY" secondAttribute="bottom" constant="7" id="4dG-PX-si5"/>
-                                        <constraint firstAttribute="trailing" secondItem="jB9-TP-wYv" secondAttribute="trailing" constant="260" id="FU3-hR-gSb"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jB9-TP-wYv" secondAttribute="trailing" id="FU3-hR-gSb"/>
                                         <constraint firstItem="Vz1-fX-nXo" firstAttribute="leading" secondItem="T56-f6-EHY" secondAttribute="trailing" constant="8" symbolic="YES" id="OKN-qw-MFq"/>
                                         <constraint firstItem="jB9-TP-wYv" firstAttribute="leading" secondItem="Jzc-gS-ENx" secondAttribute="leading" constant="20" symbolic="YES" id="T6g-mN-v7s"/>
                                         <constraint firstItem="Vz1-fX-nXo" firstAttribute="baseline" secondItem="T56-f6-EHY" secondAttribute="baseline" id="TFK-Ou-m56"/>
@@ -754,10 +854,16 @@
                                         <constraint firstItem="Vz1-fX-nXo" firstAttribute="top" secondItem="Jzc-gS-ENx" secondAttribute="topMargin" id="toP-kt-yyZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="MessageTableCell">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <connections>
-                                    <outlet property="contentLabel" destination="jB9-TP-wYv" id="6kA-qq-3Lq"/>
-                                    <outlet property="firstnameLabel" destination="T56-f6-EHY" id="58t-e6-N9O"/>
-                                    <outlet property="lastnameLabel" destination="Vz1-fX-nXo" id="FUT-cc-HsE"/>
+                                    <outlet property="contentLabel" destination="jB9-TP-wYv" id="Tj6-ck-PcH"/>
+                                    <outlet property="firstnameLabel" destination="T56-f6-EHY" id="Tyt-f2-uun"/>
+                                    <outlet property="lastnameLabel" destination="Vz1-fX-nXo" id="YWW-qG-8IF"/>
+                                    <outlet property="profilePic" destination="rgt-5l-jX5" id="Gpw-aQ-1Bj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -772,23 +878,157 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="MessageContent" destination="VEe-nc-feE" id="Qgt-pG-EtV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcC-0X-WYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1397.1014492753625" y="-727.23214285714278"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lRL-4x-UMh">
+            <objects>
+                <viewController id="ePh-Dq-VMC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nvH-9J-huT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1046"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYP-bK-ESU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1012"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fj0-oK-0v7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dW7-bv-Tsq">
+                                                <rect key="frame" x="-10" y="-13" width="416" height="1302.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. In pellentesque massa placerat duis ultricies lacus sed. Turpis massa sed elementum tempus egestas sed. Mattis aliquam faucibus purus in. Eget nullam non nisi est sit amet facilisis magna. Feugiat scelerisque varius morbi enim nunc faucibus a. Sodales ut etiam sit amet. Augue mauris augue neque gravida.
+
+Penatibus et magnis dis parturient montes nascetur. Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Tincidunt ornare massa eget egestas purus viverra. Mauris a diam maecenas sed. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Nec nam aliquam sem et tortor consequat id porta nibh. Non nisi est sit amet facilisis magna etiam. Pulvinar sapien et ligula ullamcorper. Bibendum arcu vitae elementum curabitur. Pretium aenean pharetra magna ac placerat vestibulum lectus. Turpis massa sed elementum tempus egestas. Elit sed vulputate mi sit amet. Non consectetur a erat nam at lectus. Morbi tincidunt ornare massa eget egestas purus. Magna etiam tempor orci eu lobortis elementum. Et magnis dis parturient montes. At volutpat diam ut venenatis. Sit amet luctus venenatis lectus magna fringilla urna. Erat velit scelerisque in dictum non consectetur a.
+
+Praesent tristique magna sit amet purus gravida quis blandit turpis. Platea dictumst quisque sagittis purus. In eu mi bibendum neque egestas congue quisque egestas diam. Et ligula ullamcorper malesuada proin libero nunc. Non arcu risus quis varius quam quisque id. Venenatis urna cursus eget nunc scelerisque viverra. Fermentum iaculis eu non diam phasellus. Nunc id cursus metus aliquam eleifend. Leo urna molestie at elementum eu facilisis sed odio morbi. Sed id semper risus in hendrerit gravida rutrum. Enim sed faucibus turpis in eu mi bibendum. Suspendisse in est ante in nibh mauris cursus mattis molestie. Netus et malesuada fames ac. Eget aliquet nibh praesent tristique. Libero nunc consequat interdum varius sit amet mattis vulputate. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Condimentum id venenatis a condimentum vitae. Id volutpat lacus laoreet non curabitur. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Sit amet dictum sit amet.
+
+Cursus metus aliquam eleifend mi in nulla posuere. Nulla aliquet enim tortor at. Turpis egestas pretium aenean pharetra magna. Consequat id porta nibh venenatis cras sed felis eget velit. Ac tincidunt vitae semper quis lectus nulla at volutpat diam. Ultricies integer quis auctor elit sed vulputate mi sit. Convallis tellus id interdum velit laoreet. Habitant morbi tristique senectus et netus et malesuada fames. Morbi tristique senectus et netus et malesuada fames ac turpis. Tristique senectus et netus et malesuada. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Sit amet dictum sit amet justo donec enim diam. Eget nulla facilisi etiam dignissim diam. Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet. Mauris pharetra et ultrices neque ornare. Suspendisse in est ante in nibh mauris.
+
+Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Sit amet nulla facilisi morbi tempus iaculis urna. A diam sollicitudin tempor id eu nisl nunc. Enim tortor at auctor urna nunc id cursus. Eget nullam non nisi est sit amet facilisis magna etiam. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Euismod in pellentesque massa placerat duis ultricies. Consequat id porta nibh venenatis cras sed. Cras sed felis eget velit aliquet sagittis. Vestibulum lectus mauris ultrices eros in cursus. In hendrerit gravida rutrum quisque non tellus. At lectus urna duis convallis. At auctor urna nunc id. Aliquet bibendum enim facilisis gravida neque convallis. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Facilisis mauris sit amet massa vitae tortor. Tincidunt vitae semper quis lectus nulla at. Nec tincidunt praesent semper feugiat nibh sed. Massa sapien faucibus et molestie ac feugiat sed lectus.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="75H-ZR-NcK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Fj0-oK-0v7" firstAttribute="width" secondItem="vOa-tS-v1C" secondAttribute="width" multiplier="0.857488" id="1mA-YZ-Rkm"/>
+                                    <constraint firstItem="Fj0-oK-0v7" firstAttribute="leading" secondItem="WNh-Tj-XeR" secondAttribute="leading" id="94z-oT-PKf"/>
+                                    <constraint firstItem="Fj0-oK-0v7" firstAttribute="top" secondItem="WNh-Tj-XeR" secondAttribute="top" id="bD7-cx-yrd"/>
+                                    <constraint firstItem="Fj0-oK-0v7" firstAttribute="trailing" secondItem="WNh-Tj-XeR" secondAttribute="trailing" id="lT5-P4-fj6"/>
+                                    <constraint firstItem="Fj0-oK-0v7" firstAttribute="bottom" secondItem="WNh-Tj-XeR" secondAttribute="bottom" id="vA2-BB-QKD"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="WNh-Tj-XeR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="vOa-tS-v1C"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7cq-g1-rPO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jYP-bK-ESU" firstAttribute="bottom" secondItem="7cq-g1-rPO" secondAttribute="bottom" id="5rz-8F-m48"/>
+                            <constraint firstItem="jYP-bK-ESU" firstAttribute="top" secondItem="7cq-g1-rPO" secondAttribute="top" id="jMp-4N-DKs"/>
+                            <constraint firstItem="jYP-bK-ESU" firstAttribute="trailing" secondItem="7cq-g1-rPO" secondAttribute="trailing" id="t9J-fN-Ljs"/>
+                            <constraint firstItem="jYP-bK-ESU" firstAttribute="leading" secondItem="7cq-g1-rPO" secondAttribute="leading" id="zef-24-aTQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cxD-fn-2qb"/>
+                    <size key="freeformSize" width="414" height="1100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICa-BE-p32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4525" y="1588"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yqt-kf-76w">
+            <objects>
+                <viewController id="38k-Xe-hAg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dab-eA-Ccw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1046"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xea-Wi-6at">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1012"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Xt-bK-xPd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RBH-Ys-oGM">
+                                                <rect key="frame" x="-10" y="-13" width="416" height="1302.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. In pellentesque massa placerat duis ultricies lacus sed. Turpis massa sed elementum tempus egestas sed. Mattis aliquam faucibus purus in. Eget nullam non nisi est sit amet facilisis magna. Feugiat scelerisque varius morbi enim nunc faucibus a. Sodales ut etiam sit amet. Augue mauris augue neque gravida.
+
+Penatibus et magnis dis parturient montes nascetur. Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Tincidunt ornare massa eget egestas purus viverra. Mauris a diam maecenas sed. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Nec nam aliquam sem et tortor consequat id porta nibh. Non nisi est sit amet facilisis magna etiam. Pulvinar sapien et ligula ullamcorper. Bibendum arcu vitae elementum curabitur. Pretium aenean pharetra magna ac placerat vestibulum lectus. Turpis massa sed elementum tempus egestas. Elit sed vulputate mi sit amet. Non consectetur a erat nam at lectus. Morbi tincidunt ornare massa eget egestas purus. Magna etiam tempor orci eu lobortis elementum. Et magnis dis parturient montes. At volutpat diam ut venenatis. Sit amet luctus venenatis lectus magna fringilla urna. Erat velit scelerisque in dictum non consectetur a.
+
+Praesent tristique magna sit amet purus gravida quis blandit turpis. Platea dictumst quisque sagittis purus. In eu mi bibendum neque egestas congue quisque egestas diam. Et ligula ullamcorper malesuada proin libero nunc. Non arcu risus quis varius quam quisque id. Venenatis urna cursus eget nunc scelerisque viverra. Fermentum iaculis eu non diam phasellus. Nunc id cursus metus aliquam eleifend. Leo urna molestie at elementum eu facilisis sed odio morbi. Sed id semper risus in hendrerit gravida rutrum. Enim sed faucibus turpis in eu mi bibendum. Suspendisse in est ante in nibh mauris cursus mattis molestie. Netus et malesuada fames ac. Eget aliquet nibh praesent tristique. Libero nunc consequat interdum varius sit amet mattis vulputate. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Condimentum id venenatis a condimentum vitae. Id volutpat lacus laoreet non curabitur. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Sit amet dictum sit amet.
+
+Cursus metus aliquam eleifend mi in nulla posuere. Nulla aliquet enim tortor at. Turpis egestas pretium aenean pharetra magna. Consequat id porta nibh venenatis cras sed felis eget velit. Ac tincidunt vitae semper quis lectus nulla at volutpat diam. Ultricies integer quis auctor elit sed vulputate mi sit. Convallis tellus id interdum velit laoreet. Habitant morbi tristique senectus et netus et malesuada fames. Morbi tristique senectus et netus et malesuada fames ac turpis. Tristique senectus et netus et malesuada. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Sit amet dictum sit amet justo donec enim diam. Eget nulla facilisi etiam dignissim diam. Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet. Mauris pharetra et ultrices neque ornare. Suspendisse in est ante in nibh mauris.
+
+Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Sit amet nulla facilisi morbi tempus iaculis urna. A diam sollicitudin tempor id eu nisl nunc. Enim tortor at auctor urna nunc id cursus. Eget nullam non nisi est sit amet facilisis magna etiam. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Euismod in pellentesque massa placerat duis ultricies. Consequat id porta nibh venenatis cras sed. Cras sed felis eget velit aliquet sagittis. Vestibulum lectus mauris ultrices eros in cursus. In hendrerit gravida rutrum quisque non tellus. At lectus urna duis convallis. At auctor urna nunc id. Aliquet bibendum enim facilisis gravida neque convallis. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Facilisis mauris sit amet massa vitae tortor. Tincidunt vitae semper quis lectus nulla at. Nec tincidunt praesent semper feugiat nibh sed. Massa sapien faucibus et molestie ac feugiat sed lectus.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="e1K-8n-x9B"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8Xt-bK-xPd" firstAttribute="width" secondItem="uOJ-Hq-thV" secondAttribute="width" multiplier="0.857488" id="CvW-ph-4ST"/>
+                                    <constraint firstItem="8Xt-bK-xPd" firstAttribute="bottom" secondItem="QOd-w4-xwc" secondAttribute="bottom" id="LOa-FP-xjS"/>
+                                    <constraint firstItem="8Xt-bK-xPd" firstAttribute="top" secondItem="QOd-w4-xwc" secondAttribute="top" id="dMs-2T-YN6"/>
+                                    <constraint firstItem="8Xt-bK-xPd" firstAttribute="leading" secondItem="QOd-w4-xwc" secondAttribute="leading" id="l53-id-0t2"/>
+                                    <constraint firstItem="8Xt-bK-xPd" firstAttribute="trailing" secondItem="QOd-w4-xwc" secondAttribute="trailing" id="pnv-KI-EMm"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QOd-w4-xwc"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="uOJ-Hq-thV"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fHX-lQ-V1e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xea-Wi-6at" firstAttribute="leading" secondItem="fHX-lQ-V1e" secondAttribute="leading" id="5nD-09-LQj"/>
+                            <constraint firstItem="Xea-Wi-6at" firstAttribute="top" secondItem="fHX-lQ-V1e" secondAttribute="top" id="eJb-yA-UqB"/>
+                            <constraint firstItem="Xea-Wi-6at" firstAttribute="trailing" secondItem="fHX-lQ-V1e" secondAttribute="trailing" id="fc3-ZW-f3E"/>
+                            <constraint firstItem="Xea-Wi-6at" firstAttribute="bottom" secondItem="fHX-lQ-V1e" secondAttribute="bottom" id="xdk-4j-n2h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="96v-e5-7dg"/>
+                    <size key="freeformSize" width="414" height="1100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0AV-Ub-q9n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3572" y="1588"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="U9I-fN-4Fa"/>
-        <segue reference="f4R-ek-9Xa"/>
-        <segue reference="ort-Z5-tCM"/>
+        <segue reference="ndF-JC-799"/>
+        <segue reference="MQ5-Le-mvV"/>
+        <segue reference="aJ4-Qz-Tn8"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="camera.badge.ellipsis" catalog="system" width="128" height="92"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.message.fill" catalog="system" width="128" height="113"/>

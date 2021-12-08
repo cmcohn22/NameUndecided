@@ -6,8 +6,11 @@
 //  Copyright © 2020 The Regents of the University of Michigan. All rights reserved.
 //
 import UIKit
+import CoreLocation
 
 final class ChatLogVC: UITableViewController {
+    
+    lazy var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +18,8 @@ final class ChatLogVC: UITableViewController {
         // setup refreshControler here later
         // iOS 14 or newer
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
+        
+        locationManager.requestAlwaysAuthorization()
         
         refreshTimeline(nil)
         
@@ -27,7 +32,13 @@ final class ChatLogVC: UITableViewController {
     
     // MARK:-
     private func refreshTimeline(_ sender: UIAction?) {
-        ChatLog.shared.get_chat_log { success in
+        guard let currentlocation = locationManager.location else{
+            return
+        }
+        print(currentlocation.coordinate.latitude)
+        print(currentlocation.coordinate.longitude)
+        //temporary value BELOW
+        ChatLog.shared.get_chat_log(token: "154685558fb3bb2d33ec51dbf5918e76ade92fcb", lat: currentlocation.coordinate.latitude, long: currentlocation.coordinate.longitude) { success in
             DispatchQueue.main.async {
                 if success {
                     self.tableView.reloadData()

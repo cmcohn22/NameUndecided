@@ -21,14 +21,18 @@ final class ChatLog: ObservableObject {
     let lat = 0.0
     let long = 0.0
     
-    func get_chat_log(_ completion: ((Bool) -> ())?) {
+    lazy var locationManager = CLLocationManager()
+    
+    func get_chat_log(token: String, lat: Double, long: Double, _ completion: ((Bool) -> ())?) {
         guard let apiUrl = URL(string: serverUrl+"api/chat-log/?lat=" + String(lat) + "&long=" + String(long)) else {
             print("chat-log: Bad URL")
             return
         }
+        print("apiUrl:")
+        print(apiUrl)
         
         var request = URLRequest(url: apiUrl)
-        request.addValue("Token be1721b173119203ff1c7e13d8b9e906d6b2a017", forHTTPHeaderField: "Authorization")
+        request.addValue("Token " + token, forHTTPHeaderField: "Authorization")
         // TODO: GET RID OF THIS LATER WHEN WE HAVE SIGN UP AND LOGIN WORKING ^
         request.httpMethod = "GET"
         

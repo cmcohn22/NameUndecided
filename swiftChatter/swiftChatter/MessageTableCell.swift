@@ -10,6 +10,7 @@ import UIKit
 
 final class MessageTableCell: UITableViewCell {
   
+    @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var firstnameLabel: UILabel!
     
     @IBOutlet weak var lastnameLabel: UILabel!
