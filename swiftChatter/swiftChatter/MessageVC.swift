@@ -21,6 +21,8 @@ final class MessageVC: UITableViewController {
         
         // setup refreshControler here later
         // iOS 14 or newer
+//        tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
+        
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
         
         refreshTimeline(nil)
@@ -64,6 +66,17 @@ final class MessageVC: UITableViewController {
         //chatt = chatts[indexPath.row]
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       // Make the first row larger to accommodate a custom cell.
+//      if indexPath.row == 0 {
+//          return 80
+//       }
+
+       // Use the default size for all other rows.
+//       return UITableView.automaticDimension
+        return 80
+    }
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // populate a single cell
@@ -72,6 +85,8 @@ final class MessageVC: UITableViewController {
             fatalError("No reusable cell!")
         }
 
+//        cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
+        
         let message = MessageLog.shared.messages[indexPath.row]
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
         cell.firstnameLabel.text = message.first_name
