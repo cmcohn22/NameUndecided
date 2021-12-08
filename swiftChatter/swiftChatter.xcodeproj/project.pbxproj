@@ -18,13 +18,13 @@
 		5F37F14B2756FBCC005229A7 /* ActiveChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F1492756FBCC005229A7 /* ActiveChats.swift */; };
 		5F37F14C2756FBCC005229A7 /* ActiveChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */; };
 		5FAF9BFA2760541200C57AF4 /* ChatSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF9BF92760541200C57AF4 /* ChatSettings.swift */; };
-		5FAF9BFC2760574600C57AF4 /* CreateMnkyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF9BFB2760574500C57AF4 /* CreateMnkyChat.swift */; };
 		5FE3857C276059DF002B548C /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE3857A276059DF002B548C /* UserStore.swift */; };
 		5FE3857D276059DF002B548C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE3857B276059DF002B548C /* User.swift */; };
 		5FE3857F27605EC9002B548C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE3857E27605EC9002B548C /* Extensions.swift */; };
 		88361A34275875F30006ABE4 /* ChatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A33275875F30006ABE4 /* ChatLog.swift */; };
 		88361A36275876070006ABE4 /* ChatLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A35275876070006ABE4 /* ChatLogVC.swift */; };
 		88361A38275966660006ABE4 /* ChatLogTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A37275966660006ABE4 /* ChatLogTableCell.swift */; };
+		88D51E1E2760FBA90058D993 /* istockphoto-1005952420-612x612.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D51E1D2760FBA90058D993 /* istockphoto-1005952420-612x612.jpeg */; };
 		B4FF18AC115414DD6B3B4F6F /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2744376A57DBF5D83DADEE /* Pods_swiftChatter.framework */; };
 		FC03AB4224CA88800013DA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4124CA88800013DA53 /* AppDelegate.swift */; };
 		FC03AB4424CA88800013DA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03AB4324CA88800013DA53 /* SceneDelegate.swift */; };
@@ -53,13 +53,13 @@
 		5F37F1492756FBCC005229A7 /* ActiveChats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChats.swift; sourceTree = "<group>"; };
 		5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChatsVC.swift; sourceTree = "<group>"; };
 		5FAF9BF92760541200C57AF4 /* ChatSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSettings.swift; sourceTree = "<group>"; };
-		5FAF9BFB2760574500C57AF4 /* CreateMnkyChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateMnkyChat.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/CreateMnkyChat.swift"; sourceTree = "<group>"; };
 		5FE3857A276059DF002B548C /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		5FE3857B276059DF002B548C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5FE3857E27605EC9002B548C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		88361A33275875F30006ABE4 /* ChatLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLog.swift; sourceTree = "<group>"; };
 		88361A35275876070006ABE4 /* ChatLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogVC.swift; sourceTree = "<group>"; };
 		88361A37275966660006ABE4 /* ChatLogTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogTableCell.swift; sourceTree = "<group>"; };
+		88D51E1D2760FBA90058D993 /* istockphoto-1005952420-612x612.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "istockphoto-1005952420-612x612.jpeg"; sourceTree = "<group>"; };
 		FC03AB3E24CA88800013DA53 /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC03AB4124CA88800013DA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC03AB4324CA88800013DA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +106,7 @@
 		FC03AB3524CA88800013DA53 = {
 			isa = PBXGroup;
 			children = (
+				88D51E1D2760FBA90058D993 /* istockphoto-1005952420-612x612.jpeg */,
 				FC285FFD24CBCD8900B60A29 /* Default-568h@2x.png */,
 				FC03AB4024CA88800013DA53 /* swiftChatter */,
 				FC03AB3F24CA88800013DA53 /* Products */,
@@ -139,7 +140,6 @@
 				5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */,
 				FC285FF924CBCAAD00B60A29 /* PostVC.swift */,
 				5FAF9BF92760541200C57AF4 /* ChatSettings.swift */,
-				5FAF9BFB2760574500C57AF4 /* CreateMnkyChat.swift */,
 				FC03AB4A24CA88830013DA53 /* Assets.xcassets */,
 				FC03AB4724CA88800013DA53 /* Main.storyboard */,
 				FC67425E250A9185009998D4 /* LaunchScreen.storyboard */,
@@ -219,6 +219,7 @@
 			files = (
 				FC285FFE24CBCD8900B60A29 /* Default-568h@2x.png in Resources */,
 				FC03AB4B24CA88830013DA53 /* Assets.xcassets in Resources */,
+				88D51E1E2760FBA90058D993 /* istockphoto-1005952420-612x612.jpeg in Resources */,
 				192CB5C4273030A20074CA36 /* GoogleService-Info.plist in Resources */,
 				FC03AB4924CA88800013DA53 /* Main.storyboard in Resources */,
 				FC674260250A9185009998D4 /* LaunchScreen.storyboard in Resources */,
@@ -290,7 +291,6 @@
 				19D8F9E6275EA1EC0045A6CA /* MessageLog.swift in Sources */,
 				1953AB0B2756A6E000AC3B26 /* LogInVC.swift in Sources */,
 				88361A36275876070006ABE4 /* ChatLogVC.swift in Sources */,
-				5FAF9BFC2760574600C57AF4 /* CreateMnkyChat.swift in Sources */,
 				5FE3857C276059DF002B548C /* UserStore.swift in Sources */,
 				88361A38275966660006ABE4 /* ChatLogTableCell.swift in Sources */,
 				5F37F14C2756FBCC005229A7 /* ActiveChatsVC.swift in Sources */,
