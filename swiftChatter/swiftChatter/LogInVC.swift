@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-class LogInVC: UIViewController, UITextFieldDelegate{
+class LogInVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!

@@ -39,7 +39,7 @@ struct MessageSocket: Encodable{
 //    socket.delegate = self
 //    socket.connect()
 //}
-final class MessageVC: UITableViewController{
+final class MessageVC: UITableViewController, UITextFieldDelegate {
     
     lazy var locationManager = CLLocationManager()
    
@@ -54,29 +54,22 @@ final class MessageVC: UITableViewController{
     override func viewDidLoad() {
         
         super.viewDidLoad()
-//        var request = URLRequest(url: URL(string: "wss://mnky-chat.com/ws/chat/")!)
-//                request.timeoutInterval = 5
-//                socket = WebSocket(request: request)
-//                socket.delegate = self
         
-//        request.setValue("Everything is Awesome!", forHTTPHeaderField: "My-Awesome-Header")
-//        var request = URLRequest(url: URL(string: "wss://mnky-chat.com/ws/chat/")!)
-//        request.timeoutInterval = 5000 // Sets the timeout for the connection
-//        request.setValue("0.0", forHTTPHeaderField: "lat")
-//        request.setValue("0.0", forHTTPHeaderField: "long")
-//        request.setValue("Token bbd9e8de6701f341cd96302a19b98c29e1d62f54", forHTTPHeaderField: "Authorization")
-//        print(request)
-//        socket = WebSocket(request: request)
-//        socket.delegate = self
-//        socket.connect()
-//        print("connected")// setup refreshControler here later
-        // iOS 14 or newer
+        MessageContent.delegate = self
+        
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
         
         refreshTimeline(nil)
         
         
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        MessageContent.resignFirstResponder()
+        return true
+    }
+    
+    
     @IBAction func SendMessage(_ sender: Any) {
         guard let currentlocation = locationManager.location else{
                    return
@@ -234,6 +227,10 @@ final class MessageVC: UITableViewController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // how many rows per section
         return MessageLog.shared.messages.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       return 80
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
