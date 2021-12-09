@@ -85,15 +85,21 @@ final class MessageVC: UITableViewController{
         let dblLong = currentlocation.coordinate.longitude
         let toke = "Token \(UserStore.shared.activeUser.tokenId!)"
                     print("good stuff")
+        let tents = MessageContent.text!
         let jsonObject = MessageSocket.init(contents: MessageContent.text!, chatID: chat_id, lat:dblLat, long: dblLong, type: "chat_message") //TODO Handle files
         
                     let jsonEncoder = JSONEncoder()
                             let jsonData = try! jsonEncoder.encode(jsonObject)
                             let json = String(data: jsonData, encoding: .utf8)!
         
-                    print(json)
+        print("newmessage Content \(tents)")
+        print(json)
         StartUpVC.shared.writeText((Any).self, json: json)
         MessageContent.text = ""
+        //
+        print ("full socketInfo updated \(chat_id)")
+        print(socketInfo.shared.messagesDict[chat_id])
+        //TODO: some typa thing here boy checking if didRecieve has gone thru before reloading the data
         self.tableView.reloadData()
 //                    socket?.write(string: json)
     }
@@ -256,12 +262,20 @@ final class MessageVC: UITableViewController{
         }
 
 //        let message = MessageLog.shared.messages[indexPath.row]
+        let messagey = MessageLog.shared.messages[indexPath.row]
+        print("message \(indexPath.row)")
+        print(messagey)
 //        let f = socketInfo()
+        let mesdic = socketInfo.shared.messagesDict
+        print("MESDIC")
+        print(mesdic)
+        print("CATID")
         print(chat_id)
+        print("messagesDict chatid")
         print(socketInfo.shared.messagesDict[self.chat_id])
         
         let message = socketInfo.shared.messagesDict[self.chat_id]?[indexPath.row]
-        print("here comes the message")
+        print("here comes the message \(indexPath.row)")
         print(message)
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
         cell.firstnameLabel.text = message?.first_name

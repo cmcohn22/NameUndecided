@@ -66,11 +66,13 @@ final class MessageLog: ObservableObject {
             print("end")
             print(type(of: messagesReceived))
         DispatchQueue.main.async {
-            self.messages.removeAll()
+            self.messages.removeAll() //POSSIBLY COMMENT OUT
+            //MAybe???
+            //socketInfo.shared.messagesDict[chat_id].removeAll()
             self.messages = [Message]()
             for message in messagesReceived.reversed(){
                 if message.count == self.nFields {
-                    self.messages.append(Message(type: message["type"] as? String,
+                    let messy = Message(type: message["type"] as? String,
                                                  message_id: message["message_id"] as? String,
                                                  first_name: message["first_name"] as? String,
                                                  last_name: message["last_name"] as? String,
@@ -79,11 +81,17 @@ final class MessageLog: ObservableObject {
                                                  timestamp: message["timestamp"] as? String,
                                                  profile_pic: message["profile_pic"] as? String,
                                                  likes: message["likes"] as? NSArray
-                                                 ))
+                                                 )
+                    self.messages.append(messy)
+                    //added, messin w socket message struct mf
+                    socketInfo.shared.messagesDict[chat_id, default: []].append(messy)
+                    
                 } else {
                     print("messages: Received unexpected number of fields: \(message.count) instead of \(self.nFields).")
                 }
             }
+            print("MESSAGES after getMESssagescALL!!!")
+            print(self.messages)
         }
             success = true // for completion(success)
         }.resume()
