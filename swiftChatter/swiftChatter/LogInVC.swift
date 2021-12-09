@@ -61,6 +61,7 @@ class LogInVC: UIViewController, UITextFieldDelegate{
                             //print(self.userToken)
                           //  print(tken)
                             UserStore.shared.setToken(token: tken)
+                            StartUpVC.shared.makeConnect()
                             self.performSegue(withIdentifier: "ID1", sender: self)
                         }
                         else{

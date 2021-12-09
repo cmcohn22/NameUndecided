@@ -21,6 +21,8 @@ class socketInfo{
     var messagesDict:[String:[Message]] = [:]
 }
     class StartUpVC: UIViewController, WebSocketDelegate{
+        
+        var token : String?
         lazy var locationManager = CLLocationManager()
         //let f = socketInfo()
         func convertToDictionary(text: String) -> [String: Any]? {
@@ -45,7 +47,7 @@ class socketInfo{
         }
 //        func onEvent(event: WebSocketEvent){
 //            if(event == .text(let string)){
-//                
+//
 //            }
 //        }
         func didReceive(event: WebSocketEvent, client: WebSocket) {
@@ -131,26 +133,34 @@ class socketInfo{
 //                socket.delegate = self
         
 //        request.setValue("Everything is Awesome!", forHTTPHeaderField: "My-Awesome-Header")
-        var request = URLRequest(url: URL(string: "wss://mnky-chat.com/ws/chat/")!)
-        //TODO: Change this ish to like 50
-        request.timeoutInterval = 5000 // Sets the timeout for the connection
-//        guard let currentlocation = locationManager.location else{
-//                   return
-//               }
-        let dblLat = 0.0 //currentlocation.coordinate.latitude ?? 0.0
-        let dblLong = 0.0 //currentlocation.coordinate.longitude ?? 0.0
-        request.setValue(String(dblLat), forHTTPHeaderField: "lat")
-        request.setValue(String(dblLong), forHTTPHeaderField: "long")
-        request.setValue("Token 154685558fb3bb2d33ec51dbf5918e76ade92fcb", forHTTPHeaderField: "Authorization")
-        //request.setValue("Token \(UserStore.shared.activeUser.tokenId)", forHTTPHeaderField: "Authorization")
-        print(request)
-        socket = WebSocket(request: request)
-        socket.delegate = self
-        socket.connect()
-        print("connected")// setup refreshControler here later
-        // iOS 14 or newer
+        locationManager.requestAlwaysAuthorization()
+        //guard let currentlocation
+        //locationManagerDidChangeAuthorization(locationManger)
+
+        
     }
-       
+        func makeConnect(){
+            
+            var request = URLRequest(url: URL(string: "wss://mnky-chat.com/ws/chat/")!)
+            //TODO: Change this ish to like 50
+            request.timeoutInterval = 5000 // Sets the timeout for the connection
+            guard let currentlocation = locationManager.location else{
+                       return
+                   }
+            let dblLat = currentlocation.coordinate.latitude
+            let dblLong = currentlocation.coordinate.longitude 
+            request.setValue(String(dblLat), forHTTPHeaderField: "lat")
+            request.setValue(String(dblLong), forHTTPHeaderField: "long")
+            let toke = UserStore.shared.activeUser.tokenId!
+            request.setValue("Token \(toke)", forHTTPHeaderField: "Authorization")
+            //request.setValue("Token \(UserStore.shared.activeUser.tokenId)", forHTTPHeaderField: "Authorization")
+            print(request)
+            socket = WebSocket(request: request)
+            socket.delegate = self
+            socket.connect()
+            print("connected")// setup refreshControler here later
+            // iOS 14 or newer
+        }
         func websocketDidConnect(ws: WebSocket) {
                 print("websocket is connected")
             }
@@ -182,3 +192,6 @@ class socketInfo{
         
     }
 
+func locationManagerDidChangeAuthorization(_ manager: CLLocationManager){
+    
+}

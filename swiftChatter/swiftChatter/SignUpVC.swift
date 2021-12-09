@@ -124,6 +124,7 @@ class SignUpVC: UIViewController{
                 print("responseString = \(responseString)")
                 print("responseString = \(tken)")
                 UserStore.shared.setToken(token: tken)
+                StartUpVC.shared.makeConnect()
             }catch{ print("erroMsg") }
             print("responseString = \(responseString)")
         }
