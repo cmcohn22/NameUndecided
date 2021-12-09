@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "66c1cd4a6160ecf359eb40db163ef2a83d3a3fe7f29cc52f0fe35e032375ca6a"
-build_start_time: [1639020347, 505483150]
-build_end_time: [1639020348, 828876018]
+build_start_time: [1639022078, 571672916]
+build_end_time: [1639022079, 929764986]
 inputs:
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/ActiveChats.swift": [1639009142, 820010662]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/ActiveChatsVC.swift": [1639015148, 103573322]
@@ -21,9 +21,9 @@ inputs:
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/Message.swift": [1639017813, 461569309]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/MessageLog.swift": [1639014293, 87867259]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/MessageTableCell.swift": [1638904588, 0]
-  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/MessageVC.swift": [1639016341, 619385004]
+  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/MessageVC.swift": [1639022078, 259032726]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/SceneDelegate.swift": [1639009142, 840970277]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/SignUpVC.swift": [1639009142, 841640472]
-  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/StartUpVC.swift": [1639020347, 280912160]
+  "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/StartUpVC.swift": [1639021317, 468777656]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/User.swift": [1639003581, 120303630]
   "/Users/chasecohn/Desktop/MNKY chat/NameUndecided/swiftChatter/swiftChatter/UserStore.swift": [1639003581, 120621681]

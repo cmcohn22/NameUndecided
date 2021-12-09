@@ -13,10 +13,12 @@ var socket: WebSocket!
 var isConnected = false
 let server = WebSocketServer()
 class socketInfo{
+    static let shared = socketInfo()
 //    var messagesDict = Dictionary<String, Array<Message>>()
     var messagesDict:[String:[Message]] = [:]
 }
     class StartUpVC: UIViewController, WebSocketDelegate{
+        let f = socketInfo()
         func convertToDictionary(text: String) -> [String: Any]? {
             if let data = text.data(using: .utf8) {
                 do {
@@ -62,7 +64,7 @@ class socketInfo{
                                            likes: [] as? NSArray
                                           )
                     print(messager)
-                    let f = socketInfo()
+                    
                     f.messagesDict[chatID, default: []].append(messager)
                     print(f.messagesDict)
 //                    let mess = Message.init(messageID: dict["message_id"] as! String, firstName: dict["first_name"] as! String, lastName: dict["last_name"] as! String, userName: dict["username"] as! String, content: dict["content"] as! String, timestamp: dict["timestamp"] as! String, profile_pic: dict["profile_pic"] as! String)

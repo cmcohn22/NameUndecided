@@ -82,7 +82,7 @@ final class MessageVC: UITableViewController{
                    return
                }
         let dblLat = currentlocation.coordinate.latitude
-        let dblLong = currentlocation.coordinate.latitude
+        let dblLong = currentlocation.coordinate.longitude
         let toke = "Token \(UserStore.shared.activeUser.tokenId!)"
                     print("good stuff")
         let jsonObject = MessageSocket.init(contents: MessageContent.text!, chatID: chat_id, lat:dblLat, long: dblLong, type: "chat_message") //TODO Handle files
@@ -210,7 +210,7 @@ final class MessageVC: UITableViewController{
                    return
                }
         let dblLat = currentlocation.coordinate.latitude
-        let dblLong = currentlocation.coordinate.latitude
+        let dblLong = currentlocation.coordinate.longitude
         let toke = "Token \(UserStore.shared.activeUser.tokenId!)"
         print("Here is the token passed into get_messages")
         print(toke)
@@ -255,11 +255,18 @@ final class MessageVC: UITableViewController{
             fatalError("No reusable cell!")
         }
 
-        let message = MessageLog.shared.messages[indexPath.row]
+//        let message = MessageLog.shared.messages[indexPath.row]
+//        let f = socketInfo()
+        print(chat_id)
+        print(socketInfo.shared.messagesDict[self.chat_id])
+        
+        let message = socketInfo.shared.messagesDict[self.chat_id]?[indexPath.row]
+        print("here comes the message")
+        print(message)
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
-        cell.firstnameLabel.text = message.first_name
-        cell.lastnameLabel.text = message.last_name
-        cell.contentLabel.text = message.content
+        cell.firstnameLabel.text = message?.first_name
+        cell.lastnameLabel.text = message?.last_name
+        cell.contentLabel.text = message?.content
 //        cell.profilePic.
         return cell
     }
