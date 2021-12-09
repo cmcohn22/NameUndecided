@@ -50,6 +50,7 @@
 		5551D0F0275F0B9200A57B30 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5551D0F2275F16AB00A57B30 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5551D0F4275F16B400A57B30 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		55E265B62761832F00B769CE /* swiftChatter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swiftChatter.entitlements; sourceTree = "<group>"; };
 		5F37F14727568784005229A7 /* CreateMnkyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMnkyChat.swift; sourceTree = "<group>"; };
 		5F37F1492756FBCC005229A7 /* ActiveChats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChats.swift; sourceTree = "<group>"; };
 		5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChatsVC.swift; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		FC03AB4024CA88800013DA53 /* swiftChatter */ = {
 			isa = PBXGroup;
 			children = (
+				55E265B62761832F00B769CE /* swiftChatter.entitlements */,
 				FC03AB4124CA88800013DA53 /* AppDelegate.swift */,
 				FC03AB4324CA88800013DA53 /* SceneDelegate.swift */,
 				19D8F9DF275EA1C60045A6CA /* Message.swift */,
@@ -435,6 +437,7 @@
 			baseConfigurationReference = 1F6B94E2C76EE7949A1E3438 /* Pods-swiftChatter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = swiftChatter/swiftChatter.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -457,6 +460,7 @@
 			baseConfigurationReference = 373DFA02A18C4CB5D5CC7F07 /* Pods-swiftChatter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = swiftChatter/swiftChatter.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";

@@ -7,6 +7,7 @@
 //
 import UIKit
 import CoreLocation
+import UserNotifications
 
 public var globalLat: Double = 0.0
 public var globalLong: Double = 0.0
@@ -68,7 +69,6 @@ final class ActiveChatsVC: UITableViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
         UserStore.shared.getUserInfo()
-        
 
         // setup refreshControler here later
         // iOS 14 or newer
@@ -77,6 +77,7 @@ final class ActiveChatsVC: UITableViewController, CLLocationManagerDelegate {
         refreshTimeline(nil)
         
     }
+    
 
     /*
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
