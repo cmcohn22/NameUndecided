@@ -31,22 +31,34 @@ final class ChattStore: ObservableObject {
         AF.upload(multipartFormData: { mpFD in
                     if let name = chatt.name?.data(using: .utf8) {
                         mpFD.append(name, withName: "name")
+                        print("name")
+                        print(name)
                     }
                     if let description = chatt.description?.data(using: .utf8) {
                         mpFD.append(description, withName: "description")
+                        print("name")
+                        print(description)
                     }
                     if let lat = chatt.lat {
                         mpFD.append("\(lat)".data(using: String.Encoding.utf8)!, withName: "lat")
+                        print("name")
+                        print(lat)
                     }
                     if let long = chatt.long{
                         mpFD.append("\(long)".data(using: String.Encoding.utf8)!, withName: "long")
+                        print("name")
+                        print(long)
                     }
                     if let radius = chatt.radius{
                         mpFD.append("\(radius)".data(using: String.Encoding.utf8)!, withName: "radius")
+                        print("name")
+                        print(radius)
                     }
                     if let image = image?.jpegData(compressionQuality: 1.0) {
                         mpFD.append(image, withName: "image", fileName: "chattImage", mimeType: "image/jpeg")
                     }
+            print("CHattagk")
+            print(chatt)
                 }, to: apiUrl, method: .post, headers: tokenHeaders).response { response in
                     switch (response.result) {
                     case .success:
