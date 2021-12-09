@@ -18,15 +18,19 @@ final class ChatUsersTableCell: UITableViewCell {
 //, UITableViewDelegate, UITableViewDataSource
 final class ChatSettingsVC: UIViewController {
     
+    var chat_id : String?
+    var chat_name : String?
+    var chat_description : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        ChatSettings.shared.get_chat_info { success in
+        ChatSettings.shared.get_chat_info(chat_id: chat_id!, chatName: chat_name!, chatDesc: chat_description!) { success in
             DispatchQueue.main.async {
                 if success {
-                    self.MnkyChatName.text = ChatSettings.shared.chat_name
-                    self.MnkyChatDescription.text = ChatSettings.shared.chat_description
+                    self.MnkyChatName.text = self.chat_name
+                    self.MnkyChatDescription.text = self.chat_description
                 }
             }
         }

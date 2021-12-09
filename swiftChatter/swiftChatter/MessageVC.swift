@@ -254,6 +254,23 @@ final class MessageVC: UITableViewController{
 ////                socket.connect()
 ////            }
 ////        }
+    ///
+    ///
+    ///
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if(segue.identifier == "SpecificChatSegue"){
+            //TODO
+        }
+        if let secondVC = segue.destination as? ChatSettingsVC,
+           let chatDex = tableView.indexPathForSelectedRow?.row
+        {
+            secondVC.chat_id =  ActiveChats.shared.chatts[chatDex].chat_id
+            secondVC.chat_name =  ActiveChats.shared.chatts[chatDex].name
+            secondVC.chat_description =  ActiveChats.shared.chatts[chatDex].description
+        //secondVC.image_name = txtEnterText.text
+        }
+    }
 
     // MARK:-
     private func refreshTimeline(_ sender: UIAction?) {

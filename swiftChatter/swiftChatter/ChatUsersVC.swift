@@ -28,15 +28,17 @@ final class ChatUsersVC: UITableViewController {
     
     // MARK:-
     private func refreshTimeline(_ sender: UIAction?) {
-        ChatSettings.shared.get_chat_info { success in
-            DispatchQueue.main.async {
-                if success {
-                    self.tableView.reloadData()
-                }
-                // stop the refreshing animation upon completion:
-                self.refreshControl?.endRefreshing()
-            }
-        }
+        self.tableView.reloadData()
+//TODO : I was working on this file but got reall tired so i just commented it out.
+        //        ChatSettings.shared.get_chat_info(chat_id: , chatName: , chatDesc: , <#T##completion: ((Bool) -> ())?##((Bool) -> ())?##(Bool) -> ()#>) { success in
+//            DispatchQueue.main.async {
+//                if success {
+//                    self.tableView.reloadData()
+//                }
+//                // stop the refreshing animation upon completion:
+//                self.refreshControl?.endRefreshing()
+//            }
+//        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -40,12 +40,10 @@ final class ChatSettings: ObservableObject {
 //    let lat = 0.0
 //    let long = 0.0
     
-    var chat_id = "157ace05"
-    var chat_name = ""
-    var chat_description = ""
+
     
     // Retrieve chat info to populate chatUser table cells
-    func get_chat_info(_ completion: ((Bool) -> ())?) {
+    func get_chat_info(chat_id: String, chatName: String, chatDesc: String, _ completion: ((Bool) -> ())?) {
         print("THIS FUNCTION IS BEING CALL GETCHATGETCHAT")
         guard let apiUrl = URL(string: serverUrl+"api/chat-info/?chat_id=" + String(chat_id)) else {
             print("chat-info: Bad URL")
@@ -78,9 +76,9 @@ final class ChatSettings: ObservableObject {
 
             
             print("chat info besides USERS MNKY MNKY")
-            self.chat_id = jsonObj["chat_id"] as! String
-            self.chat_name = jsonObj["name"] as! String
-            self.chat_description = jsonObj["description"] as! String
+//            self.chat_id = jsonObj["chat_id"] as! String
+//            self.chat_name = jsonObj["name"] as! String
+//            self.chat_description = jsonObj["description"] as! String
             print("HERE IS USERS")
             let chatUserInfoReceived = jsonObj["users"] as? [Dictionary<String,Any?>] ?? []
             print(chatUserInfoReceived)
@@ -102,6 +100,7 @@ final class ChatSettings: ObservableObject {
                         print("chat-info: Received unexpected number of fields: \(chatUserInfoReceived.count) instead of \(self.nFields).")
                     }
                 }
+                print(self.chatUsers)
             }
             success = true // for completion(success)
         }.resume()
