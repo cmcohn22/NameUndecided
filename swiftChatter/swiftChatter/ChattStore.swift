@@ -55,15 +55,18 @@ final class ChattStore: ObservableObject {
                     if let image = image?.jpegData(compressionQuality: 1.0) {
                         mpFD.append(image, withName: "image", fileName: "chattImage", mimeType: "image/jpeg")
                     }
-                }, to: apiUrl, method: .post, headers: tokenHeaders).response { response in
-                    print(response)
-                    switch (response.result) {
-                    case .success:
-                        print("createChatt: new chat created!")
-                    case .failure:
-                        print("createChatt: new chat failed")
-                    }
-                }
+        }, to: apiUrl, method: .post, headers: tokenHeaders).responseJSON(completionHandler: { data in //response in
+                    //print(response)
+                    print(data)
+                    print("anticipated")
+//                    {"chat_id":"71193ea5","name":"acmemaf","image":"https://mnky-chat-static.s3.amazonaws.com/media/1873963b-e07a-4800-b18f-13bb9ee094b2.jpeg"}
+//                    switch (response.result) {
+//                    case .success:
+//                        print("createChatt: new chat created!")
+//                    case .failure:
+//                        print("createChatt: new chat failed")
+//                    }
+                })
     }
     
     

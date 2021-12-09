@@ -65,6 +65,7 @@
 		88361A33275875F30006ABE4 /* ChatLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLog.swift; sourceTree = "<group>"; };
 		88361A35275876070006ABE4 /* ChatLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogVC.swift; sourceTree = "<group>"; };
 		88361A37275966660006ABE4 /* ChatLogTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogTableCell.swift; sourceTree = "<group>"; };
+		FBEF0B4727622D7E00691D99 /* seve.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = seve.gpx; sourceTree = "<group>"; };
 		FC03AB3E24CA88800013DA53 /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC03AB4124CA88800013DA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC03AB4324CA88800013DA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 				5FE3857B276059DF002B548C /* User.swift */,
 				5FE3857A276059DF002B548C /* UserStore.swift */,
 				5FE0A5F3276179F7004BCF51 /* close.gpx */,
+				FBEF0B4727622D7E00691D99 /* seve.gpx */,
 				5FE0A5F2276179F7004BCF51 /* one.gpx */,
 				5FE0A5F4276179F7004BCF51 /* StartUpVC.swift */,
 			);
