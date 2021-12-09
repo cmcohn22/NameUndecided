@@ -15,7 +15,8 @@ final class MessageLog: ObservableObject {
                                      // instances can be created
     @Published private(set) var messages = [Message]()
     private let nFields = Mirror(reflecting: Message()).children.count
-    private var count : Int = 0
+    //may have to do sometihng funky wi this var
+    var count : Int = 0
     private let serverUrl = "https://mnky-chat.com/"
     
     // TODO: Figure out current location
@@ -25,10 +26,10 @@ final class MessageLog: ObservableObject {
 //    var chat_id = "157ace05"
     // warning, make sure I don't append message twice. focus on the refreshing here
     func appendfunc(chatid: String, mezzo: Message){
-        self.messages.append(mezzo)
+        MessageLog.shared.messages.append(mezzo)
         socketInfo.shared.messagesDict[chatid, default: []].append(mezzo)
         //count - 1
-        count = count + 1
+        MessageLog.shared.count = MessageLog.shared.count + 1
         print("cout count")
         print(count)
         
@@ -77,7 +78,8 @@ final class MessageLog: ObservableObject {
             //print("end")
             //print(type(of: messagesReceived))
         DispatchQueue.main.async {
-            self.messages.removeAll() //POSSIBLY COMMENT OUT
+            socketInfo.shared.messagesDict[chat_id, default: []].removeAll()
+            MessageLog.shared.messages.removeAll() //POSSIBLY COMMENT OUT
             //MAybe???
             //socketInfo.shared.messagesDict[chat_id].removeAll()
             self.messages = [Message]()
@@ -102,7 +104,7 @@ final class MessageLog: ObservableObject {
                 }
             }
             //possibly make this shared.count
-            self.count = socketInfo.shared.messagesDict[chat_id, default: []].count
+            MessageLog.shared.count = socketInfo.shared.messagesDict[chat_id, default: []].count
             print("count dict \(self.count)")
             print("MESSAGES after getMESssagescALL!!!")
             print("commented out")

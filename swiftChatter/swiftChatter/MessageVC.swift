@@ -318,8 +318,21 @@ final class MessageVC: UITableViewController{
         //print(chat_id)
         //print("messagesDict chatid")
         //print(socketInfo.shared.messagesDict[self.chat_id])
-        
+        let testy = indexPath.row
+        print("testy")
+        print(testy)
+//        let ubermessage = socketInfo.shared.messagesDict[self.chat_id]?[MessageLog.shared.count - 1]
+        let county = socketInfo.shared.messagesDict[self.chat_id]?.count  ?? 0
+        let ubermessage = socketInfo.shared.messagesDict[self.chat_id]?[county - 1]
+        print("shardcount")
+        print(MessageLog.shared.count - 1)
+        print("county")
+        print(county)
+        print("upbermessage")
+        print(ubermessage)
         let message = socketInfo.shared.messagesDict[self.chat_id]?[indexPath.row]
+        print("mes")
+        print(message?.content)
         //print("here comes the message \(indexPath.row)")
         //print(message)
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6

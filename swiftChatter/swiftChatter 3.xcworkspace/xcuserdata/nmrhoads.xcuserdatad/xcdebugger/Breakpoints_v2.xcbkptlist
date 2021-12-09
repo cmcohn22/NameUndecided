@@ -46,8 +46,8 @@
             filePath = "swiftChatter/MessageVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
+            startingLineNumber = "337"
+            endingLineNumber = "337"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "swiftChatter/MessageVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "322"
-            endingLineNumber = "322"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -475,8 +475,8 @@
             filePath = "swiftChatter/MessageLog.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "get_messages(token:chat_id:lat:long:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -491,8 +491,8 @@
             filePath = "swiftChatter/MessageLog.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "get_messages(token:chat_id:lat:long:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -539,8 +539,8 @@
             filePath = "swiftChatter/MessageLog.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "get_messages(token:chat_id:lat:long:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -667,8 +667,8 @@
             filePath = "swiftChatter/MessageLog.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "get_messages(token:chat_id:lat:long:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -733,8 +733,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "167"
             endingLineNumber = "167"
-            landmarkName = "need to see where &quot;socket write&quot; goes. likely have to call a function that updates the shared.messagesDict"
-            landmarkType = "19">
+            landmarkName = "writeText(_:json:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -933,15 +933,172 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3526A6E0-978C-4F74-9021-5F7E41D882FE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swiftChatter/MessageVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45D8F822-C1C1-461B-AFC5-A5B58A1D099E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftChatter/LogInVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "45D8F822-C1C1-461B-AFC5-A5B58A1D099E - d1c5d4d27c3b4a89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.LogInVC.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; swiftChatter.LogInVC"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nmrhoads/Documents/nak/NameUndecided/swiftChatter/swiftChatter/LogInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "45D8F822-C1C1-461B-AFC5-A5B58A1D099E - 39d13024583d5a1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.LogInVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; swiftChatter.LogInVC"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nmrhoads/Documents/nak/NameUndecided/swiftChatter/swiftChatter/LogInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "141">
+               </Location>
+               <Location
+                  uuid = "45D8F822-C1C1-461B-AFC5-A5B58A1D099E - 9849c211799d8112"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.LogInVC.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;swiftChatter.LogInVC&gt;"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nmrhoads/Documents/nak/NameUndecided/swiftChatter/swiftChatter/LogInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "45D8F822-C1C1-461B-AFC5-A5B58A1D099E - 8263bfe22e13c650"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.LogInVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;swiftChatter.LogInVC&gt;"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nmrhoads/Documents/nak/NameUndecided/swiftChatter/swiftChatter/LogInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "98">
+               </Location>
+               <Location
+                  uuid = "45D8F822-C1C1-461B-AFC5-A5B58A1D099E - 8591ae87479ae492"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftChatter.LogInVC.__deallocating_deinit"
+                  moduleName = "swiftChatter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nmrhoads/Documents/nak/NameUndecided/swiftChatter/swiftChatter/LogInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89FCEAE7-9F9E-4DA9-9EE4-918318932D4F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftChatter/MessageVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "loadList(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD406DFC-A721-4793-90D5-6A0272AB957C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftChatter/MessageVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "loadList(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6E5E88C-7931-4019-8A32-82CFFCE185AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftChatter/MessageLog.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "appendfunc(chatid:mezzo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A3833C4-4A1B-476E-9EB2-397C75DA019B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftChatter/MessageLog.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "appendfunc(chatid:mezzo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
