@@ -18,6 +18,7 @@
 		5F7109D127619E760063E8CB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7109D027619E760063E8CB /* Settings.swift */; };
 		5F7109D327619E910063E8CB /* SettingsUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7109D227619E910063E8CB /* SettingsUser.swift */; };
 		5F7109D727619EBE0063E8CB /* SettingsUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7109D627619EBE0063E8CB /* SettingsUserVC.swift */; };
+		5F7109D92761A7270063E8CB /* MNKY Chat Logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5F7109D82761A7270063E8CB /* MNKY Chat Logo.jpeg */; };
 		5FAF9BFA2760541200C57AF4 /* ChatSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF9BF92760541200C57AF4 /* ChatSettings.swift */; };
 		5FE0A5F5276179F8004BCF51 /* one.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5FE0A5F2276179F7004BCF51 /* one.gpx */; };
 		5FE0A5F6276179F8004BCF51 /* close.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5FE0A5F3276179F7004BCF51 /* close.gpx */; };
@@ -57,6 +58,7 @@
 		5F7109D027619E760063E8CB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5F7109D227619E910063E8CB /* SettingsUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUser.swift; sourceTree = "<group>"; };
 		5F7109D627619EBE0063E8CB /* SettingsUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUserVC.swift; sourceTree = "<group>"; };
+		5F7109D82761A7270063E8CB /* MNKY Chat Logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MNKY Chat Logo.jpeg"; sourceTree = "<group>"; };
 		5FAF9BF92760541200C57AF4 /* ChatSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSettings.swift; sourceTree = "<group>"; };
 		5FE0A5F2276179F7004BCF51 /* one.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = one.gpx; sourceTree = "<group>"; };
 		5FE0A5F3276179F7004BCF51 /* close.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = close.gpx; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				5FE0A5F3276179F7004BCF51 /* close.gpx */,
 				5FE0A5F2276179F7004BCF51 /* one.gpx */,
 				5FE0A5F4276179F7004BCF51 /* StartUpVC.swift */,
+				5F7109D82761A7270063E8CB /* MNKY Chat Logo.jpeg */,
 			);
 			path = swiftChatter;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				5FE0A5F6276179F8004BCF51 /* close.gpx in Resources */,
 				5FE0A5F5276179F8004BCF51 /* one.gpx in Resources */,
 				FC285FFE24CBCD8900B60A29 /* Default-568h@2x.png in Resources */,
+				5F7109D92761A7270063E8CB /* MNKY Chat Logo.jpeg in Resources */,
 				FC03AB4B24CA88830013DA53 /* Assets.xcassets in Resources */,
 				FC03AB4924CA88800013DA53 /* Main.storyboard in Resources */,
 				FC674260250A9185009998D4 /* LaunchScreen.storyboard in Resources */,

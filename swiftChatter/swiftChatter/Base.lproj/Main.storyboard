@@ -33,7 +33,7 @@
                                         <barButtonItem title="Message" image="message.fill" catalog="system" width="150" id="Bjd-uw-hR4"/>
                                         <barButtonItem title="Profile" image="person.fill" catalog="system" width="150" id="mZv-wv-cf2">
                                             <connections>
-                                                <segue destination="IPF-70-V03" kind="show" id="ndF-JC-799"/>
+                                                <segue destination="JQ6-si-GGO" kind="show" id="w1a-Yl-J8S"/>
                                             </connections>
                                         </barButtonItem>
                                     </items>
@@ -137,14 +137,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Page (Design Here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYw-Nh-InY">
-                                <rect key="frame" x="112" y="438" width="190" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VS-eR-Z1W">
-                                <rect key="frame" x="84" y="530" width="246" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VS-eR-Z1W">
+                                <rect key="frame" x="84" y="530" width="236" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="kWJ-hj-GnQ"/>
                                 </constraints>
@@ -162,19 +156,26 @@
                                     <segue destination="CPU-Oq-a7B" kind="show" id="1gB-vv-WE4"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="MNKY Chat Logo.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="x1m-jm-SRh">
+                                <rect key="frame" x="0.0" y="210" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="OIz-aB-dJW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1QR-S1-j7Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="centerX" secondItem="1yc-tG-v7N" secondAttribute="centerX" id="5PD-Mt-RV9"/>
-                            <constraint firstItem="CYw-Nh-InY" firstAttribute="top" secondItem="1QR-S1-j7Q" secondAttribute="top" constant="394" id="FOI-Cu-1qX"/>
-                            <constraint firstItem="1yc-tG-v7N" firstAttribute="top" secondItem="5VS-eR-Z1W" secondAttribute="bottom" constant="84" id="LFS-pg-Ui0"/>
-                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="top" secondItem="CYw-Nh-InY" secondAttribute="bottom" constant="72" id="OgF-fO-MlJ"/>
-                            <constraint firstItem="CYw-Nh-InY" firstAttribute="leading" secondItem="1QR-S1-j7Q" secondAttribute="leading" constant="112" id="YsW-ph-yEY"/>
-                            <constraint firstItem="CYw-Nh-InY" firstAttribute="centerY" secondItem="Gyc-kX-23V" secondAttribute="centerY" id="eHA-v2-n1s"/>
-                            <constraint firstItem="CYw-Nh-InY" firstAttribute="centerX" secondItem="Gyc-kX-23V" secondAttribute="centerX" id="q3B-GP-1hS"/>
-                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="centerX" secondItem="CYw-Nh-InY" secondAttribute="centerX" id="t45-76-iUU"/>
-                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="leading" secondItem="1QR-S1-j7Q" secondAttribute="leading" constant="84" id="w4e-Hy-TxX"/>
+                            <constraint firstItem="1yc-tG-v7N" firstAttribute="top" secondItem="5VS-eR-Z1W" secondAttribute="bottom" constant="84" id="68d-fa-oTr"/>
+                            <constraint firstItem="1QR-S1-j7Q" firstAttribute="trailing" secondItem="1yc-tG-v7N" secondAttribute="trailing" constant="169.5" id="9xG-HQ-POX"/>
+                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="leading" secondItem="1QR-S1-j7Q" secondAttribute="leading" constant="84" id="IVB-6X-Xps"/>
+                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="top" secondItem="x1m-jm-SRh" secondAttribute="bottom" constant="20" id="bN5-A4-7p1"/>
+                            <constraint firstItem="x1m-jm-SRh" firstAttribute="top" secondItem="1QR-S1-j7Q" secondAttribute="top" constant="166" id="bra-K1-7op"/>
+                            <constraint firstItem="1QR-S1-j7Q" firstAttribute="trailing" secondItem="5VS-eR-Z1W" secondAttribute="trailing" constant="266.5" id="iDP-Uh-nTC"/>
+                            <constraint firstItem="1yc-tG-v7N" firstAttribute="leading" secondItem="1QR-S1-j7Q" secondAttribute="leading" constant="169.5" id="mW4-zv-cga"/>
+                            <constraint firstItem="x1m-jm-SRh" firstAttribute="leading" secondItem="1QR-S1-j7Q" secondAttribute="leading" id="ujq-RH-0Qp"/>
+                            <constraint firstItem="x1m-jm-SRh" firstAttribute="centerX" secondItem="1yc-tG-v7N" secondAttribute="centerX" id="z7K-x0-Ndo"/>
+                            <constraint firstItem="1QR-S1-j7Q" firstAttribute="bottom" secondItem="1yc-tG-v7N" secondAttribute="bottom" constant="143" id="zWx-uG-XdK"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -441,7 +442,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="164" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="164" width="414" height="43"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
@@ -452,7 +453,7 @@
                                 </barButtonItem>
                                 <barButtonItem title="Profile" image="person.fill" catalog="system" width="150" id="e9i-A2-sOr">
                                     <connections>
-                                        <segue destination="IPF-70-V03" kind="show" id="VqR-bK-UuJ"/>
+                                        <segue destination="JQ6-si-GGO" kind="show" id="UOg-wZ-Vyq"/>
                                     </connections>
                                 </barButtonItem>
                             </items>
@@ -531,7 +532,7 @@
             <objects>
                 <viewController id="IPF-70-V03" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QuV-EG-Tt3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02m-Bf-e73">
@@ -1141,7 +1142,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
             <objects>
                 <viewController id="JQ6-si-GGO" userLabel="SettingsUserVC" customClass="SettingsUserVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J3l-Yu-d0n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShJ-wf-PYi">
@@ -1413,13 +1414,14 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VqR-bK-UuJ"/>
+        <segue reference="UOg-wZ-Vyq"/>
         <segue reference="MQ5-Le-mvV"/>
         <segue reference="aJ4-Qz-Tn8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0.circle" catalog="system" width="128" height="121"/>
         <image name="5.circle" catalog="system" width="128" height="121"/>
+        <image name="MNKY Chat Logo.jpeg" width="146.8800048828125" height="104.87999725341797"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="camera" catalog="system" width="128" height="94"/>
