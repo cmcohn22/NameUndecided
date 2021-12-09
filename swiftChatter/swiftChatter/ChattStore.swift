@@ -19,7 +19,7 @@ final class ChattStore: ObservableObject {
     private let serverUrl = "https://mnky-chat.com/api/"
     
     private let tokenHeaders: HTTPHeaders = [
-        "Authorization": "Token bbd9e8de6701f341cd96302a19b98c29e1d62f54"
+        "Authorization": "Token \(UserStore.shared.activeUser.tokenId!)"
     ]
     
     func createChatt(_ chatt: Chatt, image: UIImage?)  {
@@ -27,27 +27,36 @@ final class ChattStore: ObservableObject {
             print("createChatt: Bad URL")
             return
         }
+        print("tokenagoisdjfoai")
+        print(UserStore.shared.activeUser.tokenId)
+        print(UserStore.shared.activeUser.tokenId!)
         
         AF.upload(multipartFormData: { mpFD in
                     if let name = chatt.name?.data(using: .utf8) {
                         mpFD.append(name, withName: "name")
+                        print(name)
                     }
                     if let description = chatt.description?.data(using: .utf8) {
                         mpFD.append(description, withName: "description")
+                        print(description)
                     }
                     if let lat = chatt.lat {
                         mpFD.append("\(lat)".data(using: String.Encoding.utf8)!, withName: "lat")
+                        print(lat)
                     }
                     if let long = chatt.long{
                         mpFD.append("\(long)".data(using: String.Encoding.utf8)!, withName: "long")
+                        print(long)
                     }
                     if let radius = chatt.radius{
                         mpFD.append("\(radius)".data(using: String.Encoding.utf8)!, withName: "radius")
+                        print(radius)
                     }
                     if let image = image?.jpegData(compressionQuality: 1.0) {
                         mpFD.append(image, withName: "image", fileName: "chattImage", mimeType: "image/jpeg")
                     }
                 }, to: apiUrl, method: .post, headers: tokenHeaders).response { response in
+                    print(response)
                     switch (response.result) {
                     case .success:
                         print("createChatt: new chat created!")

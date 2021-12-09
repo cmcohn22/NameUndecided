@@ -147,8 +147,8 @@ class socketInfo{
             guard let currentlocation = locationManager.location else{
                        return
                    }
-            let dblLat = currentlocation.coordinate.latitude
-            let dblLong = currentlocation.coordinate.longitude 
+            let dblLat = currentlocation.coordinate.latitude ?? 0.0
+            let dblLong = currentlocation.coordinate.longitude ?? 0.0
             request.setValue(String(dblLat), forHTTPHeaderField: "lat")
             request.setValue(String(dblLong), forHTTPHeaderField: "long")
             let toke = UserStore.shared.activeUser.tokenId!

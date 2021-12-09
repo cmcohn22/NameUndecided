@@ -111,6 +111,8 @@ final class ActiveChats: ObservableObject {
                                              description: chattEntry["description"] as? String,
                                              lat: chattEntry["lat"] as? Double, long: chattEntry["long"] as? Double, radius: chattEntry["radius"] as? Double, recent_message_content: chattEntry["recent_message_content"] as? String, recent_message_timestamp: chattEntry["recent_message_timestamp"] as? String, image: chattEntry["image"] as? String, require_password: chattEntry["require_password"] as? Bool)
                     self.chatts.append(chatin)
+                    print("chatin")
+                    print(chatin)
                     //self.addGeofence(chatt: chatin)
                     
                     
