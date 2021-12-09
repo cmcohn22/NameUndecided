@@ -39,7 +39,7 @@ struct MessageSocket: Encodable{
 //    socket.delegate = self
 //    socket.connect()
 //}
-final class MessageVC: UITableViewController, UITextFieldDelegate {
+final class MessageVC: UITableViewController {
     
     lazy var locationManager = CLLocationManager()
    
@@ -55,7 +55,7 @@ final class MessageVC: UITableViewController, UITextFieldDelegate {
         
         super.viewDidLoad()
         
-        MessageContent.delegate = self
+//        MessageContent.delegate = selfUITextFieldDelegate
         
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
         
@@ -64,10 +64,10 @@ final class MessageVC: UITableViewController, UITextFieldDelegate {
         
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        MessageContent.resignFirstResponder()
-        return true
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        MessageContent.resignFirstResponder()
+//        return true
+//    }
     
     
     @IBAction func SendMessage(_ sender: Any) {
