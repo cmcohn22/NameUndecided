@@ -9,11 +9,13 @@
 import Foundation
 import UIKit
 import Starscream
+import CoreLocation
 var socket: WebSocket!
 var isConnected = false
 let server = WebSocketServer()
     class StartUpVC: UIViewController, WebSocketDelegate{
         static let shared = StartUpVC()
+        lazy var locationManager = CLLocationManager()
         func handleError(_ error: Error?) {
             if let e = error as? WSError {
                 print("websocket encountered an error: \(e.message)")
@@ -63,9 +65,15 @@ let server = WebSocketServer()
 //        request.setValue("Everything is Awesome!", forHTTPHeaderField: "My-Awesome-Header")
         var request = URLRequest(url: URL(string: "wss://mnky-chat.com/ws/chat/")!)
         request.timeoutInterval = 5000 // Sets the timeout for the connection
-        request.setValue("0.0", forHTTPHeaderField: "lat")
-        request.setValue("0.0", forHTTPHeaderField: "long")
-        request.setValue("Token bbd9e8de6701f341cd96302a19b98c29e1d62f54", forHTTPHeaderField: "Authorization")
+        guard let currentlocation = locationManager.location else{
+                   return
+               }
+        let dblLat = currentlocation.coordinate.latitude
+        let dblLong = currentlocation.coordinate.latitude
+        let toke = "Token \(UserStore.shared.activeUser.tokenId!)"
+        request.setValue(String(dblLat), forHTTPHeaderField: "lat")
+        request.setValue(String(dblLong), forHTTPHeaderField: "long")
+        request.setValue(toke, forHTTPHeaderField: "Authorization")
         print(request)
         socket = WebSocket(request: request)
         socket.delegate = self

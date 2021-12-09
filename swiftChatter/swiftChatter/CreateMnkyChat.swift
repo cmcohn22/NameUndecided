@@ -10,13 +10,13 @@ import CoreLocation
 
 final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate, CLLocationManagerDelegate {
 
-    lazy var locationmanager = CLLocationManager()
+    lazy var locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         chattname.delegate = self
         chattdescription.delegate = self
-        locationmanager.requestAlwaysAuthorization()
+        locationManager.requestAlwaysAuthorization()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -36,7 +36,7 @@ final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func submitNewChatt(_ sender: Any) {
-        let currentlocation = locationmanager.location
+        let currentlocation = locationManager.location
         let chatt = Chatt(name: self.chattname.text,
                           description: self.chattdescription.text,
                           lat: currentlocation?.coordinate.latitude,
