@@ -42,6 +42,7 @@ struct MessageSocket: Encodable{
 final class MessageVC: UITableViewController{
     
     lazy var locationManager = CLLocationManager()
+   
     @IBOutlet weak var MessageContent: UITextField!
     
     var chat_id : String!

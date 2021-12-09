@@ -12,8 +12,9 @@ final class ActiveChatsVC: UITableViewController {
     enum PreferencesKeys: String {
       case savedItems
     }
+    var locationManager = CLLocationManager()
    // var chatidnow : String?
-    lazy var locationManager = CLLocationManager()
+   
     //alazy var refreshControl = UIRefreshControl()
 //
 //    func startMonitoring(geofence: Geofence) {
