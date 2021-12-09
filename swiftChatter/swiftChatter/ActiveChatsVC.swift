@@ -9,10 +9,27 @@ import UIKit
 import CoreLocation
 
 final class ActiveChatsVC: UITableViewController {
-    enum PreferencesKeys: String {
-      case savedItems
-    }
+//    enum PreferencesKeys: String {
+//      case savedItems
+//    }
     var locationManager = CLLocationManager()
+    @IBOutlet weak var toolbar: UIToolbar!
+
+//    self.toolbar.translatesAutoresizingMaskIntoConstraints = false
+//    self.view.addSubview(toolbar)
+//    
+//    //top constraint to toolbar with tableview
+//    self.toolbar.topAnchor.constraint(equalTo: tableview.bottomAnchor).isActive = true
+//
+//    //bottom constraint to toolbar with super view
+//    self.view.bottomAnchor.constraint(equalTo: toolbar.bottomAnchor).isActive = true
+//
+//    //leading constraint to toolbar with super view
+//    self.view.leadingAnchor.constraint(equalTo: toolbar.leadingAnchor).isActive = true
+//
+//    //trailing constraint with toolbar with super view
+//    self.view.trailingAnchor.constraint(equalTo: toolbar.trailingAnchor).isActive = true
+    // MARK:- TableView handlers
    // var chatidnow : String?
    
     //alazy var refreshControl = UIRefreshControl()
@@ -142,7 +159,7 @@ final class ActiveChatsVC: UITableViewController {
         }
     }
     
-    // MARK:- TableView handlers
+  
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // how many sections are in table

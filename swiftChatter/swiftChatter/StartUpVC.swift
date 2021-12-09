@@ -12,7 +12,21 @@ import Starscream
 var socket: WebSocket!
 var isConnected = false
 let server = WebSocketServer()
+class socketInfo{
+//    var messagesDict = Dictionary<String, Array<Message>>()
+    var messagesDict:[String:[Message]] = [:]
+}
     class StartUpVC: UIViewController, WebSocketDelegate{
+        func convertToDictionary(text: String) -> [String: Any]? {
+            if let data = text.data(using: .utf8) {
+                do {
+                    return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            return nil
+        }
         static let shared = StartUpVC()
         func handleError(_ error: Error?) {
             if let e = error as? WSError {
@@ -33,6 +47,27 @@ let server = WebSocketServer()
                     print("websocket is disconnected: \(reason) with code: \(code)")
                 case .text(let string):
                     print("Received text: \(string)")
+                    let message:Dictionary<String,Any?> = convertToDictionary(text: string)!
+                    print(message)
+                    let chatID:String = message["chat_id"] as! String
+                    print(message["type"])
+                    var messager = Message(type: message["type"] as? String,
+                                           message_id: message["message_id"] as? String,
+                                          first_name: message["first_name"] as? String,
+                                          last_name: message["last_name"] as? String,
+                                          username: message["username"] as? String,
+                                          content: message["content"] as? String,
+                                          timestamp: message["timestamp"] as? String,
+                                          profile_pic: message["profile_pic"] as? String,
+                                           likes: [] as? NSArray
+                                          )
+                    print(messager)
+                    let f = socketInfo()
+                    f.messagesDict[chatID, default: []].append(messager)
+                    print(f.messagesDict)
+//                    let mess = Message.init(messageID: dict["message_id"] as! String, firstName: dict["first_name"] as! String, lastName: dict["last_name"] as! String, userName: dict["username"] as! String, content: dict["content"] as! String, timestamp: dict["timestamp"] as! String, profile_pic: dict["profile_pic"] as! String)
+//                    print(mess)
+//                    socketInfo.messagesDict["hello"]?.append(mess)
                 case .binary(let data):
                     print("Received data: \(data.count)")
                 case .ping(_):
@@ -85,7 +120,7 @@ let server = WebSocketServer()
                 print("good stuff")
           
                 print(json)
-            print(socket)
+//            print(socket)
     //            let json = try?
             socket?.write(string: json)
 

@@ -6,34 +6,6 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>03549E4D-D7E0-4E5B-8982-A00E5FDB77A1</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>03549E4D-D7E0-4E5B-8982-A00E5FDB77A1.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>swiftChatter-bhfsaykimutpeidqwemhousxzjwg</string>
-			<key>timeStartedRecording</key>
-			<real>660705934.04358304</real>
-			<key>timeStoppedRecording</key>
-			<real>660705948.95965397</real>
-			<key>title</key>
-			<string>Build target swiftChatter</string>
-			<key>uniqueIdentifier</key>
-			<string>03549E4D-D7E0-4E5B-8982-A00E5FDB77A1</string>
-		</dict>
 		<key>067CFA73-F503-4B32-962B-9A8AC66642D2</key>
 		<dict>
 			<key>className</key>
@@ -146,6 +118,34 @@
 			<key>uniqueIdentifier</key>
 			<string>314DBF6C-7BD2-4271-9487-39B7D309DF8D</string>
 		</dict>
+		<key>3D7D3EBD-E8A2-4F36-9CAE-9715D0478FE3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>3D7D3EBD-E8A2-4F36-9CAE-9715D0478FE3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>Starscream-ctvoopilvkkstxgzyfdhwtujseqt</string>
+			<key>timeStartedRecording</key>
+			<real>660713153.685552</real>
+			<key>timeStoppedRecording</key>
+			<real>660713153.68585205</real>
+			<key>title</key>
+			<string>Build target Starscream</string>
+			<key>uniqueIdentifier</key>
+			<string>3D7D3EBD-E8A2-4F36-9CAE-9715D0478FE3</string>
+		</dict>
 		<key>4591213A-4360-4094-8FED-4A4F5A97DC96</key>
 		<dict>
 			<key>className</key>
@@ -201,6 +201,34 @@
 			<string>Build target FirebaseInstallations</string>
 			<key>uniqueIdentifier</key>
 			<string>4F0E6969-A680-4EA7-81C6-1C7E81C3A147</string>
+		</dict>
+		<key>5148437D-1031-4488-A5A2-248D54D481E0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>5148437D-1031-4488-A5A2-248D54D481E0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>swiftChatter-bhfsaykimutpeidqwemhousxzjwg</string>
+			<key>timeStartedRecording</key>
+			<real>660713147.41568005</real>
+			<key>timeStoppedRecording</key>
+			<real>660713153.68148398</real>
+			<key>title</key>
+			<string>Build target swiftChatter</string>
+			<key>uniqueIdentifier</key>
+			<string>5148437D-1031-4488-A5A2-248D54D481E0</string>
 		</dict>
 		<key>5284B310-4E03-4834-A29E-AF5143CFB15F</key>
 		<dict>
@@ -285,34 +313,6 @@
 			<string>Build target FirebaseCore</string>
 			<key>uniqueIdentifier</key>
 			<string>78FE8262-EAEA-4AC5-9DBC-D01792B43C80</string>
-		</dict>
-		<key>86DEBCFF-AEB1-4E14-A082-B1E979EB3618</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>86DEBCFF-AEB1-4E14-A082-B1E979EB3618.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>Starscream-ctvoopilvkkstxgzyfdhwtujseqt</string>
-			<key>timeStartedRecording</key>
-			<real>660705948.95991397</real>
-			<key>timeStoppedRecording</key>
-			<real>660705948.96013296</real>
-			<key>title</key>
-			<string>Build target Starscream</string>
-			<key>uniqueIdentifier</key>
-			<string>86DEBCFF-AEB1-4E14-A082-B1E979EB3618</string>
 		</dict>
 		<key>CEA681E2-851B-4FD2-A297-F4ECFBB86A5D</key>
 		<dict>

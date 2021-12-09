@@ -94,6 +94,7 @@ final class MessageVC: UITableViewController{
                     print(json)
         StartUpVC.shared.writeText((Any).self, json: json)
         MessageContent.text = ""
+        self.tableView.reloadData()
 //                    socket?.write(string: json)
     }
     /*
@@ -241,6 +242,10 @@ final class MessageVC: UITableViewController{
         //selectedRow = indexPath.row
         //chatt = chatts[indexPath.row]
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -8,14 +8,14 @@
 	<string>CommonCrypto</string>
 	<string>SwiftUI</string>
 	<string>FoundationNetworking</string>
-	<string>Starscream</string>
 	<string>MobileCoreServices</string>
-	<string>UIKit</string>
-	<string>Foundation</string>
 	<string>zlib</string>
-	<string>Combine</string>
 	<string>CoreLocation</string>
-	<string>SystemConfiguration</string>
+	<string>Foundation</string>
+	<string>UIKit</string>
 	<string>Network</string>
+	<string>SystemConfiguration</string>
+	<string>Starscream</string>
+	<string>Combine</string>
 </array>
 </plist>

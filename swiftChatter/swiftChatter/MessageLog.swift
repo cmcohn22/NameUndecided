@@ -68,7 +68,7 @@ final class MessageLog: ObservableObject {
         DispatchQueue.main.async {
             self.messages.removeAll()
             self.messages = [Message]()
-            for message in messagesReceived{
+            for message in messagesReceived.reversed(){
                 if message.count == self.nFields {
                     self.messages.append(Message(type: message["type"] as? String,
                                                  message_id: message["message_id"] as? String,
