@@ -15,7 +15,7 @@ final class MessageLog: ObservableObject {
                                      // instances can be created
     @Published private(set) var messages = [Message]()
     private let nFields = Mirror(reflecting: Message()).children.count
-
+    private var count : Int = 0
     private let serverUrl = "https://mnky-chat.com/"
     
     // TODO: Figure out current location
@@ -23,7 +23,17 @@ final class MessageLog: ObservableObject {
 //    let long = 0.0
     // TODO: Where am I grabbing chat_id from?
 //    var chat_id = "157ace05"
-    
+    // warning, make sure I don't append message twice. focus on the refreshing here
+    func appendfunc(chatid: String, mezzo: Message){
+        self.messages.append(mezzo)
+        socketInfo.shared.messagesDict[chatid, default: []].append(mezzo)
+        //count - 1
+        count = count + 1
+        print("cout count")
+        print(count)
+        
+        
+    }
     func get_messages(token: String, chat_id: String, lat: Double, long: Double, _ completion: ((Bool) -> ())?) {
         self.messages.removeAll()
         guard let apiUrl = URL(string: serverUrl+"api/messages/?lat=" + String(lat) + "&long=" + String(long) + "&chat_id=" + chat_id) else {
@@ -91,6 +101,9 @@ final class MessageLog: ObservableObject {
                     print("messages: Received unexpected number of fields: \(message.count) instead of \(self.nFields).")
                 }
             }
+            //possibly make this shared.count
+            self.count = socketInfo.shared.messagesDict[chat_id, default: []].count
+            print("count dict \(self.count)")
             print("MESSAGES after getMESssagescALL!!!")
             print("commented out")
             //print(self.messages)

@@ -80,12 +80,48 @@ final class MessageVC: UITableViewController{
         
     }
     @objc func loadList(notification: NSNotification){
-        //load data here
-        refreshTimeline(nil)
+        //load data here.
+        if let dict = notification.userInfo as NSDictionary? {
+                   if let mex = dict["message"] as? Message{
+                       // do something with your image
+                       MessageLog.shared.appendfunc(chatid: chat_id, mezzo: mex)
+                       //tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+                       DispatchQueue.main.async {
+                               self.tableView.reloadData()
+                           // stop the refreshing animation upon completion:
+                           self.refreshControl?.endRefreshing()
+                       }
+
+                   }
+               }
+      
+        print("pre getmessage call?")
+       // refreshTimeline(nil)
+        print("post getmessage call?")
         //alt:
         //refreshTimleline (sendmessage)
         //self.tableView.reloadData()
     }
+//    func appendfunc(){
+//        guard let currentlocation = locationManager.location else{
+//                   return
+//               }
+//        let dblLat = currentlocation.coordinate.latitude
+//        let dblLong = currentlocation.coordinate.longitude
+//        let toke = "Token \(UserStore.shared.activeUser.tokenId!)"
+//        //print("Here is the token passed into get_messages")
+//        //print(toke)
+//        MessageLog.shared.get_messages(token: toke, chat_id: chat_id, lat: dblLat, long: dblLong){ success in
+//            DispatchQueue.main.async {
+//                if success {
+//                    self.tableView.reloadData()
+//                }
+//                // stop the refreshing animation upon completion:
+//                self.refreshControl?.endRefreshing()
+//            }
+//        }
+//
+//    }
     @IBAction func SendMessage(_ sender: Any) {
         guard let currentlocation = locationManager.location else{
                    return
@@ -93,7 +129,7 @@ final class MessageVC: UITableViewController{
         let dblLat = currentlocation.coordinate.latitude
         let dblLong = currentlocation.coordinate.longitude
         let toke = "Token \(UserStore.shared.activeUser.tokenId!)"
-                    print("good stuff")
+                   // print("good stuff")
         let tents = MessageContent.text!
         let jsonObject = MessageSocket.init(contents: MessageContent.text!, chatID: chat_id, lat:dblLat, long: dblLong, type: "chat_message") //TODO Handle files
         
@@ -101,13 +137,13 @@ final class MessageVC: UITableViewController{
                             let jsonData = try! jsonEncoder.encode(jsonObject)
                             let json = String(data: jsonData, encoding: .utf8)!
         
-        print("newmessage Content \(tents)")
+        //print("newmessage Content \(tents)")
         print(json)
         StartUpVC.shared.writeText((Any).self, json: json)
         MessageContent.text = ""
         //
-        print ("full socketInfo updated \(chat_id)")
-        print(socketInfo.shared.messagesDict[chat_id])
+        //print ("full socketInfo updated \(chat_id)")
+        //print(socketInfo.shared.messagesDict[chat_id])
         //TODO: some typa thing here boy checking if didRecieve has gone thru before reloading the data
        // DispatchQueue.main.async { self.tableView.reloadData() }
 //                    socket?.write(string: json)
@@ -227,8 +263,8 @@ final class MessageVC: UITableViewController{
         let dblLat = currentlocation.coordinate.latitude
         let dblLong = currentlocation.coordinate.longitude
         let toke = "Token \(UserStore.shared.activeUser.tokenId!)"
-        print("Here is the token passed into get_messages")
-        print(toke)
+        //print("Here is the token passed into get_messages")
+        //print(toke)
         MessageLog.shared.get_messages(token: toke, chat_id: chat_id, lat: dblLat, long: dblLong){ success in
             DispatchQueue.main.async {
                 if success {
@@ -273,14 +309,14 @@ final class MessageVC: UITableViewController{
 //        let message = MessageLog.shared.messages[indexPath.row]
         let messagey = MessageLog.shared.messages[indexPath.row]
         //print("message \(indexPath.row)")
-        print(messagey)
+        //print(messagey)
 //        let f = socketInfo()
         let mesdic = socketInfo.shared.messagesDict
-        print("MESDIC")
+        //print("MESDIC")
         //print(mesdic)
-        print("CATID")
+        //print("CATID")
         //print(chat_id)
-        print("messagesDict chatid")
+        //print("messagesDict chatid")
         //print(socketInfo.shared.messagesDict[self.chat_id])
         
         let message = socketInfo.shared.messagesDict[self.chat_id]?[indexPath.row]

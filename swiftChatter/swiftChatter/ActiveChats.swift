@@ -96,15 +96,15 @@ final class ActiveChats: ObservableObject {
                 return
             }
             
-            print("HERE")
+            //print("HERE")
             let chattsReceived = jsonObj["active_chats"] as? [Dictionary<String,Any?>] ?? []
-            print(chattsReceived)
-            print(type(of: chattsReceived))
-            print("teehee")
+           // print(chattsReceived)
+            //print(type(of: chattsReceived))
+            //print("teehee")
         DispatchQueue.main.async {
             self.chatts = [Chatt]()
             for chattEntry in chattsReceived{
-                print("hi")
+                //print("hi")
                 if chattEntry.count == self.nFields {
                    let chatin = Chatt(chat_id: chattEntry["chat_id"] as? String,
                                              name: chattEntry["name"] as? String,
