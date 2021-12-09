@@ -117,6 +117,14 @@ class SignUpVC: UIViewController{
             }
 
             let responseString = String(data: data, encoding: .utf8)
+            print("Segueing")
+            do{
+                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+                let tken = json!["token"] as! String ?? "failtonke"
+                print("responseString = \(responseString)")
+                print("responseString = \(tken)")
+                UserStore.shared.setToken(token: tken)
+            }catch{ print("erroMsg") }
             print("responseString = \(responseString)")
         }
 

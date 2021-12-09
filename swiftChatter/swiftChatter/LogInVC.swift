@@ -10,13 +10,25 @@ import Foundation
 import UIKit
 import Alamofire
 
-class LogInVC: UIViewController{
+class LogInVC: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
     
     @IBOutlet weak var InvalidLogIn: UILabel!
     
+    override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            Username.delegate = self
+            Password.delegate = self
+    }
+        
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        Username.resignFirstResponder()
+        Password.resignFirstResponder()
+        return true
+    }
        
     @IBAction func Submit(_ sender: Any) {
         InvalidLogIn.text = ""
@@ -40,8 +52,15 @@ class LogInVC: UIViewController{
                         print(json)
                         print(response.response?.statusCode)
                         if(response.response?.statusCode == 200){
+                            let jsondic = json as! NSDictionary
+                            //let responseString = String(data: json, encoding: .utf8)
                             self.InvalidLogIn.text = ""
                             print("Segueing")
+                            let tken = jsondic["token"] as! String
+                            print("USERTOKEN SUCSIG")
+                            //print(self.userToken)
+                            print(tken)
+                            UserStore.shared.setToken(token: tken)
                             self.performSegue(withIdentifier: "ID1", sender: self)
                         }
                         else{

@@ -1,100 +1,54 @@
 //
-//  ChattStore.swift
+//  UserStore.swift
 //  swiftChatter
 //
-//  Created by sugih on 11/21/20.
-//  Copyright © 2020 The Regents of the University of Michigan. All rights reserved.
+//  Created by Mac Pro PD on 12/6/21.
+//  Copyright © 2021 The Regents of the University of Michigan. All rights reserved.
 //
 import Foundation
 import UIKit
 import Alamofire
+import CoreLocation
 
 
 final class UserStore: ObservableObject {
     static let shared = UserStore() // create one instance of the class to be shared
     private init() {}                // and make the constructor private so no other
                                      // instances can be created
-    @Published private(set) var activeUser = User.init()
+    @Published private(set) var activeUser: User = User()
 
     private let serverUrl = "https://mnky-chat.com/api/"
-    
-    func createUser(_ user: User, profile_pic: UIImage?)  {
-        guard let apiUrl = URL(string: serverUrl+"signup/") else {
-            print("createUser: Bad URL")
-            return
-        }
-        var tokenVal: String?
+    func setToken(token: String){
+        self.activeUser.tokenId = token
         
-        AF.upload(multipartFormData: { mpFD in
-                    if let username = user.username?.data(using: .utf8) {
-                        mpFD.append(username, withName: "username")
-                    }
-                    if let password = user.password?.data(using: .utf8) {
-                        mpFD.append(password, withName: "password")
-                    }
-                    if let first_name = user.first_name?.data(using: .utf8) {
-                        mpFD.append(first_name, withName: "first_name")
-                    }
-                    if let last_name = user.last_name?.data(using: .utf8) {
-                        mpFD.append(last_name, withName: "last_name")
-                    }
-                    if let email = user.email?.data(using: .utf8) {
-                        mpFD.append(email, withName: "email")
-                    }
-                    if let profile_pic = profile_pic?.jpegData(compressionQuality: 1.0) {
-                        mpFD.append(profile_pic, withName: "profile_pic", fileName: "profile_pic", mimeType: "image/jpeg")
-                    }
-                }, to: apiUrl, method: .post).response { response in
-                    switch (response.result) {
-                    case .success:
-                        print("createUser: new user created!")
-                    case .failure:
-                        print("createUser: new user failed")
-                    }
-                }
-        
-        
-        let actUser = User(username: user.username, password: user.password, first_name: user.first_name, last_name: user.last_name, email: user.email, profile_pic: user.profile_pic, lat: nil, long: nil, tokenId: nil)
-        
-        self.activeUser = actUser
     }
-    
-    @available(iOS 15.0.0, *)
-    func login(_ user: User) async {
-        let jsonObj = ["username": user.username,
-                       "password": user.password]
-        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
-            print("login: jsonData serialization error")
+    func getUserInfo()  {
+        guard let apiUrl = URL(string: serverUrl+"user-info/") else {
+            print("getUserInfo: Bad URL")
             return
         }
+        print("Token \(self.activeUser.tokenId)")
         
-        guard let apiUrl = URL(string: serverUrl+"login/") else {
-            print("login: Bad URL")
-            return
-        }
-        var request = URLRequest(url: apiUrl)
-        request.httpMethod = "POST"
-        request.httpBody = jsonData
+         let tokenHeaders: HTTPHeaders = [
+            "Authorization": "Token \(self.activeUser.tokenId)"
+        ]
         
-        do {
-            let (_, response) = try await URLSession.shared.data(for: request)
+        AF.request(apiUrl, method: .get, headers: tokenHeaders).responseJSON{
+            (response) in
+            print(response)
             
-            if let data = response as? HTTPURLResponse{
-                let dataString = String(data: (data.value(forKey: "token") as! Data), encoding: .utf8)
-                print("Response data string:\n \(dataString)")
+            if let result = response.value{
+                let JSON = result as! NSDictionary
+                print(JSON)
+                let usernme = (JSON.object(forKey: "username") as! String)
+                let emal = (JSON.object(forKey: "email") as! String)
+                let firstName = (JSON.object(forKey: "first_name") as! String)
+                let lastName = (JSON.object(forKey: "last_name") as! String)
+                let tempUser = User(username: usernme, first_name: firstName, last_name: lastName, email: emal, tokenId: self.activeUser.tokenId)
+                self.activeUser = tempUser
             }
-
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                print("login: HTTP STATUS: \(httpStatus.statusCode)")
-                return
-            }
-        } catch {
-            print("login: NETWORKING ERROR")
         }
-        
-        
         
     }
     
 }
-

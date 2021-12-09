@@ -42,7 +42,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-n6-Wzg" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hvh-n6-Wzg" id="nV7-wc-gvZ">
@@ -132,7 +132,7 @@
         <!--StartViewController-->
         <scene sceneID="ewQ-65-COV">
             <objects>
-                <viewController title="StartViewController" id="dXJ-b2-v0o" sceneMemberID="viewController">
+                <viewController title="StartViewController" id="dXJ-b2-v0o" customClass="StartUpVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gyc-kX-23V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,7 +441,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
@@ -712,7 +712,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="arrow.up" catalog="system"/>
                                     <connections>
-                                        <action selector="SendMessage:" destination="32I-zu-pcC" eventType="touchUpInside" id="TaT-4u-tsJ"/>
+                                        <action selector="SendMessage:" destination="32I-zu-pcC" eventType="touchUpInside" id="jE0-aO-cv5"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -793,7 +793,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="MessageContent" destination="VEe-nc-feE" id="Qgt-pG-EtV"/>
+                        <outlet property="MessageContent" destination="S58-2c-ZXG" id="b2O-yZ-16x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcC-0X-WYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
