@@ -25,7 +25,6 @@ struct ChatUser {
 //        lat = "\(currentLocation.coordinate.latitude)"
 //        long = "\(currentLocation.coordinate.longitude)"
 //    }
-    
 }
 
 final class ChatSettings: ObservableObject {
@@ -36,11 +35,6 @@ final class ChatSettings: ObservableObject {
     private let nFields = Mirror(reflecting: ChatUser()).children.count
     
     private let serverUrl = "https://mnky-chat.com/"
-    
-//    let lat = 0.0
-//    let long = 0.0
-    
-
     
     // Retrieve chat info to populate chatUser table cells
     func get_chat_info(chat_id: String, chatName: String, chatDesc: String, _ completion: ((Bool) -> ())?) {
@@ -54,7 +48,7 @@ final class ChatSettings: ObservableObject {
 
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "GET"
-        request.addValue("Token bbd9e8de6701f341cd96302a19b98c29e1d62f54", forHTTPHeaderField: "Authorization")
+        request.addValue("Token \(UserStore.shared.activeUser.tokenId)", forHTTPHeaderField: "Authorization")
 
         URLSession.shared.dataTask(with: request) { data, response, error in
             var success = false
@@ -73,20 +67,12 @@ final class ChatSettings: ObservableObject {
                 print("chat-info: failed JSON deserialization")
                 return
             }
-
-            
-            print("chat info besides USERS MNKY MNKY")
 //            self.chat_id = jsonObj["chat_id"] as! String
 //            self.chat_name = jsonObj["name"] as! String
 //            self.chat_description = jsonObj["description"] as! String
-            print("HERE IS USERS")
             let chatUserInfoReceived = jsonObj["users"] as? [Dictionary<String,Any?>] ?? []
-            print(chatUserInfoReceived)
-            print(type(of: chatUserInfoReceived))
-//            print("teehee")
-            
-//            self.chat_id = chatInfoReceived["chat_id"] as? String
-            
+//            print(chatUserInfoReceived)
+//            print(type(of: chatUserInfoReceived))
             DispatchQueue.main.async {
                 self.chatUsers = [ChatUser]()
                 for userInfo in chatUserInfoReceived{
@@ -100,7 +86,7 @@ final class ChatSettings: ObservableObject {
                         print("chat-info: Received unexpected number of fields: \(chatUserInfoReceived.count) instead of \(self.nFields).")
                     }
                 }
-                print(self.chatUsers)
+                //print(self.chatUsers)
             }
             success = true // for completion(success)
         }.resume()

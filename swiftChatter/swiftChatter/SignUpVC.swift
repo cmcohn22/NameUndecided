@@ -83,7 +83,6 @@ class SignUpVC: UIViewController{
         if validEmail && userName != "" && pass != "" && firstName != "" && lastName != "" && profilePic != ""{
           self.performSegue(withIdentifier: "ID2", sender: self)
         }
-//        else{
         
         let url = URL(string: "https://mnky-chat.com/api/signup/")!
         var request = URLRequest(url: url)
@@ -122,7 +121,7 @@ class SignUpVC: UIViewController{
                 let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
                 let tken = json!["token"] as! String ?? "failtonke"
                 print("responseString = \(responseString)")
-                print("responseString = \(tken)")
+               print("responseString = \(tken)")
                 UserStore.shared.setToken(token: tken)
                 StartUpVC.shared.makeConnect()
             }catch{ print("erroMsg") }
@@ -143,22 +142,4 @@ class SignUpVC: UIViewController{
             "profile_pic" : profilePic,
         ]
         }
-//        postRequest.httpBody = params
-        
-//    }
-    
-    
-//
-//    @IBOutlet weak var Submitt: UIButton!
-//    @IBAction func Submit(_ sender: Any) {
-//        print("hello")
-//        let userName: String = Username.text!
-//        let pass: String = Password.text!
-//        print(userName)
-//        print(pass)
-//        TestLabel.text = "\(userName)"
-//
-//            }
-//}
-
 }

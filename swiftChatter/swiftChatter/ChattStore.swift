@@ -27,45 +27,34 @@ final class ChattStore: ObservableObject {
             print("createChatt: Bad URL")
             return
         }
-        print("tokenagoisdjfoai")
-        print(UserStore.shared.activeUser.tokenId)
-        print(UserStore.shared.activeUser.tokenId!)
         
         AF.upload(multipartFormData: { mpFD in
                     if let name = chatt.name?.data(using: .utf8) {
                         mpFD.append(name, withName: "name")
-                        print(name)
+                        //print(name)
                     }
                     if let description = chatt.description?.data(using: .utf8) {
                         mpFD.append(description, withName: "description")
-                        print(description)
+                        //print(description)
                     }
                     if let lat = chatt.lat {
                         mpFD.append("\(lat)".data(using: String.Encoding.utf8)!, withName: "lat")
-                        print(lat)
+                        //print(lat)
                     }
                     if let long = chatt.long{
                         mpFD.append("\(long)".data(using: String.Encoding.utf8)!, withName: "long")
-                        print(long)
+                        //print(long)
                     }
                     if let radius = chatt.radius{
                         mpFD.append("\(radius)".data(using: String.Encoding.utf8)!, withName: "radius")
-                        print(radius)
+                            //print(radius)
                     }
                     if let image = image?.jpegData(compressionQuality: 1.0) {
                         mpFD.append(image, withName: "image", fileName: "chattImage", mimeType: "image/jpeg")
                     }
-        }, to: apiUrl, method: .post, headers: tokenHeaders).responseJSON(completionHandler: { data in //response in
-                    //print(response)
+        }, to: apiUrl, method: .post, headers: tokenHeaders).responseJSON(completionHandler: { data in
                     print(data)
                     print("anticipated")
-//                    {"chat_id":"71193ea5","name":"acmemaf","image":"https://mnky-chat-static.s3.amazonaws.com/media/1873963b-e07a-4800-b18f-13bb9ee094b2.jpeg"}
-//                    switch (response.result) {
-//                    case .success:
-//                        print("createChatt: new chat created!")
-//                    case .failure:
-//                        print("createChatt: new chat failed")
-//                    }
                 })
     }
     

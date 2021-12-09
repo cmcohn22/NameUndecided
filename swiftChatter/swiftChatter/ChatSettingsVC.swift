@@ -14,8 +14,6 @@ final class ChatUsersTableCell: UITableViewCell {
     @IBOutlet weak var adminLabel: UILabel!
     
 }
-
-//, UITableViewDelegate, UITableViewDataSource
 final class ChatSettingsVC: UIViewController {
     
     var chat_id : String?

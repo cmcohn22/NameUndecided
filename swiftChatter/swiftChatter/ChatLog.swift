@@ -39,28 +39,6 @@ final class ChatLog: ObservableObject {
         // TODO: GET RID OF THIS LATER WHEN WE HAVE SIGN UP AND LOGIN WORKING ^
         request.httpMethod = "GET"
         
-//        let locationManager = CLLocationManager()
-//        locationManager.requestAlwaysAuthorization()
-//
-//        var currentLocation: CLLocation!
-//
-//        if
-//            CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-//            CLLocationManager.authorizationStatus() == .authorizedAlways
-//        {
-//            currentLocation = locManager.location
-//        }
-//
-//
-//        let jsonObj = ["lat": currentLocation.coordinate.longitude,
-//                       "long": currentLocation.coordinate.latitude]
-//        let jsonObj = ["lat": 0.0, "long": 0.0]
-//        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
-//            print("active-chats: jsonData serialization error")
-//            return
-//        }
-//
-//        request.httpBody = jsonData
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             var success = false

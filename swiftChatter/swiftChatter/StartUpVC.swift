@@ -45,11 +45,6 @@ class socketInfo{
                 print("websocket encountered an error")
             }
         }
-//        func onEvent(event: WebSocketEvent){
-//            if(event == .text(let string)){
-//
-//            }
-//        }
         func didReceive(event: WebSocketEvent, client: WebSocket) {
                 switch event {
                 case .connected(let headers):
@@ -61,11 +56,7 @@ class socketInfo{
                 case .text(let string):
                     print("Received text: \(string)")
                     let message:Dictionary<String,Any?> = convertToDictionary(text: string)!
-                    //print("now print message!!!I!UI!H")
-                    //print(message)
                     let chatID:String = message["chat_id"] as! String
-                    //print("now print message type")
-                    //print(message["type"])
                     var messager = Message(type: message["type"] as? String,
                                            message_id: message["message_id"] as? String,
                                           first_name: message["first_name"] as? String,
@@ -76,34 +67,15 @@ class socketInfo{
                                           profile_pic: message["profile_pic"] as? String,
                                            likes: [] as? NSArray
                                           )
-                    print("messager yessirrr boy")
-                   // print(messager)
-                    //print("messageLog.shared.messages aka this should have all the messages from the get message request")
-                    //print(MessageLog.shared.messages)
-                    //print("dict pre add")
-                    //print(socketInfo.shared.messagesDict)
-                    //TODO: This is appending somewhat erratically, make it consistent
-                   // print("did receive append messager")
-                    //might be double calling
                     //TODO: UNCOMMENT THIS PROBS
                     //socketInfo.shared.messagesDict[chatID, default: []].append(messager)
                    //TODO: the following line mighy be bad (messages append)
-                    //MessageLog.shared.messages.append(messager)
-                    //ERROR: Only Seems to be appending robert manning test message, but when i return and re-call get, the properly sent message shows up
                     //TODO: IMMEADIATELY make call to the table view to return a new cell at the bottom, with appropriate chat info. auto refresh.
-                    //print("dict post add")
-                    //print(socketInfo.shared.messagesDict)
                     
                     //TODO: must ponder, how is the table being populated, and what does reloading the data do?
-                        // somehow make it so i can pass messager thru this
-//                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "notificationName"), object: nil, messag: Message)
-//                     /
                     let mesgInf : [String:Message] = ["message": messager]
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil, userInfo: mesgInf)
-                    
-//                    let mess = Message.init(messageID: dict["message_id"] as! String, firstName: dict["first_name"] as! String, lastName: dict["last_name"] as! String, userName: dict["username"] as! String, content: dict["content"] as! String, timestamp: dict["timestamp"] as! String, profile_pic: dict["profile_pic"] as! String)
-//                    print(mess)
-//                    socketInfo.messagesDict["hello"]?.append(mess)
+                
                 case .binary(let data):
                     print("Received data: \(data.count)")
                 case .ping(_):
@@ -124,18 +96,9 @@ class socketInfo{
         
    
     override func viewDidLoad() {
-        //REQUEST LOCATION AND TRY TO DO SOMETING WITH TOKEN ID HERE
         
         super.viewDidLoad()
-//        var request = URLRequest(url: URL(string: "wss://mnky-chat.com/ws/chat/")!)
-//                request.timeoutInterval = 5
-//                socket = WebSocket(request: request)
-//                socket.delegate = self
-        
-//        request.setValue("Everything is Awesome!", forHTTPHeaderField: "My-Awesome-Header")
         locationManager.requestAlwaysAuthorization()
-        //guard let currentlocation
-        //locationManagerDidChangeAuthorization(locationManger)
 
         
     }
@@ -172,13 +135,9 @@ class socketInfo{
                 print("write text")
           
                 print(json)
-//            print(socket)
-    //            let json = try?
             socket?.write(string: json)
             //TODO: need to see where "socket write" goes. likely have to call a function that updates the shared.messagesDict
             //
-
-                
             }
         func disconnect(_ sender: Any) {
             if isConnected {

@@ -60,7 +60,6 @@ final class ChatUsersVC: UITableViewController {
             fatalError("No reusable cell!")
         }
 
-        print("THIS IS BEING CALLEDJUICEJUIJUIJUIJUIJUIJUIJUIJUI")
         let chatUser = ChatSettings.shared.chatUsers[indexPath.row]
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
         cell.fullnameLabel.text = "\(chatUser.first_name) \(chatUser.last_name)"

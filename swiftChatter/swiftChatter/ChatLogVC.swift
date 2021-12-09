@@ -41,18 +41,8 @@ final class ChatLogVC: UITableViewController {
         guard let currentlocation = locationManager.location else{
             return
         }
-        print(currentlocation.coordinate.latitude)
-        print(currentlocation.coordinate.longitude)
-//        var utoken : String
-//        if((LogInVC.shared.userToken) != nil){
-//            utoken = LogInVC.shared.userToken ?? "faillog"
-//        } else if ((SignUpVC.shared.userToken) != nil){
-//            utoken = SignUpVC.shared.userToken ?? "failsign"
-//        }
-//        else{
-//            utoken = "fail"//"154685558fb3bb2d33ec51dbf5918e76ade92fcb"
-//        }
-        //temporary value BELOW
+//        print(currentlocation.coordinate.latitude)
+//        print(currentlocation.coordinate.longitude)
         ChatLog.shared.get_chat_log(token: UserStore.shared.activeUser.tokenId, lat: currentlocation.coordinate.latitude, long: currentlocation.coordinate.longitude) { success in
             DispatchQueue.main.async {
                 if success {

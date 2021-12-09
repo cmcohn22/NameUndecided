@@ -27,10 +27,10 @@ final class UserStore: ObservableObject {
             print("getUserInfo: Bad URL")
             return
         }
-        print("Token \(self.activeUser.tokenId)")
+        print("Token \(UserStore.shared.activeUser.tokenId)")
         
          let tokenHeaders: HTTPHeaders = [
-            "Authorization": "Token \(self.activeUser.tokenId)"
+            "Authorization": "Token \(UserStore.shared.activeUser.tokenId)"
         ]
         
         AF.request(apiUrl, method: .get, headers: tokenHeaders).responseJSON{
