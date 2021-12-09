@@ -81,7 +81,7 @@ final class ActiveChatsVC: UITableViewController {
         // 3
         //self.geofences = ActiveChats.shared.geofences
         //loadAllGeofences()
-        print("viewdidload geofences:")
+        //print("viewdidload geofences:")
             //print(geofences)
 //        let currentlocation = locationManager.location
         refreshTimeline(nil)

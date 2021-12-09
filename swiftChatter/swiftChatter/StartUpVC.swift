@@ -43,6 +43,11 @@ class socketInfo{
                 print("websocket encountered an error")
             }
         }
+//        func onEvent(event: WebSocketEvent){
+//            if(event == .text(let string)){
+//                
+//            }
+//        }
         func didReceive(event: WebSocketEvent, client: WebSocket) {
                 switch event {
                 case .connected(let headers):
@@ -84,6 +89,10 @@ class socketInfo{
                     //TODO: IMMEADIATELY make call to the table view to return a new cell at the bottom, with appropriate chat info. auto refresh.
                     print("dict post add")
                     print(socketInfo.shared.messagesDict)
+                    
+                    //TODO: must ponder, how is the table being populated, and what does reloading the data do?
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+                    
 //                    let mess = Message.init(messageID: dict["message_id"] as! String, firstName: dict["first_name"] as! String, lastName: dict["last_name"] as! String, userName: dict["username"] as! String, content: dict["content"] as! String, timestamp: dict["timestamp"] as! String, profile_pic: dict["profile_pic"] as! String)
 //                    print(mess)
 //                    socketInfo.messagesDict["hello"]?.append(mess)

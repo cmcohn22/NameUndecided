@@ -54,6 +54,8 @@ final class MessageVC: UITableViewController{
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
+
 //        var request = URLRequest(url: URL(string: "wss://mnky-chat.com/ws/chat/")!)
 //                request.timeoutInterval = 5
 //                socket = WebSocket(request: request)
@@ -76,6 +78,13 @@ final class MessageVC: UITableViewController{
         refreshTimeline(nil)
         
         
+    }
+    @objc func loadList(notification: NSNotification){
+        //load data here
+        refreshTimeline(nil)
+        //alt:
+        //refreshTimleline (sendmessage)
+        //self.tableView.reloadData()
     }
     @IBAction func SendMessage(_ sender: Any) {
         guard let currentlocation = locationManager.location else{
@@ -100,7 +109,7 @@ final class MessageVC: UITableViewController{
         print ("full socketInfo updated \(chat_id)")
         print(socketInfo.shared.messagesDict[chat_id])
         //TODO: some typa thing here boy checking if didRecieve has gone thru before reloading the data
-        self.tableView.reloadData()
+       // DispatchQueue.main.async { self.tableView.reloadData() }
 //                    socket?.write(string: json)
     }
     /*
@@ -263,20 +272,20 @@ final class MessageVC: UITableViewController{
 
 //        let message = MessageLog.shared.messages[indexPath.row]
         let messagey = MessageLog.shared.messages[indexPath.row]
-        print("message \(indexPath.row)")
+        //print("message \(indexPath.row)")
         print(messagey)
 //        let f = socketInfo()
         let mesdic = socketInfo.shared.messagesDict
         print("MESDIC")
-        print(mesdic)
+        //print(mesdic)
         print("CATID")
-        print(chat_id)
+        //print(chat_id)
         print("messagesDict chatid")
-        print(socketInfo.shared.messagesDict[self.chat_id])
+        //print(socketInfo.shared.messagesDict[self.chat_id])
         
         let message = socketInfo.shared.messagesDict[self.chat_id]?[indexPath.row]
-        print("here comes the message \(indexPath.row)")
-        print(message)
+        //print("here comes the message \(indexPath.row)")
+        //print(message)
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
         cell.firstnameLabel.text = message?.first_name
         cell.lastnameLabel.text = message?.last_name

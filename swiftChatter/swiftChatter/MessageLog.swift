@@ -30,6 +30,7 @@ final class MessageLog: ObservableObject {
                print("messages: Bad URL")
                return
            }
+        print("Get Messages CALLED!!!!!!!!")
         var request = URLRequest(url: apiUrl)
 //        request.addValue("Token 154685558fb3bb2d33ec51dbf5918e76ade92fcb", forHTTPHeaderField: "Authorization")
         
@@ -37,9 +38,9 @@ final class MessageLog: ObservableObject {
         // TODO: GET RID OF THIS LATER WHEN WE HAVE SIGN UP AND LOGIN WORKING ^
         request.httpMethod = "GET"
     
-        print("REQUETO ")
-        print(request)
-        print(token)
+        //print("REQUETO ")
+        //print(request)
+        //print(token)
         URLSession.shared.dataTask(with: request) { data, response, error in
             var success = false
             defer { completion?(success) }
@@ -61,10 +62,10 @@ final class MessageLog: ObservableObject {
 
             print(jsonObj)
             let messagesReceived = jsonObj["messages"] as? [Dictionary<String,Any?>] ?? []
-            print("messagesReceived: ")
-            print(messagesReceived)
-            print("end")
-            print(type(of: messagesReceived))
+            //print("messagesReceived: ")
+            //print(messagesReceived)
+            //print("end")
+            //print(type(of: messagesReceived))
         DispatchQueue.main.async {
             self.messages.removeAll() //POSSIBLY COMMENT OUT
             //MAybe???
@@ -91,7 +92,8 @@ final class MessageLog: ObservableObject {
                 }
             }
             print("MESSAGES after getMESssagescALL!!!")
-            print(self.messages)
+            print("commented out")
+            //print(self.messages)
         }
             success = true // for completion(success)
         }.resume()

@@ -49,17 +49,17 @@ class LogInVC: UIViewController, UITextFieldDelegate{
                 case .success(_):
                     if let json = response.value
                     {
-                        print(json)
-                        print(response.response?.statusCode)
+                        //print(json)
+                        //print(response.response?.statusCode)
                         if(response.response?.statusCode == 200){
                             let jsondic = json as! NSDictionary
                             //let responseString = String(data: json, encoding: .utf8)
                             self.InvalidLogIn.text = ""
-                            print("Segueing")
+                           // print("Segueing")
                             let tken = jsondic["token"] as! String
-                            print("USERTOKEN SUCSIG")
+                            //print("USERTOKEN SUCSIG")
                             //print(self.userToken)
-                            print(tken)
+                          //  print(tken)
                             UserStore.shared.setToken(token: tken)
                             self.performSegue(withIdentifier: "ID1", sender: self)
                         }
