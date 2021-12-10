@@ -2,7 +2,7 @@
 
 Backend repo: https://github.com/cturco44/mnky_chat/
 
-<img src= "https://drive.google.com/file/d/1htDW3qoTra-8T9XGjKmoNzKLmfgtheHu/view?usp=sharing">
+![This is an image](https://drive.google.com/file/d/1htDW3qoTra-8T9XGjKmoNzKLmfgtheHu/view?usp=sharing)
 
 # UM EECS441§3&4 Template
 
