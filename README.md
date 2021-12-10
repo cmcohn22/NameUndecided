@@ -15,6 +15,7 @@ Demo Video: https://youtu.be/tN5UAaUq6x8
 
 [grade_sheet]: https://docs.google.com/spreadsheets/d/1X3MaZ2m3UsdjcJARJQvdTjxElceTxeJx2uY92idq3xk/edit?usp=sharing
 [team_contract]: https://docs.google.com/document/d/1YL6lX2RmaLtHDfeRCVXXIFOjAGVMu9O5j3gxOPFHA2Y/edit?usp=sharing
-[demo_page]: https://www.youtube.com/watch?v=VIcOGEhsXGM&feature=youtu.be
-[wiki_page]: https://github.com/eecs441staff/441template/wiki
-[process_page]: https://trello.com/b/MyPhHMGd/441template
+[demo_page]: https://youtu.be/tN5UAaUq6x8
+[wiki_page]: https://github.com/cmcohn22/NameUndecided/wiki
+[process_page]: https://trello.com/b/52iqpLrr/nameundecided
+
