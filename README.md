@@ -4,7 +4,7 @@ Backend repo: https://github.com/cturco44/mnky_chat/
 
 ![Team Slide](https://github.com/cmcohn22/NameUndecided/blob/mergeWithoutCam/Screen%20Shot%202021-12-10%20at%204.52.05%20PM.png?raw=true)
 
-# UM EECS441§3&4 Template
+# Buttons to more Team Information
 
 | Gradesheet | Team Info | Demo  |  Wiki |  Trello  |
 |:----------:|:---------:|:-----:|:-----:|:--------:|
