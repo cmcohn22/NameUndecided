@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dXJ-b2-v0o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -131,59 +131,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEr-Fi-TuQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="486.95652173913049" y="85.714285714285708"/>
-        </scene>
-        <!--StartViewController-->
-        <scene sceneID="ewQ-65-COV">
-            <objects>
-                <viewController title="StartViewController" id="dXJ-b2-v0o" customClass="StartUpVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gyc-kX-23V">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MNKY Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYw-Nh-InY">
-                                <rect key="frame" x="112" y="438" width="190" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VS-eR-Z1W">
-                                <rect key="frame" x="84" y="530" width="246" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="kWJ-hj-GnQ"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log In"/>
-                                <connections>
-                                    <segue destination="0Cf-gJ-mWb" kind="show" id="L9m-KC-IK0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yc-tG-v7N">
-                                <rect key="frame" x="169.5" y="688" width="75" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
-                                <connections>
-                                    <segue destination="CPU-Oq-a7B" kind="show" id="1gB-vv-WE4"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="1QR-S1-j7Q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="centerX" secondItem="1yc-tG-v7N" secondAttribute="centerX" id="5PD-Mt-RV9"/>
-                            <constraint firstItem="CYw-Nh-InY" firstAttribute="top" secondItem="1QR-S1-j7Q" secondAttribute="top" constant="394" id="FOI-Cu-1qX"/>
-                            <constraint firstItem="1yc-tG-v7N" firstAttribute="top" secondItem="5VS-eR-Z1W" secondAttribute="bottom" constant="84" id="LFS-pg-Ui0"/>
-                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="top" secondItem="CYw-Nh-InY" secondAttribute="bottom" constant="72" id="OgF-fO-MlJ"/>
-                            <constraint firstItem="CYw-Nh-InY" firstAttribute="leading" secondItem="1QR-S1-j7Q" secondAttribute="leading" constant="112" id="YsW-ph-yEY"/>
-                            <constraint firstItem="CYw-Nh-InY" firstAttribute="centerY" secondItem="Gyc-kX-23V" secondAttribute="centerY" id="eHA-v2-n1s"/>
-                            <constraint firstItem="CYw-Nh-InY" firstAttribute="centerX" secondItem="Gyc-kX-23V" secondAttribute="centerX" id="q3B-GP-1hS"/>
-                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="centerX" secondItem="CYw-Nh-InY" secondAttribute="centerX" id="t45-76-iUU"/>
-                            <constraint firstItem="5VS-eR-Z1W" firstAttribute="leading" secondItem="1QR-S1-j7Q" secondAttribute="leading" constant="84" id="w4e-Hy-TxX"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YNd-Uf-PgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2365.217391304348" y="179.46428571428569"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="JkG-vB-GvI">
@@ -1138,6 +1085,54 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
             </objects>
             <point key="canvasLocation" x="2070" y="86"/>
         </scene>
+        <!--StartViewController-->
+        <scene sceneID="dvC-cY-dHv">
+            <objects>
+                <viewController title="StartViewController" id="rGg-ux-B8X" customClass="StartUpVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L1x-RE-SvS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrY-df-xq5">
+                                <rect key="frame" x="290" y="637" width="75" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                <connections>
+                                    <segue destination="CPU-Oq-a7B" kind="show" id="ujD-ng-6wN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSU-Pz-I4z">
+                                <rect key="frame" x="58" y="637" width="63.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                <connections>
+                                    <segue destination="0Cf-gJ-mWb" kind="show" id="2jb-3d-UrQ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="MNKY Chat LogoLogo.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="WcQ-Tz-z7W">
+                                <rect key="frame" x="0.0" y="233" width="414" height="306"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gej-L0-Oau"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vSU-Pz-I4z" firstAttribute="leading" secondItem="Gej-L0-Oau" secondAttribute="leading" constant="58" id="Acv-Wd-xJc"/>
+                            <constraint firstItem="zrY-df-xq5" firstAttribute="leading" secondItem="vSU-Pz-I4z" secondAttribute="trailing" constant="168.5" id="Gdb-eo-bKi"/>
+                            <constraint firstItem="Gej-L0-Oau" firstAttribute="trailing" secondItem="zrY-df-xq5" secondAttribute="trailing" constant="49" id="K9V-As-9wm"/>
+                            <constraint firstItem="vSU-Pz-I4z" firstAttribute="top" secondItem="WcQ-Tz-z7W" secondAttribute="bottom" constant="98" id="L3p-vl-DZr"/>
+                            <constraint firstItem="WcQ-Tz-z7W" firstAttribute="centerX" secondItem="L1x-RE-SvS" secondAttribute="centerX" id="MDI-s8-VUJ"/>
+                            <constraint firstItem="Gej-L0-Oau" firstAttribute="bottom" secondItem="vSU-Pz-I4z" secondAttribute="bottom" constant="194" id="YuL-MK-Qay"/>
+                            <constraint firstItem="zrY-df-xq5" firstAttribute="top" secondItem="WcQ-Tz-z7W" secondAttribute="bottom" constant="98" id="jNZ-Ma-boL"/>
+                            <constraint firstItem="WcQ-Tz-z7W" firstAttribute="leading" secondItem="Gej-L0-Oau" secondAttribute="leading" id="kzq-Cc-MdN"/>
+                            <constraint firstItem="WcQ-Tz-z7W" firstAttribute="top" secondItem="Gej-L0-Oau" secondAttribute="top" constant="189" id="mzw-GG-QIw"/>
+                            <constraint firstItem="Gej-L0-Oau" firstAttribute="bottom" secondItem="zrY-df-xq5" secondAttribute="bottom" constant="194" id="otU-sY-Uji"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaB-9Y-WcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2365.217391304348" y="179.46428571428569"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ndF-JC-799"/>
@@ -1147,6 +1142,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
     <resources>
         <image name="0.circle" catalog="system" width="128" height="121"/>
         <image name="5.circle" catalog="system" width="128" height="121"/>
+        <image name="MNKY Chat LogoLogo.jpeg" width="146.8800048828125" height="104.87999725341797"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="camera" catalog="system" width="128" height="94"/>
