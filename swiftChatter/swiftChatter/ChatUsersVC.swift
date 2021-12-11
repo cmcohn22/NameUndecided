@@ -8,6 +8,14 @@
 
 import UIKit
 
+
+final class ChatUsersTableCell: UITableViewCell {
+
+    @IBOutlet weak var fullnameLabel: UILabel!
+    @IBOutlet weak var adminLabel: UILabel!
+
+}
+
 final class ChatUsersVC: UITableViewController {
     
     override func viewDidLoad() {

@@ -73,6 +73,10 @@ final class ChatLogVC: UITableViewController {
         //chatt = chatts[indexPath.row]
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       return 80
+    }
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // populate a single cell

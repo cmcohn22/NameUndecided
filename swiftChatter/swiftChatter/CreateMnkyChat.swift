@@ -1,5 +1,5 @@
 //
-//  CreateMnkyChat.swift
+// CreateMnkyChat.swift
 //  swiftChatter
 //
 //  Created by sugih on 7/24/20.
@@ -10,21 +10,58 @@ import CoreLocation
 
 final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate, CLLocationManagerDelegate {
 
-    lazy var locationmanager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         chattname.delegate = self
         chattdescription.delegate = self
-        locationmanager.requestAlwaysAuthorization()
     }
+    
+    var locationManager = CLLocationManager()
+    var userLocation: CLLocation!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        determineMyCurrentLocation()
+    }
+    func determineMyCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+            //locationManager.startUpdatingHeading()
+        }
+    }
+
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         chattname.resignFirstResponder()
         chattdescription.resignFirstResponder()
         return true
     }
-
+        
+        
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            userLocation = locations[0] as CLLocation
+            
+            // Call stopUpdatingLocation() to stop listening for location updates,
+            // other wise this function will be called every time when user location changes.
+            
+           // manager.stopUpdatingLocation()
+            
+            print("user latitude = \(userLocation.coordinate.latitude)")
+            print("user longitude = \(userLocation.coordinate.longitude)")
+        }
+        
+        func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+        {
+            print("Error \(error)")
+        }
     
     var radiusIn: Double!
     @IBOutlet weak var chattname: UITextField!
@@ -36,17 +73,17 @@ final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func submitNewChatt(_ sender: Any) {
-        let currentlocation = locationmanager.location
+        let currentlocation = locationManager.location
         let chatt = Chatt(name: self.chattname.text,
                           description: self.chattdescription.text,
                           lat: currentlocation?.coordinate.latitude,
                           long: currentlocation?.coordinate.longitude,
                           radius: radiusIn)
-//        print(currentlocation?.coordinate.latitude)
-//        print(currentlocation?.coordinate.longitude)
-//        print(chatt.lat as Any)
-//        print(chatt.long as Any)
-//        print(chatt.radius as Any)
+        print(currentlocation?.coordinate.latitude)
+        print(currentlocation?.coordinate.longitude)
+        print(chatt.lat as Any)
+        print(chatt.long as Any)
+        print(chatt.radius as Any)
 
         ChattStore.shared.createChatt(chatt, image: postImage.image)
     }

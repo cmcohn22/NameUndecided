@@ -8,12 +8,6 @@
 
 import UIKit
 
-final class ChatUsersTableCell: UITableViewCell {
-    
-    @IBOutlet weak var fullnameLabel: UILabel!
-    @IBOutlet weak var adminLabel: UILabel!
-    
-}
 final class ChatSettingsVC: UIViewController {
     
     var chat_id : String?

@@ -9,7 +9,26 @@
 import Foundation
 import UIKit
 
-class SignUpVC: UIViewController{
+class SignUpVC: UIViewController, UITextFieldDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            
+        Email.delegate = self
+        FirstName.delegate = self
+        LastName.delegate = self
+        Username.delegate = self
+        Password.delegate = self
+    }
+        
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        Email.resignFirstResponder()
+        FirstName.resignFirstResponder()
+        LastName.resignFirstResponder()
+        Username.resignFirstResponder()
+        Password.resignFirstResponder()
+        return true
+    }
     
     
     @IBOutlet weak var Email: UITextField!

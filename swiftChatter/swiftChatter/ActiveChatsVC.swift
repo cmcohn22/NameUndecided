@@ -1,5 +1,5 @@
 //
-//  MainVC.swift
+//  ActiveChatsVC.swift
 //  switChatter
 //
 //  Created by sugih on 7/23/20.

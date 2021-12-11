@@ -444,7 +444,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="142" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="142" width="414" height="43"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
@@ -1140,7 +1140,6 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lj8-5o-iIH"/>
         <segue reference="ndF-JC-799"/>
         <segue reference="MQ5-Le-mvV"/>
         <segue reference="aJ4-Qz-Tn8"/>

@@ -1,5 +1,5 @@
 //
-//  ChattStore.swift
+//  ActiveChats.swift
 //  swiftChatter
 //
 //  Created by bob on 11/21/20.
