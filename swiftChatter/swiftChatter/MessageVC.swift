@@ -85,7 +85,7 @@ final class MessageVC: UITableViewController{
         if(segue.identifier == "SpecificChatSegue"){
             //TODO
         }
-        if let secondVC = segue.destination as? ChatSettingsVC,
+        if let secondVC = segue.destination as? ChatUsersVC,
            let chatDex = tableView.indexPathForSelectedRow?.row
         {
             secondVC.chat_id =  ActiveChats.shared.chatts[chatDex].chat_id

@@ -36,6 +36,10 @@ final class ChatSettings: ObservableObject {
     
     private let serverUrl = "https://mnky-chat.com/"
     
+    var chat_id : String!
+    var chat_name : String!
+    var chat_description : String!
+    
     // Retrieve chat info to populate chatUser table cells
     func get_chat_info(chat_id: String, chatName: String, chatDesc: String, _ completion: ((Bool) -> ())?) {
         print("THIS FUNCTION IS BEING CALL GETCHATGETCHAT")
@@ -67,9 +71,9 @@ final class ChatSettings: ObservableObject {
                 print("chat-info: failed JSON deserialization")
                 return
             }
-//            self.chat_id = jsonObj["chat_id"] as! String
-//            self.chat_name = jsonObj["name"] as! String
-//            self.chat_description = jsonObj["description"] as! String
+            self.chat_id = jsonObj["chat_id"] as! String
+            self.chat_name = jsonObj["name"] as! String
+            self.chat_description = jsonObj["description"] as! String
             let chatUserInfoReceived = jsonObj["users"] as? [Dictionary<String,Any?>] ?? []
 //            print(chatUserInfoReceived)
 //            print(type(of: chatUserInfoReceived))

@@ -624,13 +624,13 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pickMedia:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="pvh-Fc-CnT"/>
+                                    <action selector="pickMedia:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="7uX-5b-zfT"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" minimumValueImage="0.circle" catalog="system" maximumValueImage="5.circle" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-dC-8Q7">
                                 <rect key="frame" x="81" y="504.5" width="214" height="31"/>
                                 <connections>
-                                    <action selector="sliderValue:" destination="0Dy-RJ-xyG" eventType="valueChanged" id="Jaz-L0-ORN"/>
+                                    <action selector="sliderValue:" destination="0Dy-RJ-xyG" eventType="valueChanged" id="2hZ-ko-W1w"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" text="Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRY-F8-wf8">
@@ -644,7 +644,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                 <connections>
-                                    <action selector="submitNewChatt:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="AMq-HD-h8Z"/>
+                                    <action selector="submitNewChatt:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="OOF-A3-axB"/>
                                     <segue destination="TTV-uT-QlR" kind="show" id="Xxa-d0-Hj3"/>
                                 </connections>
                             </button>
@@ -656,7 +656,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="accessCamerar:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="tgu-vU-5G7"/>
+                                    <action selector="accessCamera:" destination="0Dy-RJ-xyG" eventType="touchUpInside" id="WFQ-ar-UMX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suh-ml-HI5">
@@ -701,16 +701,12 @@
                             <constraint firstItem="zSe-bu-5kz" firstAttribute="top" secondItem="Suh-ml-HI5" secondAttribute="bottom" constant="12.5" id="zo0-6n-Pql"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Create New MnkyChat" id="atE-5T-eTN">
-                        <connections>
-                            <outlet property="titleView" destination="MqZ-7f-EiV" id="ifa-b0-2Tm"/>
-                        </connections>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Create New MnkyChat" id="atE-5T-eTN"/>
                     <connections>
-                        <outlet property="chattdescription" destination="ZhY-hH-MGr" id="TbO-mj-qMY"/>
-                        <outlet property="chattname" destination="PDa-Z0-7Ud" id="7PR-BC-Kip"/>
-                        <outlet property="postImage" destination="MqZ-7f-EiV" id="Uqd-ke-fIr"/>
-                        <outlet property="slideValue" destination="Suh-ml-HI5" id="UCR-0G-KNj"/>
+                        <outlet property="chattdescription" destination="ZhY-hH-MGr" id="ABF-PM-p6R"/>
+                        <outlet property="chattname" destination="PDa-Z0-7Ud" id="J0H-TI-euR"/>
+                        <outlet property="postImage" destination="MqZ-7f-EiV" id="ha3-SK-me9"/>
+                        <outlet property="slideValue" destination="Suh-ml-HI5" id="uOa-Ne-QYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDw-hD-VTL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -778,27 +774,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Data and Storage"/>
-                                <connections>
-                                    <segue destination="Sro-jn-2xS" kind="show" id="Gsv-L3-A4R"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a66-b1-qDa">
                                 <rect key="frame" x="20" y="580" width="374" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Privacy and Security"/>
-                                <connections>
-                                    <segue destination="NOx-eb-wXg" kind="show" id="8Zi-ei-MjR"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-m9-jZo">
                                 <rect key="frame" x="20" y="657" width="374" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="About" buttonSize="large"/>
-                                <connections>
-                                    <segue destination="e0X-xL-hjd" kind="show" id="VEg-1p-FUL"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dark Mode" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDT-YH-P9Q">
                                 <rect key="frame" x="85" y="184" width="99" height="34"/>
@@ -1048,18 +1035,27 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Data and Storage"/>
+                                <connections>
+                                    <segue destination="Sro-jn-2xS" kind="show" id="rF0-LW-CDd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXN-CY-CUf">
                                 <rect key="frame" x="20" y="580" width="374" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Privacy and Security"/>
+                                <connections>
+                                    <segue destination="NOx-eb-wXg" kind="show" id="HIx-Mg-dEP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icD-tZ-Wd3">
                                 <rect key="frame" x="20" y="657" width="374" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="About" buttonSize="large"/>
+                                <connections>
+                                    <segue destination="e0X-xL-hjd" kind="show" id="mLB-gR-toc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firstname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xi4-W9-VOr">
                                 <rect key="frame" x="98" y="20" width="219" height="153"/>
@@ -1095,6 +1091,12 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="akC-Sq-FRd"/>
+                    <connections>
+                        <outlet property="email_label" destination="5B2-Ky-qDV" id="rAo-t6-jJr"/>
+                        <outlet property="first_name_label" destination="Xi4-W9-VOr" id="4JU-d5-XlM"/>
+                        <outlet property="last_name_label" destination="R4u-XQ-tE0" id="eaH-iL-A0r"/>
+                        <outlet property="username_label" destination="EJl-9E-NsV" id="RC7-ll-ABr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIO-K6-YMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1392,9 +1394,9 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o5I-VR-PaB"/>
+        <segue reference="Kij-Ko-3VY"/>
         <segue reference="MQ5-Le-mvV"/>
-        <segue reference="aJ4-Qz-Tn8"/>
+        <segue reference="Xxa-d0-Hj3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0.circle" catalog="system" width="128" height="121"/>

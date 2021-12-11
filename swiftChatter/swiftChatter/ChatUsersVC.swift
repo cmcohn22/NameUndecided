@@ -17,6 +17,7 @@ final class ChatUsersTableCell: UITableViewCell {
 }
 
 final class ChatUsersVC: UITableViewController {
+//    static let shared = ChatUsersVC()
     
     var chat_id : String?
     var chat_name : String?
@@ -30,11 +31,14 @@ final class ChatUsersVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ChatSettings.shared.get_chat_info(chat_id: chat_id!, chatName: chat_name!, chatDesc: chat_description!) { success in
+        ChatSettings.shared.get_chat_info(chat_id: ChatSettings.shared.chat_id, chatName: ChatSettings.shared.chat_name, chatDesc: ChatSettings.shared.chat_description) { success in
             DispatchQueue.main.async {
                 if success {
-                    self.MnkyChatName.text = self.chat_name
-                    self.MnkyChatDescription.text = self.chat_description
+                    self.chat_id = ChatSettings.shared.chat_id
+                    self.chat_name = ChatSettings.shared.chat_name
+                    self.chat_description = ChatSettings.shared.chat_description
+                    self.MnkyChatName.text = ChatSettings.shared.chat_name
+                    self.MnkyChatDescription.text = ChatSettings.shared.chat_description
                 }
             }
         }
@@ -55,16 +59,15 @@ final class ChatUsersVC: UITableViewController {
     // MARK:-
     private func refreshTimeline(_ sender: UIAction?) {
         self.tableView.reloadData()
-//TODO : I was working on this file but got reall tired so i just commented it out.
-        //        ChatSettings.shared.get_chat_info(chat_id: , chatName: , chatDesc: , <#T##completion: ((Bool) -> ())?##((Bool) -> ())?##(Bool) -> ()#>) { success in
-//            DispatchQueue.main.async {
-//                if success {
-//                    self.tableView.reloadData()
-//                }
-//                // stop the refreshing animation upon completion:
-//                self.refreshControl?.endRefreshing()
-//            }
-//        }
+        ChatSettings.shared.get_chat_info(chat_id: ChatSettings.shared.chat_id, chatName: ChatSettings.shared.chat_name, chatDesc: ChatSettings.shared.chat_description) { success in
+                DispatchQueue.main.async {
+                    if success {
+                        self.tableView.reloadData()
+                    }
+                    // stop the refreshing animation upon completion:
+                    self.refreshControl?.endRefreshing()
+                }
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
