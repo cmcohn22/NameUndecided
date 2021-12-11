@@ -18,8 +18,26 @@ final class ChatUsersTableCell: UITableViewCell {
 
 final class ChatUsersVC: UITableViewController {
     
+    var chat_id : String?
+    var chat_name : String?
+    var chat_description : String?
+    
+    
+    @IBOutlet weak var MnkyChatName: UILabel!
+    @IBOutlet weak var MnkyChatDescription: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ChatSettings.shared.get_chat_info(chat_id: chat_id!, chatName: chat_name!, chatDesc: chat_description!) { success in
+            DispatchQueue.main.async {
+                if success {
+                    self.MnkyChatName.text = self.chat_name
+                    self.MnkyChatDescription.text = self.chat_description
+                }
+            }
+        }
 
         // setup refreshControler here later
         // iOS 14 or newer
@@ -79,5 +97,8 @@ final class ChatUsersVC: UITableViewController {
         }
         return cell
     }
+    
+    
+    
 }
 

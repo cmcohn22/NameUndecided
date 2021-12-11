@@ -24,7 +24,6 @@
 		5FE3857C276059DF002B548C /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE3857A276059DF002B548C /* UserStore.swift */; };
 		5FE3857D276059DF002B548C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE3857B276059DF002B548C /* User.swift */; };
 		5FE3857F27605EC9002B548C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE3857E27605EC9002B548C /* Extensions.swift */; };
-		5FE38581276103D6002B548C /* ChatSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE38580276103D6002B548C /* ChatSettingsVC.swift */; };
 		5FE3858527616AA2002B548C /* ChatUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE3858427616AA2002B548C /* ChatUsersVC.swift */; };
 		88361A34275875F30006ABE4 /* ChatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A33275875F30006ABE4 /* ChatLog.swift */; };
 		88361A36275876070006ABE4 /* ChatLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88361A35275876070006ABE4 /* ChatLogVC.swift */; };
@@ -62,7 +61,6 @@
 		5FE3857A276059DF002B548C /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		5FE3857B276059DF002B548C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5FE3857E27605EC9002B548C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		5FE38580276103D6002B548C /* ChatSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSettingsVC.swift; sourceTree = "<group>"; };
 		5FE3858427616AA2002B548C /* ChatUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUsersVC.swift; sourceTree = "<group>"; };
 		88361A33275875F30006ABE4 /* ChatLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLog.swift; sourceTree = "<group>"; };
 		88361A35275876070006ABE4 /* ChatLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogVC.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				5F37F1492756FBCC005229A7 /* ActiveChats.swift */,
 				5F37F14A2756FBCC005229A7 /* ActiveChatsVC.swift */,
 				5FAF9BF92760541200C57AF4 /* ChatSettings.swift */,
-				5FE38580276103D6002B548C /* ChatSettingsVC.swift */,
 				5FE3858427616AA2002B548C /* ChatUsersVC.swift */,
 				5FE0A5F82761821C004BCF51 /* CreateMnkyChat.swift */,
 				FC03AB4A24CA88830013DA53 /* Assets.xcassets */,
@@ -302,7 +299,6 @@
 				1953AB0B2756A6E000AC3B26 /* LogInVC.swift in Sources */,
 				88361A36275876070006ABE4 /* ChatLogVC.swift in Sources */,
 				5FE0A5F92761821C004BCF51 /* CreateMnkyChat.swift in Sources */,
-				5FE38581276103D6002B548C /* ChatSettingsVC.swift in Sources */,
 				5FE3857C276059DF002B548C /* UserStore.swift in Sources */,
 				88361A38275966660006ABE4 /* ChatLogTableCell.swift in Sources */,
 				5F37F14C2756FBCC005229A7 /* ActiveChatsVC.swift in Sources */,
