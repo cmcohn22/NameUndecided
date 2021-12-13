@@ -10,6 +10,14 @@ import CoreLocation
 
 final class ChatLogVC: UITableViewController {
     
+    
+    @IBAction func goBack(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ActiveChatsVC") as! ActiveChatsVC
+            self.present(nextViewController, animated:true, completion:nil)
+
+    }
+    
     lazy var locationManager = CLLocationManager()
     @objc func refresh(sender:AnyObject)
     {

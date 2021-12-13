@@ -39,6 +39,7 @@ final class ChatSettings: ObservableObject {
     var chat_id : String!
     var chat_name : String!
     var chat_description : String!
+    var image: String!
     
     // Retrieve chat info to populate chatUser table cells
     func get_chat_info(chat_id: String, chatName: String, chatDesc: String, _ completion: ((Bool) -> ())?) {
@@ -74,6 +75,7 @@ final class ChatSettings: ObservableObject {
             self.chat_id = jsonObj["chat_id"] as! String
             self.chat_name = jsonObj["name"] as! String
             self.chat_description = jsonObj["description"] as! String
+            self.image = jsonObj["image"] as! String
             let chatUserInfoReceived = jsonObj["users"] as? [Dictionary<String,Any?>] ?? []
 //            print(chatUserInfoReceived)
 //            print(type(of: chatUserInfoReceived))

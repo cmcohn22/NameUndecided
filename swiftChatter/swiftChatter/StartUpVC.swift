@@ -56,25 +56,41 @@ class socketInfo{
                 case .text(let string):
                     print("Received text: \(string)")
                     let message:Dictionary<String,Any?> = convertToDictionary(text: string)!
-                    let chatID:String = message["chat_id"] as! String
-                    var messager = Message(type: message["type"] as? String,
-                                           message_id: message["message_id"] as? String,
-                                          first_name: message["first_name"] as? String,
-                                          last_name: message["last_name"] as? String,
-                                          username: message["username"] as? String,
-                                          content: message["content"] as? String,
-                                          timestamp: message["timestamp"] as? String,
-                                          profile_pic: message["profile_pic"] as? String,
-                                           likes: [] as? NSArray
-                                          )
+                    
+                    if message["type"] as? String == "chat_message" {
+                        let messager = Message(type: message["type"] as? String,
+                                               message_id: message["message_id"] as? String,
+                                              first_name: message["first_name"] as? String,
+                                              last_name: message["last_name"] as? String,
+                                              username: message["username"] as? String,
+                                              content: message["content"] as? String,
+                                              timestamp: message["timestamp"] as? String,
+                                              profile_pic: message["profile_pic"] as? String,
+                                               likes: [] as? NSArray
+                                              )
+                        let mesgInf : [String:Message] = ["message": messager]
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil, userInfo: mesgInf)
+                    }
+                    else{
+                        let messager = Message(type: message["type"] as? String,
+                                               message_id: message["message_id"] as? String,
+                                              first_name: message["first_name"] as? String,
+                                              last_name: message["last_name"] as? String,
+                                              username: message["username"] as? String,
+                                              content: message["content"] as? String,
+                                              timestamp: message["timestamp"] as? String,
+                                              profile_pic: message["profile_pic"] as? String,
+                                               likes: [] as? NSArray
+                                              )
+                        let mesgInf : [String:Message] = ["message": messager]
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil, userInfo: mesgInf)
+                    }
                     //TODO: UNCOMMENT THIS PROBS
                     //socketInfo.shared.messagesDict[chatID, default: []].append(messager)
                    //TODO: the following line mighy be bad (messages append)
                     //TODO: IMMEADIATELY make call to the table view to return a new cell at the bottom, with appropriate chat info. auto refresh.
                     
                     //TODO: must ponder, how is the table being populated, and what does reloading the data do?
-                    let mesgInf : [String:Message] = ["message": messager]
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil, userInfo: mesgInf)
                 
                 case .binary(let data):
                     print("Received data: \(data.count)")

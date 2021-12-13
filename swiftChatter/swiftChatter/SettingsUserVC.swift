@@ -19,20 +19,13 @@ final class SettingsUserVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        SettingsUser.shared.get_user_info { success in
-            DispatchQueue.main.async {
-                if success {
-                    self.first_name_label.text = SettingsUser.shared.settings.firstnameU
-                    self.last_name_label.text = SettingsUser.shared.settings.lastnameU
-                    self.username_label.text = SettingsUser.shared.settings.usernameU
-                    self.email_label.text = SettingsUser.shared.settings.emailU
-                }
-            }
-        }
+        self.first_name_label.text = UserStore.shared.activeUser.first_name
+        self.last_name_label.text = UserStore.shared.activeUser.last_name
+        self.username_label.text = UserStore.shared.activeUser.username
+        self.email_label.text = UserStore.shared.activeUser.email
+    }
 //        first_name_label.text = SettingsUser.shared.settings.firstnameU
 //        last_name_label.text = SettingsUser.shared.settings.lastnameU
 //        username_label.text = SettingsUser.shared.settings.usernameU
 //        email_label.text = SettingsUser.shared.settings.emailU
-    }
 }

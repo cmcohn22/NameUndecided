@@ -9,10 +9,48 @@ import UIKit
 import CoreLocation
 
 final class ActiveChatsVC: UITableViewController {
+    
+    var loggedId: Bool! = (UserStore.shared.activeUser.tokenId != nil)
 
     var locationManager = CLLocationManager()
     @IBOutlet weak var toolbar: UIToolbar!
 
+    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    @IBAction func createChat(_ sender: Any) {
+
+        if UserStore.shared.activeUser.tokenId == nil{
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "StartUp") as! StartUpVC
+                self.present(nextViewController, animated:true, completion:nil)
+        }
+        else{
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CreateChat") as! CreateMnkyChat
+                self.present(nextViewController, animated:true, completion:nil)
+        }
+    }
+    
+    @IBAction func handleChatLog(_ sender: Any) {
+        if UserStore.shared.activeUser.tokenId == nil{
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "StartUp") as! StartUpVC
+                self.present(nextViewController, animated:true, completion:nil)
+        }
+        else{
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChatLog") as! ChatLogVC
+                self.present(nextViewController, animated:true, completion:nil)
+        }
+    }
+    
+    @IBAction func handleUserSettings(_ sender: Any) {
+        if UserStore.shared.activeUser.tokenId == nil{
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "StartUp") as! StartUpVC
+                self.present(nextViewController, animated:true, completion:nil)
+        }
+        else{
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "UserSettings") as! SettingsUserVC
+                self.present(nextViewController, animated:true, completion:nil)
+        }
+    }
+    
+    
     @objc func refresh(sender:AnyObject)
     {
         // Updating your data here...
@@ -32,6 +70,11 @@ final class ActiveChatsVC: UITableViewController {
         
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
+        
+        if(loggedId){
+            UserStore.shared.getUserInfo()
+        }
+
         refreshTimeline(nil)
     }
 
@@ -43,6 +86,9 @@ final class ActiveChatsVC: UITableViewController {
            let chatDex = tableView.indexPathForSelectedRow?.row
         {
             secondVC.chat_id =  ActiveChats.shared.chatts[chatDex].chat_id
+            secondVC.chat_lat = ActiveChats.shared.chatts[chatDex].lat
+            secondVC.chat_long = ActiveChats.shared.chatts[chatDex].long
+            secondVC.chat_name = ActiveChats.shared.chatts[chatDex].name
         }
     }
 
@@ -85,6 +131,9 @@ final class ActiveChatsVC: UITableViewController {
         //chatt = chatts[indexPath.row]
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 142
+    }
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // populate a single cell
@@ -99,7 +148,20 @@ final class ActiveChatsVC: UITableViewController {
         cell.timestampLabel.text = chat.recent_message_timestamp
         cell.chatID = chat.chat_id
         ActiveChats.shared.chatid = chat.chat_id ?? ""
-        //cell.init(style: UITableViewCellStyle.subtitle, reuseIdentifier: chat.chat_id)
+        
+        let imageUrl: URL = URL(string: (chat.image)!)!
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+                 
+                let chattPicData:NSData = NSData(contentsOf: imageUrl)!
+                
+                 
+                 // When from background thread, UI needs to be updated on main_queue
+                DispatchQueue.main.async {
+                     let proImage = UIImage(data: chattPicData as Data)
+                    cell.imageLabel.image = proImage?.resizeImage(targetSize: CGSize(width: cell.imageLabel.frame.size.width, height: cell.imageLabel.frame.size.height))
+                 }
+             }
         return cell
     }
 

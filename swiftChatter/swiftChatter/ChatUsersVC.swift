@@ -22,6 +22,7 @@ final class ChatUsersVC: UITableViewController {
     var chat_id : String?
     var chat_name : String?
     var chat_description : String?
+    var chatImage: String?
     
     
     @IBOutlet weak var MnkyChatName: UILabel!
@@ -37,6 +38,7 @@ final class ChatUsersVC: UITableViewController {
                     self.chat_id = ChatSettings.shared.chat_id
                     self.chat_name = ChatSettings.shared.chat_name
                     self.chat_description = ChatSettings.shared.chat_description
+                    self.chatImage = ChatSettings.shared.image
                     self.MnkyChatName.text = ChatSettings.shared.chat_name
                     self.MnkyChatDescription.text = ChatSettings.shared.chat_description
                 }

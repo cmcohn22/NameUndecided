@@ -79,11 +79,11 @@ final class CreateMnkyChat: UIViewController, UIImagePickerControllerDelegate, U
                           lat: currentlocation?.coordinate.latitude,
                           long: currentlocation?.coordinate.longitude,
                           radius: radiusIn)
-        print(currentlocation?.coordinate.latitude)
-        print(currentlocation?.coordinate.longitude)
-        print(chatt.lat as Any)
-        print(chatt.long as Any)
-        print(chatt.radius as Any)
+//        print(currentlocation?.coordinate.latitude)
+//        print(currentlocation?.coordinate.longitude)
+//        print(chatt.lat as Any)
+//        print(chatt.long as Any)
+//        print(chatt.radius as Any)
 
         ChattStore.shared.createChatt(chatt, image: postImage.image)
     }
