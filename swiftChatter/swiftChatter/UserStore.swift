@@ -17,6 +17,7 @@ final class UserStore: ObservableObject {
                                      // instances can be created
     @Published private(set) var activeUser: User = User()
 
+
     private let serverUrl = "https://mnky-chat.com/api/"
     func setToken(token: String){
         self.activeUser.tokenId = token
@@ -50,5 +51,35 @@ final class UserStore: ObservableObject {
         }
         
     }
-    
+    func changeProImg(imageIn: UIImage?){
+        let tokenHeaders: HTTPHeaders = [
+            "Authorization": "Token \(UserStore.shared.activeUser.tokenId!)"
+        ]
+        guard let apiUrl = URL(string: "https://mnky-chat.com/api/profile-pic/") else {
+            print("signup: Bad URL")
+            return
+        }
+        AF.upload(multipartFormData: { mpFD in
+            if let image = imageIn?.jpegData(compressionQuality: 1.0) {
+                        mpFD.append(image, withName: "profile_pic", fileName: "proPic", mimeType: "image/jpeg")
+                    }
+        }, to: apiUrl, method: .post, headers: tokenHeaders).responseJSON{ (response) in
+            print(response.result)
+            switch response.result {
+
+            case .success(_):
+                if let json = response.value
+                {
+                    if(response.response?.statusCode == 200){
+                        print("successfully changed picture")
+                    }
+
+                }
+                break
+            case .failure(let error):
+                break
+            }
+            
+        }
+    }
 }

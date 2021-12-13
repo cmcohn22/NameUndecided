@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ActiveChatsVC" id="TTV-uT-QlR" customClass="ActiveChatsVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GsI-Ba-nvz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Kkm-1f-y6A">
@@ -97,7 +97,7 @@
                                     <outlet property="imageLabel" destination="OSb-Eu-sdw" id="X8A-Ga-ibF"/>
                                     <outlet property="messageLabel" destination="dJT-FC-iMD" id="y3r-R5-b6r"/>
                                     <outlet property="timestampLabel" destination="QTC-HT-tNz" id="WEd-mD-DlP"/>
-                                    <segue destination="32I-zu-pcC" kind="show" id="QI0-Sm-MtF"/>
+                                    <segue destination="32I-zu-pcC" kind="show" id="2gg-xo-40S"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -208,7 +208,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="50W-lb-pS6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pU6-0C-qx2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -467,7 +467,7 @@
             <objects>
                 <viewController id="32I-zu-pcC" customClass="MessageVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="oi2-gs-dzd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Lle-dO-EnI">
@@ -627,13 +627,16 @@
                     <navigationItem key="navigationItem" title="Chat Name" id="eDU-e8-EjW">
                         <barButtonItem key="rightBarButtonItem" title="GC Details" style="plain" id="aTV-SH-csq">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="k7b-mD-wOR">
-                                <rect key="frame" x="291" y="11" width="103" height="34"/>
+                                <rect key="frame" x="281.5" y="5" width="112.5" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system" title="Settings"/>
+                                <connections>
+                                    <segue destination="fDb-Qo-69z" kind="show" id="f30-nB-PQy"/>
+                                </connections>
                             </button>
                             <connections>
-                                <action selector="settings:" destination="32I-zu-pcC" id="Y2i-gl-JPb"/>
+                                <segue destination="4sE-m2-85E" kind="show" id="JCZ-RZ-NFM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1083,20 +1086,35 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcg-Sc-oWB">
-                                <rect key="frame" x="76" y="406" width="67" height="31"/>
+                                <rect key="frame" x="98" y="393" width="79" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                <connections>
+                                    <action selector="accessCamera:" destination="N7l-uC-zhX" eventType="touchUpInside" id="mMe-9y-28X"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UQl-lc-rxg">
                                 <rect key="frame" x="133" y="287" width="122" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53V-na-0qb">
-                                <rect key="frame" x="247" y="406" width="67" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ER7-tz-aiO">
+                                <rect key="frame" x="142" y="450" width="99" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change Profile Pic"/>
+                                <connections>
+                                    <action selector="changeProfilePic:" destination="N7l-uC-zhX" eventType="touchUpInside" id="T1v-VE-U4B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53V-na-0qb">
+                                <rect key="frame" x="234" y="393" width="56" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="photo" catalog="system"/>
+                                <connections>
+                                    <action selector="pickMedia:" destination="N7l-uC-zhX" eventType="touchUpInside" id="bEn-TN-PwQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="stG-fY-GL0"/>
@@ -1108,6 +1126,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                         <outlet property="email_label" destination="5B2-Ky-qDV" id="rAo-t6-jJr"/>
                         <outlet property="first_name_label" destination="Xi4-W9-VOr" id="4JU-d5-XlM"/>
                         <outlet property="last_name_label" destination="R4u-XQ-tE0" id="eaH-iL-A0r"/>
+                        <outlet property="postImage" destination="UQl-lc-rxg" id="56i-OR-XzX"/>
                         <outlet property="username_label" destination="EJl-9E-NsV" id="RC7-ll-ABr"/>
                     </connections>
                 </viewController>
@@ -1309,6 +1328,23 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
             </objects>
             <point key="canvasLocation" x="3572" y="1588"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i78-jV-WPR">
+            <objects>
+                <navigationController id="4sE-m2-85E" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rgC-EU-9gj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c99-Mg-SrA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fDb-Qo-69z" kind="showDetail" identifier="Show" id="vAe-Q0-ls9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5U-J6-UDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="-1489"/>
+        </scene>
         <!--Chat UsersVC-->
         <scene sceneID="uxL-Go-mee">
             <objects>
@@ -1342,6 +1378,9 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="05W-oV-wsB">
                                     <rect key="frame" x="319" y="193" width="49" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <connections>
+                                        <action selector="toggleMute:" destination="fDb-Qo-69z" eventType="valueChanged" id="jsS-4q-fCi"/>
+                                    </connections>
                                 </switch>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mute Chat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBn-yZ-wDN">
                                     <rect key="frame" x="201" y="193" width="110" height="31"/>
@@ -1355,12 +1394,43 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="figure.walk" catalog="system" title="Leave Chat"/>
+                                    <connections>
+                                        <action selector="leaveChat:" destination="fDb-Qo-69z" eventType="touchUpInside" id="76A-jD-2XQ"/>
+                                        <segue destination="cOe-KH-pNK" kind="show" id="7mn-1r-Mbm"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVn-OG-ihp">
+                                    <rect key="frame" x="8" y="258" width="49" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                    <connections>
+                                        <action selector="accessCamera:" destination="fDb-Qo-69z" eventType="touchUpInside" id="xNi-cJ-qdS"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOc-gg-0OW">
+                                    <rect key="frame" x="3" y="282" width="152" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Change Chat Image"/>
+                                    <connections>
+                                        <action selector="changeChatImage:" destination="fDb-Qo-69z" eventType="touchUpInside" id="u2d-ZI-5xd"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwJ-1J-rbk">
+                                    <rect key="frame" x="100" y="258" width="48" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="photo" catalog="system"/>
+                                    <connections>
+                                        <action selector="pickMedia:" destination="fDb-Qo-69z" eventType="touchUpInside" id="gcR-X1-HIb"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="8vf-2K-XUZ" customClass="ChatUsersTableCell" customModule="swiftChatter" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatUsersTableCell" rowHeight="72" id="8vf-2K-XUZ" customClass="ChatUsersTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="357.5" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8vf-2K-XUZ" id="yXS-HQ-whe">
@@ -1368,24 +1438,33 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXA-ST-gPk">
-                                            <rect key="frame" x="37" y="18" width="76" height="35"/>
+                                            <rect key="frame" x="37" y="18" width="131" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksu-LQ-6Vr">
-                                            <rect key="frame" x="319" y="22" width="58" height="28"/>
+                                            <rect key="frame" x="178" y="22" width="58" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZEv-LR-8M5">
+                                            <rect key="frame" x="310" y="0.0" width="75" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="ChatUsersTableCell">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="adminLabel" destination="Ksu-LQ-6Vr" id="AdG-KJ-DrS"/>
                                     <outlet property="fullnameLabel" destination="cXA-ST-gPk" id="B2g-R0-PZZ"/>
+                                    <outlet property="userPic" destination="ZEv-LR-8M5" id="NBq-j7-aWb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1398,15 +1477,20 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                     <connections>
                         <outlet property="MnkyChatDescription" destination="j7U-m7-qBV" id="KRa-z7-rhM"/>
                         <outlet property="MnkyChatName" destination="TTv-vp-kiW" id="iaG-kD-InU"/>
+                        <outlet property="camera" destination="mVn-OG-ihp" id="n27-sU-d1q"/>
+                        <outlet property="chatImage" destination="YtN-Tn-hBk" id="Izm-SD-yZ9"/>
+                        <outlet property="photo" destination="FwJ-1J-rbk" id="HFl-qw-zog"/>
+                        <outlet property="submitImage" destination="mOc-gg-0OW" id="lQD-gs-bjv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKU-gs-Aui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="-704"/>
+            <point key="canvasLocation" x="2576.811594202899" y="-704.46428571428567"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MQ5-Le-mvV"/>
+        <segue reference="f30-nB-PQy"/>
+        <segue reference="7mn-1r-Mbm"/>
         <segue reference="aJh-89-fFb"/>
     </inferredMetricsTieBreakers>
     <resources>

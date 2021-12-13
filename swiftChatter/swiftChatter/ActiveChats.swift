@@ -61,7 +61,7 @@ final class ActiveChats: ObservableObject {
                 }
             }
         }
-            success = true // for completion(success)
+        success = true // for completion(success)
         }.resume()
     }
 }

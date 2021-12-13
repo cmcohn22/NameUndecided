@@ -13,6 +13,7 @@ import MobileCoreServices
 import UniformTypeIdentifiers
 import Alamofire
 
+var mutedChat: Bool! = false
 struct MessageSocket: Encodable{
     let lat:Double
     let long:Double
@@ -31,12 +32,6 @@ struct MessageSocket: Encodable{
 
 final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentPickerDelegate {
     
-    @IBAction func settings(_ sender: Any) {
-        print("-------hello--------")
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChatUsersVC") as! ChatUsersVC
-            self.present(nextViewController, animated:true, completion:nil)
-    }
     
     lazy var locationManager = CLLocationManager()
    
@@ -61,9 +56,10 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
 
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
         self.title = chat_name
-        
         refreshTimeline(nil)
         
+        print("------------")
+        print(mutedChat)
         
     }
     @objc func loadList(notification: NSNotification){
@@ -72,6 +68,9 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
                        MessageLog.shared.appendfunc(chatid: chat_id, mezzo: mex)
                        DispatchQueue.main.async {
                                self.tableView.reloadData()
+                           if(mutedChat == false){
+                               self.notificationSend(message: mex)
+                           }
                            // stop the refreshing animation upon completion:
                            self.refreshControl?.endRefreshing()
                        }
@@ -79,6 +78,22 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
                    }
                }
     
+    }
+    func notificationSend(message: Message){
+        let center = UNUserNotificationCenter.current()
+        let content = UNMutableNotificationContent()
+        content.title = "New Message in \(chat_name!)"
+        content.body = message.content!
+        content.sound = .default
+        content.userInfo = ["value": "Data with local notification"]
+        let fireDate = Calendar.current.dateComponents([.day, .month, .year, .hour, .minute, .second], from: Date().addingTimeInterval(5))
+        let trigger = UNCalendarNotificationTrigger(dateMatching: fireDate, repeats: false)
+        let request = UNNotificationRequest(identifier: "alert", content: content, trigger: trigger)
+        center.add(request) { (error) in
+            if error != nil {
+                print("Error = \(error?.localizedDescription ?? "error local notification")")
+            }
+        }
     }
 
 
@@ -96,8 +111,7 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
                }
         let dblLat = currentlocation.coordinate.latitude
         let dblLong = currentlocation.coordinate.longitude
-        print(imagePicked)
-        print(pdfPicked)
+
         if (imagePicked == true) {
             UploadImageStore.shared.uploadImage(image: postImage.image, chat_id, chat_lat, chat_long)
             postImage.image = nil
@@ -121,20 +135,6 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
         imagePicked = false
         
     }
-   
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if(segue.identifier == "SpecificChatSegue"){
-            //TODO
-        }
-        if let secondVC = segue.destination as? ChatUsersVC,
-           let chatDex = tableView.indexPathForSelectedRow?.row
-        {
-            secondVC.chat_id =  ActiveChats.shared.chatts[chatDex].chat_id
-            secondVC.chat_name =  ActiveChats.shared.chatts[chatDex].name
-            secondVC.chat_description =  ActiveChats.shared.chatts[chatDex].description
-        }
-    }
 
     // MARK:-
     private func refreshTimeline(_ sender: UIAction?) {
@@ -145,6 +145,7 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
         let dblLong = currentlocation.coordinate.longitude
         //Universal Token So People Can See Messages
         var toke = "Token a23cb7a7efd4981c4a85a0cd6428213b38489c01"
+        //once user has been created
         if UserStore.shared.activeUser.tokenId != nil{
             toke = "Token \(UserStore.shared.activeUser.tokenId!)"
         }
@@ -158,6 +159,16 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
             }
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if let secondVC = segue.destination as? ChatUsersVC
+        {
+            secondVC.chat_ident = chat_id
+        }
+    }
+//    func handleMute(){
+//        let controller = ChatUsersVC()
+//        controller.delegate = self
+//    }
     
     @IBOutlet weak var postImage: UIImageView!
         
@@ -299,7 +310,7 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
                 let linkString: String! = message?.content
                 let showString: String = String(describing: message?.first_name) + "'s PDF"
                 let attributedString = NSMutableAttributedString(string: showString)
-                attributedString.addAttribute(.link, value: linkString, range: NSMakeRange(0, showString.count))
+                attributedString.addAttribute(.link, value: linkString as Any, range: NSMakeRange(0, showString.count))
                 cellPicture.pdfFile.attributedText = attributedString
             }
             
@@ -326,3 +337,9 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
         return retCell
     }
 }
+
+//extension MessageVC: MuteChatDelegate{
+//    func muteChat(mute: Bool) {
+//        self.mutedChat = mute
+//    }
+//}
