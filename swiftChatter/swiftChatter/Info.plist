@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>To take photo for profile or groupchat</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Idk</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>MnkyChat When</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To add photo to profile and groupchat</string>
 	<key>UIApplicationSceneManifest</key>
