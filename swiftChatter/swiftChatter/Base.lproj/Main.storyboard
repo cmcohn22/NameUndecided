@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ActiveChatsVC" id="TTV-uT-QlR" customClass="ActiveChatsVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GsI-Ba-nvz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Kkm-1f-y6A">
@@ -208,7 +208,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="50W-lb-pS6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pU6-0C-qx2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -467,7 +467,7 @@
             <objects>
                 <viewController id="32I-zu-pcC" customClass="MessageVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="oi2-gs-dzd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Lle-dO-EnI">
@@ -1024,7 +1024,6 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
         <!--SettingsUserVC-->
         <scene sceneID="ai2-gC-Exi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RIO-K6-YMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="UserSettings" id="N7l-uC-zhX" userLabel="SettingsUserVC" customClass="SettingsUserVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gs9-k1-POn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -1130,6 +1129,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                         <outlet property="username_label" destination="EJl-9E-NsV" id="RC7-ll-ABr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIO-K6-YMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1430.4347826086957" y="1120.9821428571429"/>
         </scene>
@@ -1334,7 +1334,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                 <navigationController id="4sE-m2-85E" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rgC-EU-9gj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c99-Mg-SrA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1350,7 +1350,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
             <objects>
                 <tableViewController storyboardIdentifier="ChatUsersVC" id="fDb-Qo-69z" customClass="ChatUsersVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="vbr-Im-6NF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="ean-qr-xye">
@@ -1491,7 +1491,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
     <inferredMetricsTieBreakers>
         <segue reference="f30-nB-PQy"/>
         <segue reference="7mn-1r-Mbm"/>
-        <segue reference="aJh-89-fFb"/>
+        <segue reference="aJ4-Qz-Tn8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0.circle" catalog="system" width="128" height="121"/>
