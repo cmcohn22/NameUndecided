@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ActiveChatsVC" id="TTV-uT-QlR" customClass="ActiveChatsVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GsI-Ba-nvz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Kkm-1f-y6A">
@@ -208,7 +208,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="50W-lb-pS6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pU6-0C-qx2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -363,8 +363,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ns6-L7-MNU">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward" catalog="system" title="Back to Active Chats"/>
+                            <connections>
+                                <segue destination="vNe-d8-rWw" kind="show" id="WCa-vr-hrA"/>
+                            </connections>
+                        </button>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l9c-TF-Rq5">
-                            <rect key="frame" x="0.0" y="142" width="414" height="43"/>
+                            <rect key="frame" x="0.0" y="175" width="414" height="43"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Chat Log" image="clock.fill" catalog="system" width="150" id="o6e-wP-mGO"/>
@@ -382,7 +391,7 @@
                         </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatLogTableCell" rowHeight="75" id="DsW-a7-sd7" userLabel="ChatLogTableCell" customClass="ChatLogTableCell" customModule="swiftChatter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
+                                <rect key="frame" x="0.0" y="77.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DsW-a7-sd7" id="IN5-1i-bGO" customClass="ChatLogTableCell" customModule="swiftChatter" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
@@ -467,11 +476,11 @@
             <objects>
                 <viewController id="32I-zu-pcC" customClass="MessageVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="oi2-gs-dzd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Lle-dO-EnI">
-                            <rect key="frame" x="0.0" y="332" width="414" height="225"/>
+                            <rect key="frame" x="0.0" y="332" width="414" height="351"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send Message..." textAlignment="natural" minimumFontSize="20" id="VEe-nc-feE">
@@ -730,6 +739,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-Qg-FaI">
+                                <rect key="frame" x="15" y="22" width="78" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward" catalog="system" title="Back"/>
+                                <connections>
+                                    <segue destination="TTV-uT-QlR" kind="push" id="RqM-bW-6oV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7LY-iF-t3V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -778,6 +796,23 @@
             </objects>
             <point key="canvasLocation" x="2070" y="86"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZlP-DM-fiP">
+            <objects>
+                <navigationController id="vNe-d8-rWw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="F0D-Kc-62i"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ovb-Gc-LPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TTV-uT-QlR" kind="relationship" relationship="rootViewController" id="LgU-mt-Ec4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mnO-AZ-p1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="467"/>
+        </scene>
         <!--StartViewController-->
         <scene sceneID="dvC-cY-dHv">
             <objects>
@@ -794,8 +829,8 @@
                                     <segue destination="CPU-Oq-a7B" kind="show" id="ujD-ng-6wN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSU-Pz-I4z">
-                                <rect key="frame" x="58" y="637" width="63.5" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSU-Pz-I4z">
+                                <rect key="frame" x="47" y="637" width="84" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                                 <connections>
@@ -1024,7 +1059,6 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
         <!--SettingsUserVC-->
         <scene sceneID="ai2-gC-Exi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RIO-K6-YMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="UserSettings" id="N7l-uC-zhX" userLabel="SettingsUserVC" customClass="SettingsUserVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gs9-k1-POn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -1130,6 +1164,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                         <outlet property="username_label" destination="EJl-9E-NsV" id="RC7-ll-ABr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIO-K6-YMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1430.4347826086957" y="1120.9821428571429"/>
         </scene>
@@ -1334,7 +1369,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
                 <navigationController id="4sE-m2-85E" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rgC-EU-9gj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c99-Mg-SrA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1350,7 +1385,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
             <objects>
                 <tableViewController storyboardIdentifier="ChatUsersVC" id="fDb-Qo-69z" customClass="ChatUsersVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="vbr-Im-6NF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="ean-qr-xye">
@@ -1491,7 +1526,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
     <inferredMetricsTieBreakers>
         <segue reference="f30-nB-PQy"/>
         <segue reference="7mn-1r-Mbm"/>
-        <segue reference="aJh-89-fFb"/>
+        <segue reference="GUn-sY-CzV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0.circle" catalog="system" width="128" height="121"/>
@@ -1499,6 +1534,7 @@ Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Malesuada f
         <image name="MNKY Chat LogoLogo.jpeg" width="146.8800048828125" height="104.87999725341797"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="106"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="doc" catalog="system" width="115" height="128"/>

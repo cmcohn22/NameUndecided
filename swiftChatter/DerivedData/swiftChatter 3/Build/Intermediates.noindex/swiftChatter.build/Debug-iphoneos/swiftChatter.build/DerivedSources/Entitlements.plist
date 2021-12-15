@@ -3,14 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>FLNPFN2P2J.edu.umich.griffkau.swiftChatter</string>
+	<string>FLNPFN2P2J.edu.umich.cmcohn.swiftChatter</string>
 	<key>com.apple.developer.team-identifier</key>
 	<string>FLNPFN2P2J</string>
 	<key>get-task-allow</key>
 	<true/>
-	<key>keychain-access-groups</key>
-	<array>
-		<string>FLNPFN2P2J.edu.umich.griffkau.swiftChatter</string>
-	</array>
 </dict>
 </plist>

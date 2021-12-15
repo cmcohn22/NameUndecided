@@ -191,6 +191,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreLocation;
 @import Foundation;
 @import UIKit;
+@import UserNotifications;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -221,12 +222,16 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC12swiftChatter13ActiveChatsVC")
 @interface ActiveChatsVC : UITableViewController
 @property (nonatomic, weak) IBOutlet UIToolbar * _Null_unspecified toolbar;
+- (IBAction)createChat:(id _Nonnull)sender;
+- (IBAction)handleChatLog:(id _Nonnull)sender;
+- (IBAction)handleUserSettings:(id _Nonnull)sender;
 - (void)refreshWithSender:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -245,13 +250,19 @@ SWIFT_CLASS("_TtC12swiftChatter13ActiveChatsVC")
 @end
 
 @class UIApplication;
+@class UNUserNotificationCenter;
+@class UNNotification;
+@class UNNotificationResponse;
 @class UISceneSession;
 @class UISceneConnectionOptions;
 @class UISceneConfiguration;
 
 SWIFT_CLASS("_TtC12swiftChatter11AppDelegate")
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions SWIFT_WARN_UNUSED_RESULT;
+- (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresentNotification:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions))completionHandler;
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center didReceiveNotificationResponse:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (UISceneConfiguration * _Nonnull)application:(UIApplication * _Nonnull)application configurationForConnectingSceneSession:(UISceneSession * _Nonnull)connectingSceneSession options:(UISceneConnectionOptions * _Nonnull)options SWIFT_WARN_UNUSED_RESULT;
 - (void)application:(UIApplication * _Nonnull)application didDiscardSceneSessions:(NSSet<UISceneSession *> * _Nonnull)sceneSessions;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -272,24 +283,15 @@ SWIFT_CLASS("_TtC12swiftChatter16ChatLogTableCell")
 
 SWIFT_CLASS("_TtC12swiftChatter9ChatLogVC")
 @interface ChatLogVC : UITableViewController
+- (IBAction)goBack:(id _Nonnull)sender;
 - (void)refreshWithSender:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC12swiftChatter14ChatSettingsVC")
-@interface ChatSettingsVC : UIViewController
-- (void)viewDidLoad;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified MnkyChatName;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified MnkyChatDescription;
-@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified ChatUsersTableView;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -299,14 +301,31 @@ SWIFT_CLASS("_TtC12swiftChatter18ChatUsersTableCell")
 @interface ChatUsersTableCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified fullnameLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified adminLabel;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified userPic;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
+@class UIImagePickerController;
 
 SWIFT_CLASS("_TtC12swiftChatter11ChatUsersVC")
-@interface ChatUsersVC : UITableViewController
+@interface ChatUsersVC : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified MnkyChatName;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified camera;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified photo;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified submitImage;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified MnkyChatDescription;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified chatImage;
+- (IBAction)leaveChat:(id _Nonnull)sender;
+- (IBAction)toggleMute:(id _Nonnull)sender;
+- (IBAction)pickMedia:(id _Nonnull)sender;
+- (IBAction)accessCamera:(id _Nonnull)sender;
+- (IBAction)changeChatImage:(id _Nonnull)sender;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
 - (void)viewDidLoad;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -327,13 +346,16 @@ SWIFT_CLASS("_TtC12swiftChatter14ChattTableCell")
 @end
 
 @class UITextField;
+@class CLLocation;
 @class UISlider;
-@class UIImagePickerController;
 
 SWIFT_CLASS("_TtC12swiftChatter14CreateMnkyChat")
 @interface CreateMnkyChat : UIViewController <CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nonnull)error;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified chattname;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified chattdescription;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified slideValue;
@@ -371,12 +393,37 @@ SWIFT_CLASS("_TtC12swiftChatter16MessageTableCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITextView;
+@class NSURL;
+
+SWIFT_CLASS("_TtC12swiftChatter23MessageTableCellPicture")
+@interface MessageTableCellPicture : UITableViewCell <UITextViewDelegate>
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified first_name;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified pdfFile;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profilePic;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified content;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified last_name;
+- (BOOL)textView:(UITextView * _Nonnull)pdfFile shouldInteractWithURL:(NSURL * _Nonnull)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSNotification;
+@class UIDocumentPickerViewController;
 
 SWIFT_CLASS("_TtC12swiftChatter9MessageVC")
-@interface MessageVC : UITableViewController
+@interface MessageVC : UITableViewController <UIDocumentPickerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified MessageContent;
 - (void)viewDidLoad;
+- (void)loadListWithNotification:(NSNotification * _Nonnull)notification;
 - (IBAction)SendMessage:(id _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified postImage;
+- (IBAction)pickMedia:(id _Nonnull)sender;
+- (IBAction)accessCamera:(id _Nonnull)sender;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (IBAction)pickDocument:(id _Nonnull)sender;
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -403,8 +450,27 @@ SWIFT_CLASS("_TtC12swiftChatter13SceneDelegate")
 @end
 
 
+SWIFT_CLASS("_TtC12swiftChatter14SettingsUserVC")
+@interface SettingsUserVC : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified first_name_label;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified username_label;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified last_name_label;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified email_label;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified postImage;
+- (IBAction)pickMedia:(id _Nonnull)sender;
+- (IBAction)changeProfilePic:(id _Nonnull)sender;
+- (IBAction)accessCamera:(id _Nonnull)sender;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC12swiftChatter8SignUpVC")
-@interface SignUpVC : UIViewController
+@interface SignUpVC : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
+- (void)viewDidLoad;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified Email;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified LastName;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified FirstName;
@@ -415,6 +481,10 @@ SWIFT_CLASS("_TtC12swiftChatter8SignUpVC")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified EmptyLastName;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified EmptyUserName;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified EmptyPassword;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified postImage;
+- (IBAction)pickMedia:(id _Nonnull)sender;
+- (IBAction)accessCamera:(id _Nonnull)sender;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
 - (IBAction)Submit:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -427,6 +497,7 @@ SWIFT_CLASS("_TtC12swiftChatter9StartUpVC")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

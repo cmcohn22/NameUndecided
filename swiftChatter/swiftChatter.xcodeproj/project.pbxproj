@@ -474,14 +474,14 @@
 				CODE_SIGN_ENTITLEMENTS = swiftChatter/swiftChatter.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46F985JG37;
+				DEVELOPMENT_TEAM = FLNPFN2P2J;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.pdanu.swiftChatter;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.cmcohn.swiftChatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -497,14 +497,14 @@
 				CODE_SIGN_ENTITLEMENTS = swiftChatter/swiftChatter.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46F985JG37;
+				DEVELOPMENT_TEAM = FLNPFN2P2J;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.pdanu.swiftChatter;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.cmcohn.swiftChatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

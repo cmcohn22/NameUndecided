@@ -62,7 +62,7 @@ final class ChatLog: ObservableObject {
             let chattsReceived = jsonObj["chat_log"] as? [Dictionary<String,Any?>] ?? []
             print(chattsReceived)
             print(type(of: chattsReceived))
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { 
             self.chatts = [Chatt]()
             for chattEntry in chattsReceived{
                 if chattEntry.count == self.nFields {

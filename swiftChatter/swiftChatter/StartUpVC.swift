@@ -22,6 +22,7 @@ class socketInfo{
 }
     class StartUpVC: UIViewController, WebSocketDelegate{
         
+        
         var token : String?
         lazy var locationManager = CLLocationManager()
         //let f = socketInfo()
@@ -54,9 +55,14 @@ class socketInfo{
                     isConnected = false
                     print("websocket is disconnected: \(reason) with code: \(code)")
                 case .text(let string):
+                    
                     print("Received text: \(string)")
                     let message:Dictionary<String,Any?> = convertToDictionary(text: string)!
-                    
+                    //These lines fix duplicates!
+//                    if UserStore.shared.activeUser.username == message["username"] as? String{
+//                        print("No Dups")
+//                        return
+//                    }
                     if message["type"] as? String == "chat_message" {
                         let messager = Message(type: message["type"] as? String,
                                                message_id: message["message_id"] as? String,
@@ -85,6 +91,7 @@ class socketInfo{
                         let mesgInf : [String:Message] = ["message": messager]
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil, userInfo: mesgInf)
                     }
+                    
                     //TODO: UNCOMMENT THIS PROBS
                     //socketInfo.shared.messagesDict[chatID, default: []].append(messager)
                    //TODO: the following line mighy be bad (messages append)

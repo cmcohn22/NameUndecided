@@ -128,6 +128,16 @@ final class MessageVC: UITableViewController, UIImagePickerControllerDelegate, U
                             let jsonData = try! jsonEncoder.encode(jsonObject)
                             let json = String(data: jsonData, encoding: .utf8)!
             StartUpVC.shared.writeText((Any).self, json: json)
+            //            loadList(notification: NSNotification)
+            //CAM!!! This updates page.
+//            DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                if(mutedChat == false){
+//                    self.notificationSend(message: mex)
+//                }
+                // stop the refreshing animation upon completion:
+//                self.refreshControl?.endRefreshing()
+//            }
             print("hit1")
         }
         MessageContent.text = ""

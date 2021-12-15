@@ -62,34 +62,6 @@
 			<key>uniqueIdentifier</key>
 			<string>2232D1DA-2955-419C-BB1D-7FDA0FBDFB5F</string>
 		</dict>
-		<key>255E2FDF-4786-410B-9CA7-017E08BCA7BF</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>255E2FDF-4786-410B-9CA7-017E08BCA7BF.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>swiftChatter-bhfsaykimutpeidqwemhousxzjwg</string>
-			<key>timeStartedRecording</key>
-			<real>660714878.41301703</real>
-			<key>timeStoppedRecording</key>
-			<real>660714885.51546705</real>
-			<key>title</key>
-			<string>Build target swiftChatter</string>
-			<key>uniqueIdentifier</key>
-			<string>255E2FDF-4786-410B-9CA7-017E08BCA7BF</string>
-		</dict>
 		<key>29966AF2-A4B2-4E15-AE8C-03E910E99B90</key>
 		<dict>
 			<key>className</key>
@@ -174,6 +146,34 @@
 			<key>uniqueIdentifier</key>
 			<string>4591213A-4360-4094-8FED-4A4F5A97DC96</string>
 		</dict>
+		<key>474996CE-C46A-4D90-9811-E82C9CA16202</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>474996CE-C46A-4D90-9811-E82C9CA16202.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>Alamofire-ctvoopilvkkstxgzyfdhwtujseqt</string>
+			<key>timeStartedRecording</key>
+			<real>661274468.61724806</real>
+			<key>timeStoppedRecording</key>
+			<real>661274476.96823704</real>
+			<key>title</key>
+			<string>Build target Alamofire</string>
+			<key>uniqueIdentifier</key>
+			<string>474996CE-C46A-4D90-9811-E82C9CA16202</string>
+		</dict>
 		<key>4F0E6969-A680-4EA7-81C6-1C7E81C3A147</key>
 		<dict>
 			<key>className</key>
@@ -201,34 +201,6 @@
 			<string>Build target FirebaseInstallations</string>
 			<key>uniqueIdentifier</key>
 			<string>4F0E6969-A680-4EA7-81C6-1C7E81C3A147</string>
-		</dict>
-		<key>5284B310-4E03-4834-A29E-AF5143CFB15F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>5284B310-4E03-4834-A29E-AF5143CFB15F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Pods-swiftChatter-ctvoopilvkkstxgzyfdhwtujseqt</string>
-			<key>timeStartedRecording</key>
-			<real>660705463.14734399</real>
-			<key>timeStoppedRecording</key>
-			<real>660705498.51655102</real>
-			<key>title</key>
-			<string>Build target Pods-swiftChatter</string>
-			<key>uniqueIdentifier</key>
-			<string>5284B310-4E03-4834-A29E-AF5143CFB15F</string>
 		</dict>
 		<key>594BBC53-45C6-495A-9F10-46F8709FC699</key>
 		<dict>
@@ -258,6 +230,34 @@
 			<key>uniqueIdentifier</key>
 			<string>594BBC53-45C6-495A-9F10-46F8709FC699</string>
 		</dict>
+		<key>68913363-095A-4F77-8666-18CBFA9DE10D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>68913363-095A-4F77-8666-18CBFA9DE10D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>Pods-swiftChatter-ctvoopilvkkstxgzyfdhwtujseqt</string>
+			<key>timeStartedRecording</key>
+			<real>661274468.614797</real>
+			<key>timeStoppedRecording</key>
+			<real>661274476.98670304</real>
+			<key>title</key>
+			<string>Build target Pods-swiftChatter</string>
+			<key>uniqueIdentifier</key>
+			<string>68913363-095A-4F77-8666-18CBFA9DE10D</string>
+		</dict>
 		<key>78FE8262-EAEA-4AC5-9DBC-D01792B43C80</key>
 		<dict>
 			<key>className</key>
@@ -285,6 +285,34 @@
 			<string>Build target FirebaseCore</string>
 			<key>uniqueIdentifier</key>
 			<string>78FE8262-EAEA-4AC5-9DBC-D01792B43C80</string>
+		</dict>
+		<key>AAB487AB-5F08-494F-AB63-ADE29E606320</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>AAB487AB-5F08-494F-AB63-ADE29E606320.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>Starscream-ctvoopilvkkstxgzyfdhwtujseqt</string>
+			<key>timeStartedRecording</key>
+			<real>661280142.11803305</real>
+			<key>timeStoppedRecording</key>
+			<real>661280142.11827695</real>
+			<key>title</key>
+			<string>Build target Starscream</string>
+			<key>uniqueIdentifier</key>
+			<string>AAB487AB-5F08-494F-AB63-ADE29E606320</string>
 		</dict>
 		<key>CEA681E2-851B-4FD2-A297-F4ECFBB86A5D</key>
 		<dict>
@@ -314,16 +342,16 @@
 			<key>uniqueIdentifier</key>
 			<string>CEA681E2-851B-4FD2-A297-F4ECFBB86A5D</string>
 		</dict>
-		<key>DBE4C970-9B57-44E2-855F-C0C4828BF074</key>
+		<key>CF539444-8082-44C8-9183-6A6E0AB8704C</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
 			<key>documentTypeString</key>
 			<string>&lt;nil&gt;</string>
 			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>DBE4C970-9B57-44E2-855F-C0C4828BF074.xcactivitylog</string>
+			<string>CF539444-8082-44C8-9183-6A6E0AB8704C.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -332,43 +360,15 @@
 				<string>W</string>
 			</dict>
 			<key>signature</key>
-			<string>Starscream-ctvoopilvkkstxgzyfdhwtujseqt</string>
+			<string>swiftChatter-bhfsaykimutpeidqwemhousxzjwg</string>
 			<key>timeStartedRecording</key>
-			<real>660714885.51574695</real>
+			<real>661280133.44630301</real>
 			<key>timeStoppedRecording</key>
-			<real>660714885.51602805</real>
+			<real>661280142.11780095</real>
 			<key>title</key>
-			<string>Build target Starscream</string>
+			<string>Build target swiftChatter</string>
 			<key>uniqueIdentifier</key>
-			<string>DBE4C970-9B57-44E2-855F-C0C4828BF074</string>
-		</dict>
-		<key>E07243B7-C10D-4718-83D2-8964EFCD8E49</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>E07243B7-C10D-4718-83D2-8964EFCD8E49.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Alamofire-ctvoopilvkkstxgzyfdhwtujseqt</string>
-			<key>timeStartedRecording</key>
-			<real>660705463.15351701</real>
-			<key>timeStoppedRecording</key>
-			<real>660705498.51614106</real>
-			<key>title</key>
-			<string>Build target Alamofire</string>
-			<key>uniqueIdentifier</key>
-			<string>E07243B7-C10D-4718-83D2-8964EFCD8E49</string>
+			<string>CF539444-8082-44C8-9183-6A6E0AB8704C</string>
 		</dict>
 		<key>E17A8ADF-3A45-49DE-8A3A-70C5E9F8C8A0</key>
 		<dict>
