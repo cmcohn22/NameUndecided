@@ -6,15 +6,34 @@
 //  Copyright © 2020 The Regents of the University of Michigan. All rights reserved.
 //
 import UIKit
+import CoreLocation
 
 final class ChatLogVC: UITableViewController {
     
+    
+    @IBAction func goBack(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ActiveChatsVC") as! ActiveChatsVC
+            self.present(nextViewController, animated:true, completion:nil)
+
+    }
+    
+    lazy var locationManager = CLLocationManager()
+    @objc func refresh(sender:AnyObject)
+    {
+        // Updating your data here...
+        refreshTimeline(nil)
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // setup refreshControler here later
         // iOS 14 or newer
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
+        
+        locationManager.requestAlwaysAuthorization()
         
         refreshTimeline(nil)
         
@@ -27,7 +46,12 @@ final class ChatLogVC: UITableViewController {
     
     // MARK:-
     private func refreshTimeline(_ sender: UIAction?) {
-        ChatLog.shared.get_chat_log { success in
+        guard let currentlocation = locationManager.location else{
+            return
+        }
+//        print(currentlocation.coordinate.latitude)
+//        print(currentlocation.coordinate.longitude)
+        ChatLog.shared.get_chat_log(token: UserStore.shared.activeUser.tokenId, lat: currentlocation.coordinate.latitude, long: currentlocation.coordinate.longitude) { success in
             DispatchQueue.main.async {
                 if success {
                     self.tableView.reloadData()
@@ -56,6 +80,10 @@ final class ChatLogVC: UITableViewController {
         //selectedRow = indexPath.row
         //chatt = chatts[indexPath.row]
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       return 80
     }
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

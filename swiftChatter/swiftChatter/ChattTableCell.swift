@@ -13,5 +13,6 @@ final class ChattTableCell: UITableViewCell {
     @IBOutlet weak var groupchatnameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var imageLabel: UIImageView!
+    var chatID: String!
     
 }
